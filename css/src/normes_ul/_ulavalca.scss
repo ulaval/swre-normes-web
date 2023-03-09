@@ -35,8 +35,8 @@ header.ulaval-header.ulaval-ulavalca-header{
     .ulaval-header-main{
         grid-template-columns:auto 1fr auto auto;
         grid-template-areas:"ecu mainnav secondnav tools";
-        grid-row-gap:0;
-        grid-column-gap:4rem;
+        row-gap:0;
+        column-gap:4rem;
         padding-top:8px;
         padding-bottom:6px;
 
@@ -45,16 +45,16 @@ header.ulaval-header.ulaval-ulavalca-header{
         grid-template-areas:
         "nothing secondnav secondnav"
         "ecu mainnav tools";
-        grid-row-gap:0;
-        grid-column-gap:3rem;
+        row-gap:0;
+        column-gap:3rem;
         }
 
         @media(max-width:$ul-mobile-width){
             grid-template-columns:auto auto;
         grid-template-areas:
         "ecu tools";
-        grid-row-gap:0;
-        grid-column-gap:0;
+        row-gap:0;
+        column-gap:0;
         }
     }
 }

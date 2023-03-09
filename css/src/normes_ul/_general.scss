@@ -3,6 +3,9 @@
     box-sizing: border-box;
 }
 
+:root{
+    font-size:16px;
+}
 html, body {
     display: flex;
     flex-direction: column;
@@ -14,7 +17,7 @@ body {
     font-size: 1em;
     color: var(--ul-color-black);
     background-color:var(--ul-color-white);
-    font-family:'Source Sans Pro', sans-serif;
+    font-family:var(--ul-font);
     }
 
 main{

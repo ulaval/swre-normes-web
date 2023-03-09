@@ -50,37 +50,28 @@
                 <div class="ulaval-header-tools">
                     <div class="ulaval-header-search-container">
                         <button type="button" class="ulaval-header-search-trigger" aria-expanded="false" aria-controls="site-main-search" aria-label="Chercher"><i aria-hidden="true" class="ulaval-i-search" role="presentation"></i></button>
-                            <div class="ulaval-header-search" id="site-main-search">
-                                <form role="search" method="get" action="#">
-                                    <label for="site-header-search-bar" class="screen-reader-text">Que cherchez-vous?</label>
-                                    <input id="site-header-search-bar" type="search" placeholder="Chercher par mots-clés" name="q" value="" class="champ-recherche" />
-                                    <button type="submit" class="btn-recherche" value="" aria-label="Chercher">
-                                        <i class="ulaval-i-search" aria-hidden="true" role="presentation"></i>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
+                    </div>
                     <nav class="ulaval-language-switcher">
                         <button type="button" class="ulaval-language-switcher-trigger" aria-expanded="false" aria-controls="ulaval-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
                             <span aria-hidden="true" aria-role="presentation">Fr</span>
                         </button>
                         <ul id="ulaval-language-switcher-list" role="listbox" hidden>
-                            <li>
-                                <a href="#" role="option" lang="en" aria-label="English">
+                            <li role="option" tabindex="-1" aria-posinset="1" aria-setsize="2" aria-selected="false">
+                                <a href="#"  lang="en" aria-label="English" >
                                     <span aria-hidden="true" aria-role="presentation">En</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#" role="option" lang="es" aria-label="Español">
+                            <li role="option" tabindex="-1" aria-posinset="2" aria-setsize="2" aria-selected="false">
+                                <a href="#" lang="es" aria-label="Español">
                                     <span aria-hidden="true" aria-role="presentation">Es</span>
                                 </a>
                             </li>
                         </ul>
                     </nav>
-                    <button class="ulaval-header-menu-trigger" aria-expanded="false" aria-controls="site-main-nav"><span class="ulaval-header-menu-trigger-midbar" role="presentation"></span><span class="screen-reader-text">Ouvrir le menu principal</span></button>
+                    <button type="button" class="ulaval-header-menu-trigger" aria-expanded="false" aria-controls="ulaval-mobile-menu"><span class="ulaval-header-menu-trigger-midbar" role="presentation"></span><span class="screen-reader-text">Ouvrir le menu principal</span></button>
                 </div>
             </div>
-            <div class="ulaval-header-mobile-menu">
+            <div class="ulaval-header-mobile-menu" id="ulaval-mobile-menu">
                 <div class="ulaval-header-mobile-menu-content">
                     <nav class="ulaval-header-main-nav" aria-label="Principale">
                         <ul>
@@ -120,6 +111,15 @@
                         </ul>
                     </nav>				
                 </div>
+            </div>
+            <div class="ulaval-header-search" id="site-main-search">
+                <form role="search" method="get" action="#">
+                    <label for="site-header-search-bar" class="screen-reader-text">Que cherchez-vous?</label>
+                    <input id="site-header-search-bar" type="search" placeholder="Chercher par mots-clés" name="q" value="" class="champ-recherche" />
+                    <button type="submit" class="btn-recherche" value="" aria-label="Chercher">
+                        <i class="ulaval-i-search" aria-hidden="true" role="presentation"></i>
+                    </button>
+                </form>
             </div>
         </header>
 

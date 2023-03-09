@@ -1,16 +1,3 @@
-//Hauteur calculée de l'en-tête (pour calculer la hauteur du menu)
-const mainHeader=document.querySelector("header.ulaval-header");
-document.body.style.setProperty(
-  "--header-height",
-  `${mainHeader.clientHeight}px`
-);
-
-// Largeur calculée de la scrollbar
-document.body.style.setProperty(
-  "--scrollbar-width",
-  `${(window.innerWidth - document.body.clientWidth) / 2}px`
-);
-
 // Fermeture du menu
 var closeMainMenu=function(){
   document.querySelector(".ulaval-header-mobile-menu").classList.remove("open");
@@ -24,6 +11,22 @@ var closeMainSearch=function(){
   document.querySelector(".ulaval-header-search").classList.add("remove");
   document.querySelector(".ulaval-header-search").classList.remove("open");
   document.querySelector(".ulaval-header-search-trigger").setAttribute("aria-expanded","false");
+}
+
+// Fermeture du sélecteur de langue
+var closeLanguageSwitcher=function(){
+  document.getElementById("ulaval-language-switcher-list").hidden=true;
+  document.querySelector(".ulaval-language-switcher-trigger").setAttribute("aria-expanded","false");
+  if(currentlyFocusedLang=document.querySelector("#ulaval-language-switcher-list>li[aria-selected=true]")){
+    currentlyFocusedLang.setAttribute("aria-selected","false");
+  }
+  document.removeEventListener('keyup', languageSwitcherKeys);
+  document.removeEventListener('keydown', preventScrollOnNavKeyDowns);
+  document.removeEventListener('click', detectClickOutside);
+  const switcherItems = document.querySelectorAll("#ulaval-language-switcher-list>li a");
+      switcherItems.forEach(item=>{
+        item.removeEventListener("mouseover",blurSwitcherItems);
+      });
 }
 
 //Comportement du bouton de menu mobile
@@ -71,44 +74,74 @@ if(languageSwitcher = document.querySelector(".ulaval-language-switcher-trigger"
       document.getElementById("ulaval-language-switcher-list").hidden=false;
       this.setAttribute("aria-expanded","true");
       document.querySelector("#ulaval-language-switcher-list>li:first-child a").focus();
+      document.querySelector("#ulaval-language-switcher-list>li:first-child").setAttribute("aria-selected","true");
       document.addEventListener('keyup', languageSwitcherKeys);
+      document.addEventListener('keydown', preventScrollOnNavKeyDowns);
+      document.addEventListener('click', detectClickOutside);
+      const switcherItems = document.querySelectorAll("#ulaval-language-switcher-list>li a");
+      switcherItems.forEach(item=>{
+        item.addEventListener("mouseover",blurSwitcherItems);
+      });
       }
       else{
-        document.getElementById("ulaval-language-switcher-list").hidden=true;
-        this.setAttribute("aria-expanded","false");
-        document.removeEventListener('keyup', languageSwitcherKeys);
+        closeLanguageSwitcher();
       }
   });
+}
+
+var blurSwitcherItems=function(e){
+  const switcherItems = document.querySelectorAll("#ulaval-language-switcher-list>li a");
+  switcherItems.forEach(item=>{
+    if(item==document.activeElement){
+      item.blur();
+    }
+  });
+}
+
+var detectClickOutside=function(e){
+  if(!document.querySelector(".ulaval-language-switcher").contains(e.target)){
+    closeLanguageSwitcher();
+  }
+}
+
+// Prévient le scroll down lorsque nous sommes en train de sélectionner une langue avec les flèches
+var preventScrollOnNavKeyDowns=function(e){
+  if (e.keyCode == 38 || e.keyCode == 40) {
+    e.preventDefault();
+}
 }
 
 // Détection des touches pour la navigation du sélecteur de langue par clavier
 var languageSwitcherKeys=function(e){
   const currentFocus=document.activeElement.parentElement;
   const currentIndex=[...currentFocus.parentElement.children].indexOf(currentFocus);
-  console.log(currentIndex);
   switch(e.keyCode){
     case 38: //Up
+      currentFocus.setAttribute("aria-selected","false");
       if(currentIndex==0){
         document.querySelector("#ulaval-language-switcher-list li:last-child a").focus();
+        document.querySelector("#ulaval-language-switcher-list li:last-child").setAttribute("aria-selected","true");
       }
       else{
           currentFocus.previousElementSibling.querySelector("a").focus();
+          currentFocus.previousElementSibling.setAttribute("aria-selected","true");
       }
       break;
     case 40: //Down
+      currentFocus.setAttribute("aria-selected","false");
       if(currentIndex==([...currentFocus.parentElement.children].length-1)){
         document.querySelector("#ulaval-language-switcher-list li:first-child a").focus();
+        document.querySelector("#ulaval-language-switcher-list li:first-child").setAttribute("aria-selected","true");
       }
       else{
           currentFocus.nextElementSibling.querySelector("a").focus();
+          currentFocus.nextElementSibling.setAttribute("aria-selected","true");
       }
       break;
     case 27: //Escape
     case 9: //Tab
-      document.getElementById("ulaval-language-switcher-list").hidden=true;
+      closeLanguageSwitcher();
       document.querySelector(".ulaval-language-switcher-trigger").focus();
-      document.querySelector(".ulaval-language-switcher-trigger").setAttribute("aria-expanded","false");
-      document.removeEventListener('keyup', languageSwitcherKeys);
       break;
   }
 }

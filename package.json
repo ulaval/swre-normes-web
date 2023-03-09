@@ -38,8 +38,6 @@
     "element-matches-polyfill": "^1.0.0",
     "element-qsa-scope": "^1.1.0",
     "glob": "^8.0.3",
-    "jquery": "^3.5.1",
-    "npm": "^9.2.0",
-    "slick-carousel": "^1.8.1"
+    "npm": "^9.2.0"
   }
 }

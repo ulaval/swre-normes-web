@@ -1,0 +1,75 @@
+header.ulaval-header.ulaval-ulavalca-header{
+    .ulaval-header-ul-link{
+        .ulaval-header-logo{
+            width:140px;
+            padding:8px;
+            .ulaval-logo-fill{
+                fill:var(--ul-color-black);
+                transition:fill 0.5s ease;
+            }
+            @media(max-width:$ul-mobile-small){
+                display:none;
+            }
+        }
+        @media (min-width: #{$ul-mobile-small + 1px}){
+            &:before{
+                display:none;
+            }
+            span{
+                border: 0;
+                clip: rect(1px, 1px, 1px, 1px);
+                -webkit-clip-path: inset(50%);
+                clip-path: inset(50%);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute !important;
+                width: 1px;
+                word-wrap: normal !important;
+                word-break: normal;
+            }
+        }
+    }
+
+    .ulaval-header-main{
+        grid-template-columns:auto 1fr auto auto;
+        grid-template-areas:"ecu mainnav secondnav tools";
+        grid-row-gap:0;
+        grid-column-gap:4rem;
+        padding-top:8px;
+        padding-bottom:6px;
+
+        @media(max-width:1805px){
+            grid-template-columns:150px 1fr 150px;
+        grid-template-areas:
+        "nothing secondnav secondnav"
+        "ecu mainnav tools";
+        grid-row-gap:0;
+        grid-column-gap:3rem;
+        }
+
+        @media(max-width:$ul-mobile-width){
+            grid-template-columns:auto auto;
+        grid-template-areas:
+        "ecu tools";
+        grid-row-gap:0;
+        grid-column-gap:0;
+        }
+    }
+}
+
+// Changements de couleur une fois le menu mobile ouvert
+@media (max-width:$ul-mobile-width){
+    .ulaval-nav-mobile-open{
+        header.ulaval-header.ulaval-ulavalca-header{
+            .ulaval-header-ul-link{
+                .ulaval-header-logo{
+                    .ulaval-logo-fill{
+                        fill:var(--ul-color-white);
+                    }
+                }
+            }
+        }
+    }
+}

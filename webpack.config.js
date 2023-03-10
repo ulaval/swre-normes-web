@@ -2,8 +2,16 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const WebpackShellPluginNext = require('webpack-shell-plugin-next');
 const fs = require('fs');
-const glob = require('glob');
 const path = require('path');
+
+// const {
+//   glob,
+//   globSync,
+//   globStream,
+//   globStreamSync,
+//   Glob,
+// } = require('glob')
+const { globSync } = require('glob')
 
 // Common Configuration
 var config = {
@@ -69,8 +77,7 @@ var config = {
 							["@babel/preset-env", {
 								"targets": {
 									"browsers": [
-										"last 2 versions",
-										"ie >= 11"
+										"last 2 versions"
 									]
 								},
 								"useBuiltIns": "usage",
@@ -98,8 +105,8 @@ var config = {
 var cssConfig = Object.assign({}, config, {
     name: "css",
     entry:
-		glob.sync('./src/scss/**/[^_]*.scss').reduce(function(obj, el){
-			obj[path.parse(el).name] = el;
+		globSync('./src/scss/**/[^_]*.scss').reduce(function(obj, el){
+			obj[path.parse(el).name] = './' + el;
 			return obj
 		},{}),
     output: {
@@ -131,8 +138,8 @@ var cssConfig = Object.assign({}, config, {
 var jsConfig = Object.assign({}, config,{
 	name: "js",
 	entry:
-		glob.sync('./src/js/**.js').reduce(function(obj, el){
-			obj[path.parse(el).name] = el;
+		globSync('./src/js/**.js').reduce(function(obj, el){
+			obj[path.parse(el).name] = './' + el;
 			return obj
 		},{}),
 	output: {

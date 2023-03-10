@@ -50,20 +50,20 @@ document.querySelector(".ulaval-header-menu-trigger").addEventListener("click", 
 
 
 // Comportement du bouton du moteur de recherche principal
-// if(searchBarButton = document.querySelector(".ulaval-header-search-trigger")) {
-//   searchBarButton.addEventListener("click", function() {
-//     if(this.getAttribute("aria-expanded") == "false") {
-//       if(document.querySelector(".ulaval-header-menu-trigger").getAttribute("aria-expanded") == "true") {
-//         closeMainMenu();
-//       }
-//     document.querySelector(".ulaval-header-search").classList.add("open");
-//     document.querySelector(".champ-recherche").focus();
-//     this.setAttribute("aria-expanded","true");
-//     } else {
-//       closeMainSearch();
-//     }
-//   });
-// }
+if(searchBarButton = document.querySelector(".ulaval-header-search-trigger")) {
+  searchBarButton.addEventListener("click", function() {
+    if(this.getAttribute("aria-expanded") == "false") {
+      if(document.querySelector(".ulaval-header-menu-trigger").getAttribute("aria-expanded") == "true") {
+        closeMainMenu();
+      }
+    document.querySelector(".ulaval-header-search").classList.add("open");
+    document.querySelector(".champ-recherche").focus();
+    this.setAttribute("aria-expanded","true");
+    } else {
+      closeMainSearch();
+    }
+  });
+}
 
 // Comportement du sélecteur de langue
 if(languageSwitcher = document.querySelector(".ulaval-language-switcher-trigger")) {

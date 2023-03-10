@@ -46,11 +46,13 @@
                     <div class="ulaval-header-search-container">
                         <button type="button" class="ulaval-header-search-trigger" aria-expanded="false" aria-controls="site-main-search" aria-label="Chercher"><i aria-hidden="true" class="ulaval-i-search" role="presentation"></i></button>
                     </div>
+                    <!-- Le label peut être modifié selon l'utilité du bouton de connexion -->
+                    <a href="#" class="ulaval-secure-login" aria-label="Espace sécurisé"><i class="ulaval-i-login" aria-role="presentation" aria-hidden="true"></i></a>
                     <nav class="ulaval-language-switcher">
                         <button type="button" class="ulaval-language-switcher-trigger" aria-expanded="false" aria-controls="ulaval-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
                             <span aria-hidden="true" aria-role="presentation">Fr</span>
                         </button>
-                        <ul id="ulaval-language-switcher-list" role="listbox" hidden>
+                        <ul id="ulaval-language-switcher-list" role="listbox" aria-label="Sélectionnez une langue" hidden>
                             <li role="option" tabindex="-1" aria-posinset="1" aria-setsize="2" aria-selected="false">
                                 <a href="#"  lang="en" aria-label="English" >
                                     <span aria-hidden="true" aria-role="presentation">En</span>
@@ -63,7 +65,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <button class="ulaval-header-menu-trigger" aria-expanded="false" aria-controls="ulaval-mobile-menu"><span class="ulaval-header-menu-trigger-midbar" role="presentation"></span><span class="screen-reader-text">Ouvrir le menu principal</span></button>
+                    <button type="button" class="ulaval-header-menu-trigger" aria-expanded="false" aria-controls="ulaval-mobile-menu"><span class="ulaval-header-menu-trigger-midbar" role="presentation"></span><span class="screen-reader-text">Ouvrir le menu principal</span></button>
                 </div>
             </div>
             <div class="ulaval-header-mobile-menu" id="ulaval-mobile-menu">

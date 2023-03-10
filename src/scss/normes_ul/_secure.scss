@@ -71,7 +71,12 @@ nav.ulaval-secure-menu-container{
         padding:0;
         list-style:none;
         border:1px var(--ul-color-black) solid;
+        white-space:nowrap;
+        z-index:1;
         li{
+            &:not(:first-child){
+                border-top:1px var(--ul-color-grey) solid;
+            }
             a{
                 display:block;
                 color:var(--ul-color-white);
@@ -80,6 +85,9 @@ nav.ulaval-secure-menu-container{
                 line-height:1rem;
                 font-size:0.875rem;
                 text-decoration:none;
+                &:not(.ulaval-secure-logout){
+                    font-weight:600;
+                }
                 &:hover{
                     color:var(--ul-color-black);
                     background-color:var(--ul-color-white);
@@ -100,3 +108,44 @@ nav.ulaval-secure-menu-container{
         }
     }
 } 
+
+// Changements de couleur une fois le menu mobile ouvert
+@media (max-width:$ul-mobile-width){
+    .ulaval-nav-mobile-open{
+        button.ulaval-secure-menu-trigger{
+            i{
+                transition:filter 0.5s ease;
+                background-image:var(--img-secure);
+                filter:invert(1);
+            }
+            &:after{
+                filter: invert(1);
+            }
+            &:hover, &:active{
+                background-color:var(--ul-color-white);
+                i{
+                    background-image:var(--img-secure-logged);
+                    transition:none;
+                    filter: none;
+                }
+                &:after{
+                    filter: none;
+                }
+            }
+        }
+        .ulaval-secure-login{
+            color:var(--ul-color-white);
+            i{
+                transition:filter 0.5s ease;
+                filter:invert(1);
+            }
+            &:hover, &:active{
+                background-color:var(--ul-color-white);
+                i{
+                    transition:none;
+                    filter:none;
+                }
+            }
+        }
+    }
+}

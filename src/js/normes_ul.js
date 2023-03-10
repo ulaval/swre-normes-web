@@ -89,7 +89,7 @@ if(languageSwitcher = document.querySelector(".ulaval-language-switcher-trigger"
 var blurSwitcherItems = function(e) {
   const switcherItems = document.querySelectorAll("#ulaval-language-switcher-list>li a");
   switcherItems.forEach(item => {
-    if(item= = document.activeElement) {
+    if(item == document.activeElement) {
       item.blur();
     }
   });

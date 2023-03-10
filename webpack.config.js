@@ -3,14 +3,6 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 const WebpackShellPluginNext = require('webpack-shell-plugin-next');
 const fs = require('fs');
 const path = require('path');
-
-// const {
-//   glob,
-//   globSync,
-//   globStream,
-//   globStreamSync,
-//   Glob,
-// } = require('glob')
 const { globSync } = require('glob')
 
 // Common Configuration

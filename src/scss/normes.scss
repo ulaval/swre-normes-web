@@ -1,0 +1,10 @@
+// Code générique essentielle pour tous les sites
+@import "normes/vars";
+@import "normes/general";
+@import "normes/icons";
+@import "normes/header";
+@import "normes/footer";
+
+// Code spécifique à utiliser au besoin
+@import "normes/ulaval"; // Site institutionnel ulaval.ca
+@import "normes/secure"; // Espace sécurisé

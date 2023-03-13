@@ -19,7 +19,7 @@ var config = {
 						loader: 'css-loader',
 						options: {
 							//sourceMap: true,
-							url: false,
+							url: false
 						}
 					},
 					{
@@ -27,7 +27,7 @@ var config = {
 						options: {
 							sassOptions: {
 								//outputStyle: 'compressed',
-								sourceMap: true,
+								sourceMap: true
 							},
 						},
 					},

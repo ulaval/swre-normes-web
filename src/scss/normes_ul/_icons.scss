@@ -5,14 +5,14 @@ Icônes utilisées dans l'en-tête et le pied de page. Utilise des SVG intégré
 :root{
     --img-ecu: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' baseProfile='tiny' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 102.6 129.8' overflow='visible' xml:space='preserve'%3E%3Cpath fill='%23E30513' d='M0,0v101.4c0,8.7,6.7,15.6,15.3,15.6h24.1c3.2,0,7.4,2.2,9.5,8.3l1.2,3.4c0.3,0.7,0.7,1.1,1.2,1.1 c0.5,0,0.9-0.4,1.2-1.1l1.2-3.4c2.1-6.1,6.3-8.3,9.5-8.3h24.1c8.6,0,15.3-6.8,15.3-15.6V0H0z'/%3E%3C/svg%3E%0A");
     --img-footer-map: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.8' height='24' viewBox='0 0 16.8 24'%3E%3Cpath d='M8.4,0A8.4,8.4,0,0,0,0,8.4c0,4.48,7.76,14.96,8.08,15.44a.4.4,0,0,0,.64,0c.32-.48,8.08-10.96,8.08-15.44A8.4,8.4,0,0,0,8.4,0Zm0,12A3.6,3.6,0,1,1,12,8.4,3.585,3.585,0,0,1,8.4,12Z' fill='%23e30513'/%3E%3C/svg%3E%0A");
-    --img-language-switcher-arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.811' height='7.797' viewBox='0 0 13.811 7.797'%3E%3Cpath d='M8.268,16.029a.375.375,0,0,1,.528,0l5.729,5.729,5.733-5.729a.375.375,0,0,1,.528.528l-5.995,6a.367.367,0,0,1-.528,0l-5.995-6A.375.375,0,0,1,8.268,16.029Z' transform='translate(-7.607 -15.368)' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E%0A");
+    --img-dropdown-arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.811' height='7.797' viewBox='0 0 13.811 7.797'%3E%3Cpath d='M8.268,16.029a.375.375,0,0,1,.528,0l5.729,5.729,5.733-5.729a.375.375,0,0,1,.528.528l-5.995,6a.367.367,0,0,1-.528,0l-5.995-6A.375.375,0,0,1,8.268,16.029Z' transform='translate(-7.607 -15.368)' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E%0A");
 }
 
 // Règles générales des icônes de médias sociaux (et du bouton de recherche)
 [class^="ulaval-i-"],
 [class*=" ulaval-i-"]{
-    width:32px;
-    height:32px;
+    width:16px;
+    height:16px;
     background-size:contain;
     background-repeat:no-repeat;
     background-position:center;
@@ -21,8 +21,6 @@ Icônes utilisées dans l'en-tête et le pied de page. Utilise des SVG intégré
 
 // Icone du bouton de recherche
 .ulaval-i-search{
-    width:16px;
-    height:16px;
     background-size:16px 48px;
     background-position:bottom left;
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18.61 57.78'%3E%3Cg id='a'%3E%3Ccircle cx='7.75' cy='46.93' r='7' fill='none' stroke='%23000' stroke-miterlimit='4' stroke-width='1.5'/%3E%3Cline x1='18.08' y1='57.25' x2='12.41' y2='51.59' fill='none' stroke='%23000' stroke-miterlimit='4' stroke-width='1.5'/%3E%3C/g%3E%3Cg id='b'%3E%3Cpath d='m1.53.71l15.77,15.77' fill='none' stroke='%23000' stroke-width='2'/%3E%3Cpath d='m17.3.71L1.53,16.47' fill='none' stroke='%23000' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");

@@ -63,23 +63,23 @@ var config = {
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
-					options: {
-						//plugins: ['lodash'],
-						presets: [
-							["@babel/preset-env", {
-								"targets": {
-									"browsers": [
-										"last 2 versions"
-									]
-								},
-								"useBuiltIns": "usage",
-								"corejs": "3"
-							}]
-						],
-						"plugins": [
-						],
-						cacheDirectory: true
-					}
+					// options: {
+					// 	//plugins: ['lodash'],
+					// 	presets: [
+					// 		["@babel/preset-env", {
+					// 			"targets": {
+					// 				"browsers": [
+					// 					"last 2 versions"
+					// 				]
+					// 			},
+					// 			"useBuiltIns": "usage",
+					// 			"corejs": "3"
+					// 		}]
+					// 	],
+					// 	"plugins": [
+					// 	],
+					// 	cacheDirectory: true
+					// }
 				}
 			}
 			// Linting JavaScript à l'enregistrement des fichiers

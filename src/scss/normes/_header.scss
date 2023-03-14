@@ -88,10 +88,10 @@ header.ulaval-header {
             text-decoration: underline;
         }
         @media (max-width: $ul-tablet-width) {
-            font-size: 1.375em;
+            font-size: ul-scale-units(1.375rem);
         }
         @media (max-width: $ul-tablet-small) {
-            font-size: 1.125em;
+            font-size: ul-scale-units(1.125rem);
         }
     }
     .ulaval-header-mobile-menu {
@@ -312,7 +312,7 @@ header.ulaval-header {
             animation: ulaval-header-search-fadeOut 0.5s;
         }
         form {
-            padding: 2em;
+            padding: ul-scale-units(2rem);
             color: var(--ul-color-white);
             max-width: 870px;
             margin: 0 auto;
@@ -330,7 +330,7 @@ header.ulaval-header {
                 flex: 1;
                 border: 0;
                 background-color: var(--ul-color-white);
-                font-size: 1em;
+                font-size: ul-scale-units(1rem);
                 padding: 11px 15px;
                 border-radius: 0;
 
@@ -352,7 +352,7 @@ header.ulaval-header {
                 }
             }
             label {
-                margin-bottom: 0.3em;
+                margin-bottom: ul-scale-units(0.3rem);
             }
         }
     }
@@ -514,8 +514,8 @@ header.ulaval-header {
         }
     }
     header.ulaval-header .ulaval-header-mobile-menu {
-        padding-top: 3em;
-        padding-bottom: 3em;
+        padding-top: ul-scale-units(3rem);
+        padding-bottom: ul-scale-units(3rem);
         @include ul-paddings;
         position: absolute;
         width: 100%;
@@ -577,7 +577,7 @@ header.ulaval-header {
                 display: flex;
                 gap: ul-scale-units(1rem);
                 list-style: none;
-                margin: 1em 0;
+                margin: ul-scale-units(1rem) 0;
                 padding: 0;
                 color: var(--ul-color-white);
                 font-size: ul-scale-units(1.25rem);

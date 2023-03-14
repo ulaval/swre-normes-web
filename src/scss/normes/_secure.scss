@@ -19,7 +19,7 @@
 
 .ulaval-secure-login {
     display: block;
-    padding: 1em;
+    padding: ul-scale-units(1rem);
     line-height: ul-scale-units(1rem);
     color: var(--ul-color-black);
     &:hover, &:active {

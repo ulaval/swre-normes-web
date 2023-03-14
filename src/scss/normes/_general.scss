@@ -1,3 +1,17 @@
+// Import
+@import "./import/_import.scss";
+
+// Styles
+// Couleurs par défaut ULaval
+:root {
+    --ul-color-red: #E30513;
+    --ul-color-gold: #FFC103;
+    --ul-color-white: #fff;
+    --ul-color-black: #000;
+    --ul-color-grey: #707070;
+    --ul-font: 'Source Sans Pro', sans-serif;
+}
+
 // Structure de base d'une page.
 *, ::before, :after {
     box-sizing: border-box;
@@ -23,59 +37,6 @@ body {
 main {
     flex: 1;
     min-height: 400px;
-}
-
-// Mixin gérant les largeurs maximales de contenu. Permet d'avoir un parent pleine largeur (par exemple une couleur d'arrière-plan)
-@mixin ulContainer {
-    margin: 0 auto;
-    width: 100%;
-    @media (min-width: $ul-paddingThreshold) {
-        max-width: $ul-desktop-large-width;
-    }
-}
-
-// Mixin gérant le "coussin" entre le contenu et les limites du navigateur en fonction de la taille de ce dernier.
-@mixin ulPaddings {
-    padding-left: 4rem;
-    padding-right: 4rem;
-    @media (min-width: $ul-paddingThreshold) {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    @media (max-width: $ul-tablet-width) {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-    @media (max-width: $ul-mobile-width) {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-    @media (max-width: $ul-tablet-small ) {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-// Version spécifique au pied de page pour prendre en compte l'icône de carte
-@mixin ulFooterPaddings {
-    padding-right: 4rem;
-    padding-left: calc(4rem + 25px);
-    @media (min-width: $ul-paddingThreshold) {
-        padding-left: 25px;
-        padding-right: 0;
-        }
-    @media (max-width: $ul-tablet-width) {
-        padding-right: 1.5rem;
-        padding-left: calc(1.5rem + 25px);
-    }
-    @media (max-width: $ul-mobile-width) {
-        padding-right: 4rem;
-        padding-left: calc(4rem + 25px);
-    }
-    @media (max-width: $ul-tablet-small ) {
-        padding-right: 1.5rem;
-        padding-left: calc(1.5rem + 25px);
-    }
 }
 
 // Texte visible uniquement aux lecteurs d'écran, généralement utilisé pour le texte des icônes

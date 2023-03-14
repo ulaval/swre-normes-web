@@ -1,3 +1,7 @@
+// Import
+@import "./import/_import.scss";
+
+// Styles
 // Paramètres généraux de l'en-tête / version bureau
 header.ulaval-header {
     background: linear-gradient(90deg,var(--ul-color-red),var(--ul-color-red) 50%,var(--ul-color-gold) 0,var(--ul-color-gold)) no-repeat,var(--ul-color-white);

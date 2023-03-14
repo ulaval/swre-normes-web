@@ -1,10 +1,10 @@
-// Code générique essentielle pour tous les sites
-@import "normes/vars";
-@import "normes/general";
-@import "normes/icons";
-@import "normes/header";
-@import "normes/footer";
+// Code nécessaire pour tous les sites
+@import "./normes/_general.scss";
+@import "./normes/_icons.scss";
+@import "./normes/_header.scss";
+@import "./normes/_footer.scss";
 
-// Code spécifique à utiliser au besoin
-@import "normes/ulaval"; // Site institutionnel ulaval.ca
-@import "normes/secure"; // Espace sécurisé
+// Code falcutatif à utiliser selon les besoins
+// @TODO: Commenter les fichiers qui ne vous concernent pas
+@import "./normes/_ulaval.scss"; // Site institutionnel ulaval.ca
+@import "./normes/_secure.scss"; // Espace sécurisé

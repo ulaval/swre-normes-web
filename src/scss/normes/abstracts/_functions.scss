@@ -1,0 +1,15 @@
+// Generic function to scale units
+@function scale-units($value, $percentage) {
+    @return $value * $percentage;
+}
+
+// @TODO: If the font-size on the <html> element is 16px, set the $ul-scale-modifier at 1
+$ul-scale-modifier: 1;
+// @TODO: If the font-size on the <html> element is 62.5%, set the $ul-scale-modifier at 1.6
+// $ul-scale-modifier: 1.6;
+
+// Specific function to scale REM units based on the $ul-scale-modifier
+// This helps if the website styles use the 62.5% trick to convert 1em from 16px to 10px
+@function ul-scale-units($value) {
+    @return scale-units($value, $ul-scale-modifier);
+}

@@ -20,7 +20,7 @@
 .ulaval-secure-login {
     display: block;
     padding: 1em;
-    line-height: 1rem;
+    line-height: ul-scale-units(1rem);
     color: var(--ul-color-black);
     &:hover, &:active {
         background-color: var(--ul-color-black);
@@ -33,10 +33,10 @@
 button.ulaval-secure-menu-trigger {
     border: 0;
     background: none;
-    padding: 1rem 0.591rem;
+    padding: ul-scale-units(1rem) ul-scale-units(0.591rem);
     color: var(--ul-color-black);
     box-sizing: border-box;
-    line-height: 1rem;
+    line-height: ul-scale-units(1rem);
     display: flex;
     align-items: center;
     &:after {
@@ -86,10 +86,10 @@ nav.ulaval-secure-menu-container {
             a {
                 display: block;
                 color: var(--ul-color-white);
-                padding: 0.591rem;
+                padding: ul-scale-units(0.591rem);
                 box-sizing: border-box;
-                line-height: 1rem;
-                font-size: 0.875rem;
+                line-height: ul-scale-units(1rem);
+                font-size: ul-scale-units(0.875rem);
                 text-decoration: none;
                 &:not(.ulaval-secure-logout) {
                     font-weight: 600;

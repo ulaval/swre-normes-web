@@ -15,9 +15,9 @@ header.ulaval-header {
         background-size: 100% 8px;
         display: block;
         content: "";
-        @include ulContainer;
+        @include ul-container;
         padding: 0;
-        @include ulPaddings;
+        @include ul-paddings;
         height: 8px;
     }
     :focus {
@@ -29,19 +29,19 @@ header.ulaval-header {
         grid-template-areas:
         "ecu secondnav secondnav"
         "title mainnav tools";
-        row-gap: 1rem;
-        column-gap: 3rem;
-        @include ulContainer;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        @include ulPaddings;
+        row-gap: ul-scale-units(1rem);
+        column-gap: ul-scale-units(3rem);
+        @include ul-container;
+        padding-top: ul-scale-units(1rem);
+        padding-bottom: ul-scale-units(1rem);
+        @include ul-paddings;
     }
     .ulaval-header-ul-link-holder {
         grid-area: ecu;
         display: flex;
     }
     a.ulaval-header-ul-link {
-        font-size: 1rem;
+        font-size: ul-scale-units(1rem);
         color: var(--ul-color-black);
         text-decoration: none;
         display: inline-flex;
@@ -65,13 +65,13 @@ header.ulaval-header {
         }
     }
     .ulaval-header-title-holder {
-        min-height: 3rem;
+        min-height: ul-scale-units(3rem);
         display: flex;
         flex-direction: column;
         justify-content: center;
         grid-area: title;
         align-self: center;
-        margin-right: 1rem;
+        margin-right: ul-scale-units(1rem);
         @media(max-width: $ul-mobile-width) {
             margin-right: 0;
         }
@@ -82,7 +82,7 @@ header.ulaval-header {
         text-decoration: none;
         color: var(--ul-color-black);
         line-height: 1.1em;
-        font-size: 1.5rem;
+        font-size: ul-scale-units(1.5rem);
         transition: color 0.5s ease;
         &:hover {
             text-decoration: underline;
@@ -107,9 +107,9 @@ header.ulaval-header {
             padding: 0;
             list-style: none;
             justify-content: flex-end;
-            gap: 1.5rem;
+            gap: ul-scale-units(1.5rem);
             li {
-                font-size: 0.875rem;
+                font-size: ul-scale-units(0.875rem);
                 a {
 
                     text-decoration: none;
@@ -140,24 +140,24 @@ header.ulaval-header {
         align-self: center;
         ul {
             display: flex;
-            gap: 2rem;
+            gap: ul-scale-units(2rem);
             margin: 0;
             padding: 0;
             list-style: none;
             li {
                 margin: 0;
                 padding: 0;
-                padding-top: 0.3rem;
+                padding-top: ul-scale-units(0.3rem);
                 display: flex;
                 a {
                     text-align: center;
                     text-decoration: none;
                     color: var(--ul-color-black);
                     font-weight: 700;
-                    font-size: 1rem;
+                    font-size: ul-scale-units(1rem);
                     background: linear-gradient(90deg, var(--ul-color-red),var(--ul-color-red)) no-repeat left bottom / 0 4px;
                     transition: background-size 400ms;
-                    padding-bottom: 0.3rem;
+                    padding-bottom: ul-scale-units(0.3rem);
                     &:hover, &:focus-visible {
                         background-size: 100% 4px;
                         background-position-x: left;
@@ -180,11 +180,11 @@ header.ulaval-header {
     button.ulaval-header-search-trigger {
         border: 0;
         background: none;
-        padding: 0.938rem 1rem;
+        padding: ul-scale-units(0.938rem) ul-scale-units(1rem);
         color: var(--ul-color-black);
         font-family: var(--ul-font);
-        line-height: 1rem;
-        font-size: 1rem;
+        line-height: ul-scale-units(1rem);
+        font-size: ul-scale-units(1rem);
         position: relative;
         @media (prefers-reduced-motion: no-preference) {
             transition: color 0.2s ease;
@@ -219,11 +219,11 @@ header.ulaval-header {
     button.ulaval-language-switcher-trigger {
         border: 0;
         background: none;
-        padding: 1rem 0.591rem;
+        padding: ul-scale-units(1rem) ul-scale-units(0.591rem);
         color: var(--ul-color-black);
         box-sizing: border-box;
-        line-height: 1rem;
-        font-size: 0.875rem;
+        line-height: ul-scale-units(1rem);
+        font-size: ul-scale-units(0.875rem);
         font-weight: 600;
         font-family: var(--ul-font);
         &:after {
@@ -266,10 +266,10 @@ header.ulaval-header {
                 a {
                     display: block;
                     color: var(--ul-color-white);
-                    padding: 0.591rem;
+                    padding: ul-scale-units(0.591rem);
                     box-sizing: border-box;
-                    line-height: 1rem;
-                    font-size: 0.875rem;
+                    line-height: ul-scale-units(1rem);
+                    font-size: ul-scale-units(0.875rem);
                     text-decoration: none;
                     &:hover {
                         color: var(--ul-color-black);
@@ -316,13 +316,13 @@ header.ulaval-header {
             color: var(--ul-color-white);
             max-width: 870px;
             margin: 0 auto;
-            padding: 1rem 2.22rem 1rem 2.22rem;
+            padding: ul-scale-units(1rem) ul-scale-units(2.22rem);
             display: flex;
             align-items: stretch;
             @media(max-width: $ul-tablet-width) {
-                padding: 1rem 1.5rem;
+                padding: ul-scale-units(1rem) ul-scale-units(1.5rem);
             }
-            @media (min-width: $ul-paddingThreshold) {
+            @media (min-width: $ul-padding-threshold) {
                 padding-left: 0;
                 padding-right: 0;
             }
@@ -381,7 +381,7 @@ header.ulaval-header {
         grid-template-areas:
         "ecu ecu"
         "title tools";
-        grid-column-gap: 1rem;
+        grid-column-gap: ul-scale-units(1rem);
         .ulaval-header-secondary-nav,.ulaval-header-main-nav, .ulaval-language-switcher {
             display: none;
         }
@@ -516,7 +516,7 @@ header.ulaval-header {
     header.ulaval-header .ulaval-header-mobile-menu {
         padding-top: 3em;
         padding-bottom: 3em;
-        @include ulPaddings;
+        @include ul-paddings;
         position: absolute;
         width: 100%;
         height: calc(100vh - 8px);
@@ -536,7 +536,7 @@ header.ulaval-header {
         .ulaval-header-mobile-menu-content {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: ul-scale-units(2rem);
 
         }
 
@@ -544,11 +544,11 @@ header.ulaval-header {
             align-self: flex-start;
             ul {
                 flex-direction: column;
-                gap: 0.7rem;
+                gap: ul-scale-units(0.7rem);
                 li {
                     padding-top: 0;
                     a {
-                        font-size: 1.5rem;
+                        font-size: ul-scale-units(1.5rem);
                         font-weight: 400;
                         color: var(--ul-color-white);
                         &[aria-current="page"] {
@@ -564,10 +564,10 @@ header.ulaval-header {
             align-self: flex-start;
             ul {
                 flex-direction: column;
-                gap: 0.7rem;
+                gap: ul-scale-units(0.7rem);
                 li a {
                     color: var(--ul-color-white);
-                    font-size: 1.25rem;
+                    font-size: ul-scale-units(1.25rem);
                 }
             }
         }
@@ -575,12 +575,12 @@ header.ulaval-header {
         nav.ulaval-mobile-language-switcher {
             ul {
                 display: flex;
-                gap: 1rem;
+                gap: ul-scale-units(1rem);
                 list-style: none;
                 margin: 1em 0;
                 padding: 0;
                 color: var(--ul-color-white);
-                font-size: 1.25rem;
+                font-size: ul-scale-units(1.25rem);
                 span.current-language {
                     font-weight: 700;
                     text-decoration: underline;

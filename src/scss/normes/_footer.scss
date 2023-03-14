@@ -15,15 +15,15 @@ footer.ulaval-footer {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 2.22rem;
+        gap: ul-scale-units(2.22rem);
         @media(max-width: $ul-tablet-small) {
             flex-direction: column;
-            gap: 2rem;
+            gap: ul-scale-units(2rem);
             align-items: flex-start;
         }
-        @include ulContainer;
+        @include ul-container;
         padding-bottom: 0;
-        @include ulFooterPaddings;
+        @include ul-footer-paddings;
 
         .ulaval-footer-address {
             position: relative;
@@ -40,13 +40,13 @@ footer.ulaval-footer {
             }
             p {
                 margin: 0;
-                margin-bottom: 0.5rem;
-                font-size: 0.875rem;
+                margin-bottom: ul-scale-units(0.5rem);
+                font-size: ul-scale-units(0.875rem);
                 &.ulaval-footer-address-unit {
-                    font-size: 1.25rem;
+                    font-size: ul-scale-units(1.25rem);
                     font-weight: 700;
                     margin-top: 0;
-                    margin-bottom: 1rem;
+                    margin-bottom: ul-scale-units(1rem);
                 }
             }
         }
@@ -54,10 +54,10 @@ footer.ulaval-footer {
         .ulaval-footer-logos {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: ul-scale-units(1rem);
             @media(max-width: $ul-tablet-small) {
                 flex: auto;
-                gap: 2rem;
+                gap: ul-scale-units(2rem);
             }
         }
         .ulaval-footer-social {
@@ -67,7 +67,7 @@ footer.ulaval-footer {
                 list-style: none;
                 margin: 0;
                 padding: 0;
-                gap: 0.6rem;
+                gap: ul-scale-units(0.6rem);
                 flex-wrap: wrap;
                 @media(max-width: $ul-tablet-small) {
                     justify-content: flex-start;
@@ -107,11 +107,11 @@ footer.ulaval-footer {
               margin: 0;
               padding: 0;
               list-style: none;
-              gap: 4.5rem;
-              font-size: 0.875rem;
+              gap: ul-scale-units(4.5rem);
+              font-size: ul-scale-units(0.875rem);
               @media(max-width: $ul-tablet-small) {
                 flex-direction: column;
-                gap: 2.5em;
+                gap: ul-scale-units(2.5em);
               }
               &>li {
                 font-weight: 600;
@@ -125,9 +125,9 @@ footer.ulaval-footer {
                     margin: 0;
                     padding: 0;
                     list-style: none;
-                    margin-top: 0.5em;
+                    margin-top: ul-scale-units(0.5em);
                     li {
-                        margin-bottom: 0.2em;
+                        margin-bottom: ul-scale-units(0.2em);
                         a {
                             color: var(--ul-color-black);
                             text-decoration: none;
@@ -147,7 +147,7 @@ footer.ulaval-footer {
             }
 
             .ulaval-footer-nav-emergency {
-                font-size: 0.875rem;
+                font-size: ul-scale-units(0.875rem);
                 a {
                     color: var(--ul-color-black);
                     text-decoration: none;
@@ -173,10 +173,10 @@ footer.ulaval-footer {
                     color: var(--ul-color-black);
                     background-color: var(--ul-color-white);
                     padding: 1em 1.5em;
-                    font-size: 1rem;
+                    font-size: ul-scale-units(1rem);
                     text-decoration: none;
                     transition: color 0.3s ease, background-color 0.3s ease;
-                    margin-bottom: 2rem;
+                    margin-bottom: ul-scale-units(2rem);
                     text-align: center;
                     &:hover {
                         color: var(--ul-color-white);
@@ -191,29 +191,29 @@ footer.ulaval-footer {
         }
     }
     .ulaval-footer-nav {
-        padding-top: 3rem;
+        padding-top: ul-scale-units(3rem);
     }
     .ulaval-footer-contact {
-        padding-top: 4rem;
+        padding-top: ul-scale-units(4rem);
     }
     .ulaval-footer-copyright {
-        margin-top: 3rem;
+        margin-top: ul-scale-units(3rem);
         background-color: var(--ul-color-black);
         color: var(--ul-color-white);
         display: flex;
-        gap: 1rem;
+        gap: ul-scale-units(1rem);
         div {
-            @include ulContainer;
-            padding-top: 1.14rem;
-            padding-bottom: 1.14rem;
-            @include ulFooterPaddings;
+            @include ul-container;
+            padding-top: ul-scale-units(1.14rem);
+            padding-bottom: ul-scale-units(1.14rem);
+            @include ul-footer-paddings;
         }
         p {
             display: flex;
-            column-gap: 1rem;
-            row-gap: 0.3rem;
+            column-gap: ul-scale-units(1rem);
+            row-gap: ul-scale-units(0.3rem);
             color: var(--ul-color-copy);
-            font-size: 0.75rem;
+            font-size: ul-scale-units(0.75rem);
             margin: 0;
             flex-wrap: wrap;
             &:first-child span:nth-child(2) {
@@ -224,7 +224,7 @@ footer.ulaval-footer {
                     content: "";
                     top: 0;
                     bottom: 0;
-                    right: -0.5rem;
+                    right: ul-scale-units(-0.5rem);
                     border-right: 1px var(--ul-color-white) solid;
                 }
             }
@@ -244,7 +244,7 @@ footer.ulaval-footer {
                         content: "";
                         top: 0;
                         bottom: 0;
-                        right: -0.5rem;
+                        right: ul-scale-units(-0.5rem);
                         border-right: 1px var(--ul-color-white) solid;
                     }
                 }
@@ -253,10 +253,10 @@ footer.ulaval-footer {
 
     }
     .ulaval-footer-logos {
-        padding-top: 3rem;
+        padding-top: ul-scale-units(3rem);
         @media(max-width: $ul-tablet-small) {
             flex-direction: column;
-            gap: 3rem;
+            gap: ul-scale-units(3rem);
         }
         &:not(:where(.ulaval-footer-logos-agreements)) {
             justify-content: flex-end;
@@ -276,7 +276,7 @@ a.ulaval-footer-questions {
     color: var(--ul-color-white);
     background-color: var(--ul-color-black);
     padding: 1em 1.5em;
-    font-size: 1rem;
+    font-size: ul-scale-units(1rem);
     text-decoration: none;
     transition: color 0.3s ease, background-color 0.3s ease;
     text-align: center;

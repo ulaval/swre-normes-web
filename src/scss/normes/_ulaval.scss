@@ -40,7 +40,7 @@ header.ulaval-header.ulaval-ulavalca-header {
         grid-template-columns: auto 1fr auto auto;
         grid-template-areas: "ecu mainnav secondnav tools";
         row-gap: 0;
-        column-gap: 4rem;
+        column-gap: ul-scale-units(4rem);
         padding-top: 8px;
         padding-bottom: 6px;
 
@@ -50,7 +50,7 @@ header.ulaval-header.ulaval-ulavalca-header {
             "nothing secondnav secondnav"
             "ecu mainnav tools";
             row-gap: 0;
-            column-gap: 3rem;
+            column-gap: ul-scale-units(3rem);
         }
 
         @media(max-width: $ul-mobile-width) {

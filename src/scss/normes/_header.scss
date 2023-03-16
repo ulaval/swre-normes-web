@@ -308,6 +308,7 @@ header.ulaval-header {
         position: absolute;
         left: 0;
         right: 0;
+        z-index:1;
         &.open {
             display: block;
             animation: ulaval-header-search-fadeIn 0.5s;
@@ -522,15 +523,15 @@ header.ulaval-header {
     header.ulaval-header .ulaval-header-mobile-menu {
         padding-top: ul-scale-units(3rem);
         padding-bottom: ul-scale-units(3rem);
-        @include ul-paddings;
+        background-color:var(--ul-color-black);
         position: absolute;
-        width: 100%;
         height: calc(100vh - 8px);
         overflow-y: auto;
         display: none;
         animation-timing-function: ease;
         animation-duration: 0.5s;
-
+        width:100%;
+        z-index:1;
         &.open {
             display: block;
             animation-name: ulaval-header-mobile-fadeIn;
@@ -543,7 +544,8 @@ header.ulaval-header {
             display: flex;
             flex-direction: column;
             gap: ul-scale-units(2rem);
-
+            @include ul-container;
+            @include ul-paddings;
         }
 
         .ulaval-header-main-nav {

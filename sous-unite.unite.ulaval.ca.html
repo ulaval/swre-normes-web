@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C600%3B1%2C700&#038;display=swap&#038;ver=6.1.1" type="text/css" media="all" />
         <link rel="stylesheet" href="assets/css/normes.css" type="text/css" media="all" />
     </head>
+    <!-- Si le titre de l'unité est très long, utilisez la classe ci-dessous dans le body pour forcer le menu mobile en tout temps -->
     <body class="ulaval-header-long-unit">
         <a class="skip-link screen-reader-text" href="#page-main">Passer au contenu</a>
         <header class="ulaval-header">
@@ -126,6 +127,27 @@
                         <i class="ulaval-i-search" aria-hidden="true" role="presentation"></i>
                     </button>
                 </form>
+            </div>
+            <div class="ulaval-header-menu-sous-unite-container">
+                <div class="ulaval-header-menu-sous-unite-content">
+                <!-- Modifiez le "label" selon le type de contenu. Ce "label" est un élément d'accessibilité. 
+                Le premier item du menu n'est visible qu'en mobile et doit mener au même endroit que le lien de département ci-dessous.
+                -->
+                <a class="ulaval-header-menu-sous-unite-link" href="#">Département de langue, linguistique et traduction</a>
+                <button type="button" class="ulaval-header-menu-sous-unite-trigger" aria-expanded="false" aria-controls="ulaval-header-menu-sous-unite">
+                    Département de langue, linguistique et traduction
+                </button>
+                <nav class="ulaval-header-menu-sous-unite" id="ulaval-header-menu-sous-unite" aria-label="Menu du département">
+                    <ul>
+                        <li><a href="#">Accueil du département</a></li>
+                        <li><a href="#" aria-current="page">Futurs étudiants</a></li>
+                        <li><a href="#">Étudiants actuels</a></li>
+                        <li><a href="#">Études</a></li>
+                        <li><a href="#">Recherche</a></li>
+                        <li><a href="#">Notre département</a></li>
+                    </ul>
+                </nav>
+                </div>
             </div>
         </header>
 

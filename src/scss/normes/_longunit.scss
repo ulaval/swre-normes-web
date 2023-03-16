@@ -2,6 +2,7 @@
 
 .ulaval-header-long-unit{
     @include mobile-menu;
+    
     &.ulaval-nav-mobile-open {
     @include mobile-menu-colors;
     }

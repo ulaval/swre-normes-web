@@ -3,6 +3,17 @@
 
 // Styles
 header.ulaval-header.ulaval-ulavalca-header {
+    .ulaval-header-ul-link-holder {
+        @media(max-width: $ul-mobile-small) {
+            align-self:center;
+        }
+        &:before {
+            display:none;
+            @media(max-width: $ul-mobile-small) {
+                display:block;
+            }
+        }
+    }
     .ulaval-header-ul-link {
         .ulaval-header-logo {
             width: 140px;
@@ -16,9 +27,6 @@ header.ulaval-header.ulaval-ulavalca-header {
             }
         }
         @media (min-width: #{$ul-mobile-small + 1px}) {
-            &:before {
-                display: none;
-            }
             span {
                 border: 0;
                 clip: rect(1px, 1px, 1px, 1px);

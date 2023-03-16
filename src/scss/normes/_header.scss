@@ -39,30 +39,35 @@ header.ulaval-header {
     .ulaval-header-ul-link-holder {
         grid-area: ecu;
         display: flex;
-    }
-    a.ulaval-header-ul-link {
-        font-size: ul-scale-units(1rem);
-        color: var(--ul-color-black);
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-
-        transition: color 0.5s ease;
-        &:hover {
-            text-decoration: underline;
-        }
-        &:focus-visible {
-            outline-offset: 3px;
-        }
         &:before {
-            display: block;
+            display: inline-block;
             content: "";
+            flex:0 0 19px;
             width: 19px;
             height: 23px;
             background-image: var(--img-ecu);
             background-size: 19px 23px;
             margin-right: 10px;
         }
+    }
+    span.ulaval-header-ul-link {
+        a{
+            font-size: ul-scale-units(1rem);
+            color: var(--ul-color-black);
+            text-decoration: none;
+            transition: color 0.5s ease, border-color 0.5s ease;
+            &:hover {
+                text-decoration: underline;
+            }
+            &:focus-visible {
+                outline-offset: 3px;
+            }
+            &:not(:first-child) {
+                margin-left:3px;
+                padding-left:5px;
+                border-left:1px var(--ul-color-black) solid;
+            }
+        } 
     }
     .ulaval-header-title-holder {
         min-height: ul-scale-units(3rem);
@@ -361,7 +366,7 @@ header.ulaval-header {
 
 
 // Affichage mobile
-@media (max-width: $ul-mobile-width) {
+@mixin mobile-menu {
     header.ulaval-header .ulaval-header-main {
         &>* {
             z-index: 3;
@@ -598,6 +603,10 @@ header.ulaval-header {
     }
 }
 
+@media (max-width: $ul-mobile-width) {
+    @include mobile-menu;
+}
+
 // Animations reliées au moteur de recherche
 @keyframes ulaval-header-search-fadeIn {
     from {
@@ -638,50 +647,57 @@ header.ulaval-header {
 
 
 // Changements de couleur une fois le menu mobile ouvert
-@media (max-width: $ul-mobile-width) {
-    .ulaval-nav-mobile-open {
-        display: block;
-        height: 100vh;
-        overflow-y: hidden;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        header.ulaval-header .ulaval-header-main {
-            &:before {
-                width: 100%;
-            }
+@mixin mobile-menu-colors {
+    display: block;
+    height: 100vh;
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    header.ulaval-header .ulaval-header-main {
+        &:before {
+            width: 100%;
+        }
 
-            a.ulaval-header-ul-link, a.ulaval-header-title {
-                color: var(--ul-color-white);
+        span.ulaval-header-ul-link a, a.ulaval-header-title {
+            color: var(--ul-color-white);
+        }
+        span.ulaval-header-ul-link a:not(:first-child) {
+            border-color:var(--ul-color-white);
+        }
+        button.ulaval-header-menu-trigger {
+            &:before, &:after {
+                background-color: var(--ul-color-white);
             }
-            button.ulaval-header-menu-trigger {
+            &>span.ulaval-header-menu-trigger-midbar {
                 &:before, &:after {
                     background-color: var(--ul-color-white);
                 }
-                &>span.ulaval-header-menu-trigger-midbar {
-                    &:before, &:after {
-                        background-color: var(--ul-color-white);
-                    }
-                }
             }
-            button.ulaval-header-search-trigger {
+        }
+        button.ulaval-header-search-trigger {
+            i {
+                transition: filter 0.5s ease;
+                filter: invert(1);
+            }
+            &:hover, &:active {
+                background-color: var(--ul-color-white);
                 i {
-                    transition: filter 0.5s ease;
-                    filter: invert(1);
-                }
-                &:hover, &:active {
-                    background-color: var(--ul-color-white);
-                    i {
-                        transition: none;
-                        filter: none;
-                    }
+                    transition: none;
+                    filter: none;
                 }
             }
         }
-        footer.ulaval-footer {
-            z-index: 1;
-        }
+    }
+    footer.ulaval-footer {
+        z-index: 1;
+    }
+    
+}
+@media (max-width: $ul-mobile-width) {
+    .ulaval-nav-mobile-open {
+        @include mobile-menu-colors;
     }
 }

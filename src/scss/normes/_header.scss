@@ -605,9 +605,6 @@ header.ulaval-header {
     }
 }
 
-@media (max-width: $ul-mobile-width) {
-    @include mobile-menu;
-}
 
 // Animations reliées au moteur de recherche
 @keyframes ulaval-header-search-fadeIn {
@@ -697,9 +694,4 @@ header.ulaval-header {
         z-index: 1;
     }
     
-}
-@media (max-width: $ul-mobile-width) {
-    .ulaval-nav-mobile-open {
-        @include mobile-menu-colors;
-    }
 }

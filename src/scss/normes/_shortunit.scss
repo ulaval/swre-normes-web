@@ -1,0 +1,7 @@
+
+@media (max-width: $ul-mobile-width) {
+    @include mobile-menu;
+    .ulaval-nav-mobile-open {
+        @include mobile-menu-colors;
+    }
+}

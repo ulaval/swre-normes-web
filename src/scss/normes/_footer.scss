@@ -42,11 +42,18 @@ footer.ulaval-footer {
                 margin: 0;
                 margin-bottom: ul-scale-units(0.5rem);
                 font-size: ul-scale-units(0.875rem);
+                max-width:664px;
                 &.ulaval-footer-address-unit {
                     font-size: ul-scale-units(1.25rem);
                     font-weight: 700;
                     margin-top: 0;
                     margin-bottom: ul-scale-units(1rem);
+                }
+                &.ulaval-footer-address-subunit{
+                    font-size: ul-scale-units(1.25rem);
+                    margin-top: -1rem;
+                    margin-bottom: ul-scale-units(1rem);
+                    
                 }
             }
         }

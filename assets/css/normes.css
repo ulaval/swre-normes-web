@@ -670,6 +670,7 @@ footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-address p {
   margin: 0;
   margin-bottom: 0.5rem;
   font-size: 0.875rem;
+  max-width: 664px;
 }
 footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-address p.ulaval-footer-address-unit,
 footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-address p.ulaval-footer-address-unit,
@@ -677,6 +678,13 @@ footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-address p.ulaval-footer
   font-size: 1.25rem;
   font-weight: 700;
   margin-top: 0;
+  margin-bottom: 1rem;
+}
+footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-address p.ulaval-footer-address-subunit,
+footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-address p.ulaval-footer-address-subunit,
+footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-address p.ulaval-footer-address-subunit {
+  font-size: 1.25rem;
+  margin-top: -1rem;
   margin-bottom: 1rem;
 }
 footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-mail-social,

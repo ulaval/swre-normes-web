@@ -19,6 +19,7 @@ var closeMainSearch = function() {
 var closeMenuSousUnite = function() {
   document.querySelector(".ulaval-header-menu-sous-unite").classList.remove("open");
   document.querySelector(".ulaval-header-menu-sous-unite-trigger").setAttribute("aria-expanded", "false");
+  document.querySelector(".ulaval-header-menu-sous-unite-trigger").setAttribute("aria-label","Ouvrir le menu");
 }
 
 // Fermeture d'un menu d'outil
@@ -112,6 +113,7 @@ if(sousUniteTrigger = document.querySelector(".ulaval-header-menu-sous-unite-tri
     if(this.getAttribute("aria-expanded") == "false") {
     closeOtherElements();
     document.querySelector(".ulaval-header-menu-sous-unite").classList.add("open");
+    this.setAttribute("aria-label","Fermer le menu");
     this.setAttribute("aria-expanded", "true");
     } else {
       closeMenuSousUnite();

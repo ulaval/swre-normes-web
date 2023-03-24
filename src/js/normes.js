@@ -12,6 +12,7 @@ var closeMainMenu = function() {
 // Fermeture du moteur de recherche
 var closeMainSearch = function() {
   document.querySelector(".ulaval-header-search").classList.remove("open");
+  document.removeEventListener("keydown",detectBackTabOnSearchBar);
   document.querySelector(".ulaval-header-search-trigger").setAttribute("aria-expanded", "false");
 }
 
@@ -86,6 +87,7 @@ if(searchBarButton = document.querySelector(".ulaval-header-search-trigger")) {
     closeOtherElements();
     document.querySelector(".ulaval-header-search").classList.add("open");
     document.querySelector(".champ-recherche").focus();
+    document.addEventListener("keydown",detectBackTabOnSearchBar);
     this.setAttribute("aria-expanded", "true");
     } else {
       closeMainSearch();
@@ -139,6 +141,14 @@ var detectClickOutside = function(e) {
 // Prévient le scroll down lorsque nous sommes en train de sélectionner une langue avec les flèches
 var preventScrollOnNavKeyDowns = function(e) {
   if (e.keyCode == 38 || e.keyCode == 40) {
+    e.preventDefault();
+  }
+}
+
+// Retourne le focus directement sur le bouton trigger de la barre de recherche
+var detectBackTabOnSearchBar = function(e) {
+  if(document.activeElement == document.querySelector(".champ-recherche") && e.shiftKey && e.keyCode == 9) { 
+    document.querySelector(".ulaval-header-search-trigger").focus();
     e.preventDefault();
   }
 }

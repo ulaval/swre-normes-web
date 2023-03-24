@@ -38,17 +38,20 @@ footer.ulaval-footer {
                 background-image: var(--img-footer-map);
                 background-size: contain;
             }
+            h2.ulaval-footer-address-unit {
+                margin: 0;
+                margin-bottom: ul-scale-units(0.5rem);
+                font-size: ul-scale-units(1.25rem);
+                font-weight: 700;
+                margin-top: 0;
+                margin-bottom: ul-scale-units(1rem);
+                max-width:664px;
+            }
             p {
                 margin: 0;
                 margin-bottom: ul-scale-units(0.5rem);
                 font-size: ul-scale-units(0.875rem);
                 max-width:664px;
-                &.ulaval-footer-address-unit {
-                    font-size: ul-scale-units(1.25rem);
-                    font-weight: 700;
-                    margin-top: 0;
-                    margin-bottom: ul-scale-units(1rem);
-                }
                 &.ulaval-footer-address-subunit{
                     font-size: ul-scale-units(1.25rem);
                     margin-top: -1rem;
@@ -109,23 +112,20 @@ footer.ulaval-footer {
                 gap: ul-scale-units(2.5rem);
                 align-items: flex-start;
               }
-            &>ul {
+            .ulaval-footer-nav-content{
               display: flex;
-              margin: 0;
-              padding: 0;
-              list-style: none;
               gap: ul-scale-units(4.5rem);
               font-size: ul-scale-units(0.875rem);
               @media(max-width: $ul-tablet-small) {
                 flex-direction: column;
                 gap: ul-scale-units(2.5rem);
               }
-              &>li {
-                font-weight: 600;
-                &>a {
-                    text-decoration: none;
+              &>div {
+                h2{
                     font-weight: 600;
-                    color: var(--ul-color-black);
+                    font-size: ul-scale-units(0.875rem);
+                    margin:0;
+                    padding:0;
                 }
                 ul {
                     font-weight: 400;
@@ -165,13 +165,22 @@ footer.ulaval-footer {
                         outline-offset: 2px;
                     }
                 }
-                a.ulaval-footer-emergency {
-                    color: var(--ul-color-red);
+                h2.ulaval-footer-emergency{
                     font-weight: 700;
-                    text-transform: uppercase;
-                    &:focus-visible {
-                        outline-offset: 2px;
-                        outline-color: var(--ul-color-black);
+                    margin:0;
+                    padding:0;
+                    font-size: ul-scale-units(0.875rem);
+                    margin-top:1em;
+                    a{
+                        color: var(--ul-color-red);
+                        text-transform: uppercase;
+                        &:focus-visible {
+                            outline-offset: 2px;
+                            outline-color: var(--ul-color-black);
+                        }
+                    }
+                    +p{
+                        margin-top:0;
                     }
                 }
                 a.ulaval-footer-newsletter {

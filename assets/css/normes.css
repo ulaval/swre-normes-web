@@ -664,6 +664,17 @@ footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-address:after {
   background-image: var(--img-footer-map);
   background-size: contain;
 }
+footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-address h2.ulaval-footer-address-unit,
+footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-address h2.ulaval-footer-address-unit,
+footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-address h2.ulaval-footer-address-unit {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  max-width: 664px;
+}
 footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-address p,
 footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-address p,
 footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-address p {
@@ -671,14 +682,6 @@ footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-address p {
   margin-bottom: 0.5rem;
   font-size: 0.875rem;
   max-width: 664px;
-}
-footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-address p.ulaval-footer-address-unit,
-footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-address p.ulaval-footer-address-unit,
-footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-address p.ulaval-footer-address-unit {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 1rem;
 }
 footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-address p.ulaval-footer-address-subunit,
 footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-address p.ulaval-footer-address-subunit,
@@ -770,69 +773,62 @@ footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list {
     align-items: flex-start;
   }
 }
-footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list > ul,
-footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list > ul,
-footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list > ul {
+footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-content,
+footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-content,
+footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-content {
   display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
   gap: 4.5rem;
   font-size: 0.875rem;
 }
 @media (max-width: 768px) {
-  footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list > ul,
-  footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list > ul,
-  footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list > ul {
+  footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-content,
+  footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-content,
+  footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-content {
     flex-direction: column;
     gap: 2.5rem;
   }
 }
-footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list > ul > li,
-footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list > ul > li,
-footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list > ul > li {
+footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-content > div h2,
+footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-content > div h2,
+footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-content > div h2 {
   font-weight: 600;
+  font-size: 0.875rem;
+  margin: 0;
+  padding: 0;
 }
-footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list > ul > li > a,
-footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list > ul > li > a,
-footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list > ul > li > a {
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--ul-color-black);
-}
-footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list > ul > li ul,
-footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list > ul > li ul,
-footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list > ul > li ul {
+footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-content > div ul,
+footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-content > div ul,
+footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-content > div ul {
   font-weight: 400;
   margin: 0;
   padding: 0;
   list-style: none;
   margin-top: 0.5rem;
 }
-footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list > ul > li ul li,
-footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list > ul > li ul li,
-footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list > ul > li ul li {
+footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-content > div ul li,
+footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-content > div ul li,
+footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-content > div ul li {
   margin-bottom: 0.2rem;
 }
-footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list > ul > li ul li a,
-footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list > ul > li ul li a,
-footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list > ul > li ul li a {
+footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-content > div ul li a,
+footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-content > div ul li a,
+footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-content > div ul li a {
   color: var(--ul-color-black);
   text-decoration: none;
 }
-footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list > ul > li a[href]:hover,
-footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list > ul > li a[href]:hover,
-footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list > ul > li a[href]:hover {
+footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-content > div a[href]:hover,
+footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-content > div a[href]:hover,
+footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-content > div a[href]:hover {
   text-decoration: underline;
 }
-footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list > ul > li a[href]:focus-visible,
-footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list > ul > li a[href]:focus-visible,
-footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list > ul > li a[href]:focus-visible {
+footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-content > div a[href]:focus-visible,
+footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-content > div a[href]:focus-visible,
+footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-content > div a[href]:focus-visible {
   outline-offset: 3px;
 }
-footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list > ul > li a[aria-current=page],
-footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list > ul > li a[aria-current=page],
-footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list > ul > li a[aria-current=page] {
+footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-content > div a[aria-current=page],
+footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-content > div a[aria-current=page],
+footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-content > div a[aria-current=page] {
   text-decoration: underline;
 }
 footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-emergency,
@@ -856,18 +852,31 @@ footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-n
 footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-emergency a:focus-visible {
   outline-offset: 2px;
 }
-footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-emergency a.ulaval-footer-emergency,
-footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-emergency a.ulaval-footer-emergency,
-footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-emergency a.ulaval-footer-emergency {
-  color: var(--ul-color-red);
+footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-emergency h2.ulaval-footer-emergency,
+footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-emergency h2.ulaval-footer-emergency,
+footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-emergency h2.ulaval-footer-emergency {
   font-weight: 700;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+  margin-top: 1em;
+}
+footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-emergency h2.ulaval-footer-emergency a,
+footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-emergency h2.ulaval-footer-emergency a,
+footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-emergency h2.ulaval-footer-emergency a {
+  color: var(--ul-color-red);
   text-transform: uppercase;
 }
-footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-emergency a.ulaval-footer-emergency:focus-visible,
-footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-emergency a.ulaval-footer-emergency:focus-visible,
-footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-emergency a.ulaval-footer-emergency:focus-visible {
+footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-emergency h2.ulaval-footer-emergency a:focus-visible,
+footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-emergency h2.ulaval-footer-emergency a:focus-visible,
+footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-emergency h2.ulaval-footer-emergency a:focus-visible {
   outline-offset: 2px;
   outline-color: var(--ul-color-black);
+}
+footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-emergency h2.ulaval-footer-emergency + p,
+footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-emergency h2.ulaval-footer-emergency + p,
+footer.ulaval-footer .ulaval-footer-logos .ulaval-footer-nav-list .ulaval-footer-nav-emergency h2.ulaval-footer-emergency + p {
+  margin-top: 0;
 }
 footer.ulaval-footer .ulaval-footer-contact .ulaval-footer-nav-list .ulaval-footer-nav-emergency a.ulaval-footer-newsletter,
 footer.ulaval-footer .ulaval-footer-nav .ulaval-footer-nav-list .ulaval-footer-nav-emergency a.ulaval-footer-newsletter,

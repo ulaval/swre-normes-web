@@ -189,7 +189,7 @@ var toolMenuKeyUp = function(e) {
 var closeOtherElements = function() {
   closeMainMenu();
   closeToolMenu();
-  if(document.querySelector(".ulaval-header-search")){
+  if(document.querySelector(".ulaval-header-search-trigger")) {
     closeMainSearch();
   }
   if(document.querySelector(".ulaval-header-menu-sous-unite")){

@@ -21,13 +21,15 @@
             <div class="ulaval-header-main">
                 <div class="ulaval-header-ul-link-holder">
                     <!-- Changer le href pour https://www.ulaval.ca/ -->
-                    <a class="ulaval-header-ul-link" href="#">
-                        <svg id="ulaval-logo" class="ulaval-header-logo" aria-role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 315 129.8">
-                            <use class="ulaval-logo-fill" href="assets/img/logo-ul.svg#ullogo_txt"></use>
-                            <use href="assets/img/logo-ul.svg#ullogo_draw"></use>
-                        </svg>
-                        <span>Université Laval</span>
-                    </a>
+                    <span class="ulaval-header-ul-link">
+                        <a href="#">
+                            <svg id="ulaval-logo" class="ulaval-header-logo" aria-role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 315 129.8">
+                                <use class="ulaval-logo-fill" href="assets/img/logo-ul.svg#ullogo_txt"></use>
+                                <use href="assets/img/logo-ul.svg#ullogo_draw"></use>
+                            </svg>
+                            <span>Université Laval</span>
+                        </a>
+                    </span>
                 </div>
                 <nav class="ulaval-header-main-nav" aria-label="Principale">
                     <ul>
@@ -59,13 +61,13 @@
                         </button>
                         <ul id="ulaval-language-switcher-list" aria-label="Sélectionnez une langue" role="listbox" hidden>
                             <li role="option" tabindex="-1" aria-posinset="1" aria-setsize="2" aria-selected="false">
-                                <a href="#"  lang="en" aria-label="English" >
-                                    <span aria-hidden="true" aria-role="presentation">En</span>
+                                <a href="#">
+                                    <span lang="en" aria-label="English">En</span>
                                 </a>
                             </li>
                             <li role="option" tabindex="-1" aria-posinset="2" aria-setsize="2" aria-selected="false">
-                                <a href="#" lang="es" aria-label="Español">
-                                    <span aria-hidden="true" aria-role="presentation">Es</span>
+                                <a href="#">
+                                    <span lang="es" aria-label="Español">Es</span>
                                 </a>
                             </li>
                         </ul>
@@ -101,13 +103,13 @@
                                 <span aria-hidden="true" aria-role="presentation" class="current-language">Fr</span>
                             </li>
                             <li>
-                                <a href="#" lang="en" aria-label="English">
-                                    <span aria-hidden="true" aria-role="presentation">En</span>
+                                <a href="#">
+                                    <span lang="en" aria-label="English">En</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" lang="es" aria-label="Español">
-                                    <span aria-hidden="true" aria-role="presentation">Es</span>
+                                <a href="#">
+                                    <span lang="es" aria-label="Español">Es</span>
                                 </a>
                             </li>
                         </ul>
@@ -131,7 +133,7 @@
         <footer class="ulaval-footer">
             <section class="ulaval-footer-contact">
                 <div class="ulaval-footer-address">
-                    <p class="ulaval-footer-address-unit">Université Laval</p>
+                    <h2 class="ulaval-footer-address-unit">Faculté des sciences de l'administration</h2>
                     <p>2325, rue de l’Université Québec (Québec) G1V 0A6<br />Téléphone: 418 656-2131 | Sans frais: 1 877 785-2825</p>
                 </div>
                 <div class="ulaval-footer-mail-social">
@@ -149,8 +151,9 @@
             </section>
             <section class="ulaval-footer-nav">
                 <nav class="ulaval-footer-nav-list" aria-label="Liens généraux">
-                    <ul>
-                        <li>Connexion
+                    <div class="ulaval-footer-nav-content">
+                        <div>
+                            <h2>Connexion</h2>
                             <ul>
                                 <li><a href="#">monPortail</a></li>
                                 <li><a href="#">Courrier électronique</a></li>
@@ -158,15 +161,17 @@
                                 <li><a href="#">IDUL et mot de passe</a></li>
                                 <li><a href="#">Connexion au réseau UL</a></li>
                             </ul>
-                        </li>
-                        <li>Carrière à l'UL
+                        </div>
+                        <div>
+                            <h2>Carrière à l'UL</h2>
                             <ul>
                                 <li><a href="#">Emplois</a></li>
                                 <li><a href="#">Peoplesoft RH</a></li>
                                 <li><a href="#">Intranet</a></li>
                             </ul>
-                        </li>
-                        <li>Milieu de vie
+                        </div>
+                        <div>
+                            <h2>Milieu de vie</h2>
                             <ul>
                                 <li><a href="#">Bibliothèque</a></li>
                                 <li><a href="#">PEPS</a></li>
@@ -174,11 +179,12 @@
                                 <li><a href="#">Résidences</a></li>
                                 <li><a href="#">Stationnement</a></li>
                             </ul>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                     <div class="ulaval-footer-nav-emergency">
                         <a class="ulaval-footer-newsletter" href="http://eepurl.com/htQpTX">Abonnez-vous à l'infolettre</a>
-                        <p><a href="https://www.ulaval.ca/mesures-durgence" class="ulaval-footer-emergency">Mesures d'urgence</a><br />Composer le <a href="tel:418-656-5555">418-656-5555</a></p>
+                        <h2 class="ulaval-footer-emergency"><a href="https://www.ulaval.ca/mesures-durgence">Mesures d'urgence</a></h2>
+                        <p>Composer le <a href="tel:418-656-5555">418-656-5555</a></p>
                     </div>
                 </nav>
             </section>

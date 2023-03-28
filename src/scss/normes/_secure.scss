@@ -117,7 +117,7 @@ nav.ulaval-secure-menu-container {
 }
 
 // Changements de couleur une fois le menu mobile ouvert
-@media (max-width: $ul-mobile-width) {
+@mixin mobile-menu-secure-colors {
     .ulaval-nav-mobile-open {
         button.ulaval-secure-menu-trigger {
             i {
@@ -155,4 +155,10 @@ nav.ulaval-secure-menu-container {
             }
         }
     }
+}
+@media (max-width: $ul-mobile-width) {
+    @include mobile-menu-secure-colors;
+}
+header.ulaval-header.ulaval-header-long-unit {
+    @include mobile-menu-secure-colors;
 }

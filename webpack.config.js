@@ -1,27 +1,20 @@
 // Require modules and plugins
-const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WebpackShellPluginNext = require('webpack-shell-plugin-next');
+const fs = require('fs');
 const glob = require('glob');
+const path = require('path');
 
 // Define a constant that expects a directoryPattern and a fileExtension
-// const mapFilenamesToEntries = (directoryPattern, fileExtension) => glob
-//   .sync(directoryPattern)
-//   .reduce((entries, filename) => {
-// 	const regex = new RegExp('([^/]+)\.' + fileExtension + '$');
-//     const [, name] = './' + filename.match(regex);
-//     return { ...entries, [name]: filename }
-//   }, {})
+// Find all matching files in a folder and return it in an array
+const mapFilenamesToEntries = (directoryPattern, fileExtension) => glob
+  .sync(directoryPattern)
+  .reduce((entries, filename) => {
+	const regex = new RegExp('([^/]+)\.' + fileExtension + '$');
+    const [, name] = filename.match(regex);
+    return { ...entries, [name]: './' + filename }
+  }, {})
 
-// Define a constant that expects a directoryPattern and a fileExtension to find all matching files in a folder
-const mapFilenamesToEntries = function(directoryPattern, fileExtension) {
-  return glob.sync(directoryPattern).reduce(function(entries, filename) {
-    const regex = new RegExp('([^/]+)\.' + fileExtension + '$');
-    const matches = filename.match(regex);
-    const name = matches[1];
-    entries[name] = './' + filename;
-    return entries;
-  }, {});
-}
 
 // Define the JS configuration
 const jsConfig = {
@@ -113,7 +106,16 @@ const cssConfig = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css'
-    })
+    }),
+	new WebpackShellPluginNext({
+		onBuildEnd: {
+			scripts: [
+				() => {
+					fs.rmSync("./assets/tmp", { recursive: true });
+				}
+			]
+		}
+	})
   ]
 };
 

@@ -1,5 +1,5 @@
 {
-  "name": "@ulaval/normes_web",
+  "name": "@swre/normes_web",
   "version": "1.0.0",
   "description": "Normes web des sites institutionnelles",
   "main": "index.js",

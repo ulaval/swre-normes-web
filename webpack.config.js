@@ -89,8 +89,14 @@ const cssConfig = {
         // Use these loaders to compile SASS, SCSS and CSS files
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-		  {
+		      {
+            loader: "css-loader",
+            options: {
+              // Avoid parsing url or image-set in CSS
+              url: false
+            }
+          },
+          {
             loader: "sass-loader",
             options: {
               // Prefer `dart-sass`

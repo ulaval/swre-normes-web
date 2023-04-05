@@ -10,7 +10,7 @@ const path = require('path');
 const mapFilenamesToEntries = (directoryPattern, fileExtension) => glob
   .sync(directoryPattern)
   .reduce((entries, filename) => {
-	const regex = new RegExp('([^/]+)\.' + fileExtension + '$');
+  const regex = new RegExp('([^/]+)\.' + fileExtension + '$');
     const [, name] = filename.match(regex);
     return { ...entries, [name]: './' + filename }
   }, {})
@@ -21,17 +21,17 @@ const jsConfig = {
 
   // Define the entry points for the JS configuration
   entry: {
-	...mapFilenamesToEntries('./src/js/*.js', 'js')
+    ...mapFilenamesToEntries('./src/js/**/*.js', 'js')
   },
 
   // Define the output for the JS configuration
   output: {
 
-	// Export the output JS files to the /assets/js folder
-	path: path.resolve(__dirname, './assets/js'),
+    // Export the output JS files to the /assets/js folder
+    path: path.resolve(__dirname, './assets/js'),
 
-	// Keep the same output name from the input file
-	filename: "[name].js"
+    // Keep the same output name from the input file
+    filename: "[name].js"
   },
 
   // Define the rules for the JS configuration
@@ -39,7 +39,7 @@ const jsConfig = {
     rules: [
       {
 
-		// Regex to match JS files
+        // Regex to match JS files
         test: /\.js$/,
 
         // Only include files in the src directory and its subdirectories
@@ -47,11 +47,11 @@ const jsConfig = {
 
         // Use these loaders to compile JS files
         use: {
-			loader: 'babel-loader',
-			options: {
-				presets: ['@babel/preset-env']
-			}
-		}
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       }
     ]
   }
@@ -62,17 +62,14 @@ const cssConfig = {
 
   // Define the entry points for your CSS configuration
   entry: {
-	...mapFilenamesToEntries('./src/scss/*.scss', 'scss')
+    ...mapFilenamesToEntries('./src/scss/**/[^_]*.scss', 'scss')
   },
 
   // Export the output files (.js) to the /assets/tmp folder
   output: {
 
-	  // Keep the same output name from the input file
-	  path: path.resolve(__dirname, './assets/tmp'),
-
-	  // The .js file for the css files will be cleanup later
-	  filename: "[name].js"
+    // Keep the same output name from the input file
+    path: path.resolve(__dirname, './assets/tmp'),
   },
 
   // Define the rules for the CSS configuration
@@ -80,7 +77,7 @@ const cssConfig = {
     rules: [
       {
 
-		// Regex to match SASS, SCSS and CSS files
+        // Regex to match SASS, SCSS and CSS files
         test: /\.(sa|sc|c)ss$/,
 
         // Only include files in the src directory and its subdirectories
@@ -89,9 +86,10 @@ const cssConfig = {
         // Use these loaders to compile SASS, SCSS and CSS files
         use: [
           MiniCssExtractPlugin.loader,
-		      {
+          {
             loader: "css-loader",
             options: {
+
               // Avoid parsing url or image-set in CSS
               url: false
             }
@@ -99,6 +97,7 @@ const cssConfig = {
           {
             loader: "sass-loader",
             options: {
+
               // Prefer `dart-sass`
               implementation: require.resolve("sass"),
             },
@@ -111,17 +110,17 @@ const cssConfig = {
   // Define the plugins used for the CSS configuration
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css'
+      filename: '../css/[name].css'
     }),
-	new WebpackShellPluginNext({
-		onBuildEnd: {
-			scripts: [
-				() => {
-					fs.rmSync("./assets/tmp", { recursive: true });
-				}
-			]
-		}
-	})
+    new WebpackShellPluginNext({
+      onBuildEnd: {
+        scripts: [
+          () => {
+            fs.rmSync("./assets/tmp", { recursive: true });
+          }
+        ]
+      }
+    })
   ]
 };
 

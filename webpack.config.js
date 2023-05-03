@@ -1,100 +1,92 @@
 // Require modules and plugins
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const WebpackShellPluginNext = require('webpack-shell-plugin-next');
-const fs = require('fs');
-const glob = require('glob');
-const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const WebpackShellPluginNext = require("webpack-shell-plugin-next");
+const fs = require("fs");
+const glob = require("glob");
+const path = require("path");
 
 // Define a constant that expects a directoryPattern and a fileExtension
 // Find all matching files in a folder and return it in an array
-const mapFilenamesToEntries = (directoryPattern, fileExtension) => glob
-  .sync(directoryPattern)
-  .reduce((entries, filename) => {
-	const regex = new RegExp('([^/]+)\.' + fileExtension + '$');
+const mapFilenamesToEntries = (directoryPattern, fileExtension) =>
+  glob.sync(directoryPattern).reduce((entries, filename) => {
+    const regex = new RegExp("([^/]+)." + fileExtension + "$");
     const [, name] = filename.match(regex);
-    return { ...entries, [name]: './' + filename }
-  }, {})
-
+    return { ...entries, [name]: "./" + filename };
+  }, {});
 
 // Define the JS configuration
 const jsConfig = {
-
   // Define the entry points for the JS configuration
   entry: {
-	...mapFilenamesToEntries('./src/js/*.js', 'js')
+    ...mapFilenamesToEntries("./src/js/*.js", "js"),
   },
 
   // Define the output for the JS configuration
   output: {
+    // Export the output JS files to the /assets/js folder
+    path: path.resolve(__dirname, "./assets/js"),
 
-	// Export the output JS files to the /assets/js folder
-	path: path.resolve(__dirname, './assets/js'),
-
-	// Keep the same output name from the input file
-	filename: "[name].js"
+    // Keep the same output name from the input file
+    filename: "[name].js",
   },
 
   // Define the rules for the JS configuration
   module: {
     rules: [
       {
-
-		// Regex to match JS files
+        // Regex to match JS files
         test: /\.js$/,
 
         // Only include files in the src directory and its subdirectories
-        include: path.resolve(__dirname, 'src'),
+        include: path.resolve(__dirname, "src"),
 
         // Use these loaders to compile JS files
         use: {
-			loader: 'babel-loader',
-			options: {
-				presets: ['@babel/preset-env']
-			}
-		}
-      }
-    ]
-  }
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+    ],
+  },
 };
 
 // Define the CSS configuration
 const cssConfig = {
-
   // Define the entry points for your CSS configuration
   entry: {
-	...mapFilenamesToEntries('./src/scss/*.scss', 'scss')
+    ...mapFilenamesToEntries("./src/scss/*.scss", "scss"),
   },
 
   // Export the output files (.js) to the /assets/tmp folder
   output: {
+    // Keep the same output name from the input file
+    path: path.resolve(__dirname, "./assets/tmp"),
 
-	  // Keep the same output name from the input file
-	  path: path.resolve(__dirname, './assets/tmp'),
-
-	  // The .js file for the css files will be cleanup later
-	  filename: "[name].js"
+    // The .js file for the css files will be cleanup later
+    filename: "[name].js",
   },
 
   // Define the rules for the CSS configuration
   module: {
     rules: [
       {
-
-		// Regex to match SASS, SCSS and CSS files
+        // Regex to match SASS, SCSS and CSS files
         test: /\.(sa|sc|c)ss$/,
 
         // Only include files in the src directory and its subdirectories
-        include: path.resolve(__dirname, 'src'),
+        include: path.resolve(__dirname, "src"),
 
         // Use these loaders to compile SASS, SCSS and CSS files
         use: [
           MiniCssExtractPlugin.loader,
-		      {
+          {
             loader: "css-loader",
             options: {
               // Avoid parsing url or image-set in CSS
-              url: false
-            }
+              url: false,
+            },
           },
           {
             loader: "sass-loader",
@@ -103,26 +95,26 @@ const cssConfig = {
               implementation: require.resolve("sass"),
             },
           },
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   },
 
   // Define the plugins used for the CSS configuration
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css'
+      filename: "[name].css",
     }),
-	new WebpackShellPluginNext({
-		onBuildEnd: {
-			scripts: [
-				() => {
-					fs.rmSync("./assets/tmp", { recursive: true });
-				}
-			]
-		}
-	})
-  ]
+    new WebpackShellPluginNext({
+      onBuildEnd: {
+        scripts: [
+          () => {
+            fs.rmSync("./assets/tmp", { recursive: true });
+          },
+        ],
+      },
+    }),
+  ],
 };
 
 // Export both configurations as an array

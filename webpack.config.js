@@ -18,11 +18,14 @@ const mapFilenamesToEntries = (directoryPattern, fileExtension) =>
 const jsConfig = {
   // Define the entry points for the JS configuration
   entry: {
-    ...mapFilenamesToEntries("./src/js/*.js", "js"),
+    ...mapFilenamesToEntries("./src/js/**/*.js", "js"),
   },
 
   // Define the output for the JS configuration
   output: {
+    // Export the output JS files to the /assets/js folder
+    path: path.resolve(__dirname, "./assets/js"),
+
     // Export the output JS files to the /assets/js folder
     path: path.resolve(__dirname, "./assets/js"),
 
@@ -56,7 +59,7 @@ const jsConfig = {
 const cssConfig = {
   // Define the entry points for your CSS configuration
   entry: {
-    ...mapFilenamesToEntries("./src/scss/*.scss", "scss"),
+    ...mapFilenamesToEntries("./src/scss/**/[^_]*.scss", "scss"),
   },
 
   // Export the output files (.js) to the /assets/tmp folder
@@ -64,8 +67,8 @@ const cssConfig = {
     // Keep the same output name from the input file
     path: path.resolve(__dirname, "./assets/tmp"),
 
-    // The .js file for the css files will be cleanup later
-    filename: "[name].js",
+    // Keep the same output name from the input file
+    path: path.resolve(__dirname, "./assets/tmp"),
   },
 
   // Define the rules for the CSS configuration
@@ -103,7 +106,7 @@ const cssConfig = {
   // Define the plugins used for the CSS configuration
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "../css/[name].css",
     }),
     new WebpackShellPluginNext({
       onBuildEnd: {

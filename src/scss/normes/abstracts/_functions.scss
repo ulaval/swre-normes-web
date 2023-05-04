@@ -1,6 +1,6 @@
 // Generic function to scale units
 @function scale-units($value, $percentage) {
-    @return $value * $percentage;
+  @return $value * $percentage;
 }
 
 // @TODO: Set the $ul-scale-modifier at 1 or 1.6 based on your needs
@@ -11,5 +11,5 @@ $ul-scale-modifier: 1;
 // Specific function to scale REM units based on the $ul-scale-modifier
 // Ex.: This helps if the website styles use the 62.5% trick to convert 1em from 16px to 10px
 @function ul-scale-units($value) {
-    @return scale-units($value, $ul-scale-modifier);
+  @return scale-units($value, $ul-scale-modifier);
 }

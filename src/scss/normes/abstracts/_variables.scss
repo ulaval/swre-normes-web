@@ -1,9 +1,18 @@
 // Dimensions standard. La première variable peut être ajustée en fonction des dimensions générales de votre projet.
-$ul-desktop-large-width: 1792px; // Largeur maximale du site (contenu régulier centré à partir de cette taille)
-$ul-padding-threshold: calc($ul-desktop-large-width + ul-scale-units(8rem)); // Largeur maximale du site + padding régulier
-$ul-desktop-small-width: 1536px; // Réduction de la taille de certains textes d'en-tête pour les petits desktops
-$ul-tablet-width: 1366px; // Affichage en mode tablette (début du menu mobile)
-$ul-mobile-width: 1280px; // Bascul en mode mobile
-$ul-mobile-links-stack: 992px; // Breakpoint pour séparer les liens des mesures d'urgence dans le pied de page
-$ul-tablet-small: 768px; // Affichage en mode tablette réduite (réduction des marges principales)
-$ul-mobile-small: 428px; // Affichage en mode mobile (réalignement des icônes de médias sociaux)
+
+// Largeur maximale du site (contenu régulier centré à partir de cette taille)
+$ul-desktop-large-width: 1792px;
+// Largeur maximale du site + padding régulier
+$ul-padding-threshold: calc($ul-desktop-large-width + ul-scale-units(8rem));
+// Réduction de la taille de certains textes d'en-tête pour les petits desktops
+$ul-desktop-small-width: 1536px;
+// Affichage en mode tablette (début du menu mobile)
+$ul-tablet-width: 1366px;
+// Bascul en mode mobile
+$ul-mobile-width: 1280px;
+// Breakpoint pour séparer les liens des mesures d'urgence dans le pied de page
+$ul-mobile-links-stack: 992px;
+// Affichage en mode tablette réduite (réduction des marges principales)
+$ul-tablet-small: 768px;
+// Affichage en mode mobile (réalignement des icônes de médias sociaux)
+$ul-mobile-small: 428px;

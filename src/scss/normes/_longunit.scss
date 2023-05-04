@@ -1,20 +1,20 @@
 @import "./abstracts/_global_abstracts.scss";
 
-.ulaval-header-long-unit{
-    @include mobile-menu;
-    
-    &.ulaval-nav-mobile-open {
+.ulaval-header-long-unit {
+  @include mobile-menu;
+
+  &.ulaval-nav-mobile-open {
     @include mobile-menu-colors;
+  }
+  .ulaval-header-title-holder {
+    margin-right: 0;
+  }
+  @media (max-width: $ul-tablet-small) {
+    header.ulaval-header .ulaval-header-main {
+      grid-template-areas:
+        "ecu ecu"
+        "title title"
+        "tools tools";
     }
-    .ulaval-header-title-holder {
-        margin-right: 0;
-    }
-    @media (max-width:$ul-tablet-small){
-        header.ulaval-header .ulaval-header-main{
-            grid-template-areas:
-            "ecu ecu"
-            "title title"
-            "tools tools"
-        }
-    }
+  }
 }

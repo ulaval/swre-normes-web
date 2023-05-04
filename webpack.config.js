@@ -24,7 +24,7 @@ const jsConfig = {
   // Define the output for the JS configuration
   output: {
     // Export the output JS files to the /../assets/js folder
-    path: path.resolve(__dirname, "./../assets/dist/js"),
+    path: path.resolve(__dirname, "././assets/dist/js"),
 
     // Keep the same output name from the input file
     filename: "[name].js",
@@ -62,7 +62,7 @@ const cssConfig = {
   // Export the output files (.js) to the /../assets/tmp folder
   output: {
     // Keep the same output name from the input file
-    path: path.resolve(__dirname, "./../assets/dist/tmp"),
+    path: path.resolve(__dirname, "././assets/dist/tmp"),
   },
 
   // Define the rules for the CSS configuration
@@ -106,7 +106,7 @@ const cssConfig = {
       onBuildEnd: {
         scripts: [
           () => {
-            fs.rmSync("./../assets/dist/tmp", { recursive: true });
+            fs.rmSync("././assets/dist/tmp", { recursive: true });
           },
         ],
       },

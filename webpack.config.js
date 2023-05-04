@@ -24,7 +24,7 @@ const jsConfig = {
   // Define the output for the JS configuration
   output: {
     // Export the output JS files to the /assets/js folder
-    path: path.resolve(__dirname, "./assets/js"),
+    path: path.resolve(__dirname, "./assets/dist/js"),
 
     // Keep the same output name from the input file
     filename: "[name].js",

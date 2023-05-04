@@ -18,14 +18,11 @@ const mapFilenamesToEntries = (directoryPattern, fileExtension) =>
 const jsConfig = {
   // Define the entry points for the JS configuration
   entry: {
-    ...mapFilenamesToEntries("./src/js/**/*.js", "js"),
+    ...mapFilenamesToEntries("./assets/src/js/**/*.js", "js"),
   },
 
   // Define the output for the JS configuration
   output: {
-    // Export the output JS files to the /assets/js folder
-    path: path.resolve(__dirname, "./assets/js"),
-
     // Export the output JS files to the /assets/js folder
     path: path.resolve(__dirname, "./assets/js"),
 
@@ -41,7 +38,7 @@ const jsConfig = {
         test: /\.js$/,
 
         // Only include files in the src directory and its subdirectories
-        include: path.resolve(__dirname, "src"),
+        include: path.resolve(__dirname, "./assets/src"),
 
         // Use these loaders to compile JS files
         use: {
@@ -59,16 +56,13 @@ const jsConfig = {
 const cssConfig = {
   // Define the entry points for your CSS configuration
   entry: {
-    ...mapFilenamesToEntries("./src/scss/**/[^_]*.scss", "scss"),
+    ...mapFilenamesToEntries("./assets/src/scss/**/[^_]*.scss", "scss"),
   },
 
   // Export the output files (.js) to the /assets/tmp folder
   output: {
     // Keep the same output name from the input file
-    path: path.resolve(__dirname, "./assets/tmp"),
-
-    // Keep the same output name from the input file
-    path: path.resolve(__dirname, "./assets/tmp"),
+    path: path.resolve(__dirname, "./assets/dist/tmp"),
   },
 
   // Define the rules for the CSS configuration
@@ -79,7 +73,7 @@ const cssConfig = {
         test: /\.(sa|sc|c)ss$/,
 
         // Only include files in the src directory and its subdirectories
-        include: path.resolve(__dirname, "src"),
+        include: path.resolve(__dirname, "./assets/src"),
 
         // Use these loaders to compile SASS, SCSS and CSS files
         use: [
@@ -112,7 +106,7 @@ const cssConfig = {
       onBuildEnd: {
         scripts: [
           () => {
-            fs.rmSync("./assets/tmp", { recursive: true });
+            fs.rmSync("./assets/dist/tmp", { recursive: true });
           },
         ],
       },

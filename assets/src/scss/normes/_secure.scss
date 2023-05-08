@@ -31,7 +31,7 @@
   }
 }
 
-button.ulaval-secure-menu-trigger {
+.ulaval-secure-menu-trigger {
   border: 0;
   background: none;
   padding: ul-scale-units(1rem) ul-scale-units(0.591rem);
@@ -66,7 +66,7 @@ button.ulaval-secure-menu-trigger {
   }
 }
 
-nav.ulaval-secure-menu-container {
+.ulaval-secure-menu-container {
   position: relative;
   #ulaval-secure-menu {
     position: absolute;
@@ -120,7 +120,7 @@ nav.ulaval-secure-menu-container {
 // Changements de couleur une fois le menu mobile ouvert
 @mixin mobile-menu-secure-colors {
   .ulaval-nav-mobile-open {
-    button.ulaval-secure-menu-trigger {
+    .ulaval-secure-menu-trigger {
       i {
         transition: filter 0.5s ease;
         background-image: var(--img-secure);
@@ -162,6 +162,6 @@ nav.ulaval-secure-menu-container {
 @media (max-width: $ul-mobile-width) {
   @include mobile-menu-secure-colors;
 }
-header.ulaval-header.ulaval-header-long-unit {
+.ulaval-header.ulaval-header-long-unit {
   @include mobile-menu-secure-colors;
 }

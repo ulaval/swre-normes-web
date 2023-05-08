@@ -10,7 +10,7 @@
     margin-right: 0;
   }
   @media (max-width: $ul-tablet-small) {
-    header.ulaval-header .ulaval-header-main {
+    .ulaval-header .ulaval-header-main {
       grid-template-areas:
         "ecu ecu"
         "title title"

@@ -2,7 +2,7 @@
 @import "./abstracts/_global_abstracts.scss";
 
 // Styles
-header.ulaval-header.ulaval-ulavalca-header {
+.ulaval-header.ulaval-ulavalca-header {
   .ulaval-header-ul-link-holder {
     @media (max-width: $ul-mobile-small) {
       align-self: center;
@@ -73,7 +73,7 @@ header.ulaval-header.ulaval-ulavalca-header {
 // Changements de couleur une fois le menu mobile ouvert
 @media (max-width: $ul-mobile-width) {
   .ulaval-nav-mobile-open {
-    header.ulaval-header.ulaval-ulavalca-header {
+    .ulaval-header.ulaval-ulavalca-header {
       .ulaval-header-ul-link {
         .ulaval-header-logo {
           .ulaval-logo-fill {

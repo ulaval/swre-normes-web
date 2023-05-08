@@ -2,7 +2,7 @@
 @import "./abstracts/_global_abstracts.scss";
 
 // Styles
-footer.ulaval-footer {
+.ulaval-footer {
   background-color: var(--ul-color-white);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
   z-index: 2;
@@ -38,7 +38,7 @@ footer.ulaval-footer {
         background-image: var(--img-footer-map);
         background-size: contain;
       }
-      h2.ulaval-footer-address-unit {
+      .ulaval-footer-address-unit {
         margin: 0;
         margin-bottom: ul-scale-units(0.5rem);
         font-size: ul-scale-units(1.25rem);
@@ -163,7 +163,7 @@ footer.ulaval-footer {
             outline-offset: 2px;
           }
         }
-        h2.ulaval-footer-emergency {
+        .ulaval-footer-emergency {
           font-weight: 700;
           margin: 0;
           padding: 0;
@@ -181,7 +181,7 @@ footer.ulaval-footer {
             margin-top: 0;
           }
         }
-        a.ulaval-footer-newsletter {
+        .ulaval-footer-newsletter {
           display: block;
           border: 1px var(--ul-color-black) solid;
           color: var(--ul-color-black);
@@ -282,7 +282,7 @@ footer.ulaval-footer {
   }
 }
 
-a.ulaval-footer-questions {
+.ulaval-footer-questions {
   display: block;
   border: 1px var(--ul-color-black) solid;
   color: var(--ul-color-white);

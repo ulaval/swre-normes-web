@@ -1,0 +1,12 @@
+/**
+ * Import default element reset and typography browser inconsistencies for default box-sizing, line-heights, margins for all elements.
+ */
+
+@import "./_reset.scss";
+@import "./_typography.scss";
+
+body {
+  font-size: em(10);
+  // font-size: em(1em);
+  font-size: em(18px);
+}

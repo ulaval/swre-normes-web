@@ -1,0 +1,27 @@
+/**
+ * Add customizable settings to help implementing to all website.
+ */
+
+/**
+ * Fixes the font-size hack for websites using 62.5% font-sizing to use em as pixel.
+ * Change $font-size-hack to true if your website use the font-size hack.
+ *
+ * @param {Length} $value - The value to fix.
+ * @param {Boolean} [$font-size-hack: false] - Whether the font-size hack is used on the website.
+ * @return {Length} - The fixed value.
+ *
+ * @usage fix-font-size-hack(1em, false) => 1em
+ * @usage fix-font-size-hack(1em, true) => 1.6em
+ * @usage fix-font-size-hack(1rem, false) => 1rem
+ * @usage fix-font-size-hack(1rem, true) => 1.6rem
+ */
+$font-size-hack: false;
+@function fix-font-size-hack($value, $font-size-hack) {
+  @if $font-size-hack {
+    // Multiply $value by 1.6 to scale 62.5% back to 100%
+    @return $value * 1.6;
+  } @else {
+    // Leave $value at 100%
+    @return $value;
+  }
+}

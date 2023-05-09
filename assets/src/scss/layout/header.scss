@@ -1,0 +1,20 @@
+/**
+ * Header
+ */
+
+// Import abstracts
+@import "../abstracts/_abstracts.scss";
+
+// Styles
+.ul-header {
+}
+
+// Uncomment the corresponding header modifier
+// "ulaval.ca" should use "_header--university.scss".
+// "unite.ulaval.ca" should use "_header--unit--no-submenu.scss".
+// "unite.ulaval.ca/sous-unite" should use "_header--unit--with-submenu.scss".
+// "sous-unite.unite.ulaval.ca" should use "_header--subunit.scss".
+@import "./_header--university.scss";
+// @import "./_header--unit--no-submenu.scss";
+// @import "./_header--unit--with-submenu.scss";
+// @import "./_header--subunit.scss";

@@ -6,9 +6,9 @@
 
 // Code falcutatif à utiliser selon les besoins
 // @TODO: Commenter les fichiers qui ne vous concernent pas
-@import "./normes/_ulaval.scss"; // Site institutionnel ulaval.ca
 @import "./normes/_secure.scss"; // Espace sécurisé
-@import "./normes/_sous-unite.scss"; // Menu sous-unité
 
+@import "./normes/_ulaval.scss"; // Site institutionnel ulaval.ca
+@import "./normes/_sous-unite.scss"; // Menu sous-unité
 @import "./normes/_shortunit.scss"; // Sous-unité avec titre régulier
 @import "./normes/_longunit.scss"; // Sous-unité avec titre très long

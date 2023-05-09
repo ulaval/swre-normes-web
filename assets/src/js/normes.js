@@ -10,7 +10,7 @@ var closeMainMenu = function () {
   document
     .querySelector(".ul-header-menu-trigger")
     .setAttribute("aria-expanded", "false");
-  document.body.classList.remove("ulaval-nav-mobile-open");
+  document.body.classList.remove("ul-nav-mobile-open");
 };
 
 // Fermeture du moteur de recherche
@@ -97,7 +97,7 @@ document
       this.querySelector("span.screen-reader-text").innerText =
         "Fermer le menu principal";
       this.setAttribute("aria-expanded", "true");
-      document.body.classList.add("ulaval-nav-mobile-open");
+      document.body.classList.add("ul-nav-mobile-open");
     } else {
       closeMainMenu();
     }
@@ -123,17 +123,14 @@ if (
   (languageSwitcher = document.querySelector(".ul-language-switcher-trigger"))
 ) {
   languageSwitcher.addEventListener("click", function () {
-    openToolMenu(
-      "ulaval-language-switcher-list",
-      ".ul-language-switcher-trigger"
-    );
+    openToolMenu("ul-language-switcher-list", ".ul-language-switcher-trigger");
   });
 }
 
 // Activation du menu sécurisé si disponible
 if ((secureMenu = document.querySelector(".ul-secure-menu-trigger"))) {
   secureMenu.addEventListener("click", function () {
-    openToolMenu("ulaval-secure-menu", ".ul-secure-menu-trigger");
+    openToolMenu("ul-secure-menu", ".ul-secure-menu-trigger");
   });
 }
 

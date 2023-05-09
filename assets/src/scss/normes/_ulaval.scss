@@ -2,7 +2,7 @@
 @import "./abstracts/_global_abstracts.scss";
 
 // Styles
-.ul-header.ul-ulavalca-header {
+.ul-header.ul-university-header {
   .ul-header-ul-link-holder {
     @media (max-width: $ul-mobile-small) {
       align-self: center;
@@ -73,7 +73,7 @@
 // Changements de couleur une fois le menu mobile ouvert
 @media (max-width: $ul-mobile-width) {
   .ul-nav-mobile-open {
-    .ul-header.ul-ulavalca-header {
+    .ul-header.ul-university-header {
       .ul-header-ul-link {
         .ul-header-logo {
           .ul-logo-fill {

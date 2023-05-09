@@ -1,15 +1,14 @@
-# README #
+# Normes web #
+@TODO: Écrire la description général des normes web.
 
-This README would normally document whatever steps are necessary to get your application up and running.
+### Gabarits de référence ###
+En fonction de votre type de site, utilisez le fichier HTML correspondant à votre URL:
+- `ulaval.ca` devrait utilisé le gabarit `university.html`.
+- `unite.ulaval.ca` devrait utilisé le gabarit `unit--no-submenu.html`.
+- `unite.ulaval.ca/sous-unite` devrait utilisé le gabarit `subunit--has-submenu.html`.
+- `sous-unite.unite.ulaval.ca` devrait utilisé le gabarit `subunit.html`.
 
-### What is this repository for? ###
-
-* @TODO
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
+### Installation et utilisation du compilateur de code ###
 ```bash
 # Install Node Package Manager (NPM)
 npm install
@@ -20,14 +19,8 @@ npm run watch
 # Build for production before any commits
 npm run build
 ```
-* @TODO
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
 
+@TODO: Lier aux guidelines et documentations
 ### Contribution guidelines ###
 
 * @TODO
@@ -35,6 +28,9 @@ npm run build
 * Code review
 * Other guidelines
 
+
+@TODO: Définir à qui parler pour évolution et bugs (maintaners)
+@TODO: Support pour installation (aide@swre)
 ### Who do I talk to? ###
 
 * @TODO

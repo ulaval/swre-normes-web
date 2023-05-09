@@ -1,0 +1,8 @@
+/**
+ * Reduce browser inconsistencies for default box-sizing, line-heights, margins for all elements.
+ */
+
+// Import all abstracts
+@import "../abstracts/_abstracts.scss";
+
+// @TODO: Add reset (unifiy default browser styles on all element necessary, margin:0, padding:0)

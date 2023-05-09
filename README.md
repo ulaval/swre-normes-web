@@ -30,6 +30,7 @@ npm run build
 
 
 @TODO: Définir à qui parler pour évolution et bugs (maintaners)
+@TODO: Support pour installation (aide@swre)
 ### Who do I talk to? ###
 
 * @TODO

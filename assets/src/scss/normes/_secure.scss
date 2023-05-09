@@ -7,17 +7,17 @@
   --img-secure-logged: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15.73 15.73'%3E%3Cpath d='m8,0c4.34.07,7.81,3.65,7.74,7.99-.07,4.34-3.65,7.81-7.99,7.74C3.39,15.66-.07,12.08,0,7.74c0,0,0,0,0,0C.08,3.39,3.66-.07,8,0Z' fill='%23040405'/%3E%3Cpath d='m7.93,3.61c1.63.03,2.93,1.37,2.9,3-.03,1.63-1.37,2.93-3,2.9-1.63-.03-2.93-1.37-2.9-3,0,0,0,0,0,0,.03-1.63,1.37-2.92,3-2.9Zm-.08,4.44c.82.01,1.5-.64,1.52-1.47s-.64-1.5-1.47-1.52c-.82-.01-1.5.64-1.52,1.47-.01.82.64,1.5,1.47,1.52Z' fill='%23fff'/%3E%3Cpath d='m10.97,13.12h0c-.27-.31-.58-.58-.92-.8-.7-.46-1.51-.7-2.35-.7-1.2,0-2.34.5-3.16,1.37-.49-.33-.92-.73-1.29-1.19,1.15-1.25,2.76-1.96,4.45-1.97,1.16,0,2.3.34,3.27.98.5.32.95.72,1.33,1.18-.39.44-.84.82-1.34,1.12Z' fill='%23fff'/%3E%3C/svg%3E");
 }
 
-.ulaval-i-login {
+.ul-i-login {
   background-image: var(--img-secure);
   display: block;
 }
 
-.ulaval-i-secure-logged {
+.ul-i-secure-logged {
   background-image: var(--img-secure-logged);
   display: block;
 }
 
-.ulaval-secure-login {
+.ul-secure-login {
   display: block;
   padding: ul-scale-units(1rem);
   line-height: ul-scale-units(1rem);
@@ -31,7 +31,7 @@
   }
 }
 
-.ulaval-secure-menu-trigger {
+.ul-secure-menu-trigger {
   border: 0;
   background: none;
   padding: ul-scale-units(1rem) ul-scale-units(0.591rem);
@@ -56,7 +56,7 @@
     &:after {
       filter: invert(1);
     }
-    .ulaval-i-secure-logged {
+    .ul-i-secure-logged {
       background-image: var(--img-secure);
       filter: invert(1);
     }
@@ -66,7 +66,7 @@
   }
 }
 
-.ulaval-secure-menu-container {
+.ul-secure-menu-container {
   position: relative;
   #ulaval-secure-menu {
     position: absolute;
@@ -92,7 +92,7 @@
         line-height: ul-scale-units(1rem);
         font-size: ul-scale-units(0.875rem);
         text-decoration: none;
-        &:not(.ulaval-secure-logout) {
+        &:not(.ul-secure-logout) {
           font-weight: 600;
         }
         &:hover {
@@ -119,8 +119,8 @@
 
 // Changements de couleur une fois le menu mobile ouvert
 @mixin mobile-menu-secure-colors {
-  .ulaval-nav-mobile-open {
-    .ulaval-secure-menu-trigger {
+  .ul-nav-mobile-open {
+    .ul-secure-menu-trigger {
       i {
         transition: filter 0.5s ease;
         background-image: var(--img-secure);
@@ -142,7 +142,7 @@
         }
       }
     }
-    .ulaval-secure-login {
+    .ul-secure-login {
       color: var(--ul-color-white);
       i {
         transition: filter 0.5s ease;
@@ -162,6 +162,6 @@
 @media (max-width: $ul-mobile-width) {
   @include mobile-menu-secure-colors;
 }
-.ulaval-header.ulaval-header-long-unit {
+.ul-header.ul-header-long-unit {
   @include mobile-menu-secure-colors;
 }

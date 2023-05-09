@@ -2,16 +2,16 @@
 @import "./abstracts/_global_abstracts.scss";
 
 // Styles
-.ulaval-footer {
+.ul-footer {
   background-color: var(--ul-color-white);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
   z-index: 2;
   :focus {
     outline: 1px solid;
   }
-  .ulaval-footer-contact,
-  .ulaval-footer-nav,
-  .ulaval-footer-logos {
+  .ul-footer-contact,
+  .ul-footer-nav,
+  .ul-footer-logos {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -25,7 +25,7 @@
     padding-bottom: 0;
     @include ul-footer-paddings;
 
-    .ulaval-footer-address {
+    .ul-footer-address {
       position: relative;
       &:after {
         position: absolute;
@@ -38,7 +38,7 @@
         background-image: var(--img-footer-map);
         background-size: contain;
       }
-      .ulaval-footer-address-unit {
+      .ul-footer-address-unit {
         margin: 0;
         margin-bottom: ul-scale-units(0.5rem);
         font-size: ul-scale-units(1.25rem);
@@ -52,15 +52,15 @@
         margin-bottom: ul-scale-units(0.5rem);
         font-size: ul-scale-units(0.875rem);
         max-width: 664px;
-        &.ulaval-footer-address-subunit {
+        &.ul-footer-address-subunit {
           font-size: ul-scale-units(1.25rem);
           margin-top: -1rem;
           margin-bottom: ul-scale-units(1rem);
         }
       }
     }
-    .ulaval-footer-mail-social,
-    .ulaval-footer-logos {
+    .ul-footer-mail-social,
+    .ul-footer-logos {
       display: flex;
       flex-direction: column;
       gap: ul-scale-units(1rem);
@@ -69,7 +69,7 @@
         gap: ul-scale-units(2rem);
       }
     }
-    .ulaval-footer-social {
+    .ul-footer-social {
       ul {
         display: flex;
         justify-content: flex-end;
@@ -102,7 +102,7 @@
         }
       }
     }
-    .ulaval-footer-nav-list {
+    .ul-footer-nav-list {
       display: flex;
       gap: ul-scale-units(4.5rem);
       @media (max-width: $ul-mobile-links-stack) {
@@ -110,7 +110,7 @@
         gap: ul-scale-units(2.5rem);
         align-items: flex-start;
       }
-      .ulaval-footer-nav-content {
+      .ul-footer-nav-content {
         display: flex;
         gap: ul-scale-units(4.5rem);
         font-size: ul-scale-units(0.875rem);
@@ -151,7 +151,7 @@
         }
       }
 
-      .ulaval-footer-nav-emergency {
+      .ul-footer-nav-emergency {
         font-size: ul-scale-units(0.875rem);
         a {
           color: var(--ul-color-black);
@@ -163,7 +163,7 @@
             outline-offset: 2px;
           }
         }
-        .ulaval-footer-emergency {
+        .ul-footer-emergency {
           font-weight: 700;
           margin: 0;
           padding: 0;
@@ -181,7 +181,7 @@
             margin-top: 0;
           }
         }
-        .ulaval-footer-newsletter {
+        .ul-footer-newsletter {
           display: block;
           border: 1px var(--ul-color-black) solid;
           color: var(--ul-color-black);
@@ -203,13 +203,13 @@
       }
     }
   }
-  .ulaval-footer-nav {
+  .ul-footer-nav {
     padding-top: ul-scale-units(3rem);
   }
-  .ulaval-footer-contact {
+  .ul-footer-contact {
     padding-top: ul-scale-units(4rem);
   }
-  .ulaval-footer-copyright {
+  .ul-footer-copyright {
     margin-top: ul-scale-units(3rem);
     background-color: var(--ul-color-black);
     color: var(--ul-color-white);
@@ -264,25 +264,25 @@
       }
     }
   }
-  .ulaval-footer-logos {
+  .ul-footer-logos {
     padding-top: ul-scale-units(3rem);
     @media (max-width: $ul-tablet-small) {
       flex-direction: column;
       gap: ul-scale-units(3rem);
     }
-    &:not(:where(.ulaval-footer-logos-agreements)) {
+    &:not(:where(.ul-footer-logos-agreements)) {
       justify-content: flex-end;
     }
-    .ulaval-footer-logo-unite {
+    .ul-footer-logo-unite {
       width: 237px;
     }
-    .ulaval-footer-logo {
+    .ul-footer-logo {
       width: 140px;
     }
   }
 }
 
-.ulaval-footer-questions {
+.ul-footer-questions {
   display: block;
   border: 1px var(--ul-color-black) solid;
   color: var(--ul-color-white);

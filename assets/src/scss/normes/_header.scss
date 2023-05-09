@@ -3,7 +3,7 @@
 
 // Styles
 // Paramètres généraux de l'en-tête / version bureau
-.ulaval-header {
+.ul-header {
   background: linear-gradient(
         90deg,
         var(--ul-color-red),
@@ -39,7 +39,7 @@
   :focus {
     outline: 1px solid;
   }
-  .ulaval-header-main {
+  .ul-header-main {
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-areas:
@@ -52,7 +52,7 @@
     padding-bottom: ul-scale-units(1rem);
     @include ul-paddings;
   }
-  .ulaval-header-ul-link-holder {
+  .ul-header-ul-link-holder {
     grid-area: ecu;
     display: flex;
     &:before {
@@ -66,7 +66,7 @@
       margin-right: 10px;
     }
   }
-  .ulaval-header-ul-link {
+  .ul-header-ul-link {
     a {
       font-size: ul-scale-units(1rem);
       color: var(--ul-color-black);
@@ -85,7 +85,7 @@
       }
     }
   }
-  .ulaval-header-title-holder {
+  .ul-header-title-holder {
     min-height: ul-scale-units(3rem);
     display: flex;
     flex-direction: column;
@@ -97,7 +97,7 @@
       margin-right: 0;
     }
   }
-  .ulaval-header-title {
+  .ul-header-title {
     flex: 0 0 25%;
     font-weight: 700;
     text-decoration: none;
@@ -115,11 +115,11 @@
       font-size: ul-scale-units(1.125rem);
     }
   }
-  .ulaval-header-mobile-menu {
+  .ul-header-mobile-menu {
     display: none;
   }
 
-  .ulaval-header-secondary-nav {
+  .ul-header-secondary-nav {
     grid-area: secondnav;
     align-self: center;
     ul {
@@ -148,7 +148,7 @@
     }
   }
 
-  .ulaval-header-tools {
+  .ul-header-tools {
     grid-area: tools;
     display: flex;
     justify-content: flex-end;
@@ -156,7 +156,7 @@
     gap: 0;
   }
 
-  .ulaval-header-main-nav {
+  .ul-header-main-nav {
     grid-area: mainnav;
     align-self: center;
     ul {
@@ -207,7 +207,7 @@
     }
   }
 
-  .ulaval-header-search-trigger {
+  .ul-header-search-trigger {
     border: 0;
     background: none;
     padding: ul-scale-units(0.938rem) ul-scale-units(1rem);
@@ -247,7 +247,7 @@
     }
   }
 
-  .ulaval-language-switcher-trigger {
+  .ul-language-switcher-trigger {
     border: 0;
     background: none;
     padding: ul-scale-units(1rem) ul-scale-units(0.591rem);
@@ -279,7 +279,7 @@
       transform: scaleY(-1);
     }
   }
-  .ulaval-language-switcher {
+  .ul-language-switcher {
     position: relative;
     #ulaval-language-switcher-list {
       position: absolute;
@@ -325,11 +325,11 @@
       }
     }
   }
-  .ulaval-header-menu-trigger {
+  .ul-header-menu-trigger {
     display: none;
   }
 
-  .ulaval-header-search {
+  .ul-header-search {
     background: var(--ul-color-black);
     overflow: hidden;
     display: none;
@@ -339,11 +339,11 @@
     z-index: 1;
     &.open {
       display: block;
-      animation: ulaval-header-search-fadeIn 0.5s;
+      animation: ul-header-search-fadeIn 0.5s;
     }
     &:not(.open).remove {
       display: block;
-      animation: ulaval-header-search-fadeOut 0.5s;
+      animation: ul-header-search-fadeOut 0.5s;
     }
     form {
       padding: ul-scale-units(2rem);
@@ -395,7 +395,7 @@
 
 // Affichage mobile
 @mixin mobile-menu {
-  .ulaval-header .ulaval-header-main {
+  .ul-header .ul-header-main {
     & > * {
       z-index: 3;
     }
@@ -416,12 +416,12 @@
       "ecu ecu"
       "title tools";
     grid-column-gap: ul-scale-units(1rem);
-    .ulaval-header-secondary-nav,
-    .ulaval-header-main-nav,
-    .ulaval-language-switcher {
+    .ul-header-secondary-nav,
+    .ul-header-main-nav,
+    .ul-language-switcher {
       display: none;
     }
-    .ulaval-header-menu-trigger {
+    .ul-header-menu-trigger {
       display: flex;
       align-items: center;
       width: 48px;
@@ -458,7 +458,7 @@
           transition: right 0.3s ease;
         }
       }
-      & > .ulaval-header-menu-trigger-midbar {
+      & > .ul-header-menu-trigger-midbar {
         &:before {
           content: "";
           position: absolute;
@@ -494,7 +494,7 @@
           background-color: var(--ul-color-white);
         }
 
-        & > .ulaval-header-menu-trigger-midbar {
+        & > .ul-header-menu-trigger-midbar {
           &:before,
           &:after {
             background-color: var(--ul-color-white);
@@ -515,7 +515,7 @@
             transition: right 0.3s ease, background-color 0.3s ease;
           }
         }
-        & > .ulaval-header-menu-trigger-midbar {
+        & > .ul-header-menu-trigger-midbar {
           &:before,
           &:after {
             transition: background-color 0.5s ease;
@@ -531,7 +531,7 @@
         &:after {
           right: 32px;
         }
-        & > .ulaval-header-menu-trigger-midbar {
+        & > .ul-header-menu-trigger-midbar {
           &:before {
             transform: rotate(-45deg);
           }
@@ -546,7 +546,7 @@
           &:after {
             background-color: var(--ul-color-black);
           }
-          & > .ulaval-header-menu-trigger-midbar {
+          & > .ul-header-menu-trigger-midbar {
             &:before,
             &:after {
               background-color: var(--ul-color-black);
@@ -556,7 +556,7 @@
       }
     }
   }
-  .ulaval-header .ulaval-header-mobile-menu {
+  .ul-header .ul-header-mobile-menu {
     padding-top: ul-scale-units(3rem);
     padding-bottom: ul-scale-units(3rem);
     background-color: var(--ul-color-black);
@@ -570,13 +570,13 @@
     z-index: 1;
     &.open {
       display: block;
-      animation-name: ulaval-header-mobile-fadeIn;
+      animation-name: ul-header-mobile-fadeIn;
     }
     &:not(.open).remove {
       display: block;
-      animation-name: ulaval-header-mobile-fadeOut;
+      animation-name: ul-header-mobile-fadeOut;
     }
-    .ulaval-header-mobile-menu-content {
+    .ul-header-mobile-menu-content {
       display: flex;
       flex-direction: column;
       gap: ul-scale-units(2rem);
@@ -584,7 +584,7 @@
       @include ul-paddings;
     }
 
-    .ulaval-header-main-nav {
+    .ul-header-main-nav {
       align-self: flex-start;
       ul {
         flex-direction: column;
@@ -609,7 +609,7 @@
         }
       }
     }
-    .ulaval-header-secondary-nav {
+    .ul-header-secondary-nav {
       align-self: flex-start;
       ul {
         flex-direction: column;
@@ -621,7 +621,7 @@
       }
     }
 
-    .ulaval-mobile-language-switcher {
+    .ul-mobile-language-switcher {
       ul {
         display: flex;
         gap: ul-scale-units(1rem);
@@ -647,7 +647,7 @@
 }
 
 // Animations reliées au moteur de recherche
-@keyframes ulaval-header-search-fadeIn {
+@keyframes ul-header-search-fadeIn {
   from {
     max-height: 0;
   }
@@ -656,7 +656,7 @@
   }
 }
 
-@keyframes ulaval-header-search-fadeOut {
+@keyframes ul-header-search-fadeOut {
   from {
     max-height: 220px;
   }
@@ -666,7 +666,7 @@
 }
 
 // Animations reliées au menu mobile
-@keyframes ulaval-header-mobile-fadeIn {
+@keyframes ul-header-mobile-fadeIn {
   from {
     transform: translateX(-100vw);
   }
@@ -675,7 +675,7 @@
   }
 }
 
-@keyframes ulaval-header-mobile-fadeOut {
+@keyframes ul-header-mobile-fadeOut {
   from {
     transform: translateX(0);
   }
@@ -694,31 +694,31 @@
   bottom: 0;
   left: 0;
   right: 0;
-  .ulaval-header .ulaval-header-main {
+  .ul-header .ul-header-main {
     &:before {
       width: 100%;
     }
 
-    .ulaval-header-ul-link a,
-    .ulaval-header-title {
+    .ul-header-ul-link a,
+    .ul-header-title {
       color: var(--ul-color-white);
     }
-    .ulaval-header-ul-link a:not(:first-child) {
+    .ul-header-ul-link a:not(:first-child) {
       border-color: var(--ul-color-white);
     }
-    .ulaval-header-menu-trigger {
+    .ul-header-menu-trigger {
       &:before,
       &:after {
         background-color: var(--ul-color-white);
       }
-      & > .ulaval-header-menu-trigger-midbar {
+      & > .ul-header-menu-trigger-midbar {
         &:before,
         &:after {
           background-color: var(--ul-color-white);
         }
       }
     }
-    .ulaval-header-search-trigger {
+    .ul-header-search-trigger {
       i {
         transition: filter 0.5s ease;
         filter: invert(1);
@@ -733,7 +733,7 @@
       }
     }
   }
-  .ulaval-footer {
+  .ul-footer {
     z-index: 1;
   }
 }

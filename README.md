@@ -3,10 +3,11 @@
 
 ### Gabarits de référence ###
 En fonction de votre type de site, utilisez le fichier HTML correspondant à votre URL:
-- `ulaval.ca` devrait utilisé le gabarit `university.html`.
-- `unite.ulaval.ca` devrait utilisé le gabarit `unit--no-submenu.html`.
-- `unite.ulaval.ca/sous-unite` devrait utilisé le gabarit `subunit--has-submenu.html`.
-- `sous-unite.unite.ulaval.ca` devrait utilisé le gabarit `subunit.html`.
+
+* `ulaval.ca` devrait utilisé le gabarit `university.html`.
+* `unite.ulaval.ca` devrait utilisé le gabarit `unit--no-submenu.html`.
+* `unite.ulaval.ca/sous-unite` devrait utilisé le gabarit `subunit--with-submenu.html`.
+* `sous-unite.unite.ulaval.ca` devrait utilisé le gabarit `subunit.html`.
 
 ### Installation et utilisation du compilateur de code ###
 ```bash

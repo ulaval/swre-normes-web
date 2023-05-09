@@ -1,18 +1,18 @@
 // Importation du fichier global
 @import "./abstracts/_global_abstracts.scss";
 
-.ulaval-header-menu-sous-unite-container {
+.ul-header-menu-sous-unite-container {
   background-color: var(--ul-color-black);
   color: var(--ul-color-white);
 }
 
-.ulaval-header-menu-sous-unite-content {
+.ul-header-menu-sous-unite-content {
   @include ul-container;
   @include ul-paddings;
   display: flex;
   align-items: center;
   column-gap: ul-scale-units(3rem);
-  .ulaval-header-menu-sous-unite-link {
+  .ul-header-menu-sous-unite-link {
     color: var(--ul-color-white);
     font-size: ul-scale-units(1rem);
     font-weight: 700;
@@ -100,7 +100,7 @@
 }
 
 @media (max-width: $ul-mobile-width) {
-  .ulaval-header-menu-sous-unite-content {
+  .ul-header-menu-sous-unite-content {
     button {
       display: flex;
     }
@@ -122,11 +122,11 @@
       display: none;
       &.open {
         display: block;
-        animation: ulaval-header-sous-unite-fadeIn 0.5s;
+        animation: ul-header-sous-unite-fadeIn 0.5s;
       }
       &:not(.open).remove {
         display: block;
-        animation: ulaval-header-sous-unite-fadeOut 0.5s;
+        animation: ul-header-sous-unite-fadeOut 0.5s;
       }
     }
     ul {
@@ -149,7 +149,7 @@
 }
 
 // Animations reliées au moteur de recherche
-@keyframes ulaval-header-sous-unite-fadeIn {
+@keyframes ul-header-sous-unite-fadeIn {
   from {
     max-height: 0;
   }
@@ -158,7 +158,7 @@
   }
 }
 
-@keyframes ulaval-header-sous-unite-fadeOut {
+@keyframes ul-header-sous-unite-fadeOut {
   from {
     max-height: 1000px;
   }

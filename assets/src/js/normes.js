@@ -2,36 +2,34 @@ let currentOpenMenu = null;
 
 // Fermeture du menu
 var closeMainMenu = function () {
-  document.querySelector(".ulaval-header-mobile-menu").classList.remove("open");
+  document.querySelector(".ul-header-mobile-menu").classList.remove("open");
   document
-    .querySelector(".ulaval-header-menu-trigger")
+    .querySelector(".ul-header-menu-trigger")
     .querySelector("span.screen-reader-text").innerText =
     "Ouvrir le menu principal";
   document
-    .querySelector(".ulaval-header-menu-trigger")
+    .querySelector(".ul-header-menu-trigger")
     .setAttribute("aria-expanded", "false");
-  document.body.classList.remove("ulaval-nav-mobile-open");
+  document.body.classList.remove("ul-nav-mobile-open");
 };
 
 // Fermeture du moteur de recherche
 var closeMainSearch = function () {
-  document.querySelector(".ulaval-header-search").classList.remove("open");
+  document.querySelector(".ul-header-search").classList.remove("open");
   document.removeEventListener("keydown", detectBackTabOnSearchBar);
   document
-    .querySelector(".ulaval-header-search-trigger")
+    .querySelector(".ul-header-search-trigger")
     .setAttribute("aria-expanded", "false");
 };
 
 // Fermeture du moteur de recherche
 var closeMenuSousUnite = function () {
+  document.querySelector(".ul-header-menu-sous-unite").classList.remove("open");
   document
-    .querySelector(".ulaval-header-menu-sous-unite")
-    .classList.remove("open");
-  document
-    .querySelector(".ulaval-header-menu-sous-unite-trigger")
+    .querySelector(".ul-header-menu-sous-unite-trigger")
     .setAttribute("aria-expanded", "false");
   document
-    .querySelector(".ulaval-header-menu-sous-unite-trigger")
+    .querySelector(".ul-header-menu-sous-unite-trigger")
     .setAttribute("aria-label", "Ouvrir le menu");
 };
 
@@ -91,30 +89,26 @@ var openToolMenu = function (menu, trigger) {
 
 // Comportement du bouton de menu mobile
 document
-  .querySelector(".ulaval-header-menu-trigger")
+  .querySelector(".ul-header-menu-trigger")
   .addEventListener("click", function () {
     if (this.getAttribute("aria-expanded") == "false") {
       closeOtherElements();
-      document
-        .querySelector(".ulaval-header-mobile-menu")
-        .classList.add("open");
+      document.querySelector(".ul-header-mobile-menu").classList.add("open");
       this.querySelector("span.screen-reader-text").innerText =
         "Fermer le menu principal";
       this.setAttribute("aria-expanded", "true");
-      document.body.classList.add("ulaval-nav-mobile-open");
+      document.body.classList.add("ul-nav-mobile-open");
     } else {
       closeMainMenu();
     }
   });
 
 // Comportement du bouton du moteur de recherche principal
-if (
-  (searchBarButton = document.querySelector(".ulaval-header-search-trigger"))
-) {
+if ((searchBarButton = document.querySelector(".ul-header-search-trigger"))) {
   searchBarButton.addEventListener("click", function () {
     if (this.getAttribute("aria-expanded") == "false") {
       closeOtherElements();
-      document.querySelector(".ulaval-header-search").classList.add("open");
+      document.querySelector(".ul-header-search").classList.add("open");
       document.querySelector(".champ-recherche").focus();
       document.addEventListener("keydown", detectBackTabOnSearchBar);
       this.setAttribute("aria-expanded", "true");
@@ -126,36 +120,31 @@ if (
 
 // Activation du sélecteur de langue si disponible
 if (
-  (languageSwitcher = document.querySelector(
-    ".ulaval-language-switcher-trigger"
-  ))
+  (languageSwitcher = document.querySelector(".ul-language-switcher-trigger"))
 ) {
   languageSwitcher.addEventListener("click", function () {
-    openToolMenu(
-      "ulaval-language-switcher-list",
-      ".ulaval-language-switcher-trigger"
-    );
+    openToolMenu("ul-language-switcher-list", ".ul-language-switcher-trigger");
   });
 }
 
 // Activation du menu sécurisé si disponible
-if ((secureMenu = document.querySelector(".ulaval-secure-menu-trigger"))) {
+if ((secureMenu = document.querySelector(".ul-secure-menu-trigger"))) {
   secureMenu.addEventListener("click", function () {
-    openToolMenu("ulaval-secure-menu", ".ulaval-secure-menu-trigger");
+    openToolMenu("ul-secure-menu", ".ul-secure-menu-trigger");
   });
 }
 
 // Activation du menu sous-unité si disponible
 if (
   (sousUniteTrigger = document.querySelector(
-    ".ulaval-header-menu-sous-unite-trigger"
+    ".ul-header-menu-sous-unite-trigger"
   ))
 ) {
   sousUniteTrigger.addEventListener("click", function () {
     if (this.getAttribute("aria-expanded") == "false") {
       closeOtherElements();
       document
-        .querySelector(".ulaval-header-menu-sous-unite")
+        .querySelector(".ul-header-menu-sous-unite")
         .classList.add("open");
       this.setAttribute("aria-label", "Fermer le menu");
       this.setAttribute("aria-expanded", "true");
@@ -200,7 +189,7 @@ var detectBackTabOnSearchBar = function (e) {
     e.shiftKey &&
     e.keyCode == 9
   ) {
-    document.querySelector(".ulaval-header-search-trigger").focus();
+    document.querySelector(".ul-header-search-trigger").focus();
     e.preventDefault();
   }
 };
@@ -254,10 +243,10 @@ var toolMenuKeyUp = function (e) {
 var closeOtherElements = function () {
   closeMainMenu();
   closeToolMenu();
-  if (document.querySelector(".ulaval-header-search-trigger")) {
+  if (document.querySelector(".ul-header-search-trigger")) {
     closeMainSearch();
   }
-  if (document.querySelector(".ulaval-header-menu-sous-unite")) {
+  if (document.querySelector(".ul-header-menu-sous-unite")) {
     closeMenuSousUnite();
   }
 };
@@ -265,18 +254,18 @@ var closeOtherElements = function () {
 // Ajout/retrait de certaines classes durant les périodes d'animation pour aider à la fluidité
 document.addEventListener("animationstart", function (e) {
   if (
-    e.animationName === "ulaval-header-search-fadeIn" ||
-    e.animationName === "ulaval-header-mobile-fadeIn" ||
-    e.animationName === "ulaval-header-sous-unite-fadeIn"
+    e.animationName === "ul-header-search-fadeIn" ||
+    e.animationName === "ul-header-mobile-fadeIn" ||
+    e.animationName === "ul-header-sous-unite-fadeIn"
   ) {
     e.target.classList.add("remove");
   }
 });
 document.addEventListener("animationend", function (e) {
   if (
-    e.animationName === "ulaval-header-search-fadeOut" ||
-    e.animationName === "ulaval-header-mobile-fadeOut" ||
-    e.animationName === "ulaval-header-sous-unite-fadeOut"
+    e.animationName === "ul-header-search-fadeOut" ||
+    e.animationName === "ul-header-mobile-fadeOut" ||
+    e.animationName === "ul-header-sous-unite-fadeOut"
   ) {
     e.target.classList.remove("remove");
   }

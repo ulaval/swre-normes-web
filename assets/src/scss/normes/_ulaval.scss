@@ -2,8 +2,8 @@
 @import "./abstracts/_global_abstracts.scss";
 
 // Styles
-.ulaval-header.ulaval-ulavalca-header {
-  .ulaval-header-ul-link-holder {
+.ul-header.ul-university-header {
+  .ul-header-ul-link-holder {
     @media (max-width: $ul-mobile-small) {
       align-self: center;
     }
@@ -14,11 +14,11 @@
       }
     }
   }
-  .ulaval-header-ul-link {
-    .ulaval-header-logo {
+  .ul-header-ul-link {
+    .ul-header-logo {
       width: 140px;
       padding: 8px;
-      .ulaval-logo-fill {
+      .ul-logo-fill {
         fill: var(--ul-color-black);
         transition: fill 0.5s ease;
       }
@@ -44,7 +44,7 @@
     }
   }
 
-  .ulaval-header-main {
+  .ul-header-main {
     grid-template-columns: auto 1fr auto auto;
     grid-template-areas: "ecu mainnav secondnav tools";
     row-gap: 0;
@@ -72,11 +72,11 @@
 
 // Changements de couleur une fois le menu mobile ouvert
 @media (max-width: $ul-mobile-width) {
-  .ulaval-nav-mobile-open {
-    .ulaval-header.ulaval-ulavalca-header {
-      .ulaval-header-ul-link {
-        .ulaval-header-logo {
-          .ulaval-logo-fill {
+  .ul-nav-mobile-open {
+    .ul-header.ul-university-header {
+      .ul-header-ul-link {
+        .ul-header-logo {
+          .ul-logo-fill {
             fill: var(--ul-color-white);
           }
         }

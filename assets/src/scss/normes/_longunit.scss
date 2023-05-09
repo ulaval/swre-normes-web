@@ -1,16 +1,16 @@
 @import "./abstracts/_global_abstracts.scss";
 
-.ulaval-header-long-unit {
+.ul-header-long-unit {
   @include mobile-menu;
 
-  &.ulaval-nav-mobile-open {
+  &.ul-nav-mobile-open {
     @include mobile-menu-colors;
   }
-  .ulaval-header-title-holder {
+  .ul-header-title-holder {
     margin-right: 0;
   }
   @media (max-width: $ul-tablet-small) {
-    .ulaval-header .ulaval-header-main {
+    .ul-header .ul-header-main {
       grid-template-areas:
         "ecu ecu"
         "title title"

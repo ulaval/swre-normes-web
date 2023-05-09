@@ -51,5 +51,5 @@ Thumbs.db
 # Ignore Developper files
 docker-compose.yml
 
-# Don't assets dist
+# Don't ignore assets dist
 !/assets/dist

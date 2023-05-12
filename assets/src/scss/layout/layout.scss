@@ -8,8 +8,12 @@
 @import "../abstracts/_abstracts.scss";
 
 // Local variables
-// $website-container-padding: 1em;
-$website-container-padding: 1.25em;
+// On mobile, the base padding on each side is 1em (16px).
+$website-container-base-padding: fix-font-size-hack(1em);
+
+// The we a step that is increasing for each breakpoint.
+// The step is equal to half of 1.25em (20px) of each side.
+$website-container-step-padding: fix-font-size-hack(calc(1.25em / 2));
 
 // Styles
 .container {
@@ -19,8 +23,10 @@ $website-container-padding: 1.25em;
   @if $website-container-type == "fixed" {
   }
   @if $website-container-type == "fluid" {
-    padding-left: $website-container-padding * 1;
-    padding-right: $website-container-padding * 1;
+    padding-left: $website-container-base-padding +
+      ($website-container-step-padding * 0);
+    padding-right: $website-container-base-padding +
+      ($website-container-step-padding * 0);
   }
 }
 
@@ -33,8 +39,10 @@ $website-container-padding: 1.25em;
     @if $website-container-type == "fixed" {
     }
     @if $website-container-type == "fluid" {
-      padding-left: $website-container-padding * 2;
-      padding-right: $website-container-padding * 2;
+      padding-left: $website-container-base-padding +
+        ($website-container-step-padding * 1);
+      padding-right: $website-container-base-padding +
+        ($website-container-step-padding * 1);
     }
   }
 }
@@ -44,8 +52,10 @@ $website-container-padding: 1.25em;
     @if $website-container-type == "fixed" {
     }
     @if $website-container-type == "fluid" {
-      padding-left: $website-container-padding * 3;
-      padding-right: $website-container-padding * 3;
+      padding-left: $website-container-base-padding +
+        ($website-container-step-padding * 2);
+      padding-right: $website-container-base-padding +
+        ($website-container-step-padding * 2);
     }
   }
 }
@@ -55,41 +65,55 @@ $website-container-padding: 1.25em;
     @if $website-container-type == "fixed" {
     }
     @if $website-container-type == "fluid" {
-      padding-left: $website-container-padding * 4;
-      padding-right: $website-container-padding * 4;
+      padding-left: $website-container-base-padding +
+        ($website-container-step-padding * 3);
+      padding-right: $website-container-base-padding +
+        ($website-container-step-padding * 3);
     }
   }
 }
 
-@media (min-width: $breakpoint-xl) {
-  .container {
-    @if $website-container-type == "fixed" {
-    }
-    @if $website-container-type == "fluid" {
-      padding-left: $website-container-padding * 5;
-      padding-right: $website-container-padding * 5;
-    }
-  }
-}
-
-@media (min-width: $breakpoint-xxl) {
-  .container {
-    @if $website-container-type == "fixed" {
-    }
-    @if $website-container-type == "fluid" {
-      padding-left: $website-container-padding * 6;
-      padding-right: $website-container-padding * 6;
+@if $website-container-max-width > $breakpoint-xl {
+  @media (min-width: $breakpoint-xl) {
+    .container {
+      @if $website-container-type == "fixed" {
+      }
+      @if $website-container-type == "fluid" {
+        padding-left: $website-container-base-padding +
+          ($website-container-step-padding * 4);
+        padding-right: $website-container-base-padding +
+          ($website-container-step-padding * 4);
+      }
     }
   }
 }
 
-@media (min-width: $breakpoint-sl) {
-  .container {
-    @if $website-container-type == "fixed" {
+@if $website-container-max-width > $breakpoint-xxl {
+  @media (min-width: $breakpoint-xxl) {
+    .container {
+      @if $website-container-type == "fixed" {
+      }
+      @if $website-container-type == "fluid" {
+        padding-left: $website-container-base-padding +
+          ($website-container-step-padding * 5);
+        padding-right: $website-container-base-padding +
+          ($website-container-step-padding * 5);
+      }
     }
-    @if $website-container-type == "fluid" {
-      padding-left: $website-container-padding * 7;
-      padding-right: $website-container-padding * 7;
+  }
+}
+
+@if $website-container-max-width > $breakpoint-sl {
+  @media (min-width: $breakpoint-sl) {
+    .container {
+      @if $website-container-type == "fixed" {
+      }
+      @if $website-container-type == "fluid" {
+        padding-left: $website-container-base-padding +
+          ($website-container-step-padding * 6);
+        padding-right: $website-container-base-padding +
+          ($website-container-step-padding * 6);
+      }
     }
   }
 }

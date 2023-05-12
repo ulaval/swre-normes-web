@@ -28,9 +28,9 @@
  * With the fixed method, the website will have multiple pre-defined breakpoints
  * With the fluid method, the website will always use 100% of the available space.
  *
- * @usage $website-container-max-width: 1800px;
+ * @usage $website-container-max-width: 1940px;
  * @usage $website-container-max-width: 1600px;
- * @usage $website-container-max-width: 1200px;
+ * @usage $website-container-max-width: 1280px;
  */
 /**
  * Fixes the font-size hack for websites using 62.5% font-sizing to use em as pixel.
@@ -104,9 +104,9 @@
  * With the fixed method, the website will have multiple pre-defined breakpoints
  * With the fluid method, the website will always use 100% of the available space.
  *
- * @usage $website-container-max-width: 1800px;
+ * @usage $website-container-max-width: 1940px;
  * @usage $website-container-max-width: 1600px;
- * @usage $website-container-max-width: 1200px;
+ * @usage $website-container-max-width: 1280px;
  */
 /**
  * Fixes the font-size hack for websites using 62.5% font-sizing to use em as pixel.

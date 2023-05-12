@@ -1,9 +1,9 @@
 // Dimensions standard. La première variable peut être ajustée en fonction des dimensions générales de votre projet.
 
 // Largeur maximale du site (contenu régulier centré à partir de cette taille)
-$ul-desktop-large-width: 1792px;
+// $ul-desktop-large-width: 1792px;
 // Largeur maximale du site + padding régulier
-$ul-padding-threshold: calc($ul-desktop-large-width + ul-scale-units(8rem));
+// $ul-padding-threshold: calc($ul-desktop-large-width + ul-scale-units(8rem));
 // Réduction de la taille de certains textes d'en-tête pour les petits desktops
 $ul-desktop-small-width: 1536px;
 // Affichage en mode tablette (début du menu mobile)

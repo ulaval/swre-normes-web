@@ -146,86 +146,15 @@ Icônes utilisées dans l'en-tête et le pied de page. Utilise des SVG intégré
   background-size: 100% 8px;
   display: block;
   content: "";
-  margin: 0 auto;
-  width: 100%;
   padding: 0;
-  padding-left: 4rem;
-  padding-right: 4rem;
   height: 8px;
-}
-@media (min-width: calc(1792px + 8rem)) {
-  .ul-header:before {
-    max-width: 1792px;
-  }
-}
-@media (min-width: calc(1792px + 8rem)) {
-  .ul-header:before {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-@media (max-width: 1366px) {
-  .ul-header:before {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-@media (max-width: 1280px) {
-  .ul-header:before {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-@media (max-width: 768px) {
-  .ul-header:before {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
 }
 .ul-header :focus {
   outline: 1px solid;
 }
 .ul-header .ul-header-main {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-areas: "ecu secondnav secondnav" "title mainnav tools";
-  row-gap: 1rem;
-  column-gap: 3rem;
-  margin: 0 auto;
-  width: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-@media (min-width: calc(1792px + 8rem)) {
-  .ul-header .ul-header-main {
-    max-width: 1792px;
-  }
-}
-@media (min-width: calc(1792px + 8rem)) {
-  .ul-header .ul-header-main {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-@media (max-width: 1366px) {
-  .ul-header .ul-header-main {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-@media (max-width: 1280px) {
-  .ul-header .ul-header-main {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-@media (max-width: 768px) {
-  .ul-header .ul-header-main {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
 }
 .ul-header .ul-header-ul-link-holder {
   grid-area: ecu;
@@ -513,12 +442,6 @@ Icônes utilisées dans l'en-tête et le pied de page. Utilise des SVG intégré
     padding: 1rem 1.5rem;
   }
 }
-@media (min-width: calc(1792px + 8rem)) {
-  .ul-header .ul-header-search form {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
 .ul-header .ul-header-search form input.champ-recherche {
   background-color: var(--ul-color-white);
   border-radius: 0;
@@ -596,8 +519,6 @@ Icônes utilisées dans l'en-tête et le pied de page. Utilise des SVG intégré
   align-items: flex-start;
   gap: 2.22rem;
   padding-bottom: 0;
-  padding-right: 4rem;
-  padding-left: calc(4rem + 25px);
 }
 @media (max-width: 768px) {
   .ul-footer .ul-footer-contact,
@@ -606,38 +527,6 @@ Icônes utilisées dans l'en-tête et le pied de page. Utilise des SVG intégré
     flex-direction: column;
     gap: 2rem;
     align-items: flex-start;
-  }
-}
-@media (min-width: calc(1792px + 8rem)) {
-  .ul-footer .ul-footer-contact,
-  .ul-footer .ul-footer-nav,
-  .ul-footer .ul-footer-logos {
-    padding-left: 25px;
-    padding-right: 0;
-  }
-}
-@media (max-width: 1366px) {
-  .ul-footer .ul-footer-contact,
-  .ul-footer .ul-footer-nav,
-  .ul-footer .ul-footer-logos {
-    padding-right: 1.5rem;
-    padding-left: calc(1.5rem + 25px);
-  }
-}
-@media (max-width: 1280px) {
-  .ul-footer .ul-footer-contact,
-  .ul-footer .ul-footer-nav,
-  .ul-footer .ul-footer-logos {
-    padding-right: 4rem;
-    padding-left: calc(4rem + 25px);
-  }
-}
-@media (max-width: 768px) {
-  .ul-footer .ul-footer-contact,
-  .ul-footer .ul-footer-nav,
-  .ul-footer .ul-footer-logos {
-    padding-right: 1.5rem;
-    padding-left: calc(1.5rem + 25px);
   }
 }
 .ul-footer .ul-footer-contact .ul-footer-address,
@@ -913,32 +802,6 @@ Icônes utilisées dans l'en-tête et le pied de page. Utilise des SVG intégré
 .ul-footer .ul-footer-copyright div {
   padding-top: 1.14rem;
   padding-bottom: 1.14rem;
-  padding-right: 4rem;
-  padding-left: calc(4rem + 25px);
-}
-@media (min-width: calc(1792px + 8rem)) {
-  .ul-footer .ul-footer-copyright div {
-    padding-left: 25px;
-    padding-right: 0;
-  }
-}
-@media (max-width: 1366px) {
-  .ul-footer .ul-footer-copyright div {
-    padding-right: 1.5rem;
-    padding-left: calc(1.5rem + 25px);
-  }
-}
-@media (max-width: 1280px) {
-  .ul-footer .ul-footer-copyright div {
-    padding-right: 4rem;
-    padding-left: calc(4rem + 25px);
-  }
-}
-@media (max-width: 768px) {
-  .ul-footer .ul-footer-copyright div {
-    padding-right: 1.5rem;
-    padding-left: calc(1.5rem + 25px);
-  }
 }
 .ul-footer .ul-footer-copyright p {
   display: flex;
@@ -1275,35 +1138,9 @@ Icônes utilisées dans l'en-tête et le pied de page. Utilise des SVG intégré
 }
 
 .ul-header-menu-sous-unite-content {
-  padding-left: 4rem;
-  padding-right: 4rem;
   display: flex;
   align-items: center;
   column-gap: 3rem;
-}
-@media (min-width: calc(1792px + 8rem)) {
-  .ul-header-menu-sous-unite-content {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-@media (max-width: 1366px) {
-  .ul-header-menu-sous-unite-content {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-@media (max-width: 1280px) {
-  .ul-header-menu-sous-unite-content {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-@media (max-width: 768px) {
-  .ul-header-menu-sous-unite-content {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
 }
 .ul-header-menu-sous-unite-content .ul-header-menu-sous-unite-link {
   color: var(--ul-color-white);
@@ -1428,36 +1265,6 @@ Icônes utilisées dans l'en-tête et le pied de page. Utilise des SVG intégré
     width: 100%;
     border-top: 1px var(--ul-color-grey) solid;
   }
-  .ul-header-menu-sous-unite-content ul li a {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-@media (max-width: 1280px) and (min-width: calc(1792px + 8rem)) {
-  .ul-header-menu-sous-unite-content ul li a {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-@media (max-width: 1280px) and (max-width: 1366px) {
-  .ul-header-menu-sous-unite-content ul li a {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-@media (max-width: 1280px) and (max-width: 1280px) {
-  .ul-header-menu-sous-unite-content ul li a {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-@media (max-width: 1280px) and (max-width: 768px) {
-  .ul-header-menu-sous-unite-content ul li a {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-@media (max-width: 1280px) {
   .ul-header-menu-sous-unite-content ul li a:focus-visible {
     outline-offset: -0.35rem;
   }
@@ -1675,42 +1482,7 @@ Icônes utilisées dans l'en-tête et le pied de page. Utilise des SVG intégré
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin: 0 auto;
-    width: 100%;
-    padding-left: 4rem;
-    padding-right: 4rem;
   }
-}
-@media (max-width: 1280px) and (min-width: calc(1792px + 8rem)) {
-  .ul-header .ul-header-mobile-menu .ul-header-mobile-menu-content {
-    max-width: 1792px;
-  }
-}
-@media (max-width: 1280px) and (min-width: calc(1792px + 8rem)) {
-  .ul-header .ul-header-mobile-menu .ul-header-mobile-menu-content {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-@media (max-width: 1280px) and (max-width: 1366px) {
-  .ul-header .ul-header-mobile-menu .ul-header-mobile-menu-content {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-@media (max-width: 1280px) and (max-width: 1280px) {
-  .ul-header .ul-header-mobile-menu .ul-header-mobile-menu-content {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-@media (max-width: 1280px) and (max-width: 768px) {
-  .ul-header .ul-header-mobile-menu .ul-header-mobile-menu-content {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-@media (max-width: 1280px) {
   .ul-header .ul-header-mobile-menu .ul-header-main-nav {
     align-self: flex-start;
   }
@@ -1731,8 +1503,6 @@ Icônes utilisées dans l'en-tête et le pied de page. Utilise des SVG intégré
     background-size: 100% 4px;
     background-position-x: left;
   }
-}
-@media (max-width: 1280px) {
   .ul-header .ul-header-mobile-menu .ul-header-secondary-nav {
     align-self: flex-start;
   }
@@ -1744,8 +1514,6 @@ Icônes utilisées dans l'en-tête et le pied de page. Utilise des SVG intégré
     color: var(--ul-color-white);
     font-size: 1.25rem;
   }
-}
-@media (max-width: 1280px) {
   .ul-header .ul-header-mobile-menu .ul-mobile-language-switcher ul {
     display: flex;
     gap: 1rem;
@@ -1983,39 +1751,6 @@ Icônes utilisées dans l'en-tête et le pied de page. Utilise des SVG intégré
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin: 0 auto;
-  width: 100%;
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-@media (min-width: calc(1792px + 8rem)) {
-  .ul-header-long-unit .ul-header .ul-header-mobile-menu .ul-header-mobile-menu-content {
-    max-width: 1792px;
-  }
-}
-@media (min-width: calc(1792px + 8rem)) {
-  .ul-header-long-unit .ul-header .ul-header-mobile-menu .ul-header-mobile-menu-content {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-@media (max-width: 1366px) {
-  .ul-header-long-unit .ul-header .ul-header-mobile-menu .ul-header-mobile-menu-content {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-@media (max-width: 1280px) {
-  .ul-header-long-unit .ul-header .ul-header-mobile-menu .ul-header-mobile-menu-content {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-@media (max-width: 768px) {
-  .ul-header-long-unit .ul-header .ul-header-mobile-menu .ul-header-mobile-menu-content {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
 }
 .ul-header-long-unit .ul-header .ul-header-mobile-menu .ul-header-main-nav {
   align-self: flex-start;

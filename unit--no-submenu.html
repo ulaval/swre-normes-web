@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="apple-touch-icon" href="./assets/dist/favicon/apple-touch-icon.png" sizes="180x180" />
     <link rel="icon" href="./assets/dist/favicon/favicon.ico" sizes="any">
@@ -15,66 +15,78 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C600%3B1%2C700&#038;display=swap&#038;ver=6.1.1" type="text/css" media="all" />
     <link rel="stylesheet" href="./assets/dist/css/base.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./assets/dist/css/utils.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./assets/dist/css/layout.css" type="text/css" media="all" />
     <link rel="stylesheet" href="./assets/dist/css/header.css" type="text/css" media="all" />
     <link rel="stylesheet" href="./assets/dist/css/footer.css" type="text/css" media="all" />
     <link rel="stylesheet" href="./assets/dist/css/normes.css" type="text/css" media="all" />
   </head>
 
   <body>
-    <a class="skip-link screen-reader-text" href="#page-main">Passer au contenu</a>
+
+    <!-- For accessibility reason, we have a visaully hidden anchor directing to the main content. -->
+    <!-- The text should be translated in multi-language website. -->
+    <div class="skip-to-content">
+      <div class="container">
+        <a href="#main-content" class="visually-hidden focusable">Aller au contenu principal</a>
+      </div>
+    </div>
+
     <header class="ul-header ul-header--unit--no-submenu">
-      <div class="ul-header-main">
-        <div class="ul-header-ul-link-holder">
-          <span class="ul-header-ul-link">
-            <!-- The following href should always target https://www.ulaval.ca/ -->
-            <a href="https://www.ulaval.ca/">Université Laval</a>
-          </span>
-        </div>
-        <div class="ul-header-title-holder">
-          <!-- Changer le href pour la racine de votre site web -->
-          <a href="#" class="ul-header-title">Faculté des sciences<br /> de l'administration</a>
-        </div>
-        <nav class="ul-header-main-nav" aria-label="Principale">
-          <ul>
-            <li><a href="#" aria-current="page">Futurs étudiants</a></li>
-            <li><a href="#">Étudiants actuels</a></li>
-            <li><a href="#">Études</a></li>
-            <li><a href="#">Facultés</a></li>
-            <li><a href="#">Recherche et création</a></li>
-          </ul>
-        </nav>
-        <nav class="ul-header-secondary-nav" aria-label="Liens rapides">
-          <ul>
-            <li><a href="#" aria-current="page">ULaval nouvelles</a></li>
-            <li><a href="#">monPortail</a></li>
-            <li><a href="#">Nous joindre</a></li>
-            <li><a href="#">Donner</a></li>
-          </ul>
-        </nav>
-        <div class="ul-header-tools">
-          <div class="ul-header-search-container">
-            <button type="button" class="ul-header-search-trigger" aria-expanded="false" aria-controls="site-main-search" aria-label="Chercher"><i aria-hidden="true" class="ul-i-search" role="presentation"></i></button>
+      <div class="container">
+        <div class="ul-header-main">
+          <div class="ul-header-ul-link-holder">
+            <span class="ul-header-ul-link">
+              <!-- The following href should always target https://www.ulaval.ca/ -->
+              <a href="https://www.ulaval.ca/">Université Laval</a>
+            </span>
           </div>
-          <!-- Le label peut être modifié selon l'utilité du bouton de connexion -->
-          <a href="#" class="ul-secure-login" aria-label="Espace sécurisé"><i class="ul-i-login" aria-role="presentation" aria-hidden="true"></i></a>
-          <nav class="ul-language-switcher">
-            <button type="button" class="ul-language-switcher-trigger" aria-expanded="false" aria-controls="ul-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
-              <span aria-hidden="true" aria-role="presentation">Fr</span>
-            </button>
-            <ul id="ul-language-switcher-list" role="listbox" aria-label="Sélectionnez une langue" hidden>
-              <li role="option" tabindex="-1" aria-posinset="1" aria-setsize="2" aria-selected="false">
-                <a href="#">
-                  <span lang="en" aria-label="English">En</span>
-                </a>
-              </li>
-              <li role="option" tabindex="-1" aria-posinset="2" aria-setsize="2" aria-selected="false">
-                <a href="#">
-                  <span lang="es" aria-label="Español">Es</span>
-                </a>
-              </li>
+          <div class="ul-header-title-holder">
+            <!-- Changer le href pour la racine de votre site web -->
+            <a href="#" class="ul-header-title">Faculté des sciences<br /> de l'administration</a>
+          </div>
+          <nav class="ul-header-main-nav" aria-label="Principale">
+            <ul>
+              <li><a href="#" aria-current="page">Futurs étudiants</a></li>
+              <li><a href="#">Étudiants actuels</a></li>
+              <li><a href="#">Études</a></li>
+              <li><a href="#">Facultés</a></li>
+              <li><a href="#">Recherche et création</a></li>
             </ul>
           </nav>
-          <button type="button" class="ul-header-menu-trigger" aria-expanded="false" aria-controls="ul-mobile-menu"><span class="ul-header-menu-trigger-midbar" role="presentation"></span><span class="screen-reader-text">Ouvrir le menu principal</span></button>
+          <nav class="ul-header-secondary-nav" aria-label="Liens rapides">
+            <ul>
+              <li><a href="#" aria-current="page">ULaval nouvelles</a></li>
+              <li><a href="#">monPortail</a></li>
+              <li><a href="#">Nous joindre</a></li>
+              <li><a href="#">Donner</a></li>
+            </ul>
+          </nav>
+          <div class="ul-header-tools">
+            <div class="ul-header-search-container">
+              <button type="button" class="ul-header-search-trigger" aria-expanded="false" aria-controls="site-main-search" aria-label="Chercher"><i aria-hidden="true" class="ul-i-search" role="presentation"></i></button>
+            </div>
+            <!-- Le label peut être modifié selon l'utilité du bouton de connexion -->
+            <a href="#" class="ul-secure-login" aria-label="Espace sécurisé"><i class="ul-i-login" aria-role="presentation" aria-hidden="true"></i></a>
+            <nav class="ul-language-switcher">
+              <button type="button" class="ul-language-switcher-trigger" aria-expanded="false" aria-controls="ul-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
+                <span aria-hidden="true" aria-role="presentation">Fr</span>
+              </button>
+              <ul id="ul-language-switcher-list" role="listbox" aria-label="Sélectionnez une langue" hidden>
+                <li role="option" tabindex="-1" aria-posinset="1" aria-setsize="2" aria-selected="false">
+                  <a href="#">
+                    <span lang="en" aria-label="English">En</span>
+                  </a>
+                </li>
+                <li role="option" tabindex="-1" aria-posinset="2" aria-setsize="2" aria-selected="false">
+                  <a href="#">
+                    <span lang="es" aria-label="Español">Es</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <button type="button" class="ul-header-menu-trigger" aria-expanded="false" aria-controls="ul-mobile-menu"><span class="ul-header-menu-trigger-midbar" role="presentation"></span><span class="screen-reader-text">Ouvrir le menu principal</span></button>
+          </div>
         </div>
       </div>
       <div class="ul-header-mobile-menu" id="ul-mobile-menu">
@@ -127,77 +139,92 @@
       </div>
     </header>
 
-    <main id="page-main">
+    <!-- The id #main-content is targeted by the .skip-to-content link -->
+    <main id="main-content">
+
+      <!-- You can use .container restrict your content to the website max-width -->
+      <!-- You can use .container-fullwidth unrestrict your content from the website max-width -->
+      <div class="container">
+        <img style="width:100%" src="https://placehold.co/1600x250?font=open-sans&text=.container" alt="Container restricted to the website width">
+      </div>
+      <div class="container-fullwidth">
+        <img style="width:100%" src="https://placehold.co/1920x250?font=open-sans&text=.container-fullwidth" alt="Container stretching to the full browser width">
+      </div>
+      <div class="container">
+        <img style="width:100%" src="https://placehold.co/1600x250?font=open-sans&text=.container" alt="Container restricted to the website width">
+      </div>
     </main>
 
     <footer class="ul-footer">
-      <section class="ul-footer-contact">
-        <div class="ul-footer-address">
-          <h2 class="ul-footer-address-unit">Faculté des sciences de l'administration</h2>
-          <p>Pavillon Palasis-Prince, 2325, rue de la Terrasse<br />Université Laval, Québec (Québec) G1V 0A6<br />Téléphone: <span>418 656-2180</span></p>
-        </div>
-        <div class="ul-footer-mail-social">
-          <nav class="ul-footer-social" aria-label="Suivez-nous sur">
-            <ul>
-              <li><a href="#" target="_blank"><i class="ul-i-socials-facebook" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Facebook</span></a></li>
-              <li><a href="#" target="_blank"><i class="ul-i-socials-youtube" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Youtube</span></a></li>
-              <li><a href="#" target="_blank"><i class="ul-i-socials-twitter" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Twitter</span></a></li>
-              <li><a href="#" target="_blank"><i class="ul-i-socials-linkedin" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">LinkedIn</span></a></li>
-              <li><a href="#" target="_blank"><i class="ul-i-socials-instagram" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Instagram</span></a></li>
-            </ul>
+      <div class="container">
+        <section class="ul-footer-contact">
+          <div class="ul-footer-address">
+            <h2 class="ul-footer-address-unit">Faculté des sciences de l'administration</h2>
+            <p>Pavillon Palasis-Prince, 2325, rue de la Terrasse<br />Université Laval, Québec (Québec) G1V 0A6<br />Téléphone: <span>418 656-2180</span></p>
+          </div>
+          <div class="ul-footer-mail-social">
+            <nav class="ul-footer-social" aria-label="Suivez-nous sur">
+              <ul>
+                <li><a href="#" target="_blank"><i class="ul-i-socials-facebook" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Facebook</span></a></li>
+                <li><a href="#" target="_blank"><i class="ul-i-socials-youtube" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Youtube</span></a></li>
+                <li><a href="#" target="_blank"><i class="ul-i-socials-twitter" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Twitter</span></a></li>
+                <li><a href="#" target="_blank"><i class="ul-i-socials-linkedin" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">LinkedIn</span></a></li>
+                <li><a href="#" target="_blank"><i class="ul-i-socials-instagram" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Instagram</span></a></li>
+              </ul>
+            </nav>
+            <a class="ul-footer-questions" href="#">Des questions?</a>
+          </div>
+        </section>
+        <section class="ul-footer-nav">
+          <nav class="ul-footer-nav-list" aria-label="Liens généraux">
+            <div class="ul-footer-nav-content">
+              <div>
+                <h2>Connexion</h2>
+                <ul>
+                  <li><a href="#">monPortail</a></li>
+                  <li><a href="#">Courrier électronique</a></li>
+                  <li><a href="#">Capsule</a></li>
+                  <li><a href="#">IDUL et mot de passe</a></li>
+                  <li><a href="#">Connexion au réseau UL</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2>Carrière à l'UL</h2>
+                <ul>
+                  <li><a href="#">Emplois</a></li>
+                  <li><a href="#">Peoplesoft RH</a></li>
+                  <li><a href="#">Intranet</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2>Milieu de vie</h2>
+                <ul>
+                  <li><a href="#">Bibliothèque</a></li>
+                  <li><a href="#">PEPS</a></li>
+                  <li><a href="#">Rouge et Or</a></li>
+                  <li><a href="#">Résidences</a></li>
+                  <li><a href="#">Stationnement</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="ul-footer-nav-emergency">
+              <a class="ul-footer-newsletter" href="http://eepurl.com/htQpTX">Abonnez-vous à l'infolettre</a>
+              <h2 class="ul-footer-emergency"><a href="https://www.ulaval.ca/mesures-durgence">Mesures d'urgence</a></h2>
+              <p>Composer le <a href="tel:418-656-5555">418-656-5555</a></p>
+            </div>
           </nav>
-          <a class="ul-footer-questions" href="#">Des questions?</a>
-        </div>
-      </section>
-      <section class="ul-footer-nav">
-        <nav class="ul-footer-nav-list" aria-label="Liens généraux">
-          <div class="ul-footer-nav-content">
-            <div>
-              <h2>Connexion</h2>
-              <ul>
-                <li><a href="#">monPortail</a></li>
-                <li><a href="#">Courrier électronique</a></li>
-                <li><a href="#">Capsule</a></li>
-                <li><a href="#">IDUL et mot de passe</a></li>
-                <li><a href="#">Connexion au réseau UL</a></li>
-              </ul>
-            </div>
-            <div>
-              <h2>Carrière à l'UL</h2>
-              <ul>
-                <li><a href="#">Emplois</a></li>
-                <li><a href="#">Peoplesoft RH</a></li>
-                <li><a href="#">Intranet</a></li>
-              </ul>
-            </div>
-            <div>
-              <h2>Milieu de vie</h2>
-              <ul>
-                <li><a href="#">Bibliothèque</a></li>
-                <li><a href="#">PEPS</a></li>
-                <li><a href="#">Rouge et Or</a></li>
-                <li><a href="#">Résidences</a></li>
-                <li><a href="#">Stationnement</a></li>
-              </ul>
-            </div>
+        </section>
+        <section class="ul-footer-logos">
+          <img aria-role="presentation" aria-hidden="true" class="ul-footer-logo-unite" src="./assets/dist/svg/logo-fsa.svg" />
+        </section>
+        <section class="ul-footer-copyright">
+          <div>
+            <p>
+              <span>&copy;&nbsp;2023&nbsp;&nbsp; Université Laval </span><span> Tous droits réservés </span><span> <a href="https://www.ulaval.ca/conditions.html" target="_blank">Conditions générales d'utilisation</a> </span><span> <a href="https://www.ulaval.ca/conditions/fraude-en-ligne.html" target="_blank">Fraude en ligne</a> </span><span> <a href="https://www.ulaval.ca/confidentialite" target="_blank">Avis de confidentialité</a></span>
+            </p>
           </div>
-          <div class="ul-footer-nav-emergency">
-            <a class="ul-footer-newsletter" href="http://eepurl.com/htQpTX">Abonnez-vous à l'infolettre</a>
-            <h2 class="ul-footer-emergency"><a href="https://www.ulaval.ca/mesures-durgence">Mesures d'urgence</a></h2>
-            <p>Composer le <a href="tel:418-656-5555">418-656-5555</a></p>
-          </div>
-        </nav>
-      </section>
-      <section class="ul-footer-logos">
-        <img aria-role="presentation" aria-hidden="true" class="ul-footer-logo-unite" src="./assets/dist/svg/logo-fsa.svg" />
-      </section>
-      <section class="ul-footer-copyright">
-        <div>
-          <p>
-            <span>&copy;&nbsp;2023&nbsp;&nbsp; Université Laval </span><span> Tous droits réservés </span><span> <a href="https://www.ulaval.ca/conditions.html" target="_blank">Conditions générales d'utilisation</a> </span><span> <a href="https://www.ulaval.ca/conditions/fraude-en-ligne.html" target="_blank">Fraude en ligne</a> </span><span> <a href="https://www.ulaval.ca/confidentialite" target="_blank">Avis de confidentialité</a></span>
-          </p>
-        </div>
-      </section>
+        </section>
+      </div>
     </footer>
     <script src="./assets/dist/js/normes.js"></script>
   </body>

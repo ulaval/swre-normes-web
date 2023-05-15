@@ -39,6 +39,7 @@
   :focus {
     outline: 1px solid;
   }
+  // @TODO: This class will be replaced by .container.
   .ul-header-main {
     display: grid;
     grid-template-columns: auto 1fr auto;

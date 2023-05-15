@@ -1,0 +1,95 @@
+/**
+ * The website max-width should be 1600px but can be changed to fit existing website.
+ * A padding is used to insure good spacing. To give more breathing room, the padding is increasing for bigger displays.
+ * The same ".container" selector should be used in all sections (header/footer/content) to insure uniformity.
+ */
+
+// Import abstracts
+@import "../abstracts/_abstracts.scss";
+
+// Local variables
+// $website-container-padding: 1em;
+$website-container-padding: 1.25em;
+
+// Styles
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $website-container-max-width;
+  @if $website-container-type == "fixed" {
+  }
+  @if $website-container-type == "fluid" {
+    padding-left: $website-container-padding * 1;
+    padding-right: $website-container-padding * 1;
+  }
+}
+
+.container-fullwidth {
+  max-width: none;
+}
+
+@media (min-width: $breakpoint-sm) {
+  .container {
+    @if $website-container-type == "fixed" {
+    }
+    @if $website-container-type == "fluid" {
+      padding-left: $website-container-padding * 2;
+      padding-right: $website-container-padding * 2;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .container {
+    @if $website-container-type == "fixed" {
+    }
+    @if $website-container-type == "fluid" {
+      padding-left: $website-container-padding * 3;
+      padding-right: $website-container-padding * 3;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .container {
+    @if $website-container-type == "fixed" {
+    }
+    @if $website-container-type == "fluid" {
+      padding-left: $website-container-padding * 4;
+      padding-right: $website-container-padding * 4;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .container {
+    @if $website-container-type == "fixed" {
+    }
+    @if $website-container-type == "fluid" {
+      padding-left: $website-container-padding * 5;
+      padding-right: $website-container-padding * 5;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xxl) {
+  .container {
+    @if $website-container-type == "fixed" {
+    }
+    @if $website-container-type == "fluid" {
+      padding-left: $website-container-padding * 6;
+      padding-right: $website-container-padding * 6;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-sl) {
+  .container {
+    @if $website-container-type == "fixed" {
+    }
+    @if $website-container-type == "fluid" {
+      padding-left: $website-container-padding * 7;
+      padding-right: $website-container-padding * 7;
+    }
+  }
+}

@@ -21,7 +21,7 @@
       gap: ul-scale-units(2rem);
       align-items: flex-start;
     }
-    @include ul-container;
+    // @include ul-container;
     padding-bottom: 0;
     @include ul-footer-paddings;
 
@@ -215,12 +215,15 @@
     color: var(--ul-color-white);
     display: flex;
     gap: ul-scale-units(1rem);
+
+    // @TODO: This div will be replaced by .container.
     div {
-      @include ul-container;
+      // @include ul-container;
       padding-top: ul-scale-units(1.14rem);
       padding-bottom: ul-scale-units(1.14rem);
       @include ul-footer-paddings;
     }
+
     p {
       display: flex;
       column-gap: ul-scale-units(1rem);

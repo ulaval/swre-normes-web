@@ -1,0 +1,54 @@
+/**
+ * Utils
+ */
+
+// Import abstracts
+@import "../abstracts/_abstracts.scss";
+
+// Styles
+.skip-to-content {
+  text-align: center;
+  background-color: $color-gray-lighter;
+  a {
+    color: $color-gray-dark;
+    display: inline-block;
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
+    padding-left: 0.125em;
+    padding-right: 0.125em;
+    &:focus {
+      outline-color: $color-gray-dark;
+      outline-offset: 2px;
+      outline-style: dotted;
+    }
+  }
+}
+
+// Accesible way to visualy hide something but keep it focusable
+// https://www.a11yproject.com/posts/how-to-hide-content/
+.visually-hidden {
+  clip-path: inset(50%);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
+  &.focusable:active,
+  &.focusable:focus {
+    clip-path: none;
+    clip: auto;
+    height: auto;
+    overflow: visible;
+    position: static !important;
+    white-space: normal;
+    width: auto;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .skip-to-content {
+    text-align: left;
+  }
+}

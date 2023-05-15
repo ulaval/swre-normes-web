@@ -37,6 +37,11 @@ $website-container-step-padding: fix-font-size-hack(calc(1.25em / 2));
 @media (min-width: $breakpoint-sm) {
   .container {
     @if $website-container-type == "fixed" {
+      max-width: calc(
+        $website-container-max-width -
+          $website-container-base-padding -
+          ($website-container-step-padding * 2 * 1)
+      );
     }
     @if $website-container-type == "fluid" {
       padding-left: $website-container-base-padding +
@@ -50,6 +55,11 @@ $website-container-step-padding: fix-font-size-hack(calc(1.25em / 2));
 @media (min-width: $breakpoint-md) {
   .container {
     @if $website-container-type == "fixed" {
+      max-width: calc(
+        $website-container-max-width -
+          $website-container-base-padding -
+          ($website-container-step-padding * 2 * 2)
+      );
     }
     @if $website-container-type == "fluid" {
       padding-left: $website-container-base-padding +
@@ -63,6 +73,11 @@ $website-container-step-padding: fix-font-size-hack(calc(1.25em / 2));
 @media (min-width: $breakpoint-lg) {
   .container {
     @if $website-container-type == "fixed" {
+      max-width: calc(
+        $website-container-max-width -
+          $website-container-base-padding -
+          ($website-container-step-padding * 2 * 3)
+      );
     }
     @if $website-container-type == "fluid" {
       padding-left: $website-container-base-padding +
@@ -77,6 +92,11 @@ $website-container-step-padding: fix-font-size-hack(calc(1.25em / 2));
   @media (min-width: $breakpoint-xl) {
     .container {
       @if $website-container-type == "fixed" {
+        max-width: calc(
+          $website-container-max-width -
+            $website-container-base-padding -
+            ($website-container-step-padding * 2 * 4)
+        );
       }
       @if $website-container-type == "fluid" {
         padding-left: $website-container-base-padding +
@@ -92,6 +112,11 @@ $website-container-step-padding: fix-font-size-hack(calc(1.25em / 2));
   @media (min-width: $breakpoint-xxl) {
     .container {
       @if $website-container-type == "fixed" {
+        max-width: calc(
+          $website-container-max-width -
+            $website-container-base-padding -
+            ($website-container-step-padding * 2 * 5)
+        );
       }
       @if $website-container-type == "fluid" {
         padding-left: $website-container-base-padding +
@@ -107,6 +132,11 @@ $website-container-step-padding: fix-font-size-hack(calc(1.25em / 2));
   @media (min-width: $breakpoint-sl) {
     .container {
       @if $website-container-type == "fixed" {
+        max-width: calc(
+          $website-container-max-width -
+            $website-container-base-padding -
+            ($website-container-step-padding * 2 * 6)
+        );
       }
       @if $website-container-type == "fluid" {
         padding-left: $website-container-base-padding +

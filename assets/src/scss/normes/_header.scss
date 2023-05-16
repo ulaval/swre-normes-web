@@ -294,6 +294,7 @@
 }
 .ul-link--in-list {
   font-size: ul-scale-units(0.875rem);
+  list-style-type: none;
   a {
     color: var(--ul-color-black);
     text-decoration: none;

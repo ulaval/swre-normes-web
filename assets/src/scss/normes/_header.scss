@@ -31,27 +31,15 @@
     background-size: 100% 8px;
     display: block;
     content: "";
-    // @include ul-container;
-    // @include ul-paddings;
     padding: 0;
     height: 8px;
   }
   :focus {
     outline: 1px solid;
   }
-  // @TODO: This class will be replaced by .container.
-  .ul-header-main {
-    // display: grid;
-    // grid-template-columns: auto 1fr auto;
-    // grid-template-areas:
-    //   "ecu secondnav secondnav"
-    //   "title mainnav tools";
-    // row-gap: ul-scale-units(1rem);
-    // column-gap: ul-scale-units(3rem);
-    // @include ul-container;
+  .container {
     padding-top: ul-scale-units(1rem);
     padding-bottom: ul-scale-units(1rem);
-    // @include ul-paddings;
   }
   .ul-header-ul-link-holder {
     grid-area: ecu;
@@ -241,7 +229,7 @@
   grid-area: mainnav;
   align-self: center;
 
-  .container {
+  ul {
     display: flex;
     gap: ul-scale-units(2rem);
     margin: 0;
@@ -262,9 +250,8 @@
     color: var(--ul-color-black);
     font-weight: 700;
     font-size: ul-scale-units(1rem);
-    background: linear-gradient(90deg,
-        var(--ul-color-red),
-        var(--ul-color-red)) no-repeat left bottom / 0 4px;
+    background: linear-gradient(90deg, var(--ul-color-red), var(--ul-color-red))
+      no-repeat left bottom / 0 4px;
     transition: background-size 400ms;
     padding-bottom: ul-scale-units(0.3rem);
 
@@ -279,9 +266,12 @@
     }
 
     &[aria-current="page"] {
-      background: linear-gradient(90deg,
+      background: linear-gradient(
+          90deg,
           var(--ul-color-black),
-          var(--ul-color-black)) no-repeat left bottom / 0 4px;
+          var(--ul-color-black)
+        )
+        no-repeat left bottom / 0 4px;
       background-size: 100% 4px;
       background-position-x: left;
     }
@@ -293,7 +283,7 @@
   grid-area: secondnav;
   align-self: center;
 
-  .container {
+  ul {
     display: flex;
     gap: ul-scale-units(1.5rem);
     list-style: none;
@@ -598,23 +588,18 @@
       animation-name: ul-header-mobile-fadeOut;
     }
 
-    // @TODO: This class will be replaced by .container.
-    .ul-header-mobile-menu-content {
+    .container {
       display: flex;
       flex-direction: column;
       gap: ul-scale-units(2rem);
-      // @include ul-container;
-      // @include ul-paddings;
     }
-
-
   }
 
   //Mobile main menu
   .ul-header-main-nav {
     align-self: flex-start;
 
-    .container {
+    ul {
       flex-direction: column;
       gap: ul-scale-units(0.7rem);
     }
@@ -631,9 +616,12 @@
       text-decoration: none;
 
       &[aria-current="page"] {
-        background: linear-gradient(90deg,
+        background: linear-gradient(
+            90deg,
             var(--ul-color-white),
-            var(--ul-color-white)) no-repeat left bottom / 0 4px;
+            var(--ul-color-white)
+          )
+          no-repeat left bottom / 0 4px;
         background-size: 100% 4px;
         background-position-x: left;
       }
@@ -644,7 +632,7 @@
   .ul-header-secondary-nav {
     align-self: flex-start;
 
-    .container {
+    ul {
       flex-direction: column;
       gap: ul-scale-units(0.7rem);
     }
@@ -659,7 +647,7 @@
 
   //Mobile utility menu - Language switcher
   .ul-mobile-language-switcher {
-    .container {
+    ul {
       display: flex;
       gap: ul-scale-units(1rem);
       list-style: none;
@@ -761,8 +749,8 @@
     }
     .ul-header-search-trigger {
       i {
-          transition: filter 0.5s ease;
-          filter: invert(1);
+        transition: filter 0.5s ease;
+        filter: invert(1);
       }
       &:hover,
       &:active {

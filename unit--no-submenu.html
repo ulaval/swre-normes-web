@@ -15,6 +15,7 @@
     <title>Unités - Normes web</title>
     <meta name="description" content="Normes web pour les sites des unités" />
 
+    <!-- The stylesheets order has been optimized. Do not change it. -->
     <link rel="stylesheet" href="./assets/dist/css/fonts.css" type="text/css" media="all" />
     <link rel="stylesheet" href="./assets/dist/css/base.css" type="text/css" media="all" />
     <link rel="stylesheet" href="./assets/dist/css/utils.css" type="text/css" media="all" />
@@ -110,24 +111,72 @@
               <li><a href="#">Donner</a></li>
             </ul>
           </nav>
-          <nav class="ul-mobile-language-switcher" aria-label="Sélectionnez votre langue">
-            <ul>
-              <li>
-                <span class="screen-reader-text" lang="fr">Français</span>
-                <span aria-hidden="true" aria-role="presentation" class="current-language">Fr</span>
-              </li>
-              <li>
-                <a href="#">
-                  <span lang="en" aria-label="English">En</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span lang="es" aria-label="Español">Es</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <div class="ul-header-tools">
+            <div class="ul-header-search-container">
+              <button type="button" class="ul-header-search-trigger" aria-expanded="false" aria-controls="site-main-search" aria-label="Chercher"><i aria-hidden="true" class="ul-i-search" role="presentation"></i></button>
+            </div>
+            <!-- Le label peut être modifié selon l'utilité du bouton de connexion -->
+            <a href="#" class="ul-secure-login" aria-label="Espace sécurisé"><i class="ul-i-login" aria-role="presentation" aria-hidden="true"></i></a>
+            <nav class="ul-language-switcher">
+              <button type="button" class="ul-language-switcher-trigger" aria-expanded="false" aria-controls="ul-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
+                <span aria-hidden="true" aria-role="presentation">Fr</span>
+              </button>
+              <ul id="ul-language-switcher-list" role="listbox" aria-label="Sélectionnez une langue" hidden>
+                <li role="option" tabindex="-1" aria-posinset="1" aria-setsize="2" aria-selected="false">
+                  <a href="#">
+                    <span lang="en" aria-label="English">En</span>
+                  </a>
+                </li>
+                <li role="option" tabindex="-1" aria-posinset="2" aria-setsize="2" aria-selected="false">
+                  <a href="#">
+                    <span lang="es" aria-label="Español">Es</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <button type="button" class="ul-header-menu-trigger" aria-expanded="false" aria-controls="ul-mobile-menu"><span class="ul-header-menu-trigger-midbar" role="presentation"></span><span class="screen-reader-text">Ouvrir le menu principal</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="ul-header-mobile-menu" id="ul-mobile-menu">
+        <div class="container">
+          <div class="ul-header-mobile-menu-content">
+            <nav class="ul-header-main-nav" aria-label="Principale">
+              <ul>
+                <li><a href="#" aria-current="page">Futurs étudiants</a></li>
+                <li><a href="#">Étudiants actuels</a></li>
+                <li><a href="#">Études</a></li>
+                <li><a href="#">Facultés</a></li>
+                <li><a href="#">Recherche et création</a></li>
+              </ul>
+            </nav>
+            <nav class="ul-header-secondary-nav" aria-label="Liens rapides">
+              <ul>
+                <li><a href="#" aria-current="page">ULaval nouvelles</a></li>
+                <li><a href="#">monPortail</a></li>
+                <li><a href="#">Nous joindre</a></li>
+                <li><a href="#">Donner</a></li>
+              </ul>
+            </nav>
+            <nav class="ul-mobile-language-switcher" aria-label="Sélectionnez votre langue">
+              <ul>
+                <li>
+                  <span class="screen-reader-text" lang="fr">Français</span>
+                  <span aria-hidden="true" aria-role="presentation" class="current-language">Fr</span>
+                </li>
+                <li>
+                  <a href="#">
+                    <span lang="en" aria-label="English">En</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span lang="es" aria-label="Español">Es</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
       <div class="ul-header-search" id="site-main-search">

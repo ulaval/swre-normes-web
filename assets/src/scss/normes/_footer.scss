@@ -23,7 +23,7 @@
     }
     // @include ul-container;
     padding-bottom: 0;
-    @include ul-footer-paddings;
+    // @include ul-footer-paddings;
 
     .ul-footer-address {
       position: relative;
@@ -221,7 +221,7 @@
       // @include ul-container;
       padding-top: ul-scale-units(1.14rem);
       padding-bottom: ul-scale-units(1.14rem);
-      @include ul-footer-paddings;
+      // @include ul-footer-paddings;
     }
 
     p {

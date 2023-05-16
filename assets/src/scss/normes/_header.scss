@@ -31,9 +31,9 @@
     background-size: 100% 8px;
     display: block;
     content: "";
-    @include ul-container;
+    // @include ul-container;
+    // @include ul-paddings;
     padding: 0;
-    @include ul-paddings;
     height: 8px;
   }
   :focus {
@@ -41,17 +41,17 @@
   }
   // @TODO: This class will be replaced by .container.
   .ul-header-main {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas:
-      "ecu secondnav secondnav"
-      "title mainnav tools";
-    row-gap: ul-scale-units(1rem);
-    column-gap: ul-scale-units(3rem);
-    @include ul-container;
+    // display: grid;
+    // grid-template-columns: auto 1fr auto;
+    // grid-template-areas:
+    //   "ecu secondnav secondnav"
+    //   "title mainnav tools";
+    // row-gap: ul-scale-units(1rem);
+    // column-gap: ul-scale-units(3rem);
+    // @include ul-container;
     padding-top: ul-scale-units(1rem);
     padding-bottom: ul-scale-units(1rem);
-    @include ul-paddings;
+    // @include ul-paddings;
   }
   .ul-header-ul-link-holder {
     grid-area: ecu;
@@ -357,10 +357,10 @@
       @media (max-width: $ul-tablet-width) {
         padding: ul-scale-units(1rem) ul-scale-units(1.5rem);
       }
-      @media (min-width: $ul-padding-threshold) {
-        padding-left: 0;
-        padding-right: 0;
-      }
+      // @media (min-width: $ul-padding-threshold) {
+      //   padding-left: 0;
+      //   padding-right: 0;
+      // }
       input.champ-recherche {
         background-color: var(--ul-color-white);
         border-radius: 0;
@@ -577,12 +577,14 @@
       display: block;
       animation-name: ul-header-mobile-fadeOut;
     }
+
+    // @TODO: This class will be replaced by .container.
     .ul-header-mobile-menu-content {
       display: flex;
       flex-direction: column;
       gap: ul-scale-units(2rem);
-      @include ul-container;
-      @include ul-paddings;
+      // @include ul-container;
+      // @include ul-paddings;
     }
 
     .ul-header-main-nav {

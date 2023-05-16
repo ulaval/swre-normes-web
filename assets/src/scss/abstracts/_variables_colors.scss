@@ -1,5 +1,35 @@
 /**
- * Colors
+ * Define basic colors that can be used by any website.
  */
 
-// @TODO: Add colors, defines prefix color variable.
+// Lightness: 100%
+$color-white: #ffffff;
+
+// Lightness: 93%
+$color-gray-lightest: #ededed;
+
+// Lightness: 83%
+$color-gray-lighter: #d4d4d4;
+
+// Lightness: 70%
+$color-gray-light: #b3b3b3;
+
+// Lightness: 50%
+$color-gray-medium: #808080;
+
+// Lightness: 20%
+$color-gray-dark: #333333;
+
+// Lightness: 15%
+$color-gray-darker: #262626;
+
+// Lightness: 7%
+$color-gray-darkest: #121212;
+
+// Lightness: 0%
+$color-black: #000000;
+
+// UL colors found in the logo
+$color-ul-red: #e30513;
+$color-ul-yellow: #ffc103;
+$color-ul-blue: #0099ff;

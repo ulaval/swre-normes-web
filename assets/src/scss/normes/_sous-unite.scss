@@ -7,8 +7,8 @@
 }
 
 .ul-header-menu-sous-unite-content {
-  @include ul-container;
-  @include ul-paddings;
+  // @include ul-container;
+  // @include ul-paddings;
   display: flex;
   align-items: center;
   column-gap: ul-scale-units(3rem);
@@ -152,8 +152,8 @@
     border-top: 1px var(--ul-color-grey) solid;
 
     a {
-      @include ul-container;
-      @include ul-paddings;
+      //@include ul-container;
+      //@include ul-paddings;
 
       &:focus-visible {
         outline-offset: ul-scale-units(-0.35rem);

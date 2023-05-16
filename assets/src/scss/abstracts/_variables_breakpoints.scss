@@ -1,32 +1,22 @@
 /**
- * Breakpoints
+ * Define basic breakpoints that can be used by any website.
+ * Always use mobile-first when using breakpoints.
  */
 
-// @TODO: Define naming pattern and refactor variable names
-// @TODO: Change names to remove "ul-"
-// @TODO: Simplify comments
-// @TODO: Move custom breakpoints to where they are needed only
+// Approximatelly phone landscape
+$breakpoint-sm: 576px;
 
-// Display in mobile mode (realignment of social media icons)
-$ul-mobile-small: 428px;
+// Approximatelly tablet portrait
+$breakpoint-md: 768px;
 
-// Display in reduced tablet mode (reduction of main margins)
-$ul-tablet-small: 768px;
+// Approximatelly tablet landscape
+$breakpoint-lg: 992px;
 
-// Breakpoint to separate emergency measures links in the footer
-$ul-mobile-links-stack: 992px;
+// Approximatelly regular desktop
+$breakpoint-xl: 1200px;
 
-// Switch to mobile mode
-$ul-mobile-width: 1280px;
+// Approximatelly medium desktop
+$breakpoint-xxl: 1400px;
 
-// Display in tablet mode (start of mobile menu)
-$ul-tablet-width: 1366px;
-
-// Reduction of the size of certain header texts for small desktops
-$ul-desktop-small-width: 1536px;
-
-// Maximum width of the website (regular content centered from this size)
-$ul-desktop-large-width: 1792px;
-
-// Maximum width of the website + regular padding
-$ul-padding-threshold: calc($ul-desktop-large-width + ul-scale-units(8rem));
+// Approximatelly large desktop
+$breakpoint-sl: 1600px;

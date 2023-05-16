@@ -35,20 +35,20 @@
           <a href="#" class="ul-header-title">Faculté des sciences<br /> de l'administration</a>
         </div>
         <nav class="ul-header-main-nav" aria-label="Principale">
-          <ul>
-            <li><a href="#" aria-current="page">Futurs étudiants</a></li>
-            <li><a href="#">Étudiants actuels</a></li>
-            <li><a href="#">Études</a></li>
-            <li><a href="#">Facultés</a></li>
-            <li><a href="#">Recherche et création</a></li>
+          <ul class="container">
+            <li class="ul-link--in-main-nav"><a href="#" aria-current="page">Futurs étudiants</a></li>
+            <li class="ul-link--in-main-nav"><a href="#">Étudiants actuels</a></li>
+            <li class="ul-link--in-main-nav"><a href="#">Études</a></li>
+            <li class="ul-link--in-main-nav"><a href="#">Facultés</a></li>
+            <li class="ul-link--in-main-nav"><a href="#">Recherche et création</a></li>
           </ul>
         </nav>
         <nav class="ul-header-secondary-nav" aria-label="Liens rapides">
-          <ul>
-            <li><a href="#" aria-current="page">ULaval nouvelles</a></li>
-            <li><a href="#">monPortail</a></li>
-            <li><a href="#">Nous joindre</a></li>
-            <li><a href="#">Donner</a></li>
+          <ul class="container">
+            <li class="ul-link--in-list"><a href="#" aria-current="page">ULaval nouvelles</a></li>
+            <li class="ul-link--in-list"><a href="#">monPortail</a></li>
+            <li class="ul-link--in-list"><a href="#">Nous joindre</a></li>
+            <li class="ul-link--in-list"><a href="#">Donner</a></li>
           </ul>
         </nav>
         <div class="ul-header-tools">
@@ -61,13 +61,13 @@
             <button type="button" class="ul-language-switcher-trigger" aria-expanded="false" aria-controls="ul-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
               <span aria-hidden="true" aria-role="presentation">Fr</span>
             </button>
-            <ul id="ul-language-switcher-list" role="listbox" aria-label="Sélectionnez une langue" hidden>
-              <li role="option" tabindex="-1" aria-posinset="1" aria-setsize="2" aria-selected="false">
+            <ul id="ul-language-switcher-list" class="ul-language-switcher-list" role="listbox" aria-label="Sélectionnez une langue" hidden>
+              <li class="ul-link--in-language-nav" role="option" tabindex="-1" aria-posinset="1" aria-setsize="2" aria-selected="false">
                 <a href="#">
                   <span lang="en" aria-label="English">En</span>
                 </a>
               </li>
-              <li role="option" tabindex="-1" aria-posinset="2" aria-setsize="2" aria-selected="false">
+              <li class="ul-link--in-language-nav" role="option" tabindex="-1" aria-posinset="2" aria-setsize="2" aria-selected="false">
                 <a href="#">
                   <span lang="es" aria-label="Español">Es</span>
                 </a>
@@ -80,34 +80,34 @@
       <div class="ul-header-mobile-menu" id="ul-mobile-menu">
         <div class="ul-header-mobile-menu-content">
           <nav class="ul-header-main-nav" aria-label="Principale">
-            <ul>
-              <li><a href="#" aria-current="page">Futurs étudiants</a></li>
-              <li><a href="#">Étudiants actuels</a></li>
-              <li><a href="#">Études</a></li>
-              <li><a href="#">Facultés</a></li>
-              <li><a href="#">Recherche et création</a></li>
+            <ul class="container">
+              <li class="ul-link--in-mobile-main-nav"><a href="#" aria-current="page">Futurs étudiants</a></li>
+              <li class="ul-link--in-mobile-main-nav"><a href="#">Étudiants actuels</a></li>
+              <li class="ul-link--in-mobile-main-nav"><a href="#">Études</a></li>
+              <li class="ul-link--in-mobile-main-nav"><a href="#">Facultés</a></li>
+              <li class="ul-link--in-mobile-main-nav"><a href="#">Recherche et création</a></li>
             </ul>
           </nav>
           <nav class="ul-header-secondary-nav" aria-label="Liens rapides">
-            <ul>
-              <li><a href="#" aria-current="page">ULaval nouvelles</a></li>
-              <li><a href="#">monPortail</a></li>
-              <li><a href="#">Nous joindre</a></li>
-              <li><a href="#">Donner</a></li>
+            <ul class="container">
+              <li class="ul-link--in-mobile-secondary-nav"><a href="#" aria-current="page">ULaval nouvelles</a></li>
+              <li class="ul-link--in-mobile-secondary-nav"><a href="#">monPortail</a></li>
+              <li class="ul-link--in-mobile-secondary-nav"><a href="#">Nous joindre</a></li>
+              <li class="ul-link--in-mobile-secondary-nav"><a href="#">Donner</a></li>
             </ul>
           </nav>
           <nav class="ul-mobile-language-switcher" aria-label="Sélectionnez votre langue">
-            <ul>
-              <li>
+            <ul class="container">
+              <li class="ul-link--in-mobile-language-switcher">
                 <span class="screen-reader-text" lang="fr">Français</span>
                 <span aria-hidden="true" aria-role="presentation" class="current-language">Fr</span>
               </li>
-              <li>
+              <li class="ul-link--in-mobile-language-switcher">
                 <a href="#">
                   <span lang="en" aria-label="English">En</span>
                 </a>
               </li>
-              <li>
+              <li class="ul-link--in-mobile-language-switcher">
                 <a href="#">
                   <span lang="es" aria-label="Español">Es</span>
                 </a>
@@ -134,16 +134,16 @@
       <section class="ul-footer-contact">
         <div class="ul-footer-address">
           <h2 class="ul-footer-address-unit">Faculté des sciences de l'administration</h2>
-          <p>Pavillon Palasis-Prince, 2325, rue de la Terrasse<br />Université Laval, Québec (Québec) G1V 0A6<br />Téléphone: <span>418 656-2180</span></p>
+          <p class="ul-footer-address-details">Pavillon Palasis-Prince, 2325, rue de la Terrasse<br />Université Laval, Québec (Québec) G1V 0A6<br />Téléphone: <span>418 656-2180</span></p>
         </div>
         <div class="ul-footer-mail-social">
           <nav class="ul-footer-social" aria-label="Suivez-nous sur">
-            <ul>
-              <li><a href="#" target="_blank"><i class="ul-i-socials-facebook" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Facebook</span></a></li>
-              <li><a href="#" target="_blank"><i class="ul-i-socials-youtube" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Youtube</span></a></li>
-              <li><a href="#" target="_blank"><i class="ul-i-socials-twitter" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Twitter</span></a></li>
-              <li><a href="#" target="_blank"><i class="ul-i-socials-linkedin" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">LinkedIn</span></a></li>
-              <li><a href="#" target="_blank"><i class="ul-i-socials-instagram" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Instagram</span></a></li>
+            <ul class="container">
+              <li class="ul-link--in-footer-social"><a href="#" target="_blank"><i class="ul-i-socials-facebook" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Facebook</span></a></li>
+              <li class="ul-link--in-footer-social"><a href="#" target="_blank"><i class="ul-i-socials-youtube" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Youtube</span></a></li>
+              <li class="ul-link--in-footer-social"><a href="#" target="_blank"><i class="ul-i-socials-twitter" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Twitter</span></a></li>
+              <li class="ul-link--in-footer-social"><a href="#" target="_blank"><i class="ul-i-socials-linkedin" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">LinkedIn</span></a></li>
+              <li class="ul-link--in-footer-social"><a href="#" target="_blank"><i class="ul-i-socials-instagram" aria-hidden="true" role="presentation"></i><span class="screen-reader-text">Instagram</span></a></li>
             </ul>
           </nav>
           <a class="ul-footer-questions" href="#">Des questions?</a>
@@ -151,40 +151,42 @@
       </section>
       <section class="ul-footer-nav">
         <nav class="ul-footer-nav-list" aria-label="Liens généraux">
-          <div class="ul-footer-nav-content">
+          <div class="ul-footer-nav-list-content">
             <div>
-              <h2>Connexion</h2>
-              <ul>
-                <li><a href="#">monPortail</a></li>
-                <li><a href="#">Courrier électronique</a></li>
-                <li><a href="#">Capsule</a></li>
-                <li><a href="#">IDUL et mot de passe</a></li>
-                <li><a href="#">Connexion au réseau UL</a></li>
+              <h2 class="ul-footer-nav-list-content-column-title">Connexion</h2>
+              <ul class="container">
+                <li class="ul-link--in-list ul-link--in-footer-nav-list"><a href="#">monPortail</a></li>
+                <li class="ul-link--in-list ul-link--in-footer-nav-list"><a href="#">Courrier électronique</a></li>
+                <li class="ul-link--in-list ul-link--in-footer-nav-list"><a href="#">Capsule</a></li>
+                <li class="ul-link--in-list ul-link--in-footer-nav-list"><a href="#">IDUL et mot de passe</a></li>
+                <li class="ul-link--in-list ul-link--in-footer-nav-list"><a href="#">Connexion au réseau UL</a></li>
               </ul>
             </div>
             <div>
-              <h2>Carrière à l'UL</h2>
-              <ul>
-                <li><a href="#">Emplois</a></li>
-                <li><a href="#">Peoplesoft RH</a></li>
-                <li><a href="#">Intranet</a></li>
+              <h2 class="ul-footer-nav-list-content-column-title">Carrière à l'UL</h2>
+              <ul class="container">
+                <li class="ul-link--in-list ul-link--in-footer-nav-list"><a href="#">Emplois</a></li>
+                <li class="ul-link--in-list ul-link--in-footer-nav-list"><a href="#">Peoplesoft RH</a></li>
+                <li class="ul-link--in-list ul-link--in-footer-nav-list"><a href="#">Intranet</a></li>
               </ul>
             </div>
             <div>
-              <h2>Milieu de vie</h2>
-              <ul>
-                <li><a href="#">Bibliothèque</a></li>
-                <li><a href="#">PEPS</a></li>
-                <li><a href="#">Rouge et Or</a></li>
-                <li><a href="#">Résidences</a></li>
-                <li><a href="#">Stationnement</a></li>
+              <h2 class="ul-footer-nav-list-content-column-title">Milieu de vie</h2>
+              <ul class="container">
+                <li class="ul-link--in-list ul-link--in-footer-nav-list"><a href="#">Bibliothèque</a></li>
+                <li class="ul-link--in-list ul-link--in-footer-nav-list"><a href="#">PEPS</a></li>
+                <li class="ul-link--in-list ul-link--in-footer-nav-list"><a href="#">Rouge et Or</a></li>
+                <li class="ul-link--in-list ul-link--in-footer-nav-list"><a href="#">Résidences</a></li>
+                <li class="ul-link--in-list ul-link--in-footer-nav-list"><a href="#">Stationnement</a></li>
               </ul>
             </div>
           </div>
-          <div class="ul-footer-nav-emergency">
-            <a class="ul-footer-newsletter" href="http://eepurl.com/htQpTX">Abonnez-vous à l'infolettre</a>
-            <h2 class="ul-footer-emergency"><a href="https://www.ulaval.ca/mesures-durgence">Mesures d'urgence</a></h2>
-            <p>Composer le <a href="tel:418-656-5555">418-656-5555</a></p>
+          <div class="ul-footer-nav-list-emergency">
+            <a class="ul-footer-nav-list-emergency-newsletter" href="http://eepurl.com/htQpTX">Abonnez-vous à l'infolettre</a>
+            <h2 class="ul-footer-nav-list-emergency-header-title">
+              <a href="https://www.ulaval.ca/mesures-durgence">Mesures d'urgence</a>
+            </h2>
+            <p class="ul-footer-nav-list-emergency-content">Composer le <a href="tel:418-656-5555">418-656-5555</a></p>
           </div>
         </nav>
       </section>
@@ -192,8 +194,8 @@
         <img aria-role="presentation" aria-hidden="true" class="ul-footer-logo-unite" src="./assets/dist/svg/logo-fsa.svg" />
       </section>
       <section class="ul-footer-copyright">
-        <div>
-          <p>
+        <div class="container">
+          <p class="ul-footer-copyright--item-list">
             <span>&copy;&nbsp;2023&nbsp;&nbsp; Université Laval </span><span> Tous droits réservés </span><span> <a href="https://www.ulaval.ca/conditions.html" target="_blank">Conditions générales d'utilisation</a> </span><span> <a href="https://www.ulaval.ca/conditions/fraude-en-ligne.html" target="_blank">Fraude en ligne</a> </span><span> <a href="https://www.ulaval.ca/confidentialite" target="_blank">Avis de confidentialité</a></span>
           </p>
         </div>

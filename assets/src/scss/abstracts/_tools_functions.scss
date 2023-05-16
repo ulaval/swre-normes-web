@@ -2,31 +2,22 @@
  * Define basic functions that can be used by any website.
  */
 
-/**
- * Converts a pixel value to an em value based on a given context.
- *
- * @param {Number|Length} $pixels - The pixel value to convert to em.
- * @param {Number|Length} [$context: $browser-context] - The context value in pixels used for the conversion.
- * @return {Length} - The calculated value in em.
- *
- * @usage em(16px) => 1em
- * @usage em(24) => 1.5em
- * @usage em(16, 10) => 1.6em
- */
-$browser-context: 16;
-@function em($pixels, $context: $browser-context) {
-  // Convert $pixels value to pixel unit
-  @if (unitless($pixels)) {
-    $pixels: $pixels * 1px;
+@use "sass:math";
+@use "sass:meta";
+
+/*
+ * Remove the unit of a length
+ * @param {Number} $number - Number to remove unit from
+ * @return {Number} - Unitless number
+¸*/
+@function strip-unit($value) {
+  @if meta.type-of($value) != "number" {
+    @error "Invalid `#{meta.type-of($value)}` type. Choose a number type instead.";
+  } @else if meta.type-of($value) == "number" and not math.is-unitless($value) {
+    @return math.div($value, ($value * 0 + 1));
   }
 
-  // Convert $context value to pixel unit
-  @if (unitless($context)) {
-    $context: $context * 1px;
-  }
-
-  // Return value in em
-  @return fix-font-size-hack(calc($pixels / $context) * 1em);
+  @return $value;
 }
 
 /**
@@ -43,15 +34,69 @@ $browser-context: 16;
 $browser-context: 16;
 @function rem($pixels, $context: $browser-context) {
   // Convert $pixels value to pixel unit
-  @if (unitless($pixels)) {
+  @if (math.is-unitless($pixels)) {
     $pixels: $pixels * 1px;
   }
 
   // Convert $context value to pixel unit
-  @if (unitless($context)) {
+  @if (math.is-unitless($context)) {
     $context: $context * 1px;
   }
 
   // Return value in rem
   @return fix-font-size-hack(calc($pixels / $context) * 1rem);
+}
+
+/**
+ * Converts a pixel value to an em value based on a given context.
+ *
+ * @param {Number|Length} $pixels - The pixel value to convert to em.
+ * @param {Number|Length} [$context: $browser-context] - The context value in pixels used for the conversion.
+ * @return {Length} - The calculated value in em.
+ *
+ * @usage em(16px) => 1em
+ * @usage em(24) => 1.5em
+ * @usage em(16, 10) => 1.6em
+ */
+$browser-context: 16;
+@function em($pixels, $context: $browser-context) {
+  // Convert $pixels value to pixel unit
+  @if (math.is-unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  // Convert $context value to pixel unit
+  @if (math.is-unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  // Return value in em
+  @return fix-font-size-hack(calc($pixels / $context) * 1em);
+}
+
+/**
+ * Converts a em value to an pixel value based on a given context.
+ *
+ * @param {Number|Length} $em - The em value to convert to pixels.
+ * @param {Number|Length} [$context: $browser-context] - The context value in em used for the conversion.
+ * @return {Length} - The calculated value in pixels.
+ *
+ * @usage px(1em) => 16px
+ * @usage px(1) => 16px
+ * @usage px(1, 10) => 10px
+ */
+$browser-context: 16;
+@function px($em, $context: $browser-context) {
+  // Convert $em value to pixel unit
+  @if (not math.is-unitless($em)) {
+    $em: strip-unit($em);
+  }
+
+  // Convert $context value to pixel unit
+  @if (not math.is-unitless($context)) {
+    $context: strip-unit($context);
+  }
+
+  // Return value in em
+  @return calc($em * $context * 1px);
 }

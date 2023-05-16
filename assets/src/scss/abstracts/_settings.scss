@@ -11,7 +11,7 @@
  * @usage $website-container-max-width: "fixed";
  * @usage $website-container-type: "fluid";
  */
-$website-container-type: "fixed";
+$website-container-type: "fluid";
 
 /**
  * Define the responsive way to resize the website.
@@ -23,7 +23,7 @@ $website-container-type: "fixed";
  * @usage $website-container-max-width: 1600px;
  * @usage $website-container-max-width: 1280px;
  */
-$website-container-max-width: 1940px;
+$website-container-max-width: 1600px;
 
 /**
  * Fixes the font-size hack for websites using 62.5% font-sizing to use em as pixel.

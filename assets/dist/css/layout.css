@@ -1,1 +1,147 @@
-.container{margin-left:auto;margin-right:auto;max-width:1600px;padding-left:1em;padding-right:1em}.container-fullwidth{max-width:none}@media(min-width: 576px){.container{padding-left:1.625em;padding-right:1.625em}}@media(min-width: 768px){.container{padding-left:2.25em;padding-right:2.25em}}@media(min-width: 992px){.container{padding-left:2.875em;padding-right:2.875em}}@media(min-width: 1200px){.container{padding-left:3.5em;padding-right:3.5em}}@media(min-width: 1400px){.container{padding-left:4.125em;padding-right:4.125em}}@media(min-width: 1600px){.container{padding-left:4.75em;padding-right:4.75em}}
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./assets/src/scss/layout/layout.scss ***!
+  \*************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/**
+ * The website max-width should be 1600px but can be changed to fit existing website.
+ * A padding is used to insure good spacing. To give more breathing room, the padding is increasing for bigger displays.
+ * The same ".container" selector should be used in all sections (header/footer/content) to insure uniformity.
+ * @TODO: Fixed website container type - Add a landscape/portrait modifier to adjust max-width for breakpoint sm, md and lg.
+ */
+/**
+ * Import settings, functions, mixins, variables.
+ */
+/**
+ * Add customizable settings to help implementing to all website.
+ */
+/**
+ * Define the responsive way to resize the website.
+ *
+ * With the fixed method, the website will have multiple pre-defined breakpoints
+ * With the fluid method, the website will always use 100% of the available space.
+ *
+ * @usage $website-container-max-width: "fixed";
+ * @usage $website-container-type: "fluid";
+ */
+/**
+ * Define the responsive way to resize the website.
+ *
+ * With the fixed method, the website will have multiple pre-defined breakpoints
+ * With the fluid method, the website will always use 100% of the available space.
+ *
+ * @usage $website-container-max-width: 1940px;
+ * @usage $website-container-max-width: 1600px;
+ * @usage $website-container-max-width: 1280px;
+ */
+/**
+ * Fixes the font-size hack for websites using 62.5% font-sizing to use em as pixel.
+ * Change $font-size-hack to true if your website use the font-size hack.
+ *
+ * @param {Length} $value - The value to fix.
+ * @param {Boolean} [$font-size-hack: false] - Whether the font-size hack is used on the website.
+ * @return {Length} - The fixed value.
+ *
+ * @usage fix-font-size-hack(1em, false) => 1em
+ * @usage fix-font-size-hack(1em, true) => 1.6em
+ * @usage fix-font-size-hack(1rem, false) => 1rem
+ * @usage fix-font-size-hack(1rem, true) => 1.6rem
+ */
+/**
+ * Define basic functions that can be used by any website.
+ */
+/*
+ * Remove the unit of a length
+ * @param {Number} $number - Number to remove unit from
+ * @return {Number} - Unitless number
+¸*/
+/**
+ * Converts a pixel value to an rem value based on a given context.
+ *
+ * @param {Number|Length} $pixels - The pixel value to convert to rem.
+ * @param {Number|Length} [$context: $browser-context] - The context value in pixels used for the conversion.
+ * @return {Length} - The calculated value in rem.
+ *
+ * @usage rem(16px) => 1rem
+ * @usage rem(24) => 1.5rem
+ * @usage rem(16, 10) => 1.6rem
+ */
+/**
+ * Converts a pixel value to an em value based on a given context.
+ *
+ * @param {Number|Length} $pixels - The pixel value to convert to em.
+ * @param {Number|Length} [$context: $browser-context] - The context value in pixels used for the conversion.
+ * @return {Length} - The calculated value in em.
+ *
+ * @usage em(16px) => 1em
+ * @usage em(24) => 1.5em
+ * @usage em(16, 10) => 1.6em
+ */
+/**
+ * Converts a em value to an pixel value based on a given context.
+ *
+ * @param {Number|Length} $em - The em value to convert to pixels.
+ * @param {Number|Length} [$context: $browser-context] - The context value in em used for the conversion.
+ * @return {Length} - The calculated value in pixels.
+ *
+ * @usage px(1em) => 16px
+ * @usage px(1) => 16px
+ * @usage px(1, 10) => 10px
+ */
+/**
+ * Define basic mixins that can be used by any website.
+ */
+/**
+ * Define basic breakpoints that can be used by any website.
+ * Always use mobile-first when using breakpoints.
+ */
+/**
+ * Define basic colors that can be used by any website.
+ */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.container-fullwidth {
+  max-width: none;
+}
+
+@media (min-width: 576px) {
+  .container {
+    padding-left: 1.625em;
+    padding-right: 1.625em;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2.25em;
+    padding-right: 2.25em;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    padding-left: 2.875em;
+    padding-right: 2.875em;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    padding-left: 4.125em;
+    padding-right: 4.125em;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    padding-left: 4.75em;
+    padding-right: 4.75em;
+  }
+}

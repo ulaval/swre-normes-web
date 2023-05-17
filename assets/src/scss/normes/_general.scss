@@ -13,71 +13,71 @@
 }
 
 // Structure de base d'une page.
-*,
-::before,
-:after {
-  box-sizing: border-box;
-}
+// *,
+// ::before,
+// :after {
+//   box-sizing: border-box;
+// }
 
-:root {
-  // @TODO: If the font-size on the <html> element is 62.5%, comment this line and set the right value for $ul-scale-modifier
-  font-size: 16px;
-}
-html,
-body {
-  display: flex;
-  flex-direction: column;
-}
+// :root {
+//   // @TODO: If the font-size on the <html> element is 62.5%, comment this line and set the right value for $ul-scale-modifier
+//   font-size: 16px;
+// }
+// html,
+// body {
+//   display: flex;
+//   flex-direction: column;
+// }
 
-body {
-  margin: 0;
-  padding: 0 !important;
+// body {
+//   margin: 0;
+//   padding: 0 !important;
 
-  font-size: 1em;
-  color: var(--ul-color-black);
-  background-color: var(--ul-color-white);
-  font-family: var(--ul-font);
-}
+//   font-size: 1em;
+//   color: var(--ul-color-black);
+//   background-color: var(--ul-color-white);
+//   font-family: var(--ul-font);
+// }
 
-main {
-  flex: 1;
-  min-height: 250px;
-}
+// main {
+//   flex: 1;
+//   min-height: 250px;
+// }
 
-// Texte visible uniquement aux lecteurs d'écran, généralement utilisé pour le texte des icônes
-.screen-reader-text {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;
-  width: 1px;
-  word-wrap: normal !important;
-  word-break: normal;
-}
+// // Texte visible uniquement aux lecteurs d'écran, généralement utilisé pour le texte des icônes
+// .screen-reader-text {
+//   border: 0;
+//   clip: rect(1px, 1px, 1px, 1px);
+//   -webkit-clip-path: inset(50%);
+//   clip-path: inset(50%);
+//   height: 1px;
+//   margin: -1px;
+//   overflow: hidden;
+//   padding: 0;
+//   position: absolute !important;
+//   width: 1px;
+//   word-wrap: normal !important;
+//   word-break: normal;
+// }
 
-// Bouton d'accessibilité pour passer directement au contenu principal de la page sans devoir faire le tour de la navigation
-.skip-link:focus {
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  -webkit-clip-path: none;
-  clip-path: none;
-  color: #21759b;
-  display: block;
-  font-size: ul-scale-units(0.875rem);
-  font-weight: 700;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000;
-}
+// // Bouton d'accessibilité pour passer directement au contenu principal de la page sans devoir faire le tour de la navigation
+// .skip-link:focus {
+//   background-color: #f1f1f1;
+//   border-radius: 3px;
+//   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+//   clip: auto !important;
+//   -webkit-clip-path: none;
+//   clip-path: none;
+//   color: #21759b;
+//   display: block;
+//   font-size: ul-scale-units(0.875rem);
+//   font-weight: 700;
+//   height: auto;
+//   left: 5px;
+//   line-height: normal;
+//   padding: 15px 23px 14px;
+//   text-decoration: none;
+//   top: 5px;
+//   width: auto;
+//   z-index: 100000;
+// }

@@ -11,7 +11,7 @@
  * @usage $website-container-max-width: "fixed";
  * @usage $website-container-type: "fluid";
  */
-$website-container-type: "fluid";
+$website-container-type: "fixed";
 
 /**
  * Define the responsive way to resize the website.
@@ -48,3 +48,11 @@ $font-size-hack: false;
     @return $value;
   }
 }
+
+/**
+ * Activate some styles to help with debugging.
+ *
+ * @usage $debug: false;
+ * @usage $debug: true;
+ */
+$debug: true;

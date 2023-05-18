@@ -17,11 +17,11 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: ul-scale-units(2.22rem);
+  gap: fix-font-size-hack(2.22rem);
 
   @media (max-width: $ul-tablet-small) {
     flex-direction: column;
-    gap: ul-scale-units(2rem);
+    gap: fix-font-size-hack(2rem);
     align-items: flex-start;
   }
 
@@ -31,61 +31,62 @@
   .footer-logos {
     display: flex;
     flex-direction: column;
-    gap: ul-scale-units(1rem);
+    gap: fix-font-size-hack(1rem);
 
     @media (max-width: $ul-tablet-small) {
       flex: auto;
-      gap: ul-scale-units(2rem);
+      gap: fix-font-size-hack(2rem);
     }
   }
 }
 
 //Footer secondary nav
 .footer-nav {
-  padding-top: ul-scale-units(3rem);
+  padding-top: fix-font-size-hack(3rem);
 }
 .footer-nav-list {
   display: flex;
-  gap: ul-scale-units(4.5rem);
+  gap: fix-font-size-hack(4.5rem);
 
   @media (max-width: $ul-mobile-links-stack) {
     flex-direction: column;
-    gap: ul-scale-units(2.5rem);
+    gap: fix-font-size-hack(2.5rem);
     align-items: flex-start;
   }
 }
 .footer-nav-list-content {
   display: flex;
-  gap: ul-scale-units(4.5rem);
+  gap: fix-font-size-hack(4.5rem);
 
-  //font-size: ul-scale-units(0.875rem);
+  //font-size: fix-font-size-hack(0.875rem);
   @media (max-width: $ul-tablet-small) {
     flex-direction: column;
-    gap: ul-scale-units(2.5rem);
+    gap: fix-font-size-hack(2.5rem);
   }
 
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-top: ul-scale-units(0.5rem);
+    margin-top: fix-font-size-hack(0.5rem);
   }
 
   .footer-nav-list-content-column-title {
     font-weight: 600;
-    font-size: ul-scale-units(0.875rem);
+    font-size: fix-font-size-hack(0.875rem);
     margin: 0;
     padding: 0;
   }
 
   .ul-link--in-footer-nav-list {
-    margin-bottom: ul-scale-units(0.2rem);
+    margin-bottom: fix-font-size-hack(0.2rem);
   }
 }
 .footer-nav-list-emergency {
-  font-size: ul-scale-units(0.875rem);
+  font-size: fix-font-size-hack(0.875rem);
 }
 .footer-nav-list-emergency-content {
+  font-size: 1em;
   margin-top: 0;
 
   a {
@@ -109,7 +110,7 @@
   font-weight: 700;
   margin: 0;
   padding: 0;
-  font-size: ul-scale-units(0.875rem);
+  font-size: fix-font-size-hack(0.875rem);
   margin-top: 1em;
   text-decoration: none;
   text-transform: uppercase;
@@ -130,10 +131,10 @@
   color: var(--ul-color-black);
   background-color: var(--ul-color-white);
   padding: 1em 1.5em;
-  font-size: ul-scale-units(1rem);
+  font-size: fix-font-size-hack(1rem);
   text-decoration: none;
   transition: color 0.3s ease, background-color 0.3s ease;
-  margin-bottom: ul-scale-units(2rem);
+  margin-bottom: fix-font-size-hack(2rem);
   text-align: center;
 
   &:hover {
@@ -147,15 +148,15 @@
 }
 
 .footer-contact {
-  padding-top: ul-scale-units(4rem);
+  padding-top: fix-font-size-hack(4rem);
 }
 
 .footer-logos {
-  padding-top: ul-scale-units(3rem);
+  padding-top: fix-font-size-hack(3rem);
 
   @media (max-width: $ul-tablet-small) {
     flex-direction: column;
-    gap: ul-scale-units(3rem);
+    gap: fix-font-size-hack(3rem);
   }
 
   &:not(:where(.footer-logos-agreements)) {
@@ -188,10 +189,10 @@
 
   .footer-address-unit {
     margin: 0;
-    margin-bottom: ul-scale-units(0.5rem);
-    font-size: ul-scale-units(1.25rem);
+    margin-bottom: fix-font-size-hack(0.5rem);
+    font-size: fix-font-size-hack(1.25rem);
     font-weight: 700;
-    margin-bottom: ul-scale-units(1rem);
+    margin-bottom: fix-font-size-hack(1rem);
     max-width: 664px;
   }
 
@@ -204,14 +205,14 @@
 
   .footer-address-details {
     margin: 0;
-    margin-bottom: ul-scale-units(0.5rem);
-    font-size: ul-scale-units(0.875rem);
+    margin-bottom: fix-font-size-hack(0.5rem);
+    font-size: fix-font-size-hack(0.875rem);
     max-width: 664px;
 
     &.footer-address-subunit {
-      font-size: ul-scale-units(1.25rem);
+      font-size: fix-font-size-hack(1.25rem);
       margin-top: -1rem;
-      margin-bottom: ul-scale-units(1rem);
+      margin-bottom: fix-font-size-hack(1rem);
     }
   }
 }
@@ -222,7 +223,7 @@
   color: var(--ul-color-white);
   background-color: var(--ul-color-black);
   padding: 1em 1.5em;
-  font-size: ul-scale-units(1rem);
+  font-size: fix-font-size-hack(1rem);
   text-decoration: none;
   transition: color 0.3s ease, background-color 0.3s ease;
   text-align: center;

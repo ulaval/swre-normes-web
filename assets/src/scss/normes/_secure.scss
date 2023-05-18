@@ -19,8 +19,8 @@
 
 .ul-secure-login {
   display: block;
-  padding: ul-scale-units(1rem);
-  line-height: ul-scale-units(1rem);
+  padding: fix-font-size-hack(1rem);
+  line-height: fix-font-size-hack(1rem);
   color: var(--ul-color-black);
   &:hover,
   &:active {
@@ -34,10 +34,10 @@
 .ul-secure-menu-trigger {
   border: 0;
   background: none;
-  padding: ul-scale-units(1rem) ul-scale-units(0.591rem);
+  padding: fix-font-size-hack(1rem) fix-font-size-hack(0.591rem);
   color: var(--ul-color-black);
   box-sizing: border-box;
-  line-height: ul-scale-units(1rem);
+  line-height: fix-font-size-hack(1rem);
   display: flex;
   align-items: center;
   &:after {
@@ -92,10 +92,10 @@
   a {
     display: block;
     color: var(--ul-color-white);
-    padding: ul-scale-units(0.591rem);
+    padding: fix-font-size-hack(0.591rem);
     box-sizing: border-box;
-    line-height: ul-scale-units(1rem);
-    font-size: ul-scale-units(0.875rem);
+    line-height: fix-font-size-hack(1rem);
+    font-size: fix-font-size-hack(0.875rem);
     text-decoration: none;
 
     &:not(.ul-secure-logout) {

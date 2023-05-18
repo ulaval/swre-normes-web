@@ -2,45 +2,7 @@
 @import "./abstracts/_global_abstracts.scss";
 
 // Styles
-// Paramètres généraux de l'en-tête / version bureau
 .ul-header {
-  background: linear-gradient(
-        90deg,
-        var(--ul-color-red),
-        var(--ul-color-red) 50%,
-        var(--ul-color-gold) 0,
-        var(--ul-color-gold)
-      )
-      no-repeat,
-    var(--ul-color-white);
-  background-size: 100% 8px;
-  background-color: var(--ul-color-white);
-  box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.16);
-  z-index: 3;
-  position: relative;
-  &:before {
-    background: linear-gradient(
-          90deg,
-          var(--ul-color-red),
-          var(--ul-color-red) 80%,
-          var(--ul-color-gold) 80%,
-          var(--ul-color-gold)
-        )
-        no-repeat,
-      var(--ul-color-white);
-    background-size: 100% 8px;
-    display: block;
-    content: "";
-    padding: 0;
-    height: 8px;
-  }
-  :focus {
-    outline: 1px solid;
-  }
-  .container {
-    padding-top: ul-scale-units(1rem);
-    padding-bottom: ul-scale-units(1rem);
-  }
   .ul-header-ul-link-holder {
     grid-area: ecu;
     display: flex;
@@ -106,6 +68,10 @@
   }
   .ul-header-mobile-menu {
     display: none;
+
+    &.open {
+      display: block;
+    }
   }
 
   .ul-header-tools {
@@ -154,10 +120,6 @@
     &[aria-expanded="true"] {
       text-decoration: underline;
     }
-  }
-
-  .ul-header-menu-trigger {
-    display: none;
   }
 
   .ul-header-search {
@@ -316,101 +278,11 @@
   }
 }
 
-// In header, utility menu, language switcher
-.ul-language-switcher-trigger {
-  border: 0;
-  background: none;
-  padding: ul-scale-units(1rem) ul-scale-units(0.591rem);
-  color: var(--ul-color-black);
-  box-sizing: border-box;
-  line-height: ul-scale-units(1rem);
-  font-size: ul-scale-units(0.875rem);
-  font-weight: 600;
-  font-family: var(--ul-font);
-
-  &:after {
-    display: inline-block;
-    width: 13px;
-    height: 7px;
-    content: "";
-    background-image: var(--img-dropdown-arrow);
-    background-size: 13px 7px;
-    margin-left: 4px;
-  }
-
-  &:hover,
-  &:active,
-  &[aria-expanded="true"] {
-    background-color: var(--ul-color-black);
-    color: var(--ul-color-white);
-
-    &:after {
-      filter: invert(1);
-    }
-  }
-
-  &[aria-expanded="true"]:after {
-    transform: scaleY(-1);
-  }
-}
-.ul-language-switcher {
-  position: relative;
-
-  .ul-language-switcher-list {
-    position: absolute;
-    background-color: var(--ul-color-black);
-    color: var(--ul-color-white);
-    top: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    border: 1px var(--ul-color-black) solid;
-    z-index: 1;
-  }
-}
-.ul-link--in-language-nav {
-  &:not(:first-child) {
-    border-top: 1px var(--ul-color-grey) solid;
-  }
-
-  a {
-    display: block;
-    color: var(--ul-color-white);
-    padding: ul-scale-units(0.591rem);
-    box-sizing: border-box;
-    line-height: ul-scale-units(1rem);
-    font-size: ul-scale-units(0.875rem);
-    text-decoration: none;
-
-    &:hover {
-      color: var(--ul-color-black);
-      background-color: var(--ul-color-white);
-      text-decoration: underline;
-    }
-
-    &:focus,
-    &:focus-visible {
-      outline: 1px color(--ul-color-black) solid;
-      background-color: var(--ul-color-white);
-      color: var(--ul-color-black);
-      outline-offset: 2px;
-    }
-
-    &:active {
-      color: var(--ul-color-black);
-      background-color: var(--ul-color-white);
-      text-decoration: underline;
-    }
-  }
-}
-
 // Affichage mobile
+/*
 @mixin mobile-menu {
+  /*
   .ul-header .ul-header-main {
-    & > * {
-      z-index: 3;
-    }
     &:before {
       position: fixed;
       display: block;
@@ -433,141 +305,9 @@
     .ul-language-switcher {
       display: none;
     }
-    .ul-header-menu-trigger {
-      display: flex;
-      align-items: center;
-      width: 48px;
-      height: 48px;
-      padding: 16px;
-      display: inline-block;
-      border: 0;
-      background: none;
-      position: relative;
-      &:before {
-        content: "";
-        position: absolute;
-        top: 16px;
-        left: 16px;
-        right: 16px;
-        height: 3px;
-        height: 2px;
-        border-radius: 2px;
-        background: var(--ul-color-black);
-        @media (prefers-reduced-motion: no-preference) {
-          transition: left 0.3s ease;
-        }
-      }
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: 16px;
-        left: 16px;
-        right: 16px;
-        background-color: var(--ul-color-black);
-        height: 2px;
-        border-radius: 2px;
-        @media (prefers-reduced-motion: no-preference) {
-          transition: right 0.3s ease;
-        }
-      }
-      & > .ul-header-menu-trigger-midbar {
-        &:before {
-          content: "";
-          position: absolute;
-          top: 23px;
-          left: 16px;
-          right: 16px;
-          height: 2px;
-          border-radius: 2px;
-          background-color: var(--ul-color-black);
-          @media (prefers-reduced-motion: no-preference) {
-            transition: transform 0.3s ease;
-          }
-        }
-        &:after {
-          content: "";
-          position: absolute;
-          top: 23px;
-          left: 16px;
-          right: 16px;
-          height: 2px;
-          border-radius: 2px;
-          background-color: var(--ul-color-black);
-          @media (prefers-reduced-motion: no-preference) {
-            transition: transform 0.3s ease;
-          }
-        }
-      }
-      &:hover,
-      &:active {
-        background-color: var(--ul-color-black);
-        &:before,
-        &:after {
-          background-color: var(--ul-color-white);
-        }
-
-        & > .ul-header-menu-trigger-midbar {
-          &:before,
-          &:after {
-            background-color: var(--ul-color-white);
-          }
-        }
-      }
-      &[aria-expanded="true"] {
-        transition: background-color 0.5s ease;
-        &:before,
-        &:after {
-          transition: background-color 0.5s ease;
-        }
-        @media (prefers-reduced-motion: no-preference) {
-          &:before {
-            transition: left 0.3s ease, background-color 0.3s ease;
-          }
-          &:before {
-            transition: right 0.3s ease, background-color 0.3s ease;
-          }
-        }
-        & > .ul-header-menu-trigger-midbar {
-          &:before,
-          &:after {
-            transition: background-color 0.5s ease;
-            @media (prefers-reduced-motion: no-preference) {
-              transition: transform 0.3s ease, background-color 0.3s ease;
-            }
-          }
-        }
-
-        &:before {
-          left: 32px;
-        }
-        &:after {
-          right: 32px;
-        }
-        & > .ul-header-menu-trigger-midbar {
-          &:before {
-            transform: rotate(-45deg);
-          }
-          &:after {
-            transform: rotate(45deg);
-          }
-        }
-        &:hover,
-        &:active {
-          background-color: var(--ul-color-white);
-          &:before,
-          &:after {
-            background-color: var(--ul-color-black);
-          }
-          & > .ul-header-menu-trigger-midbar {
-            &:before,
-            &:after {
-              background-color: var(--ul-color-black);
-            }
-          }
-        }
-      }
-    }
   }
+  */
+/*
   .ul-header .ul-header-mobile-menu {
     padding-top: ul-scale-units(3rem);
     padding-bottom: ul-scale-units(3rem);
@@ -598,7 +338,7 @@
 
   //Mobile main menu
   .ul-header-main-nav {
-    align-self: flex-start;
+    //align-self: flex-start;
 
     ul {
       flex-direction: column;
@@ -631,7 +371,7 @@
 
   //Mobile secondary menu
   .ul-header-secondary-nav {
-    align-self: flex-start;
+    //align-self: flex-start;
 
     ul {
       flex-direction: column;
@@ -715,6 +455,7 @@
 }
 
 // Changements de couleur une fois le menu mobile ouvert
+/*
 @mixin mobile-menu-colors {
   display: block;
   height: 100vh;
@@ -724,6 +465,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  /*
   .ul-header .ul-header-main {
     &:before {
       width: 100%;
@@ -763,7 +505,10 @@
       }
     }
   }
+  */
+/*
   .ul-footer {
     z-index: 1;
   }
 }
+*/

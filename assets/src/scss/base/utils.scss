@@ -47,6 +47,14 @@
   }
 }
 
+// UI utility to remove any content styling
+.menu {
+  li {
+    list-style-type: none;
+    margin: 0;
+  }
+}
+
 @media (min-width: $breakpoint-md) {
   .skip-to-content {
     text-align: left;

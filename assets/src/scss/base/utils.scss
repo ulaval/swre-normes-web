@@ -55,6 +55,26 @@
   }
 }
 
+.accesible-links-wrapper {
+  a {
+    // Better outline shape
+    margin: 0 -2px;
+    padding: 0 2px;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline-color: $color-black;
+      outline-style: dotted;
+      outline-width: 1px;
+      outline-offset: 1px;
+    }
+  }
+}
+
 @media (min-width: $breakpoint-md) {
   .skip-to-content {
     text-align: left;

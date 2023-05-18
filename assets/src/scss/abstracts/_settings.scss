@@ -48,3 +48,11 @@ $font-size-hack: false;
     @return $value;
   }
 }
+
+/**
+ * Activate some styles to help with debugging.
+ *
+ * @usage $debug: false;
+ * @usage $debug: true;
+ */
+$debug: true;

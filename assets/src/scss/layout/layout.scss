@@ -16,17 +16,13 @@ $website-container-base-padding: fix-font-size-hack(1em);
 // The step is equal to half of 1.25em (20px) of each side.
 $website-container-step-padding: fix-font-size-hack(calc(1.25em / 2));
 
-// Debug
-// main {
-//   @if $website-container-type == "fixed" {
-//     background: $color-ul-yellow;
-//   }
-//   @if $website-container-type == "fluid" {
-//     background: $color-ul-blue;
-//   }
-// }
-
 // Styles
+@if $font-size-hack {
+  html {
+    font-size: 62.5%;
+  }
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -151,6 +147,19 @@ $website-container-step-padding: fix-font-size-hack(calc(1.25em / 2));
           $website-container-step-padding *
           6;
       }
+    }
+  }
+}
+
+@if $debug {
+  header,
+  main,
+  footer {
+    @if $website-container-type == "fixed" {
+      background: $color-ul-yellow;
+    }
+    @if $website-container-type == "fluid" {
+      background: $color-ul-blue;
     }
   }
 }

@@ -1,4 +1,8 @@
+// Import abstracts
+@import "./abstracts/_abstracts.scss";
+
 // Code nécessaire pour tous les sites
+@import "./normes/_general.scss";
 @import "./normes/_general.scss";
 @import "./normes/_icons.scss";
 @import "./normes/_header.scss";

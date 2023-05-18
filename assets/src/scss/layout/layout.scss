@@ -27,15 +27,15 @@ $website-container-step-padding: fix-font-size-hack(calc(1.25em / 2));
   margin-left: auto;
   margin-right: auto;
   max-width: $website-container-max-width;
+  padding-left: $website-container-base-padding;
+  padding-right: $website-container-base-padding;
+
   @if $website-container-type == "fixed" {
-    padding-left: $website-container-base-padding;
-    padding-right: $website-container-base-padding;
+    transition: max-width 0.125s ease-out;
   }
   @if $website-container-type == "fluid" {
-    padding-left: $website-container-base-padding;
-    padding-right: $website-container-base-padding;
+    transition: padding-left 0.125s ease-out, padding-right 0.125s ease-out;
   }
-  transition: padding-left 0.125s ease-out, padding-right 0.125s ease-out;
 }
 
 .container-fullwidth {

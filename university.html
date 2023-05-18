@@ -41,7 +41,7 @@
           <div class="ul-header-top-meta">
             <nav class="ul-header-secondary-nav" aria-label="Liens rapides">
               <ul class="menu">
-                <li class="ul-link--in-list"><a href="#" aria-current="page">Libellé supp</a></li>
+                <!-- <li class="ul-link--in-list"><a href="#" aria-current="page">Libellé supp</a></li> -->
                 <li class="ul-link--in-list"><a href="#">monPortail</a></li>
                 <li class="ul-link--in-list"><a href="#">Nouvelles</a></li>
                 <li class="ul-link--in-list"><a href="#">Nous joindre</a></li>
@@ -109,7 +109,7 @@
                   </li>
                 </ul>
               </nav>
-              <button type="button" class="ul-header-menu-trigger" aria-expanded="false" aria-controls="ul-mobile-menu"><span class="ul-header-menu-trigger-midbar" role="presentation"></span><span class="screen-reader-text">Ouvrir le menu principal</span></button>
+              <button type="button" class="ul-header-menu-trigger" aria-expanded="false" aria-controls="ul-mobile-menu"><span class="ul-header-menu-trigger-midbar" role="presentation"></span><span class="visually-hidden">Ouvrir le menu principal</span></button>
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@
           </nav>
           <nav class="ul-header-secondary-nav" aria-label="Liens rapides">
             <ul>
-              <li class="ul-link--in-mobile-secondary-nav"><a href="#" aria-current="page">Libellé supp</a></li>
+              <!--<li class="ul-link--in-mobile-secondary-nav"><a href="#" aria-current="page">Libellé supp</a></li>-->
               <li class="ul-link--in-mobile-secondary-nav"><a href="#">monPortail</a></li>
               <li class="ul-link--in-mobile-secondary-nav"><a href="#">Nouvelles</a></li>
               <li class="ul-link--in-mobile-secondary-nav"><a href="#">Nous joindre</a></li>
@@ -138,7 +138,7 @@
           <nav class="ul-mobile-language-switcher" aria-label="Sélectionnez votre langue">
             <ul class="menu">
               <li class="ul-link--in-mobile-language-switcher">
-                <span class="screen-reader-text" lang="fr">Français</span>
+                <span class="visually-hidden" lang="fr">Français</span>
                 <span aria-hidden="true" aria-role="presentation" class="current-language">Fr</span>
               </li>
               <li class="ul-link--in-mobile-language-switcher">
@@ -157,7 +157,7 @@
       </div>
       <div class="ul-header-search" id="site-main-search">
         <form role="search" method="get" action="#">
-          <label for="site-header-search-bar" class="screen-reader-text">Que cherchez-vous?</label>
+          <label for="site-header-search-bar" class="visually-hidden">Que cherchez-vous?</label>
           <input id="site-header-search-bar" type="search" placeholder="Chercher par mots-clés" name="q" value="" class="champ-recherche" />
           <button type="submit" class="btn-recherche" value="" aria-label="Chercher">
             <i class="ul-i-search" aria-hidden="true" role="presentation"></i>
@@ -246,8 +246,7 @@
                     <!-- Include this SVG as an inline SVG -->
                     <!-- ./assets/dist/svg/social-instagram.svg -->
                     <svg class="social-instagram" aria-role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                      <path
-                        d="M16 6.97c2.94 0 3.29.01 4.45.07.7 0 1.39.14 2.05.38.48.18.91.46 1.27.82.37.35.65.79.82 1.27.24.66.37 1.35.38 2.05.05 1.16.07 1.51.07 4.45s-.01 3.29-.07 4.45c0 .7-.14 1.39-.38 2.05-.18.48-.46.91-.82 1.27-.36.37-.79.65-1.27.82-.66.24-1.35.37-2.05.38-1.16.05-1.51.07-4.45.07s-3.29-.01-4.45-.07c-.7 0-1.39-.14-2.05-.38-.48-.18-.91-.46-1.27-.82-.37-.35-.65-.79-.82-1.27a6.25 6.25 0 0 1-.38-2.05c-.05-1.16-.07-1.51-.07-4.45s.01-3.29.07-4.45c0-.7.14-1.39.38-2.05.18-.48.46-.91.82-1.27.36-.37.79-.65 1.27-.83a6.25 6.25 0 0 1 2.05-.38c1.16-.06 1.51-.07 4.45-.07m0-1.99c-2.99 0-3.37.01-4.54.07-.91.02-1.81.19-2.67.51-.74.28-1.4.71-1.95 1.27-.56.55-.99 1.22-1.27 1.95-.32.85-.49 1.76-.51 2.67-.05 1.17-.07 1.55-.07 4.54s.01 3.36.07 4.54c.02.91.19 1.82.51 2.67.28.73.71 1.4 1.27 1.95.55.56 1.22.99 1.95 1.27.85.32 1.76.5 2.67.51 1.18.05 1.55.07 4.54.07s3.36-.01 4.54-.07c.91-.02 1.82-.19 2.67-.51.73-.28 1.4-.71 1.95-1.27.56-.55.99-1.22 1.27-1.95.32-.86.49-1.76.51-2.68.05-1.18.07-1.55.07-4.54s-.01-3.36-.07-4.54c-.02-.91-.19-1.82-.51-2.67-.28-.73-.71-1.4-1.27-1.95-.55-.56-1.22-.99-1.95-1.27-.86-.32-1.76-.49-2.68-.51-1.18-.05-1.55-.06-4.54-.06" />
+                      <path d="M16 6.97c2.94 0 3.29.01 4.45.07.7 0 1.39.14 2.05.38.48.18.91.46 1.27.82.37.35.65.79.82 1.27.24.66.37 1.35.38 2.05.05 1.16.07 1.51.07 4.45s-.01 3.29-.07 4.45c0 .7-.14 1.39-.38 2.05-.18.48-.46.91-.82 1.27-.36.37-.79.65-1.27.82-.66.24-1.35.37-2.05.38-1.16.05-1.51.07-4.45.07s-3.29-.01-4.45-.07c-.7 0-1.39-.14-2.05-.38-.48-.18-.91-.46-1.27-.82-.37-.35-.65-.79-.82-1.27a6.25 6.25 0 0 1-.38-2.05c-.05-1.16-.07-1.51-.07-4.45s.01-3.29.07-4.45c0-.7.14-1.39.38-2.05.18-.48.46-.91.82-1.27.36-.37.79-.65 1.27-.83a6.25 6.25 0 0 1 2.05-.38c1.16-.06 1.51-.07 4.45-.07m0-1.99c-2.99 0-3.37.01-4.54.07-.91.02-1.81.19-2.67.51-.74.28-1.4.71-1.95 1.27-.56.55-.99 1.22-1.27 1.95-.32.85-.49 1.76-.51 2.67-.05 1.17-.07 1.55-.07 4.54s.01 3.36.07 4.54c.02.91.19 1.82.51 2.67.28.73.71 1.4 1.27 1.95.55.56 1.22.99 1.95 1.27.85.32 1.76.5 2.67.51 1.18.05 1.55.07 4.54.07s3.36-.01 4.54-.07c.91-.02 1.82-.19 2.67-.51.73-.28 1.4-.71 1.95-1.27.56-.55.99-1.22 1.27-1.95.32-.86.49-1.76.51-2.68.05-1.18.07-1.55.07-4.54s-.01-3.36-.07-4.54c-.02-.91-.19-1.82-.51-2.67-.28-.73-.71-1.4-1.27-1.95-.55-.56-1.22-.99-1.95-1.27-.86-.32-1.76-.49-2.68-.51-1.18-.05-1.55-.06-4.54-.06" />
                       <path d="M16 10.35c-3.12 0-5.66 2.53-5.66 5.66s2.53 5.65 5.66 5.65 5.65-2.53 5.65-5.65c0-3.12-2.53-5.66-5.65-5.66m0 9.32a3.675 3.675 0 1 1 .01-7.35c2.03 0 3.67 1.65 3.67 3.67 0 2.03-1.64 3.67-3.67 3.67Z" />
                       <path d="M21.88 8.8c.73 0 1.32.59 1.32 1.32 0 .73-.59 1.32-1.32 1.32-.73 0-1.32-.59-1.32-1.32 0-.73.59-1.32 1.32-1.32" />
                     </svg>

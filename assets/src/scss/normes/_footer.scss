@@ -1,7 +1,7 @@
 // Importation du fichier global
 @import "./abstracts/_global_abstracts.scss";
 
-.footer-nav,
+.footer-navigation,
 .footer-logos {
   display: flex;
   justify-content: space-between;
@@ -16,7 +16,6 @@
 
   padding-bottom: 0;
 
-  .footer-mail-social,
   .footer-logos {
     display: flex;
     flex-direction: column;
@@ -30,10 +29,10 @@
 }
 
 //Footer secondary nav
-.footer-nav {
+.footer-navigation {
   padding-top: fix-font-size-hack(3rem);
 }
-.footer-nav-list {
+.footer-navigation-list {
   display: flex;
   gap: fix-font-size-hack(4.5rem);
 
@@ -43,7 +42,7 @@
     align-items: flex-start;
   }
 }
-.footer-nav-list-content {
+.footer-navigation-list-content {
   display: flex;
   gap: fix-font-size-hack(4.5rem);
 
@@ -60,21 +59,21 @@
     margin-top: fix-font-size-hack(0.5rem);
   }
 
-  .footer-nav-list-content-column-title {
+  .footer-navigation-list-content-column-title {
     font-weight: 600;
     font-size: fix-font-size-hack(0.875rem);
     margin: 0;
     padding: 0;
   }
 
-  .ul-link--in-footer-nav-list {
+  .ul-link--in-footer-navigation-list {
     margin-bottom: fix-font-size-hack(0.2rem);
   }
 }
-.footer-nav-list-emergency {
+.footer-navigation-list-emergency {
   font-size: fix-font-size-hack(0.875rem);
 }
-.footer-nav-list-emergency-content {
+.footer-navigation-list-emergency-content {
   font-size: 1em;
   margin-top: 0;
 
@@ -95,7 +94,7 @@
     outline-offset: 2px;
   }
 }
-.footer-nav-list-emergency-header-title {
+.footer-navigation-list-emergency-header-title {
   font-weight: 700;
   margin: 0;
   padding: 0;

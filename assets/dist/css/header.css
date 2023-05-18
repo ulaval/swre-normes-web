@@ -1,1 +1,531 @@
-.ul-header{background:linear-gradient(90deg, var(--ul-color-red), var(--ul-color-red) 50%, var(--ul-color-gold) 0, var(--ul-color-gold)) no-repeat,var(--ul-color-white);background-size:100% 8px;background-color:var(--ul-color-white);box-shadow:0px 1px 7px 0px rgba(0,0,0,.16);z-index:3;position:relative}.ul-header:before{background:linear-gradient(90deg, var(--ul-color-red), var(--ul-color-red) 80%, var(--ul-color-gold) 80%, var(--ul-color-gold)) no-repeat,var(--ul-color-white);background-size:100% 8px;display:block;content:"";padding:0;height:8px}.ul-header-main-nav,.ul-header-secondary-nav,.ul-header-language-switcher{display:none}.ul-header-top,.ul-header-main{align-items:center;display:flex}.ul-header-top{height:1.5em;justify-content:flex-end;margin-bottom:1em}.ul-header-top-meta{margin-left:auto}.ul-header-main{column-gap:3em;height:3.75em}.ul-header-main-logo{display:block;width:128px}.ul-header-main-utilities{margin-left:auto}.ul-header-language-switcher{position:relative}.ul-header-language-switcher-list{position:absolute;background-color:var(--ul-color-black);color:var(--ul-color-white);top:100%;width:100%;margin:0;padding:0;list-style:none;border:1px var(--ul-color-black) solid;z-index:1}.ul-header-language-switcher-trigger{background:none;border:0;box-sizing:border-box;color:var(--ul-color-black);font-family:var(--ul-font);font-size:.875rem;font-weight:600;line-height:1rem;padding:1rem .591rem}.ul-header-language-switcher-trigger:after{background-image:var(--img-dropdown-arrow);background-size:13px 7px;content:"";display:inline-block;height:7px;margin-left:4px;width:13px}.ul-header-language-switcher-trigger:hover,.ul-header-language-switcher-trigger:active,.ul-header-language-switcher-trigger[aria-expanded=true]{background-color:var(--ul-color-black);color:var(--ul-color-white)}.ul-header-language-switcher-trigger:hover:after,.ul-header-language-switcher-trigger:active:after,.ul-header-language-switcher-trigger[aria-expanded=true]:after{filter:invert(1)}.ul-header-language-switcher-trigger[aria-expanded=true]:after{transform:scaleY(-1)}.ul-header .ul-link--in-language-nav:not(:first-child){border-top:1px var(--ul-color-grey) solid}.ul-header .ul-link--in-language-nav a{box-sizing:border-box;color:var(--ul-color-white);display:block;font-size:.875rem;line-height:1rem;padding:.591rem;text-decoration:none}.ul-header .ul-link--in-language-nav a:hover{background-color:var(--ul-color-white);color:var(--ul-color-black);text-decoration:underline}.ul-header .ul-link--in-language-nav a:focus,.ul-header .ul-link--in-language-nav a:focus-visible{background-color:var(--ul-color-white);color:var(--ul-color-black);outline-offset:2px;outline:1px color(--ul-color-black) solid}.ul-header .ul-link--in-language-nav a:active{background-color:var(--ul-color-white);color:var(--ul-color-black);text-decoration:underline}.ul-header-menu-trigger{align-items:center;background:none;border:0;display:flex;display:inline-block;height:48px;padding:16px;position:relative;width:48px}.ul-header-menu-trigger:before{background:var(--ul-color-black);border-radius:2px;content:"";height:2px;height:3px;left:16px;position:absolute;right:16px;top:16px}@media(prefers-reduced-motion: no-preference){.ul-header-menu-trigger:before{transition:left .3s ease}}.ul-header-menu-trigger:after{content:"";position:absolute;bottom:16px;left:16px;right:16px;background-color:var(--ul-color-black);height:2px;border-radius:2px}@media(prefers-reduced-motion: no-preference){.ul-header-menu-trigger:after{transition:right .3s ease}}.ul-header-menu-trigger-midbar:before{background-color:var(--ul-color-black);border-radius:2px;content:"";height:2px;left:16px;position:absolute;right:16px;top:23px}@media(prefers-reduced-motion: no-preference){.ul-header-menu-trigger-midbar:before{transition:transform .3s ease}}.ul-header-menu-trigger-midbar:after{background-color:var(--ul-color-black);border-radius:2px;content:"";height:2px;left:16px;position:absolute;right:16px;top:23px}@media(prefers-reduced-motion: no-preference){.ul-header-menu-trigger-midbar:after{transition:transform .3s ease}}.ul-header-menu-trigger:hover,.ul-header-menu-trigger:active{background-color:var(--ul-color-black)}.ul-header-menu-trigger:hover:before,.ul-header-menu-trigger:hover:after,.ul-header-menu-trigger:active:before,.ul-header-menu-trigger:active:after{background-color:var(--ul-color-white)}.ul-header-menu-trigger:hover .ul-header-menu-trigger-midbar:before,.ul-header-menu-trigger:hover .ul-header-menu-trigger-midbar:after,.ul-header-menu-trigger:active .ul-header-menu-trigger-midbar:before,.ul-header-menu-trigger:active .ul-header-menu-trigger-midbar:after{background-color:var(--ul-color-white)}.ul-header-menu-trigger[aria-expanded=true]{transition:background-color .5s ease}.ul-header-menu-trigger[aria-expanded=true]:before,.ul-header-menu-trigger[aria-expanded=true]:after{transition:background-color .5s ease}@media(prefers-reduced-motion: no-preference){.ul-header-menu-trigger[aria-expanded=true]:before{transition:left .3s ease,background-color .3s ease}.ul-header-menu-trigger[aria-expanded=true]:before{transition:right .3s ease,background-color .3s ease}}.ul-header-menu-trigger[aria-expanded=true] .ul-header-menu-trigger-midbar:before,.ul-header-menu-trigger[aria-expanded=true] .ul-header-menu-trigger-midbar:after{transition:background-color .5s ease}@media(prefers-reduced-motion: no-preference){.ul-header-menu-trigger[aria-expanded=true] .ul-header-menu-trigger-midbar:before,.ul-header-menu-trigger[aria-expanded=true] .ul-header-menu-trigger-midbar:after{transition:transform .3s ease,background-color .3s ease}}.ul-header-menu-trigger[aria-expanded=true]:before{left:32px}.ul-header-menu-trigger[aria-expanded=true]:after{right:32px}.ul-header-menu-trigger[aria-expanded=true] .ul-header-menu-trigger-midbar:before{transform:rotate(-45deg)}.ul-header-menu-trigger[aria-expanded=true] .ul-header-menu-trigger-midbar:after{transform:rotate(45deg)}.ul-header-menu-trigger[aria-expanded=true]:hover,.ul-header-menu-trigger[aria-expanded=true]:active{background-color:var(--ul-color-white)}.ul-header-menu-trigger[aria-expanded=true]:hover:before,.ul-header-menu-trigger[aria-expanded=true]:hover:after,.ul-header-menu-trigger[aria-expanded=true]:active:before,.ul-header-menu-trigger[aria-expanded=true]:active:after{background-color:var(--ul-color-black)}.ul-header-menu-trigger[aria-expanded=true]:hover .ul-header-menu-trigger-midbar:before,.ul-header-menu-trigger[aria-expanded=true]:hover .ul-header-menu-trigger-midbar:after,.ul-header-menu-trigger[aria-expanded=true]:active .ul-header-menu-trigger-midbar:before,.ul-header-menu-trigger[aria-expanded=true]:active .ul-header-menu-trigger-midbar:after{background-color:var(--ul-color-black)}.ul-header-mobile-menu{display:none}.ul-header-mobile-menu.open{display:block}.ul-header-main-nav ul{display:flex;gap:ul-scale-units(2rem);margin:0;padding:0;list-style:none}.ul-header .ul-link--in-main-nav{margin:0;padding:0;padding-top:ul-scale-units(0.3rem);display:flex}.ul-header .ul-link--in-main-nav a{text-align:center;text-decoration:none;color:var(--ul-color-black);font-weight:700;font-size:ul-scale-units(1rem);background:linear-gradient(90deg, var(--ul-color-red), var(--ul-color-red)) no-repeat left bottom/0 4px;transition:background-size 400ms;padding-bottom:ul-scale-units(0.3rem)}.ul-header .ul-link--in-main-nav a:hover,.ul-header .ul-link--in-main-nav a:focus-visible{background-size:100% 4px;background-position-x:left}.ul-header .ul-link--in-main-nav a:focus-visible{outline-offset:10px}.ul-header .ul-link--in-main-nav a[aria-current=page]{background:linear-gradient(90deg, var(--ul-color-black), var(--ul-color-black)) no-repeat left bottom/0 4px;background-size:100% 4px;background-position-x:left}.ul-header-secondary-nav ul{display:flex;gap:ul-scale-units(1.5rem);list-style:none;justify-content:flex-end;margin:0;padding:0}.ul-header .ul-link--in-list{font-size:ul-scale-units(0.875rem);list-style-type:none}.ul-header .ul-link--in-list a{color:var(--ul-color-black);text-decoration:none}.ul-header .ul-link--in-list a:hover,.ul-header .ul-link--in-list a:focus-visible,.ul-header .ul-link--in-list a[aria-current=page]{text-decoration:underline}.ul-header .ul-link--in-list a:focus-visible{outline-offset:5px}.ul-header .ul-link--in-list a[href]:hover{text-decoration:underline}.ul-header .ul-link--in-list a[href]:focus-visible{outline-offset:3px}.ul-header :focus{outline:1px solid}.ul-header .container{padding-top:1rem;padding-bottom:1rem}@media(min-width: 1280px){.ul-header-menu-trigger,.ul-header-mobile-menu.open{display:none}.ul-header-main-nav,.ul-header-secondary-nav,.ul-header-language-switcher{display:block}}
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./assets/src/scss/layout/header.scss ***!
+  \*************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/**
+ * Header
+ */
+/**
+ * Import settings, functions, mixins, variables.
+ */
+/**
+ * Add customizable settings to help implementing to all website.
+ */
+/**
+ * Define the responsive way to resize the website.
+ *
+ * With the fixed method, the website will have multiple pre-defined breakpoints
+ * With the fluid method, the website will always use 100% of the available space.
+ *
+ * @usage $website-container-max-width: "fixed";
+ * @usage $website-container-type: "fluid";
+ */
+/**
+ * Define the responsive way to resize the website.
+ *
+ * With the fixed method, the website will have multiple pre-defined breakpoints
+ * With the fluid method, the website will always use 100% of the available space.
+ *
+ * @usage $website-container-max-width: 1940px;
+ * @usage $website-container-max-width: 1600px;
+ * @usage $website-container-max-width: 1280px;
+ */
+/**
+ * Fixes the font-size hack for websites using 62.5% font-sizing to use em as pixel.
+ * Change $font-size-hack to true if your website use the font-size hack.
+ *
+ * @param {Length} $value - The value to fix.
+ * @param {Boolean} [$font-size-hack: false] - Whether the font-size hack is used on the website.
+ * @return {Length} - The fixed value.
+ *
+ * @usage fix-font-size-hack(1em, false) => 1em
+ * @usage fix-font-size-hack(1em, true) => 1.6em
+ * @usage fix-font-size-hack(1rem, false) => 1rem
+ * @usage fix-font-size-hack(1rem, true) => 1.6rem
+ */
+/**
+ * Activate some styles to help with debugging.
+ *
+ * @usage $debug: false;
+ * @usage $debug: true;
+ */
+/**
+ * Define basic functions that can be used by any website.
+ */
+/*
+ * Remove the unit of a length
+ * @param {Number} $number - Number to remove unit from
+ * @return {Number} - Unitless number
+¸*/
+/**
+ * Converts a pixel value to an rem value based on a given context.
+ *
+ * @param {Number|Length} $pixels - The pixel value to convert to rem.
+ * @param {Number|Length} [$context: $browser-context] - The context value in pixels used for the conversion.
+ * @return {Length} - The calculated value in rem.
+ *
+ * @usage rem(16px) => 1rem
+ * @usage rem(24) => 1.5rem
+ * @usage rem(16, 10) => 1.6rem
+ */
+/**
+ * Converts a pixel value to an em value based on a given context.
+ *
+ * @param {Number|Length} $pixels - The pixel value to convert to em.
+ * @param {Number|Length} [$context: $browser-context] - The context value in pixels used for the conversion.
+ * @return {Length} - The calculated value in em.
+ *
+ * @usage em(16px) => 1em
+ * @usage em(24) => 1.5em
+ * @usage em(16, 10) => 1.6em
+ */
+/**
+ * Converts a em value to an pixel value based on a given context.
+ *
+ * @param {Number|Length} $em - The em value to convert to pixels.
+ * @param {Number|Length} [$context: $browser-context] - The context value in em used for the conversion.
+ * @return {Length} - The calculated value in pixels.
+ *
+ * @usage px(1em) => 16px
+ * @usage px(1) => 16px
+ * @usage px(1, 10) => 10px
+ */
+/**
+ * Define basic mixins that can be used by any website.
+ */
+/**
+ * Define basic breakpoints that can be used by any website.
+ * Always use mobile-first when using breakpoints.
+ */
+/**
+ * Define basic colors that can be used by any website.
+ */
+.ul-header {
+  background: linear-gradient(90deg, var(--ul-color-red), var(--ul-color-red) 50%, var(--ul-color-gold) 0, var(--ul-color-gold)) no-repeat, var(--ul-color-white);
+  background-size: 100% 8px;
+  background-color: var(--ul-color-white);
+  box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.16);
+  z-index: 3;
+  position: relative;
+}
+.ul-header:before {
+  background: linear-gradient(90deg, var(--ul-color-red), var(--ul-color-red) 80%, var(--ul-color-gold) 80%, var(--ul-color-gold)) no-repeat, var(--ul-color-white);
+  background-size: 100% 8px;
+  display: block;
+  content: "";
+  padding: 0;
+  height: 8px;
+}
+.ul-header-main-nav, .ul-header-secondary-nav, .ul-header-language-switcher {
+  display: none;
+}
+.ul-header-top, .ul-header-main {
+  align-items: center;
+  display: flex;
+}
+.ul-header-top {
+  height: 1.5em;
+  justify-content: flex-end;
+  margin-bottom: 1em;
+}
+.ul-header-top-meta {
+  margin-left: auto;
+}
+.ul-header-main {
+  column-gap: 3em;
+  height: 3.75em;
+}
+.ul-header-main-logo {
+  display: block;
+  width: 128px;
+}
+.ul-header-main-utilities {
+  margin-left: auto;
+}
+.ul-header-language-switcher {
+  position: relative;
+}
+.ul-header-language-switcher-list {
+  position: absolute;
+  background-color: var(--ul-color-black);
+  color: var(--ul-color-white);
+  top: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px var(--ul-color-black) solid;
+  z-index: 1;
+}
+.ul-header-language-switcher-trigger {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  color: var(--ul-color-black);
+  font-family: var(--ul-font);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1rem;
+  padding: 1rem 0.591rem;
+}
+.ul-header-language-switcher-trigger:after {
+  background-image: var(--img-dropdown-arrow);
+  background-size: 13px 7px;
+  content: "";
+  display: inline-block;
+  height: 7px;
+  margin-left: 4px;
+  width: 13px;
+}
+.ul-header-language-switcher-trigger:hover, .ul-header-language-switcher-trigger:active, .ul-header-language-switcher-trigger[aria-expanded=true] {
+  background-color: var(--ul-color-black);
+  color: var(--ul-color-white);
+}
+.ul-header-language-switcher-trigger:hover:after, .ul-header-language-switcher-trigger:active:after, .ul-header-language-switcher-trigger[aria-expanded=true]:after {
+  filter: invert(1);
+}
+.ul-header-language-switcher-trigger[aria-expanded=true]:after {
+  transform: scaleY(-1);
+}
+.ul-header .ul-link--in-language-nav:not(:first-child) {
+  border-top: 1px var(--ul-color-grey) solid;
+}
+.ul-header .ul-link--in-language-nav a {
+  box-sizing: border-box;
+  color: var(--ul-color-white);
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  padding: 0.591rem;
+  text-decoration: none;
+}
+.ul-header .ul-link--in-language-nav a:hover {
+  background-color: var(--ul-color-white);
+  color: var(--ul-color-black);
+  text-decoration: underline;
+}
+.ul-header .ul-link--in-language-nav a:focus, .ul-header .ul-link--in-language-nav a:focus-visible {
+  background-color: var(--ul-color-white);
+  color: var(--ul-color-black);
+  outline-offset: 2px;
+  outline: 1px color(--ul-color-black) solid;
+}
+.ul-header .ul-link--in-language-nav a:active {
+  background-color: var(--ul-color-white);
+  color: var(--ul-color-black);
+  text-decoration: underline;
+}
+.ul-header-menu-trigger {
+  align-items: center;
+  background: none;
+  border: 0;
+  display: flex;
+  display: inline-block;
+  height: 48px;
+  padding: 16px;
+  position: relative;
+  width: 48px;
+}
+.ul-header-menu-trigger:before {
+  background: var(--ul-color-black);
+  border-radius: 2px;
+  content: "";
+  height: 2px;
+  height: 3px;
+  left: 16px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ul-header-menu-trigger:before {
+    transition: left 0.3s ease;
+  }
+}
+.ul-header-menu-trigger:after {
+  content: "";
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  background-color: var(--ul-color-black);
+  height: 2px;
+  border-radius: 2px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ul-header-menu-trigger:after {
+    transition: right 0.3s ease;
+  }
+}
+.ul-header-menu-trigger-midbar:before {
+  background-color: var(--ul-color-black);
+  border-radius: 2px;
+  content: "";
+  height: 2px;
+  left: 16px;
+  position: absolute;
+  right: 16px;
+  top: 23px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ul-header-menu-trigger-midbar:before {
+    transition: transform 0.3s ease;
+  }
+}
+.ul-header-menu-trigger-midbar:after {
+  background-color: var(--ul-color-black);
+  border-radius: 2px;
+  content: "";
+  height: 2px;
+  left: 16px;
+  position: absolute;
+  right: 16px;
+  top: 23px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ul-header-menu-trigger-midbar:after {
+    transition: transform 0.3s ease;
+  }
+}
+.ul-header-menu-trigger:hover, .ul-header-menu-trigger:active {
+  background-color: var(--ul-color-black);
+}
+.ul-header-menu-trigger:hover:before, .ul-header-menu-trigger:hover:after, .ul-header-menu-trigger:active:before, .ul-header-menu-trigger:active:after {
+  background-color: var(--ul-color-white);
+}
+.ul-header-menu-trigger:hover .ul-header-menu-trigger-midbar:before, .ul-header-menu-trigger:hover .ul-header-menu-trigger-midbar:after, .ul-header-menu-trigger:active .ul-header-menu-trigger-midbar:before, .ul-header-menu-trigger:active .ul-header-menu-trigger-midbar:after {
+  background-color: var(--ul-color-white);
+}
+.ul-header-menu-trigger[aria-expanded=true] {
+  transition: background-color 0.5s ease;
+}
+.ul-header-menu-trigger[aria-expanded=true]:before, .ul-header-menu-trigger[aria-expanded=true]:after {
+  transition: background-color 0.5s ease;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ul-header-menu-trigger[aria-expanded=true]:before {
+    transition: left 0.3s ease, background-color 0.3s ease;
+  }
+  .ul-header-menu-trigger[aria-expanded=true]:before {
+    transition: right 0.3s ease, background-color 0.3s ease;
+  }
+}
+.ul-header-menu-trigger[aria-expanded=true] .ul-header-menu-trigger-midbar:before, .ul-header-menu-trigger[aria-expanded=true] .ul-header-menu-trigger-midbar:after {
+  transition: background-color 0.5s ease;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ul-header-menu-trigger[aria-expanded=true] .ul-header-menu-trigger-midbar:before, .ul-header-menu-trigger[aria-expanded=true] .ul-header-menu-trigger-midbar:after {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+}
+.ul-header-menu-trigger[aria-expanded=true]:before {
+  left: 32px;
+}
+.ul-header-menu-trigger[aria-expanded=true]:after {
+  right: 32px;
+}
+.ul-header-menu-trigger[aria-expanded=true] .ul-header-menu-trigger-midbar:before {
+  transform: rotate(-45deg);
+}
+.ul-header-menu-trigger[aria-expanded=true] .ul-header-menu-trigger-midbar:after {
+  transform: rotate(45deg);
+}
+.ul-header-menu-trigger[aria-expanded=true]:hover, .ul-header-menu-trigger[aria-expanded=true]:active {
+  background-color: var(--ul-color-white);
+}
+.ul-header-menu-trigger[aria-expanded=true]:hover:before, .ul-header-menu-trigger[aria-expanded=true]:hover:after, .ul-header-menu-trigger[aria-expanded=true]:active:before, .ul-header-menu-trigger[aria-expanded=true]:active:after {
+  background-color: var(--ul-color-black);
+}
+.ul-header-menu-trigger[aria-expanded=true]:hover .ul-header-menu-trigger-midbar:before, .ul-header-menu-trigger[aria-expanded=true]:hover .ul-header-menu-trigger-midbar:after, .ul-header-menu-trigger[aria-expanded=true]:active .ul-header-menu-trigger-midbar:before, .ul-header-menu-trigger[aria-expanded=true]:active .ul-header-menu-trigger-midbar:after {
+  background-color: var(--ul-color-black);
+}
+.ul-header-mobile-menu {
+  display: none;
+}
+.ul-header-mobile-menu.open {
+  display: block;
+}
+.ul-header-main-nav ul {
+  display: flex;
+  gap: ul-scale-units(2rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ul-header .ul-link--in-main-nav {
+  margin: 0;
+  padding: 0;
+  padding-top: ul-scale-units(0.3rem);
+  display: flex;
+}
+.ul-header .ul-link--in-main-nav a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--ul-color-black);
+  font-weight: 700;
+  font-size: ul-scale-units(1rem);
+  background: linear-gradient(90deg, var(--ul-color-red), var(--ul-color-red)) no-repeat left bottom/0 4px;
+  transition: background-size 400ms;
+  padding-bottom: ul-scale-units(0.3rem);
+}
+.ul-header .ul-link--in-main-nav a:hover, .ul-header .ul-link--in-main-nav a:focus-visible {
+  background-size: 100% 4px;
+  background-position-x: left;
+}
+.ul-header .ul-link--in-main-nav a:focus-visible {
+  outline-offset: 10px;
+}
+.ul-header .ul-link--in-main-nav a[aria-current=page] {
+  background: linear-gradient(90deg, var(--ul-color-black), var(--ul-color-black)) no-repeat left bottom/0 4px;
+  background-size: 100% 4px;
+  background-position-x: left;
+}
+.ul-header-secondary-nav ul {
+  display: flex;
+  gap: ul-scale-units(1.5rem);
+  list-style: none;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+.ul-header .ul-link--in-list {
+  font-size: ul-scale-units(0.875rem);
+  list-style-type: none;
+}
+.ul-header .ul-link--in-list a {
+  color: var(--ul-color-black);
+  text-decoration: none;
+}
+.ul-header .ul-link--in-list a:hover, .ul-header .ul-link--in-list a:focus-visible, .ul-header .ul-link--in-list a[aria-current=page] {
+  text-decoration: underline;
+}
+.ul-header .ul-link--in-list a:focus-visible {
+  outline-offset: 5px;
+}
+.ul-header .ul-link--in-list a[href]:hover {
+  text-decoration: underline;
+}
+.ul-header .ul-link--in-list a[href]:focus-visible {
+  outline-offset: 3px;
+}
+.ul-header :focus {
+  outline: 1px solid;
+}
+.ul-header .container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 1280px) {
+  .ul-header-menu-trigger, .ul-header-mobile-menu.open {
+    display: none;
+  }
+  .ul-header-main-nav, .ul-header-secondary-nav, .ul-header-language-switcher {
+    display: block;
+  }
+}
+/*
+ * Uncomment the corresponding header modifier
+ * "ulaval.ca" should use "_header--university.scss".
+ * "unite.ulaval.ca" should use "_header--unit--no-submenu.scss".
+ * "unite.ulaval.ca/sous-unite" should use "_header--unit--with-submenu.scss".
+ * "sous-unite.unite.ulaval.ca" should use "_header--subunit.scss".
+ */
+/**
+ * Header - University
+ */
+/**
+ * Import settings, functions, mixins, variables.
+ */
+/**
+ * Add customizable settings to help implementing to all website.
+ */
+/**
+ * Define the responsive way to resize the website.
+ *
+ * With the fixed method, the website will have multiple pre-defined breakpoints
+ * With the fluid method, the website will always use 100% of the available space.
+ *
+ * @usage $website-container-max-width: "fixed";
+ * @usage $website-container-type: "fluid";
+ */
+/**
+ * Define the responsive way to resize the website.
+ *
+ * With the fixed method, the website will have multiple pre-defined breakpoints
+ * With the fluid method, the website will always use 100% of the available space.
+ *
+ * @usage $website-container-max-width: 1940px;
+ * @usage $website-container-max-width: 1600px;
+ * @usage $website-container-max-width: 1280px;
+ */
+/**
+ * Fixes the font-size hack for websites using 62.5% font-sizing to use em as pixel.
+ * Change $font-size-hack to true if your website use the font-size hack.
+ *
+ * @param {Length} $value - The value to fix.
+ * @param {Boolean} [$font-size-hack: false] - Whether the font-size hack is used on the website.
+ * @return {Length} - The fixed value.
+ *
+ * @usage fix-font-size-hack(1em, false) => 1em
+ * @usage fix-font-size-hack(1em, true) => 1.6em
+ * @usage fix-font-size-hack(1rem, false) => 1rem
+ * @usage fix-font-size-hack(1rem, true) => 1.6rem
+ */
+/**
+ * Activate some styles to help with debugging.
+ *
+ * @usage $debug: false;
+ * @usage $debug: true;
+ */
+/**
+ * Define basic functions that can be used by any website.
+ */
+/*
+ * Remove the unit of a length
+ * @param {Number} $number - Number to remove unit from
+ * @return {Number} - Unitless number
+¸*/
+/**
+ * Converts a pixel value to an rem value based on a given context.
+ *
+ * @param {Number|Length} $pixels - The pixel value to convert to rem.
+ * @param {Number|Length} [$context: $browser-context] - The context value in pixels used for the conversion.
+ * @return {Length} - The calculated value in rem.
+ *
+ * @usage rem(16px) => 1rem
+ * @usage rem(24) => 1.5rem
+ * @usage rem(16, 10) => 1.6rem
+ */
+/**
+ * Converts a pixel value to an em value based on a given context.
+ *
+ * @param {Number|Length} $pixels - The pixel value to convert to em.
+ * @param {Number|Length} [$context: $browser-context] - The context value in pixels used for the conversion.
+ * @return {Length} - The calculated value in em.
+ *
+ * @usage em(16px) => 1em
+ * @usage em(24) => 1.5em
+ * @usage em(16, 10) => 1.6em
+ */
+/**
+ * Converts a em value to an pixel value based on a given context.
+ *
+ * @param {Number|Length} $em - The em value to convert to pixels.
+ * @param {Number|Length} [$context: $browser-context] - The context value in em used for the conversion.
+ * @return {Length} - The calculated value in pixels.
+ *
+ * @usage px(1em) => 16px
+ * @usage px(1) => 16px
+ * @usage px(1, 10) => 10px
+ */
+/**
+ * Define basic mixins that can be used by any website.
+ */
+/**
+ * Define basic breakpoints that can be used by any website.
+ * Always use mobile-first when using breakpoints.
+ */
+/**
+ * Define basic colors that can be used by any website.
+ */

@@ -547,60 +547,60 @@ h4,
 h5 {
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 1.5em 0;
+  margin: 0 0 3.84em 0;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 6.4em;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 5.12em;
 }
 
 h3 {
-  font-size: 1.75em;
+  font-size: 4.48em;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 3.84em;
 }
 
 h5 {
-  font-size: 1.25em;
+  font-size: 3.2em;
 }
 
 h6 {
-  font-size: 1em;
+  font-size: 2.56em;
   font-weight: 400;
   line-height: 1.375;
-  margin: 0 0 1.5em 0;
+  margin: 0 0 3.84em 0;
 }
 
 p {
-  font-size: 1em;
+  font-size: 2.56em;
   font-weight: 400;
   line-height: 1.375;
-  margin: 0 0 1.5em 0;
+  margin: 0 0 3.84em 0;
 }
 
 ul,
 ol {
-  font-size: 1em;
-  margin: 0 0 1.5em 0;
-  padding: 0 0 0 1.25em;
+  font-size: 2.56em;
+  margin: 0 0 3.84em 0;
+  padding: 0 0 0 3.2em;
   list-style: disc;
 }
 ul ul,
 ul ol,
 ol ul,
 ol ol {
-  margin: 1em 0 0 0;
+  margin: 2.56em 0 0 0;
 }
 
 li {
   line-height: 1.375;
-  margin: 0 0 1em 0;
+  margin: 0 0 2.56em 0;
 }
 
 ul li {

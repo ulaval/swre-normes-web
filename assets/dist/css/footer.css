@@ -100,16 +100,18 @@
 /**
  * Define basic colors that can be used by any website.
  */
-.footer ul {
-  margin-bottom: 0;
-  padding-left: 0;
-}
+.footer p,
+.footer ul,
 .footer li {
   margin-bottom: 0;
+}
+.footer ul {
+  padding-left: 0;
 }
 
 .footer-main {
   background-color: #ffffff;
+  padding: 4.8em 0;
 }
 
 .footer-main-unit {
@@ -117,19 +119,39 @@
 }
 .footer-main-unit .divider {
   display: none;
+  position: relative;
+  top: -1px;
 }
 
-.footer-main-unit-details .details-row {
+.footer-main-unit-title {
+  align-items: center;
+  display: flex;
+  font-size: 2em;
+  justify-content: center;
+  margin-bottom: 0.75em;
+}
+.footer-main-unit-title svg {
+  fill: #e30513;
+  height: 1.2em;
+  position: relative;
+  margin-right: 0.5em;
+  top: -0.05em;
+}
+
+.footer-main-unit-contact {
+  font-size: 1.4em;
+}
+.footer-main-unit-contact .contact-row {
   display: block;
 }
-.footer-main-unit-details a {
+.footer-main-unit-contact a {
   color: #000000;
   text-decoration: none;
 }
-.footer-main-unit-details .address {
+.footer-main-unit-contact .address {
   display: inline-block;
 }
-.footer-main-unit-details .tel {
+.footer-main-unit-contact .tel {
   margin: 0 -1px;
   padding: 0 1px;
   white-space: nowrap;
@@ -137,75 +159,76 @@
 
 .footer-main-social {
   display: flex;
-  gap: 0.5em;
+  font-size: 1em;
+  gap: 0.8em;
   justify-content: center;
+  padding: 2.4em 0;
 }
 .footer-main-social li {
   list-style-type: none;
   display: flex;
 }
 .footer-main-social a {
+  border: 1px solid transparent;
   background-color: #ffffff;
   display: inline-block;
-  transition: background-color 0.25s ease;
+  transition: background-color 0.125s ease;
 }
-.footer-main-social a:hover {
+.footer-main-social a:hover, .footer-main-social a:focus {
+  border: 1px solid color-black;
   background-color: #000000;
+  outline: none;
 }
-.footer-main-social a:hover svg {
+.footer-main-social a:hover svg, .footer-main-social a:focus svg {
   fill: #ffffff;
 }
 .footer-main-social svg {
   display: block;
   fill: #000000;
-  height: 1.5em;
-  padding: 0.25em;
-  transition: fill 0.25s ease;
-  width: 1.5em;
+  height: 2.4em;
+  padding: 0.4em;
+  transition: fill 0.125s ease;
+  width: 2.4em;
 }
 
 .footer-bottom {
   background-color: #000000;
   color: #ffffff;
-  padding-bottom: 1em;
-  padding-top: 1em;
+  padding-bottom: 1.6em;
+  padding-top: 1.6em;
   text-align: center;
 }
 
-.footer-bottom-inner {
-  font-size: 0.75em;
-}
-
 .footer-bottom-copyright {
-  font-size: 1em;
+  font-size: 1.2em;
   margin-bottom: 0;
 }
 .footer-bottom-copyright span + span:before {
   content: "|";
-  padding: 0 0.333em;
+  padding: 0 0.5328em;
   position: relative;
   top: -1px;
 }
 
 .footer-bottom-links {
-  font-size: 1em;
-  margin-top: 0.5em;
+  font-size: 1.2em;
+  margin-top: 1.28em;
 }
 .footer-bottom-links li {
   display: block;
-  margin-top: 0.17em;
+  margin-top: 0.272em;
 }
 .footer-bottom-links a {
   color: #ffffff;
   text-decoration: none;
 }
 .footer-bottom-links a:focus {
-  outline-color: #808080;
+  outline-color: #b3b3b3;
 }
 
 @media (min-width: 470px) {
-  .footer-main-unit-details .details-row,
-  .footer-main-unit-details .divider {
+  .footer-main-unit-contact .contact-row,
+  .footer-main-unit-contact .divider {
     display: inline;
   }
   .footer-bottom-links {
@@ -217,12 +240,15 @@
   }
   .footer-bottom-links li + li:before {
     content: "|";
-    padding: 0 0.5em;
+    padding: 0 0.8em;
     position: relative;
     top: -1px;
   }
 }
 @media (min-width: 576px) {
+  .footer-main-unit-title {
+    justify-content: flex-start;
+  }
   .footer-main-unit {
     text-align: left;
   }
@@ -234,7 +260,7 @@
     flex-wrap: wrap;
   }
   .footer-bottom-copyright {
-    margin-right: 1.5em;
+    margin-right: 2.4em;
   }
   .footer-bottom-copyright,
   .footer-bottom-links {

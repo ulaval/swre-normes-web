@@ -9,7 +9,7 @@
 .ul-header-menu-sous-unite-content {
   display: flex;
   align-items: center;
-  column-gap: ul-scale-units(3rem);
+  column-gap: fix-font-size-hack(3rem);
 
   button {
     display: none;
@@ -71,8 +71,8 @@
     display: block;
     color: var(--ul-color-white);
     text-decoration: none;
-    font-size: ul-scale-units(0.875rem);
-    padding: ul-scale-units(0.56rem);
+    font-size: fix-font-size-hack(0.875rem);
+    padding: fix-font-size-hack(0.56rem);
 
     &[aria-current="page"] {
       text-decoration: underline;
@@ -84,7 +84,7 @@
     }
 
     &:focus-visible {
-      outline-offset: ul-scale-units(0.19rem);
+      outline-offset: fix-font-size-hack(0.19rem);
       background-color: var(--ul-color-white);
       color: var(--ul-color-black);
     }
@@ -93,7 +93,7 @@
 
 .ul-header-menu-sous-unite-link {
   color: var(--ul-color-white);
-  font-size: ul-scale-units(1rem);
+  font-size: fix-font-size-hack(1rem);
   font-weight: 700;
   text-decoration: none;
 
@@ -143,7 +143,7 @@
     }
   }
   .ul-header-menu-sous-unite-link {
-    padding: ul-scale-units(0.5rem) 0;
+    padding: fix-font-size-hack(0.5rem) 0;
   }
   .ul-link--in-sous-unite-content {
     width: 100%;
@@ -151,7 +151,7 @@
 
     a {
       &:focus-visible {
-        outline-offset: ul-scale-units(-0.35rem);
+        outline-offset: fix-font-size-hack(-0.35rem);
       }
     }
   }

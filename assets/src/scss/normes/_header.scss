@@ -38,8 +38,8 @@
     outline: 1px solid;
   }
   .container {
-    padding-top: ul-scale-units(1rem);
-    padding-bottom: ul-scale-units(1rem);
+    padding-top: fix-font-size-hack(1rem);
+    padding-bottom: fix-font-size-hack(1rem);
   }
   .ul-header-ul-link-holder {
     grid-area: ecu;
@@ -57,7 +57,7 @@
   }
   .ul-header-ul-link {
     a {
-      font-size: ul-scale-units(1rem);
+      font-size: fix-font-size-hack(1rem);
       color: var(--ul-color-black);
       text-decoration: none;
       transition: color 0.5s ease, border-color 0.5s ease;
@@ -75,13 +75,13 @@
     }
   }
   .ul-header-title-holder {
-    min-height: ul-scale-units(3rem);
+    min-height: fix-font-size-hack(3rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
     grid-area: title;
     align-self: center;
-    margin-right: ul-scale-units(1rem);
+    margin-right: fix-font-size-hack(1rem);
     @media (max-width: $ul-mobile-width) {
       margin-right: 0;
     }
@@ -92,16 +92,16 @@
     text-decoration: none;
     color: var(--ul-color-black);
     line-height: 1.1em;
-    font-size: ul-scale-units(1.5rem);
+    font-size: fix-font-size-hack(1.5rem);
     transition: color 0.5s ease;
     &:hover {
       text-decoration: underline;
     }
     @media (max-width: $ul-tablet-width) {
-      font-size: ul-scale-units(1.375rem);
+      font-size: fix-font-size-hack(1.375rem);
     }
     @media (max-width: $ul-tablet-small) {
-      font-size: ul-scale-units(1.125rem);
+      font-size: fix-font-size-hack(1.125rem);
     }
   }
   .ul-header-mobile-menu {
@@ -119,11 +119,11 @@
   .ul-header-search-trigger {
     border: 0;
     background: none;
-    padding: ul-scale-units(0.938rem) ul-scale-units(1rem);
+    padding: fix-font-size-hack(0.938rem) fix-font-size-hack(1rem);
     color: var(--ul-color-black);
     font-family: var(--ul-font);
-    line-height: ul-scale-units(1rem);
-    font-size: ul-scale-units(1rem);
+    line-height: fix-font-size-hack(1rem);
+    font-size: fix-font-size-hack(1rem);
     position: relative;
     @media (prefers-reduced-motion: no-preference) {
       transition: color 0.2s ease;
@@ -177,15 +177,15 @@
       animation: ul-header-search-fadeOut 0.5s;
     }
     form {
-      padding: ul-scale-units(2rem);
+      padding: fix-font-size-hack(2rem);
       color: var(--ul-color-white);
       max-width: 870px;
       margin: 0 auto;
-      padding: ul-scale-units(1rem) ul-scale-units(2.22rem);
+      padding: fix-font-size-hack(1rem) fix-font-size-hack(2.22rem);
       display: flex;
       align-items: stretch;
       @media (max-width: $ul-tablet-width) {
-        padding: ul-scale-units(1rem) ul-scale-units(1.5rem);
+        padding: fix-font-size-hack(1rem) fix-font-size-hack(1.5rem);
       }
       // @media (min-width: $ul-padding-threshold) {
       //   padding-left: 0;
@@ -196,7 +196,7 @@
         border-radius: 0;
         border: 0;
         flex: 1;
-        font-size: ul-scale-units(1rem);
+        font-size: fix-font-size-hack(1rem);
         margin: 0;
         padding: 11px 15px;
 
@@ -218,7 +218,7 @@
         }
       }
       label {
-        margin-bottom: ul-scale-units(0.3rem);
+        margin-bottom: fix-font-size-hack(0.3rem);
       }
     }
   }
@@ -231,7 +231,7 @@
 
   ul {
     display: flex;
-    gap: ul-scale-units(2rem);
+    gap: fix-font-size-hack(2rem);
     margin: 0;
     padding: 0;
     list-style: none;
@@ -241,7 +241,7 @@
 .ul-link--in-main-nav {
   margin: 0;
   padding: 0;
-  padding-top: ul-scale-units(0.3rem);
+  padding-top: fix-font-size-hack(0.3rem);
   display: flex;
 
   a {
@@ -249,11 +249,11 @@
     text-decoration: none;
     color: var(--ul-color-black);
     font-weight: 700;
-    font-size: ul-scale-units(1rem);
+    font-size: fix-font-size-hack(1rem);
     background: linear-gradient(90deg, var(--ul-color-red), var(--ul-color-red))
       no-repeat left bottom / 0 4px;
     transition: background-size 400ms;
-    padding-bottom: ul-scale-units(0.3rem);
+    padding-bottom: fix-font-size-hack(0.3rem);
 
     &:hover,
     &:focus-visible {
@@ -285,7 +285,7 @@
 
   ul {
     display: flex;
-    gap: ul-scale-units(1.5rem);
+    gap: fix-font-size-hack(1.5rem);
     list-style: none;
     justify-content: flex-end;
     margin: 0;
@@ -293,7 +293,7 @@
   }
 }
 .ul-link--in-list {
-  font-size: ul-scale-units(0.875rem);
+  font-size: fix-font-size-hack(0.875rem);
   list-style-type: none;
   a {
     color: var(--ul-color-black);
@@ -320,11 +320,11 @@
 .ul-language-switcher-trigger {
   border: 0;
   background: none;
-  padding: ul-scale-units(1rem) ul-scale-units(0.591rem);
+  padding: fix-font-size-hack(1rem) fix-font-size-hack(0.591rem);
   color: var(--ul-color-black);
   box-sizing: border-box;
-  line-height: ul-scale-units(1rem);
-  font-size: ul-scale-units(0.875rem);
+  line-height: fix-font-size-hack(1rem);
+  font-size: fix-font-size-hack(0.875rem);
   font-weight: 600;
   font-family: var(--ul-font);
 
@@ -377,10 +377,10 @@
   a {
     display: block;
     color: var(--ul-color-white);
-    padding: ul-scale-units(0.591rem);
+    padding: fix-font-size-hack(0.591rem);
     box-sizing: border-box;
-    line-height: ul-scale-units(1rem);
-    font-size: ul-scale-units(0.875rem);
+    line-height: fix-font-size-hack(1rem);
+    font-size: fix-font-size-hack(0.875rem);
     text-decoration: none;
 
     &:hover {
@@ -427,7 +427,7 @@
     grid-template-areas:
       "ecu ecu"
       "title tools";
-    grid-column-gap: ul-scale-units(1rem);
+    grid-column-gap: fix-font-size-hack(1rem);
     .ul-header-secondary-nav,
     .ul-header-main-nav,
     .ul-language-switcher {
@@ -569,8 +569,8 @@
     }
   }
   .ul-header .ul-header-mobile-menu {
-    padding-top: ul-scale-units(3rem);
-    padding-bottom: ul-scale-units(3rem);
+    padding-top: fix-font-size-hack(3rem);
+    padding-bottom: fix-font-size-hack(3rem);
     background-color: var(--ul-color-black);
     position: absolute;
     height: calc(100vh - 8px);
@@ -592,7 +592,7 @@
     .container {
       display: flex;
       flex-direction: column;
-      gap: ul-scale-units(2rem);
+      gap: fix-font-size-hack(2rem);
     }
   }
 
@@ -602,7 +602,7 @@
 
     ul {
       flex-direction: column;
-      gap: ul-scale-units(0.7rem);
+      gap: fix-font-size-hack(0.7rem);
     }
   }
   .ul-link--in-mobile-main-nav {
@@ -610,10 +610,10 @@
     padding-top: 0;
 
     a {
-      font-size: ul-scale-units(1.5rem);
+      font-size: fix-font-size-hack(1.5rem);
       font-weight: 400;
       color: var(--ul-color-white);
-      padding-bottom: ul-scale-units(0.3rem);
+      padding-bottom: fix-font-size-hack(0.3rem);
       text-decoration: none;
 
       &[aria-current="page"] {
@@ -635,13 +635,13 @@
 
     ul {
       flex-direction: column;
-      gap: ul-scale-units(0.7rem);
+      gap: fix-font-size-hack(0.7rem);
     }
   }
   .ul-link--in-mobile-secondary-nav {
     a {
       color: var(--ul-color-white);
-      font-size: ul-scale-units(1.25rem);
+      font-size: fix-font-size-hack(1.25rem);
       text-decoration: none;
     }
   }
@@ -650,12 +650,12 @@
   .ul-mobile-language-switcher {
     ul {
       display: flex;
-      gap: ul-scale-units(1rem);
+      gap: fix-font-size-hack(1rem);
       list-style: none;
-      margin: ul-scale-units(1rem) 0;
+      margin: fix-font-size-hack(1rem) 0;
       padding: 0;
       color: var(--ul-color-white);
-      font-size: ul-scale-units(1.25rem);
+      font-size: fix-font-size-hack(1.25rem);
     }
   }
 
@@ -763,7 +763,7 @@
       }
     }
   }
-  .ul-footer {
+  .footer {
     z-index: 1;
   }
 }

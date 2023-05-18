@@ -85,7 +85,11 @@ $browser-context: 16;
  * @usage px(1) => 16px
  * @usage px(1, 10) => 10px
  */
-$browser-context: 16;
+@if $font-size-hack {
+  $browser-context: 10;
+} @else {
+  $browser-context: 16;
+}
 @function px($em, $context: $browser-context) {
   // Convert $em value to pixel unit
   @if (not math.is-unitless($em)) {

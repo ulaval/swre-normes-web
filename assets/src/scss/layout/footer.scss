@@ -8,7 +8,6 @@
 // Styles
 .footer {
   p,
-  ul,
   li {
     margin-bottom: 0;
   }
@@ -48,7 +47,7 @@
   }
 }
 
-.footer-main-unit-contact {
+.footer-main-unit-infos {
   font-size: fix-font-size-hack(0.875em);
 
   .contact-row {
@@ -63,8 +62,8 @@
   }
   .tel {
     // Better outline shape
-    margin: 0 -1px;
-    padding: 0 1px;
+    margin: 0;
+    padding: 0;
     white-space: nowrap;
   }
 }
@@ -74,7 +73,7 @@
   font-size: 1em;
   gap: fix-font-size-hack(0.5em);
   justify-content: center;
-  padding: fix-font-size-hack(1.5em) 0;
+  margin: fix-font-size-hack(1.5em) 0;
 
   li {
     list-style-type: none;
@@ -110,6 +109,59 @@
   }
 }
 
+.footer-main-newsletter,
+.footer-main-query {
+}
+
+.footer-main-button {
+  border: 1px solid $color-black;
+  display: block;
+  font-size: fix-font-size-hack(1em);
+  line-height: 1em;
+  margin-top: 1em;
+  min-width: 200px;
+  padding: 1em 1.5em;
+  text-align: center;
+  text-decoration: none;
+}
+
+a.footer-main-button--light {
+  background-color: $color-white;
+  color: $color-black;
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+    background-color: $color-black;
+  }
+
+  &:focus {
+    outline-color: $color-white;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-offset: -4px;
+  }
+}
+
+a.footer-main-button--dark {
+  color: $color-white;
+  background-color: $color-black;
+
+  &:hover,
+  &:focus {
+    color: $color-black;
+    background-color: $color-white;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 1px $color-black inset;
+    outline-color: $color-black;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-offset: -6px;
+  }
+}
+
 .footer-bottom {
   background-color: $color-black;
   color: $color-white;
@@ -134,6 +186,7 @@
 
 .footer-bottom-links {
   font-size: fix-font-size-hack(0.75em);
+  margin-bottom: 0;
   margin-top: 0.5em;
 
   li {
@@ -152,7 +205,7 @@
 }
 
 @media (min-width: 470px) {
-  .footer-main-unit-contact {
+  .footer-main-unit-infos {
     .contact-row,
     .divider {
       display: inline;
@@ -178,15 +231,34 @@
 }
 
 @media (min-width: $breakpoint-sm) {
-  .footer-main-unit-title {
-    justify-content: flex-start;
+  .footer-main-contact {
+    display: flex;
+    justify-content: space-between;
   }
+
   .footer-main-unit {
     text-align: left;
   }
 
+  .footer-main-unit-title {
+    justify-content: flex-start;
+  }
+
+  .footer-main-unit-infos {
+    .contact-row {
+      display: block;
+    }
+    .divider {
+      display: none;
+    }
+  }
+
   .footer-main-social {
-    justify-content: start;
+    // justify-content: start;
+    // display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-top: fix-font-size-hack(-0.5em);
   }
 
   .footer-bottom-inner {
@@ -209,5 +281,56 @@
     li {
       display: flex;
     }
+  }
+}
+
+@media (min-width: 670px) {
+  @if $website-container-type == "fluid" {
+    .footer-main-unit-infos {
+      .contact-row,
+      .divider {
+        display: inline;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  @if $website-container-type == "fixed" {
+    .footer-main-unit-infos {
+      .contact-row,
+      .divider {
+        display: inline;
+      }
+    }
+  }
+  //   .footer-main-contact {
+  //     display: flex;
+  //     justify-content: space-between;
+  //   }
+
+  //   .footer-main-contact-left {
+  //   }
+
+  //   .footer-main-contact-right {
+  //     // align-items: flex-start;
+  //     // display: flex;
+  //     // flex-direction: column;
+  //   }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .footer-main-contact {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-main-contact-left {
+  }
+
+  .footer-main-contact-right {
+    // align-items: flex-start;
+    // display: flex;
+    // flex-direction: column;
   }
 }

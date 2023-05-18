@@ -66,13 +66,6 @@
       font-size: ul-scale-units(1.125rem);
     }
   }
-  .ul-header-mobile-menu {
-    display: none;
-
-    &.open {
-      display: block;
-    }
-  }
 
   .ul-header-tools {
     grid-area: tools;
@@ -91,6 +84,7 @@
     line-height: ul-scale-units(1rem);
     font-size: ul-scale-units(1rem);
     position: relative;
+
     @media (prefers-reduced-motion: no-preference) {
       transition: color 0.2s ease;
       i {
@@ -188,9 +182,6 @@
 
 // In header, main nav
 .ul-header-main-nav {
-  grid-area: mainnav;
-  align-self: center;
-
   ul {
     display: flex;
     gap: ul-scale-units(2rem);

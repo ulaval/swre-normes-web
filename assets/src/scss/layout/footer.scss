@@ -166,7 +166,14 @@ a.footer-button--dark {
 }
 
 .footer-logos {
-  padding-top: fix-font-size-hack(3rem);
+  text-align: center;
+  margin-top: fix-font-size-hack(3em);
+
+  //   @media (max-width: $ul-tablet-small) {
+  //     flex-direction: column;
+  //     gap: fix-font-size-hack(2rem);
+  //     align-items: flex-start;
+  //   }
 
   //   @media (max-width: $ul-tablet-small) {
   //     flex-direction: column;
@@ -184,6 +191,31 @@ a.footer-button--dark {
   //   .footer-logo {
   //     width: 140px;
   //   }
+}
+
+.footer-logo {
+  display: inline-block;
+  // filter: grayscale(100%);
+  transition: filter 0.125s ease;
+
+  &:hover,
+  &:focus {
+    filter: grayscale(0%);
+  }
+
+  &:focus {
+    outline-color: $color-black;
+    outline-style: dotted;
+    outline-width: 1px;
+    outline-offset: fix-font-size-hack(0.5em);
+  }
+}
+
+.footer {
+  .university-logo {
+    display: block;
+    width: 128px;
+  }
 }
 
 .footer-bottom {
@@ -281,6 +313,12 @@ a.footer-button--dark {
     justify-content: space-between;
     margin-bottom: 0;
     margin-top: fix-font-size-hack(-0.5em);
+  }
+
+  .footer-logos {
+    display: flex;
+    justify-content: space-between;
+    gap: fix-font-size-hack(2em);
   }
 
   .footer-bottom-inner {

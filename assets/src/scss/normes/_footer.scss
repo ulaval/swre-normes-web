@@ -113,24 +113,3 @@
     }
   }
 }
-
-.footer-logos {
-  padding-top: fix-font-size-hack(3rem);
-
-  @media (max-width: $ul-tablet-small) {
-    flex-direction: column;
-    gap: fix-font-size-hack(3rem);
-  }
-
-  &:not(:where(.footer-logos-agreements)) {
-    justify-content: flex-end;
-  }
-
-  .footer-logo-unite {
-    width: 237px;
-  }
-
-  .footer-logo {
-    width: 140px;
-  }
-}

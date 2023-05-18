@@ -6,14 +6,465 @@
 @import "../abstracts/_abstracts.scss";
 
 // Styles
+// Header should always have a total height of 8.75em (without submenu)
 .ul-header {
+  background: linear-gradient(
+        90deg,
+        var(--ul-color-red),
+        var(--ul-color-red) 50%,
+        var(--ul-color-gold) 0,
+        var(--ul-color-gold)
+      )
+      no-repeat,
+    var(--ul-color-white);
+  background-size: 100% 8px;
+  background-color: var(--ul-color-white);
+  box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.16);
+  z-index: 3;
+  position: relative;
+
+  &:before {
+    background: linear-gradient(
+          90deg,
+          var(--ul-color-red),
+          var(--ul-color-red) 80%,
+          var(--ul-color-gold) 80%,
+          var(--ul-color-gold)
+        )
+        no-repeat,
+      var(--ul-color-white);
+    background-size: 100% 8px;
+    display: block;
+    content: "";
+    padding: 0;
+    height: 8px;
+  }
+
+  // Hide any non-mobile interface elements
+  &-main-nav,
+  &-secondary-nav,
+  &-language-switcher {
+    display: none;
+  }
+
+  &-top,
+  &-main {
+    align-items: center;
+    display: flex;
+  }
+
+  &-top {
+    // Set height to avoid any jump if either small logo or meta nav isn't present
+    height: 1.5em;
+    justify-content: flex-end;
+    margin-bottom: 1em;
+  }
+
+  &-top-meta {
+    margin-left: auto;
+  }
+
+  &-main {
+    column-gap: 3em;
+    height: 3.75em;
+  }
+
+  &-main-logo {
+    display: block;
+    width: 128px;
+  }
+
+  &-main-utilities {
+    margin-left: auto;
+  }
+
+  &-language-switcher {
+    position: relative;
+
+    &-list {
+      position: absolute;
+      background-color: var(--ul-color-black);
+      color: var(--ul-color-white);
+      top: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border: 1px var(--ul-color-black) solid;
+      z-index: 1;
+    }
+  }
+
+  &-language-switcher-trigger {
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    color: var(--ul-color-black);
+    font-family: var(--ul-font);
+    font-size: fix-font-size-hack(0.875rem);
+    font-weight: 600;
+    line-height: fix-font-size-hack(1rem);
+    padding: fix-font-size-hack(1rem) fix-font-size-hack(0.591rem);
+
+    &:after {
+      background-image: var(--img-dropdown-arrow);
+      background-size: 13px 7px;
+      content: "";
+      display: inline-block;
+      height: 7px;
+      margin-left: 4px;
+      width: 13px;
+    }
+
+    &:hover,
+    &:active,
+    &[aria-expanded="true"] {
+      background-color: var(--ul-color-black);
+      color: var(--ul-color-white);
+
+      &:after {
+        filter: invert(1);
+      }
+    }
+
+    &[aria-expanded="true"]:after {
+      transform: scaleY(-1);
+    }
+  }
+
+  // @TODO: Review this
+  .ul-link--in-language-nav {
+    &:not(:first-child) {
+      border-top: 1px var(--ul-color-grey) solid;
+    }
+
+    a {
+      box-sizing: border-box;
+      color: var(--ul-color-white);
+      display: block;
+      font-size: fix-font-size-hack(0.875rem);
+      line-height: fix-font-size-hack(1rem);
+      padding: fix-font-size-hack(0.591rem);
+      text-decoration: none;
+
+      &:hover {
+        background-color: var(--ul-color-white);
+        color: var(--ul-color-black);
+        text-decoration: underline;
+      }
+
+      &:focus,
+      &:focus-visible {
+        background-color: var(--ul-color-white);
+        color: var(--ul-color-black);
+        outline-offset: 2px;
+        outline: 1px color(--ul-color-black) solid;
+      }
+
+      &:active {
+        background-color: var(--ul-color-white);
+        color: var(--ul-color-black);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-menu-trigger {
+    align-items: center;
+    background: none;
+    border: 0;
+    display: flex;
+    display: inline-block;
+    height: 48px;
+    padding: 16px;
+    position: relative;
+    width: 48px;
+
+    &:before {
+      background: var(--ul-color-black);
+      border-radius: 2px;
+      content: "";
+      height: 2px;
+      height: 3px;
+      left: 16px;
+      position: absolute;
+      right: 16px;
+      top: 16px;
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition: left 0.3s ease;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      background-color: var(--ul-color-black);
+      height: 2px;
+      border-radius: 2px;
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition: right 0.3s ease;
+      }
+    }
+
+    &-midbar {
+      &:before {
+        background-color: var(--ul-color-black);
+        border-radius: 2px;
+        content: "";
+        height: 2px;
+        left: 16px;
+        position: absolute;
+        right: 16px;
+        top: 23px;
+
+        @media (prefers-reduced-motion: no-preference) {
+          transition: transform 0.3s ease;
+        }
+      }
+
+      &:after {
+        background-color: var(--ul-color-black);
+        border-radius: 2px;
+        content: "";
+        height: 2px;
+        left: 16px;
+        position: absolute;
+        right: 16px;
+        top: 23px;
+
+        @media (prefers-reduced-motion: no-preference) {
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-color: var(--ul-color-black);
+
+      &:before,
+      &:after {
+        background-color: var(--ul-color-white);
+      }
+
+      .ul-header-menu-trigger-midbar {
+        &:before,
+        &:after {
+          background-color: var(--ul-color-white);
+        }
+      }
+    }
+
+    &[aria-expanded="true"] {
+      transition: background-color 0.5s ease;
+
+      &:before,
+      &:after {
+        transition: background-color 0.5s ease;
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        &:before {
+          transition: left 0.3s ease, background-color 0.3s ease;
+        }
+        &:before {
+          transition: right 0.3s ease, background-color 0.3s ease;
+        }
+      }
+
+      .ul-header-menu-trigger-midbar {
+        &:before,
+        &:after {
+          transition: background-color 0.5s ease;
+
+          @media (prefers-reduced-motion: no-preference) {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+          }
+        }
+      }
+
+      &:before {
+        left: 32px;
+      }
+
+      &:after {
+        right: 32px;
+      }
+
+      .ul-header-menu-trigger-midbar {
+        &:before {
+          transform: rotate(-45deg);
+        }
+        &:after {
+          transform: rotate(45deg);
+        }
+      }
+
+      &:hover,
+      &:active {
+        background-color: var(--ul-color-white);
+
+        &:before,
+        &:after {
+          background-color: var(--ul-color-black);
+        }
+
+        .ul-header-menu-trigger-midbar {
+          &:before,
+          &:after {
+            background-color: var(--ul-color-black);
+          }
+        }
+      }
+    }
+  }
+
+  &-mobile-menu {
+    display: none;
+
+    &.open {
+      display: block;
+    }
+  }
+
+  // In header, main nav
+  &-main-nav {
+    ul {
+      display: flex;
+      gap: ul-scale-units(2rem);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  .ul-link--in-main-nav {
+    margin: 0;
+    padding: 0;
+    padding-top: ul-scale-units(0.3rem);
+    display: flex;
+
+    a {
+      text-align: center;
+      text-decoration: none;
+      color: var(--ul-color-black);
+      font-weight: 700;
+      font-size: ul-scale-units(1rem);
+      background: linear-gradient(
+          90deg,
+          var(--ul-color-red),
+          var(--ul-color-red)
+        )
+        no-repeat left bottom / 0 4px;
+      transition: background-size 400ms;
+      padding-bottom: ul-scale-units(0.3rem);
+
+      &:hover,
+      &:focus-visible {
+        background-size: 100% 4px;
+        background-position-x: left;
+      }
+
+      &:focus-visible {
+        outline-offset: 10px;
+      }
+
+      &[aria-current="page"] {
+        background: linear-gradient(
+            90deg,
+            var(--ul-color-black),
+            var(--ul-color-black)
+          )
+          no-repeat left bottom / 0 4px;
+        background-size: 100% 4px;
+        background-position-x: left;
+      }
+    }
+  }
+
+  // In header, secondary nav
+  &-secondary-nav {
+    ul {
+      display: flex;
+      gap: ul-scale-units(1.5rem);
+      list-style: none;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .ul-link--in-list {
+    font-size: ul-scale-units(0.875rem);
+    list-style-type: none;
+    a {
+      color: var(--ul-color-black);
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible,
+      &[aria-current="page"] {
+        text-decoration: underline;
+      }
+
+      &:focus-visible {
+        outline-offset: 5px;
+      }
+
+      &[href]:hover {
+        text-decoration: underline;
+      }
+
+      &[href]:focus-visible {
+        outline-offset: 3px;
+      }
+    }
+  }
+
+  // @TODO: Review this
+  :focus {
+    outline: 1px solid;
+  }
+
+  .container {
+    padding-top: fix-font-size-hack(1rem);
+    padding-bottom: fix-font-size-hack(1rem);
+  }
 }
 
-// Uncomment the corresponding header modifier
-// "ulaval.ca" should use "_header--university.scss".
-// "unite.ulaval.ca" should use "_header--unit--no-submenu.scss".
-// "unite.ulaval.ca/sous-unite" should use "_header--unit--with-submenu.scss".
-// "sous-unite.unite.ulaval.ca" should use "_header--subunit.scss".
+@media (prefers-reduced-motion: no-preference) {
+}
+
+@media (min-width: 1280px) {
+  .ul-header {
+    // Hide mobile-only elements
+    &-menu-trigger,
+    &-mobile-menu.open {
+      display: none;
+    }
+
+    // Show main UI elements
+    &-main-nav,
+    &-secondary-nav,
+    &-language-switcher {
+      display: block;
+    }
+  }
+}
+
+/*
+ * Uncomment the corresponding header modifier
+ * "ulaval.ca" should use "_header--university.scss".
+ * "unite.ulaval.ca" should use "_header--unit--no-submenu.scss".
+ * "unite.ulaval.ca/sous-unite" should use "_header--unit--with-submenu.scss".
+ * "sous-unite.unite.ulaval.ca" should use "_header--subunit.scss".
+ */
+// @TODO: Make this automatically conditional from a settings.scss, probably
 @import "./_header--university.scss";
 // @import "./_header--unit--no-submenu.scss";
 // @import "./_header--unit--with-submenu.scss";

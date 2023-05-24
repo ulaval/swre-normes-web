@@ -36,6 +36,8 @@ var closeMenuSousUnite = function () {
 // Fermeture d'un menu d'outil
 var closeToolMenu = function () {
   if (currentOpenMenu) {
+    console.log("currentOpenMenu.list");
+    console.log(currentOpenMenu.list);
     document.getElementById(currentOpenMenu.list).hidden = true;
     document
       .querySelector(currentOpenMenu.button)
@@ -69,6 +71,8 @@ var openToolMenu = function (menu, trigger) {
       list: menu,
       button: trigger,
     };
+    console.log("menu");
+    console.log(menu);
     document.getElementById(menu).hidden = false;
     triggerButton.setAttribute("aria-expanded", "true");
     document.querySelector("#" + menu + ">li:first-child a").focus();
@@ -120,10 +124,15 @@ if ((searchBarButton = document.querySelector(".ul-header-search-trigger"))) {
 
 // Activation du sélecteur de langue si disponible
 if (
-  (languageSwitcher = document.querySelector(".ul-language-switcher-trigger"))
+  (languageSwitcher = document.querySelector(
+    ".ul-header-language-switcher-trigger"
+  ))
 ) {
   languageSwitcher.addEventListener("click", function () {
-    openToolMenu("ul-language-switcher-list", ".ul-language-switcher-trigger");
+    openToolMenu(
+      "ul-header-language-switcher-list",
+      ".ul-header-language-switcher-trigger"
+    );
   });
 }
 

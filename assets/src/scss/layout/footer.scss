@@ -175,10 +175,6 @@ a.footer-button--dark {
 }
 
 .footer-utils {
-  border-bottom: 1px solid $color-gray-lightest;
-  border-top: 1px solid $color-gray-lightest;
-  padding-bottom: fix-font-size-hack(3em);
-  padding-top: fix-font-size-hack(3em);
   text-align: center;
 }
 
@@ -223,8 +219,8 @@ a.footer-button--dark {
 
   a {
     // Better outline shape
-    margin: 0 -1px;
-    padding: 0px 1px;
+    margin: 0;
+    padding: 0;
 
     color: $color-black;
     text-decoration: none;
@@ -326,6 +322,14 @@ a.footer-button--dark {
   }
 }
 
+@if $better-footer-design {
+  .footer-utils,
+  .footer-logos {
+    border-top: 1px solid $color-gray-lightest;
+    padding-top: fix-font-size-hack(3em);
+  }
+}
+
 @media (min-width: 470px) {
   .footer-unit-infos {
     .contact-row,
@@ -388,7 +392,6 @@ a.footer-button--dark {
   }
 
   .footer-social {
-    // justify-content: space-between;
     justify-content: flex-end;
     gap: fix-font-size-hack(1.175em);
     margin-bottom: 0;
@@ -427,12 +430,17 @@ a.footer-button--dark {
     @include website-container-type-breakpoint-670;
   }
 
+  @if $better-footer-design {
+    .footer-utils {
+      border: 0;
+      padding: 0;
+    }
+  }
+
   .footer-utils {
-    border: 0;
     display: flex;
     justify-content: space-between;
     max-width: fix-font-size-hack(50em);
-    padding: 0;
   }
 
   .footer-navigation {
@@ -471,21 +479,16 @@ a.footer-button--dark {
     display: flex;
     justify-content: space-between;
   }
-
-  .footer-contact-inner {
-  }
-
-  .footer-contact-inner--left {
-  }
-
-  .footer-contact-inner--right {
-  }
 }
 
 @media (min-width: $breakpoint-xl) {
+  .footer-contact {
+    padding-bottom: fix-font-size-hack(3em);
+    margin-bottom: fix-font-size-hack(-0.75em);
+  }
   .footer-button {
     & + .footer-button {
-      margin-bottom: -100%;
+      margin-bottom: fix-font-size-hack(-4.063em);
     }
   }
 

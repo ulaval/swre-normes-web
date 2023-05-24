@@ -49,6 +49,9 @@
 
 // UI utility to remove any content styling
 .menu {
+  margin: 0;
+  padding: 0;
+
   li {
     list-style-type: none;
     margin: 0;

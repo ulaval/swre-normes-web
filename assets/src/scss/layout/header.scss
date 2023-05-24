@@ -69,11 +69,6 @@
     height: 3.75em;
   }
 
-  &-main-logo {
-    display: block;
-    width: 128px;
-  }
-
   &-main-utilities {
     margin-left: auto;
   }
@@ -540,6 +535,13 @@
   .container {
     padding-top: fix-font-size-hack(1rem);
     padding-bottom: fix-font-size-hack(1rem);
+  }
+}
+
+.ul-header {
+  .university-logo {
+    display: block;
+    width: 128px;
   }
 }
 

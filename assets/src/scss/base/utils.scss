@@ -55,7 +55,7 @@
   }
 }
 
-.accesible-links-wrapper {
+.accessible-links-wrapper {
   a {
     // Better outline shape
     margin: 0 -2px;
@@ -68,9 +68,9 @@
 
     &:focus {
       outline-color: $color-black;
+      outline-offset: 1px;
       outline-style: dotted;
       outline-width: 1px;
-      outline-offset: 1px;
     }
   }
 }

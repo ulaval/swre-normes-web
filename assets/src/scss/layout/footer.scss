@@ -257,12 +257,12 @@ a.footer-button--dark {
 
 .footer-logo {
   display: inline-block;
-  // filter: grayscale(100%);
-  transition: filter 0.125s ease;
+  transition: filter 0.125s ease, opacity 0.125s ease;
 
   &:hover,
   &:focus {
     filter: grayscale(0%);
+    opacity: 1;
   }
 
   &:focus {
@@ -327,6 +327,10 @@ a.footer-button--dark {
   .footer-logos {
     border-top: 1px solid $color-gray-lightest;
     padding-top: fix-font-size-hack(3em);
+  }
+  .footer-logo {
+    filter: grayscale(100%);
+    opacity: 0.85;
   }
 }
 

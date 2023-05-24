@@ -27,6 +27,7 @@
 
 .footer-contact {
   margin-bottom: fix-font-size-hack(3em);
+  transition: margin-bottom 0.125s ease-out;
 }
 
 .footer-unit {

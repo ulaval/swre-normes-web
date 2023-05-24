@@ -50,6 +50,14 @@ $font-size-hack: false;
 }
 
 /**
+ * Activate some styles for a better footer on mobile.
+ *
+ * @usage $better-footer-design: false;
+ * @usage $better-footer-design: true;
+ */
+$better-footer-design: true;
+
+/**
  * Activate some styles to help with debugging.
  *
  * @usage $debug: false;

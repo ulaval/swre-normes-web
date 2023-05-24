@@ -68,9 +68,9 @@
 
     &:focus {
       outline-color: $color-black;
+      outline-offset: 1px;
       outline-style: dotted;
       outline-width: 1px;
-      outline-offset: 1px;
     }
   }
 }

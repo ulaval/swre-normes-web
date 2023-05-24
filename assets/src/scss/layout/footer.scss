@@ -11,7 +11,8 @@
   z-index: 2;
 
   p,
-  li {
+  li,
+  ul {
     margin-bottom: 0;
   }
   ul {
@@ -22,6 +23,10 @@
 .footer-main {
   background-color: $color-white;
   padding: fix-font-size-hack(3em) 0;
+}
+
+.footer-contact {
+  margin-bottom: fix-font-size-hack(3em);
 }
 
 .footer-unit {
@@ -44,8 +49,8 @@
   svg {
     fill: $color-ul-red;
     height: 1.2em;
-    position: relative;
     margin-right: 0.5em;
+    position: relative;
     top: -0.05em;
   }
 }
@@ -69,31 +74,34 @@
     padding: 0;
     white-space: nowrap;
   }
+  & + .footer-unit-infos {
+    margin-top: fix-font-size-hack(0.75em);
+  }
 }
 
 .footer-social {
   display: flex;
   font-size: 1em;
-  gap: fix-font-size-hack(0.5em);
+  gap: fix-font-size-hack(0.75em);
   justify-content: center;
   margin: fix-font-size-hack(1.5em) 0;
 
   li {
-    list-style-type: none;
     display: flex;
+    list-style-type: none;
   }
 
   a {
+    background-color: $color-white;
     border: 1px solid transparent;
     // border: 1px solid $color-gray-lightest;
-    background-color: $color-white;
     display: inline-block;
     transition: background-color 0.125s ease;
 
     &:hover,
     &:focus {
-      border: 1px solid color-black;
       background-color: $color-black;
+      border: 1px solid color-black;
       outline: none;
 
       svg {
@@ -121,8 +129,9 @@
   display: block;
   font-size: fix-font-size-hack(1em);
   line-height: 1em;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 1em;
-  min-width: 200px;
   padding: 1em 1.5em;
   text-align: center;
   text-decoration: none;
@@ -134,40 +143,93 @@ a.footer-button--light {
 
   &:hover,
   &:focus {
-    color: $color-white;
     background-color: $color-black;
+    color: $color-white;
   }
 
   &:focus {
     outline-color: $color-white;
+    outline-offset: -4px;
     outline-style: solid;
     outline-width: 2px;
-    outline-offset: -4px;
   }
 }
 
 a.footer-button--dark {
-  color: $color-white;
   background-color: $color-black;
+  color: $color-white;
 
   &:hover,
   &:focus {
-    color: $color-black;
     background-color: $color-white;
+    color: $color-black;
   }
 
   &:focus {
     box-shadow: 0px 0px 0px 1px $color-black inset;
     outline-color: $color-black;
+    outline-offset: -6px;
     outline-style: solid;
     outline-width: 2px;
-    outline-offset: -6px;
+  }
+}
+
+.footer-utils {
+  text-align: center;
+}
+
+.footer-navigation {
+  li {
+    font-size: fix-font-size-hack(0.875em);
+    list-style-type: none;
+  }
+  a {
+    color: $color-black;
+    text-decoration: none;
+  }
+}
+
+.footer-navigation-group {
+  & + .footer-navigation-group {
+    margin-top: fix-font-size-hack(2em);
+  }
+}
+
+.footer-navigation-title {
+  font-size: fix-font-size-hack(0.875em);
+  margin-bottom: fix-font-size-hack(0.5em);
+}
+
+.footer-emergency {
+  margin-top: fix-font-size-hack(2em);
+}
+
+.footer-emergency-title {
+  font-size: fix-font-size-hack(0.875em);
+  margin: 0;
+
+  a {
+    color: $color-ul-red;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+.footer-emergency-text {
+  font-size: fix-font-size-hack(0.875em);
+
+  a {
+    // Better outline shape
+    margin: 0;
+    padding: 0;
+
+    color: $color-black;
+    text-decoration: none;
   }
 }
 
 .footer-logos {
-  text-align: center;
   margin-top: fix-font-size-hack(3em);
+  text-align: center;
 
   //   @media (max-width: $ul-tablet-small) {
   //     flex-direction: column;
@@ -260,6 +322,14 @@ a.footer-button--dark {
   }
 }
 
+@if $better-footer-design {
+  .footer-utils,
+  .footer-logos {
+    border-top: 1px solid $color-gray-lightest;
+    padding-top: fix-font-size-hack(3em);
+  }
+}
+
 @media (min-width: 470px) {
   .footer-unit-infos {
     .contact-row,
@@ -287,6 +357,27 @@ a.footer-button--dark {
 }
 
 @media (min-width: $breakpoint-sm) {
+  .footer-button {
+    max-width: fix-font-size-hack(16em);
+  }
+
+  .footer-navigation {
+    align-items: flex-start;
+    display: flex;
+    gap: fix-font-size-hack(2em);
+    justify-content: space-between;
+  }
+
+  .footer-navigation-group {
+    flex: 1 1 33%;
+
+    & + .footer-navigation-group {
+      margin-top: 0;
+    }
+  }
+}
+
+@mixin website-container-type-breakpoint-670 {
   .footer-contact {
     display: flex;
     justify-content: space-between;
@@ -300,19 +391,21 @@ a.footer-button--dark {
     justify-content: flex-start;
   }
 
-  .footer-unit-infos {
-    .contact-row {
-      display: block;
-    }
-    .divider {
-      display: none;
-    }
-  }
-
   .footer-social {
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: fix-font-size-hack(1.175em);
     margin-bottom: 0;
     margin-top: fix-font-size-hack(-0.5em);
+  }
+
+  .footer-button {
+    max-width: none;
+    min-width: 12em;
+  }
+
+  .footer-utils {
+    text-align: left;
+    gap: fix-font-size-hack(2em);
   }
 
   .footer-logos {
@@ -321,6 +414,43 @@ a.footer-button--dark {
     gap: fix-font-size-hack(2em);
   }
 
+  .footer-bottom {
+    text-align: left;
+  }
+}
+
+@media (min-width: 670px) {
+  @if $website-container-type == "fluid" {
+    @include website-container-type-breakpoint-670;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  @if $website-container-type == "fixed" {
+    @include website-container-type-breakpoint-670;
+  }
+
+  @if $better-footer-design {
+    .footer-utils {
+      border: 0;
+      padding: 0;
+    }
+  }
+
+  .footer-utils {
+    display: flex;
+    justify-content: space-between;
+    max-width: fix-font-size-hack(50em);
+  }
+
+  .footer-navigation {
+    flex: 1 1 75%;
+  }
+
+  .footer-emergency {
+    flex: 1 1 25%;
+    margin-top: 0;
+  }
   .footer-bottom-inner {
     display: flex;
     flex-wrap: wrap;
@@ -344,40 +474,26 @@ a.footer-button--dark {
   }
 }
 
-@media (min-width: 670px) {
-  @if $website-container-type == "fluid" {
-    .footer-unit-infos {
-      .contact-row,
-      .divider {
-        display: inline;
-      }
-    }
-  }
-}
-
-@media (min-width: $breakpoint-md) {
-  @if $website-container-type == "fixed" {
-    .footer-unit-infos {
-      .contact-row,
-      .divider {
-        display: inline;
-      }
-    }
-  }
-}
-
 @media (min-width: $breakpoint-lg) {
   .footer-contact {
     display: flex;
     justify-content: space-between;
   }
+}
 
-  .footer-contact-inner {
+@media (min-width: $breakpoint-xl) {
+  .footer-contact {
+    padding-bottom: fix-font-size-hack(3em);
+    margin-bottom: fix-font-size-hack(-0.75em);
+  }
+  .footer-button {
+    & + .footer-button {
+      margin-bottom: fix-font-size-hack(-4.063em);
+    }
   }
 
-  .footer-contact-inner--left {
-  }
-
-  .footer-contact-inner--right {
+  .footer-navigation-title,
+  .footer-emergency-title {
+    margin-top: fix-font-size-hack(-0.75em);
   }
 }

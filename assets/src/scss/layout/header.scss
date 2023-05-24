@@ -6,6 +6,21 @@
 @import "../abstracts/_abstracts.scss";
 
 // Styles
+
+.ul-nav-mobile-open {
+  overflow: hidden;
+
+  .ul-header {
+    background-color: #000;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 8888;
+  }
+}
+
 // Header should always have a total height of 8.75em (without submenu)
 .ul-header {
   background: linear-gradient(
@@ -71,6 +86,10 @@
 
   &-main-utilities {
     margin-left: auto;
+  }
+
+  &-tools {
+    display: flex;
   }
 
   &-search {
@@ -433,27 +452,23 @@
     }
   }
 
-  // In header, main nav
+  // Main nav is present twice, once for each modifier: mobile, desktop
   &-main-nav {
-    ul {
+    // Generic styles applicable to mobile and desktop
+    .menu {
       display: flex;
       gap: fix-font-size-hack(2rem);
-      margin: 0;
-      padding: 0;
-      list-style: none;
     }
-  }
 
-  .ul-link--in-main-nav {
-    margin: 0;
-    padding: 0;
-    padding-top: fix-font-size-hack(0.3rem);
-    display: flex;
+    .menu-item {
+      padding-top: fix-font-size-hack(0.3rem);
+      display: flex;
+    }
 
-    a {
+    .menu-link {
       text-align: center;
       text-decoration: none;
-      color: var(--ul-color-black);
+      color: $color-black;
       font-weight: 700;
       font-size: fix-font-size-hack(1rem);
       background: linear-gradient(
@@ -476,15 +491,19 @@
       }
 
       &[aria-current="page"] {
-        background: linear-gradient(
-            90deg,
-            var(--ul-color-black),
-            var(--ul-color-black)
-          )
-          no-repeat left bottom / 0 4px;
+        background-image: linear-gradient(90deg, $color-black, $color-black);
+        background-position: left bottom;
+        background-repeat: no-repeat;
         background-size: 100% 4px;
-        background-position-x: left;
       }
+    }
+
+    // Mobile specific layout and color
+    &--mobile {
+    }
+
+    // Desktop specific layout and color
+    &--desktop {
     }
   }
 

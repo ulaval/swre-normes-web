@@ -25,6 +25,10 @@
   padding: fix-font-size-hack(3em) 0;
 }
 
+.footer-contact {
+  margin-bottom: fix-font-size-hack(3em);
+}
+
 .footer-unit {
   text-align: center;
 
@@ -70,12 +74,15 @@
     padding: 0;
     white-space: nowrap;
   }
+  & + .footer-unit-infos {
+    margin-top: fix-font-size-hack(0.75em);
+  }
 }
 
 .footer-social {
   display: flex;
   font-size: 1em;
-  gap: fix-font-size-hack(0.5em);
+  gap: fix-font-size-hack(0.75em);
   justify-content: center;
   margin: fix-font-size-hack(1.5em) 0;
 
@@ -122,8 +129,9 @@
   display: block;
   font-size: fix-font-size-hack(1em);
   line-height: 1em;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 1em;
-  min-width: 200px;
   padding: 1em 1.5em;
   text-align: center;
   text-decoration: none;
@@ -167,7 +175,10 @@ a.footer-button--dark {
 }
 
 .footer-utils {
-  margin-top: fix-font-size-hack(3em);
+  border-bottom: 1px solid $color-gray-lightest;
+  border-top: 1px solid $color-gray-lightest;
+  padding-bottom: fix-font-size-hack(3em);
+  padding-top: fix-font-size-hack(3em);
   text-align: center;
 }
 
@@ -342,6 +353,27 @@ a.footer-button--dark {
 }
 
 @media (min-width: $breakpoint-sm) {
+  .footer-button {
+    max-width: fix-font-size-hack(16em);
+  }
+
+  .footer-navigation {
+    align-items: flex-start;
+    display: flex;
+    gap: fix-font-size-hack(2em);
+    justify-content: space-between;
+  }
+
+  .footer-navigation-group {
+    flex: 1 1 33%;
+
+    & + .footer-navigation-group {
+      margin-top: 0;
+    }
+  }
+}
+
+@mixin website-container-type-breakpoint-670 {
   .footer-contact {
     display: flex;
     justify-content: space-between;
@@ -355,31 +387,22 @@ a.footer-button--dark {
     justify-content: flex-start;
   }
 
-  .footer-unit-infos {
-    .contact-row {
-      display: block;
-    }
-    .divider {
-      display: none;
-    }
-  }
-
   .footer-social {
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: flex-end;
+    gap: fix-font-size-hack(1.175em);
     margin-bottom: 0;
     margin-top: fix-font-size-hack(-0.5em);
   }
 
-  .footer-navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+  .footer-button {
+    max-width: none;
+    min-width: 12em;
   }
 
-  .footer-navigation-group {
-    & + .footer-navigation-group {
-      margin-top: 0;
-    }
+  .footer-utils {
+    text-align: left;
+    gap: fix-font-size-hack(2em);
   }
 
   .footer-logos {
@@ -388,6 +411,38 @@ a.footer-button--dark {
     gap: fix-font-size-hack(2em);
   }
 
+  .footer-bottom {
+    text-align: left;
+  }
+}
+
+@media (min-width: 670px) {
+  @if $website-container-type == "fluid" {
+    @include website-container-type-breakpoint-670;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  @if $website-container-type == "fixed" {
+    @include website-container-type-breakpoint-670;
+  }
+
+  .footer-utils {
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: fix-font-size-hack(50em);
+    padding: 0;
+  }
+
+  .footer-navigation {
+    flex: 1 1 75%;
+  }
+
+  .footer-emergency {
+    flex: 1 1 25%;
+    margin-top: 0;
+  }
   .footer-bottom-inner {
     display: flex;
     flex-wrap: wrap;
@@ -411,28 +466,6 @@ a.footer-button--dark {
   }
 }
 
-@media (min-width: 670px) {
-  @if $website-container-type == "fluid" {
-    .footer-unit-infos {
-      .contact-row,
-      .divider {
-        display: inline;
-      }
-    }
-  }
-}
-
-@media (min-width: $breakpoint-md) {
-  @if $website-container-type == "fixed" {
-    .footer-unit-infos {
-      .contact-row,
-      .divider {
-        display: inline;
-      }
-    }
-  }
-}
-
 @media (min-width: $breakpoint-lg) {
   .footer-contact {
     display: flex;
@@ -446,5 +479,18 @@ a.footer-button--dark {
   }
 
   .footer-contact-inner--right {
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .footer-button {
+    & + .footer-button {
+      margin-bottom: -100%;
+    }
+  }
+
+  .footer-navigation-title,
+  .footer-emergency-title {
+    margin-top: fix-font-size-hack(-0.75em);
   }
 }

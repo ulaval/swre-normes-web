@@ -73,6 +73,107 @@
     margin-left: auto;
   }
 
+  &-search {
+    background: var(--ul-color-black);
+    overflow: hidden;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    &.open {
+      display: block;
+      animation: ul-header-search-fadeIn 0.5s;
+    }
+
+    &:not(.open).remove {
+      display: block;
+      animation: ul-header-search-fadeOut 0.5s;
+    }
+
+    form {
+      padding: fix-font-size-hack(2rem);
+      color: var(--ul-color-white);
+      max-width: 870px;
+      margin: 0 auto;
+      padding: fix-font-size-hack(1rem) fix-font-size-hack(1.5rem);
+      display: flex;
+      align-items: stretch;
+
+      input.champ-recherche {
+        background-color: var(--ul-color-white);
+        border-radius: 0;
+        border: 0;
+        flex: 1;
+        font-size: fix-font-size-hack(1rem);
+        margin: 0;
+        padding: 11px 15px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      button {
+        background-color: var(--ul-color-white);
+        padding: 18px;
+        border: none;
+        line-height: 1em;
+        display: inline-block;
+        &:hover {
+          background-color: var(--ul-color-black);
+          i {
+            filter: invert(1);
+          }
+        }
+      }
+      label {
+        margin-bottom: fix-font-size-hack(0.3rem);
+      }
+    }
+  }
+
+  &-search-trigger {
+    background: none;
+    border: 0;
+    color: var(--ul-color-black);
+    cursor: pointer;
+    font-family: var(--ul-font);
+    font-size: fix-font-size-hack(1rem);
+    line-height: fix-font-size-hack(1rem);
+    padding: fix-font-size-hack(0.938rem) fix-font-size-hack(1rem);
+    position: relative;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: color 0.2s ease;
+      i {
+        transition: background-position 0.5s ease;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-color: var(--ul-color-black);
+      i {
+        filter: invert(1);
+      }
+    }
+
+    &[aria-expanded="true"] {
+      background-color: var(--ul-color-black);
+      i {
+        filter: invert(1) !important;
+        background-position: top left;
+      }
+    }
+
+    &:active,
+    &[aria-expanded="true"] {
+      text-decoration: underline;
+    }
+  }
+
   &-language-switcher {
     position: relative;
 
@@ -85,7 +186,6 @@
       margin: 0;
       padding: 0;
       list-style: none;
-      border: 1px var(--ul-color-black) solid;
       z-index: 1;
     }
   }
@@ -95,6 +195,7 @@
     border: 0;
     box-sizing: border-box;
     color: var(--ul-color-black);
+    cursor: pointer;
     font-family: var(--ul-font);
     font-size: fix-font-size-hack(0.875rem);
     font-weight: 600;
@@ -324,6 +425,11 @@
 
     &.open {
       display: block;
+
+      .ul-header-main-nav,
+      .ul-header-secondary-nav {
+        display: block;
+      }
     }
   }
 
@@ -331,7 +437,7 @@
   &-main-nav {
     ul {
       display: flex;
-      gap: ul-scale-units(2rem);
+      gap: fix-font-size-hack(2rem);
       margin: 0;
       padding: 0;
       list-style: none;
@@ -341,7 +447,7 @@
   .ul-link--in-main-nav {
     margin: 0;
     padding: 0;
-    padding-top: ul-scale-units(0.3rem);
+    padding-top: fix-font-size-hack(0.3rem);
     display: flex;
 
     a {
@@ -349,7 +455,7 @@
       text-decoration: none;
       color: var(--ul-color-black);
       font-weight: 700;
-      font-size: ul-scale-units(1rem);
+      font-size: fix-font-size-hack(1rem);
       background: linear-gradient(
           90deg,
           var(--ul-color-red),
@@ -357,7 +463,7 @@
         )
         no-repeat left bottom / 0 4px;
       transition: background-size 400ms;
-      padding-bottom: ul-scale-units(0.3rem);
+      padding-bottom: fix-font-size-hack(0.3rem);
 
       &:hover,
       &:focus-visible {
@@ -386,7 +492,7 @@
   &-secondary-nav {
     ul {
       display: flex;
-      gap: ul-scale-units(1.5rem);
+      gap: fix-font-size-hack(1.5rem);
       list-style: none;
       justify-content: flex-end;
       margin: 0;
@@ -395,7 +501,7 @@
   }
 
   .ul-link--in-list {
-    font-size: ul-scale-units(0.875rem);
+    font-size: fix-font-size-hack(0.875rem);
     list-style-type: none;
     a {
       color: var(--ul-color-black);
@@ -455,6 +561,12 @@
     &-secondary-nav,
     &-language-switcher {
       display: block;
+    }
+
+    &-search {
+      form {
+        padding: fix-font-size-hack(1rem) fix-font-size-hack(2.22rem);
+      }
     }
   }
 }

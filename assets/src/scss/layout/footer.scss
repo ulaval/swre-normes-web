@@ -11,7 +11,8 @@
   z-index: 2;
 
   p,
-  li {
+  li,
+  ul {
     margin-bottom: 0;
   }
   ul {
@@ -44,8 +45,8 @@
   svg {
     fill: $color-ul-red;
     height: 1.2em;
-    position: relative;
     margin-right: 0.5em;
+    position: relative;
     top: -0.05em;
   }
 }
@@ -79,21 +80,21 @@
   margin: fix-font-size-hack(1.5em) 0;
 
   li {
-    list-style-type: none;
     display: flex;
+    list-style-type: none;
   }
 
   a {
+    background-color: $color-white;
     border: 1px solid transparent;
     // border: 1px solid $color-gray-lightest;
-    background-color: $color-white;
     display: inline-block;
     transition: background-color 0.125s ease;
 
     &:hover,
     &:focus {
-      border: 1px solid color-black;
       background-color: $color-black;
+      border: 1px solid color-black;
       outline: none;
 
       svg {
@@ -134,40 +135,94 @@ a.footer-button--light {
 
   &:hover,
   &:focus {
-    color: $color-white;
     background-color: $color-black;
+    color: $color-white;
   }
 
   &:focus {
     outline-color: $color-white;
+    outline-offset: -4px;
     outline-style: solid;
     outline-width: 2px;
-    outline-offset: -4px;
   }
 }
 
 a.footer-button--dark {
-  color: $color-white;
   background-color: $color-black;
+  color: $color-white;
 
   &:hover,
   &:focus {
-    color: $color-black;
     background-color: $color-white;
+    color: $color-black;
   }
 
   &:focus {
     box-shadow: 0px 0px 0px 1px $color-black inset;
     outline-color: $color-black;
+    outline-offset: -6px;
     outline-style: solid;
     outline-width: 2px;
-    outline-offset: -6px;
+  }
+}
+
+.footer-utils {
+  margin-top: fix-font-size-hack(3em);
+  text-align: center;
+}
+
+.footer-navigation {
+  li {
+    font-size: fix-font-size-hack(0.875em);
+    list-style-type: none;
+  }
+  a {
+    color: $color-black;
+    text-decoration: none;
+  }
+}
+
+.footer-navigation-group {
+  & + .footer-navigation-group {
+    margin-top: fix-font-size-hack(2em);
+  }
+}
+
+.footer-navigation-title {
+  font-size: fix-font-size-hack(0.875em);
+  margin-bottom: fix-font-size-hack(0.5em);
+}
+
+.footer-emergency {
+  margin-top: fix-font-size-hack(2em);
+}
+
+.footer-emergency-title {
+  font-size: fix-font-size-hack(0.875em);
+  margin: 0;
+
+  a {
+    color: $color-ul-red;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+.footer-emergency-text {
+  font-size: fix-font-size-hack(0.875em);
+
+  a {
+    // Better outline shape
+    margin: 0 -1px;
+    padding: 0px 1px;
+
+    color: $color-black;
+    text-decoration: none;
   }
 }
 
 .footer-logos {
-  text-align: center;
   margin-top: fix-font-size-hack(3em);
+  text-align: center;
 
   //   @media (max-width: $ul-tablet-small) {
   //     flex-direction: column;
@@ -313,6 +368,18 @@ a.footer-button--dark {
     justify-content: space-between;
     margin-bottom: 0;
     margin-top: fix-font-size-hack(-0.5em);
+  }
+
+  .footer-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-navigation-group {
+    & + .footer-navigation-group {
+      margin-top: 0;
+    }
   }
 
   .footer-logos {

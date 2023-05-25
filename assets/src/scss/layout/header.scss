@@ -15,7 +15,7 @@
   // --unit: 8.75em
   padding-top: 6.25em;
 
-  .ul-header {
+  .header {
     background-color: $color-black;
     height: 100vh;
     left: 0;
@@ -40,7 +40,7 @@
       &:after {
         background-color: var(--ul-color-white);
       }
-      & > .ul-header-menu-trigger-midbar {
+      & > .header-menu-trigger-midbar {
         &:before,
         &:after {
           background-color: var(--ul-color-white);
@@ -68,14 +68,14 @@
     }
   }
 
-  a.ul-header-title,
-  a.ul-header-university-link {
+  a.header-title,
+  a.header-university-link {
     color: $color-white;
   }
 }
 
 // Header should always have a total height of 8.75em (without submenu)
-.ul-header {
+.header {
   box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   width: 100%;
@@ -164,44 +164,44 @@
 }
 
 // Hide any non-mobile interface elements
-.ul-header-top-meta,
-.ul-header-main-nav,
-.ul-header-secondary-nav,
-.ul-header-language-switcher {
+.header-top-meta,
+.header-main-nav,
+.header-secondary-nav,
+.header-language-switcher {
   display: none;
 }
 
-.ul-header-top,
-.ul-header-main {
+.header-top,
+.header-main {
   align-items: center;
   display: flex;
 }
 
 // Set height to avoid any jump if either small logo or meta nav isn't present
-.ul-header-top-brand,
-.ul-header-top-meta {
+.header-top-brand,
+.header-top-meta {
   height: 1.5em;
   margin-bottom: 1em;
 }
 
-.ul-header-top-meta {
+.header-top-meta {
   margin-left: auto;
 }
 
-.ul-header-main {
+.header-main {
   column-gap: 2em;
   height: 3.75em;
 }
 
-.ul-header-main-utilities {
+.header-main-utilities {
   margin-left: auto;
 }
 
-.ul-header-tools {
+.header-tools {
   display: flex;
 }
 
-.ul-header-search {
+.header-search {
   background: var(--ul-color-black);
   overflow: hidden;
   display: none;
@@ -212,12 +212,12 @@
 
   &.open {
     display: block;
-    animation: ul-header-search-fadeIn 0.5s;
+    animation: header-search-fadeIn 0.5s;
   }
 
   &:not(.open).remove {
     display: block;
-    animation: ul-header-search-fadeOut 0.5s;
+    animation: header-search-fadeOut 0.5s;
   }
 
   form {
@@ -262,7 +262,7 @@
   }
 }
 
-.ul-header-search-trigger {
+.header-search-trigger {
   background: none;
   border: 0;
   color: var(--ul-color-black);
@@ -302,7 +302,7 @@
   }
 }
 
-.ul-header-language-switcher {
+.header-language-switcher {
   position: relative;
 
   &-list {
@@ -343,7 +343,7 @@
   }
 }
 
-.ul-header-language-switcher-trigger {
+.header-language-switcher-trigger {
   background: none;
   border: 0;
   box-sizing: border-box;
@@ -381,7 +381,7 @@
   }
 }
 
-.ul-header-menu-trigger {
+.header-menu-trigger {
   align-items: center;
   background: none;
   border: 0;
@@ -465,7 +465,7 @@
       background-color: var(--ul-color-white);
     }
 
-    .ul-header-menu-trigger-midbar {
+    .header-menu-trigger-midbar {
       &:before,
       &:after {
         background-color: var(--ul-color-white);
@@ -490,7 +490,7 @@
       }
     }
 
-    .ul-header-menu-trigger-midbar {
+    .header-menu-trigger-midbar {
       &:before,
       &:after {
         transition: background-color 0.5s ease;
@@ -509,7 +509,7 @@
       right: 32px;
     }
 
-    .ul-header-menu-trigger-midbar {
+    .header-menu-trigger-midbar {
       &:before {
         transform: rotate(-45deg);
       }
@@ -527,7 +527,7 @@
         background-color: var(--ul-color-black);
       }
 
-      .ul-header-menu-trigger-midbar {
+      .header-menu-trigger-midbar {
         &:before,
         &:after {
           background-color: var(--ul-color-black);
@@ -537,27 +537,27 @@
   }
 }
 
-.ul-header-mobile-menu {
+.header-mobile-menu {
   animation-duration: 0.4s;
-  animation-name: ul-header-mobile-moveOut;
+  animation-name: header-mobile-moveOut;
   animation-timing-function: ease;
   background-color: $color-black;
   display: none;
   transform: translateX(-100vw);
 
   &.open {
-    animation-name: ul-header-mobile-moveIn;
+    animation-name: header-mobile-moveIn;
     display: block;
   }
 
-  .ul-header-main-nav,
-  .ul-header-secondary-nav {
+  .header-main-nav,
+  .header-secondary-nav {
     display: block;
   }
 }
 
 // Main nav is present twice, once for each modifier: mobile, desktop
-.ul-header-main-nav {
+.header-main-nav {
   // Generic styles applicable to mobile and desktop
   .menu {
     display: flex;
@@ -638,7 +638,7 @@
 }
 
 // Secondary nav is present twice, once for each modifier: mobile, desktop
-.ul-header-secondary-nav {
+.header-secondary-nav {
   // Generic styles applicable to mobile and desktop
   .menu {
     display: flex;
@@ -696,7 +696,7 @@
   }
 }
 
-a.ul-header-title {
+a.header-title {
   color: $color-black;
   display: block;
   font-size: 1.5em;
@@ -711,7 +711,7 @@ a.ul-header-title {
   }
 }
 
-a.ul-header-university-link {
+a.header-university-link {
   align-items: center;
   display: flex;
   color: $color-black;
@@ -723,7 +723,7 @@ a.ul-header-university-link {
   }
 }
 
-.ul-header {
+.header {
   .university-logo-simplified {
     display: block;
     margin-right: 0.625em;
@@ -746,7 +746,7 @@ a.ul-header-university-link {
     overflow: initial;
     padding-top: 0;
 
-    .ul-header {
+    .header {
       background-color: $color-white;
       height: initial;
       left: initial;
@@ -765,12 +765,12 @@ a.ul-header-university-link {
       }
     }
 
-    .ul-header-menu-trigger {
+    .header-menu-trigger {
       &:before,
       &:after {
         background-color: $color-black;
       }
-      & > .ul-header-menu-trigger-midbar {
+      & > .header-menu-trigger-midbar {
         &:before,
         &:after {
           background-color: $color-black;
@@ -778,7 +778,7 @@ a.ul-header-university-link {
       }
     }
 
-    .ul-header-search-trigger {
+    .header-search-trigger {
       i {
         transition: filter 0.5s ease;
         filter: none;
@@ -793,31 +793,31 @@ a.ul-header-university-link {
       }
     }
 
-    a.ul-header-title,
-    a.ul-header-university-link {
+    a.header-title,
+    a.header-university-link {
       color: unset;
     }
   }
 
   // Hide mobile-only elements
-  .ul-header-menu-trigger,
-  .ul-header-mobile-menu.open {
+  .header-menu-trigger,
+  .header-mobile-menu.open {
     display: none;
   }
 
   // Show main UI elements
-  .ul-header-top {
+  .header-top {
     justify-content: flex-end;
   }
 
-  .ul-header-top-meta,
-  .ul-header-main-nav,
-  .ul-header-secondary-nav,
-  .ul-header-language-switcher {
+  .header-top-meta,
+  .header-main-nav,
+  .header-secondary-nav,
+  .header-language-switcher {
     display: block;
   }
 
-  .ul-header-search {
+  .header-search {
     form {
       padding: fix-font-size-hack(1rem) fix-font-size-hack(2.22rem);
     }
@@ -827,7 +827,7 @@ a.ul-header-university-link {
 // Animations and transition mediaqueries
 // Override motion sickness-inducing animations
 @media (prefers-reduced-motion: reduce) {
-  .ul-header {
+  .header {
     &:after {
       transition: none;
     }
@@ -835,7 +835,7 @@ a.ul-header-university-link {
 }
 
 // Keyframes
-@keyframes ul-header-mobile-moveIn {
+@keyframes header-mobile-moveIn {
   from {
     transform: translateX(-100vw);
   }
@@ -844,7 +844,7 @@ a.ul-header-university-link {
   }
 }
 
-@keyframes ul-header-mobile-moveOut {
+@keyframes header-mobile-moveOut {
   from {
     transform: translateX(0);
   }

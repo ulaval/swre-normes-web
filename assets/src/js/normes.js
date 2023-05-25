@@ -2,34 +2,34 @@ let currentOpenMenu = null;
 
 // Fermeture du menu
 var closeMainMenu = function () {
-  document.querySelector(".ul-header-mobile-menu").classList.remove("open");
+  document.querySelector(".header-mobile-menu").classList.remove("open");
   document
-    .querySelector(".ul-header-menu-trigger")
+    .querySelector(".header-menu-trigger")
     .querySelector("span.screen-reader-text").innerText =
     "Ouvrir le menu principal";
   document
-    .querySelector(".ul-header-menu-trigger")
+    .querySelector(".header-menu-trigger")
     .setAttribute("aria-expanded", "false");
   document.body.classList.remove("mobile-menu-open");
 };
 
 // Fermeture du moteur de recherche
 var closeMainSearch = function () {
-  document.querySelector(".ul-header-search").classList.remove("open");
+  document.querySelector(".header-search").classList.remove("open");
   document.removeEventListener("keydown", detectBackTabOnSearchBar);
   document
-    .querySelector(".ul-header-search-trigger")
+    .querySelector(".header-search-trigger")
     .setAttribute("aria-expanded", "false");
 };
 
 // Fermeture du moteur de recherche
 var closeMenuSousUnite = function () {
-  document.querySelector(".ul-header-menu-sous-unite").classList.remove("open");
+  document.querySelector(".header-menu-sous-unite").classList.remove("open");
   document
-    .querySelector(".ul-header-menu-sous-unite-trigger")
+    .querySelector(".header-menu-sous-unite-trigger")
     .setAttribute("aria-expanded", "false");
   document
-    .querySelector(".ul-header-menu-sous-unite-trigger")
+    .querySelector(".header-menu-sous-unite-trigger")
     .setAttribute("aria-label", "Ouvrir le menu");
 };
 
@@ -93,11 +93,11 @@ var openToolMenu = function (menu, trigger) {
 
 // Comportement du bouton de menu mobile
 document
-  .querySelector(".ul-header-menu-trigger")
+  .querySelector(".header-menu-trigger")
   .addEventListener("click", function () {
     if (this.getAttribute("aria-expanded") == "false") {
       closeOtherElements();
-      document.querySelector(".ul-header-mobile-menu").classList.add("open");
+      document.querySelector(".header-mobile-menu").classList.add("open");
       this.querySelector("span.screen-reader-text").innerText =
         "Fermer le menu principal";
       this.setAttribute("aria-expanded", "true");
@@ -108,11 +108,11 @@ document
   });
 
 // Comportement du bouton du moteur de recherche principal
-if ((searchBarButton = document.querySelector(".ul-header-search-trigger"))) {
+if ((searchBarButton = document.querySelector(".header-search-trigger"))) {
   searchBarButton.addEventListener("click", function () {
     if (this.getAttribute("aria-expanded") == "false") {
       closeOtherElements();
-      document.querySelector(".ul-header-search").classList.add("open");
+      document.querySelector(".header-search").classList.add("open");
       document.querySelector(".champ-recherche").focus();
       document.addEventListener("keydown", detectBackTabOnSearchBar);
       this.setAttribute("aria-expanded", "true");
@@ -125,13 +125,13 @@ if ((searchBarButton = document.querySelector(".ul-header-search-trigger"))) {
 // Activation du sélecteur de langue si disponible
 if (
   (languageSwitcher = document.querySelector(
-    ".ul-header-language-switcher-trigger"
+    ".header-language-switcher-trigger"
   ))
 ) {
   languageSwitcher.addEventListener("click", function () {
     openToolMenu(
-      "ul-header-language-switcher-list",
-      ".ul-header-language-switcher-trigger"
+      "header-language-switcher-list",
+      ".header-language-switcher-trigger"
     );
   });
 }
@@ -145,16 +145,12 @@ if ((secureMenu = document.querySelector(".ul-secure-menu-trigger"))) {
 
 // Activation du menu sous-unité si disponible
 if (
-  (sousUniteTrigger = document.querySelector(
-    ".ul-header-menu-sous-unite-trigger"
-  ))
+  (sousUniteTrigger = document.querySelector(".header-menu-sous-unite-trigger"))
 ) {
   sousUniteTrigger.addEventListener("click", function () {
     if (this.getAttribute("aria-expanded") == "false") {
       closeOtherElements();
-      document
-        .querySelector(".ul-header-menu-sous-unite")
-        .classList.add("open");
+      document.querySelector(".header-menu-sous-unite").classList.add("open");
       this.setAttribute("aria-label", "Fermer le menu");
       this.setAttribute("aria-expanded", "true");
     } else {
@@ -198,7 +194,7 @@ var detectBackTabOnSearchBar = function (e) {
     e.shiftKey &&
     e.keyCode == 9
   ) {
-    document.querySelector(".ul-header-search-trigger").focus();
+    document.querySelector(".header-search-trigger").focus();
     e.preventDefault();
   }
 };
@@ -252,10 +248,10 @@ var toolMenuKeyUp = function (e) {
 var closeOtherElements = function () {
   closeMainMenu();
   closeToolMenu();
-  if (document.querySelector(".ul-header-search-trigger")) {
+  if (document.querySelector(".header-search-trigger")) {
     closeMainSearch();
   }
-  if (document.querySelector(".ul-header-menu-sous-unite")) {
+  if (document.querySelector(".header-menu-sous-unite")) {
     closeMenuSousUnite();
   }
 };
@@ -263,18 +259,18 @@ var closeOtherElements = function () {
 // Ajout/retrait de certaines classes durant les périodes d'animation pour aider à la fluidité
 document.addEventListener("animationstart", function (e) {
   if (
-    e.animationName === "ul-header-search-fadeIn" ||
-    e.animationName === "ul-header-mobile-fadeIn" ||
-    e.animationName === "ul-header-sous-unite-fadeIn"
+    e.animationName === "header-search-fadeIn" ||
+    e.animationName === "header-mobile-fadeIn" ||
+    e.animationName === "header-sous-unite-fadeIn"
   ) {
     e.target.classList.add("remove");
   }
 });
 document.addEventListener("animationend", function (e) {
   if (
-    e.animationName === "ul-header-search-fadeOut" ||
-    e.animationName === "ul-header-mobile-fadeOut" ||
-    e.animationName === "ul-header-sous-unite-fadeOut"
+    e.animationName === "header-search-fadeOut" ||
+    e.animationName === "header-mobile-fadeOut" ||
+    e.animationName === "header-sous-unite-fadeOut"
   ) {
     e.target.classList.remove("remove");
   }

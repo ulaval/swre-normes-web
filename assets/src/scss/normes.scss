@@ -1,11 +1,6 @@
 // Import abstracts
 @import "./abstracts/_abstracts.scss";
 
-// Code nécessaire pour tous les sites
 @import "./normes/_icons.scss";
-
-// Code falcutatif à utiliser selon les besoins
-// @TODO: Commenter les fichiers qui ne vous concernent pas
-@import "./normes/_secure.scss"; // Espace sécurisé
-
-@import "./normes/_sous-unite.scss"; // Menu sous-unité
+@import "./normes/_secure.scss";
+@import "./normes/_sous-unite.scss";

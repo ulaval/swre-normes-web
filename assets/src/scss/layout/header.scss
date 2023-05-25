@@ -762,32 +762,32 @@ a.ul-header-university-link {
         fill: $color-black;
         transition: none;
       }
+    }
 
-      &-menu-trigger {
+    .ul-header-menu-trigger {
+      &:before,
+      &:after {
+        background-color: $color-black;
+      }
+      & > .ul-header-menu-trigger-midbar {
         &:before,
         &:after {
           background-color: $color-black;
         }
-        & > .ul-header-menu-trigger-midbar {
-          &:before,
-          &:after {
-            background-color: $color-black;
-          }
-        }
       }
+    }
 
-      &-search-trigger {
+    .ul-header-search-trigger {
+      i {
+        transition: filter 0.5s ease;
+        filter: none;
+      }
+      &:hover,
+      &:active {
+        background-color: $color-black;
         i {
-          transition: filter 0.5s ease;
-          filter: none;
-        }
-        &:hover,
-        &:active {
-          background-color: $color-black;
-          i {
-            transition: none;
-            filter: invert(1);
-          }
+          transition: none;
+          filter: invert(1);
         }
       }
     }

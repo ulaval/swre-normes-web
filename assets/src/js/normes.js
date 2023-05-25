@@ -10,7 +10,7 @@ var closeMainMenu = function () {
   document
     .querySelector(".ul-header-menu-trigger")
     .setAttribute("aria-expanded", "false");
-  document.body.classList.remove("ul-mobile-menu-open");
+  document.body.classList.remove("mobile-menu-open");
 };
 
 // Fermeture du moteur de recherche
@@ -101,7 +101,7 @@ document
       this.querySelector("span.screen-reader-text").innerText =
         "Fermer le menu principal";
       this.setAttribute("aria-expanded", "true");
-      document.body.classList.add("ul-mobile-menu-open");
+      document.body.classList.add("mobile-menu-open");
     } else {
       closeMainMenu();
     }

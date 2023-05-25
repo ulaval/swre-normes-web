@@ -69,6 +69,11 @@
       }
     }
   }
+
+  a.ul-header-title,
+  a.ul-header-university-link {
+    color: $color-white;
+  }
 }
 
 // Header should always have a total height of 8.75em (without submenu)
@@ -109,7 +114,7 @@
   }
 
   // Hide any non-mobile interface elements
-  &-top,
+  &-top-meta,
   &-main-nav,
   &-secondary-nav,
   &-language-switcher {
@@ -119,12 +124,13 @@
   &-top,
   &-main {
     align-items: center;
+    display: flex;
   }
 
-  &-top {
-    // Set height to avoid any jump if either small logo or meta nav isn't present
+  // Set height to avoid any jump if either small logo or meta nav isn't present
+  &-top-brand,
+  &-top-meta {
     height: 1.5em;
-    justify-content: flex-end;
     margin-bottom: 1em;
   }
 
@@ -134,7 +140,6 @@
 
   &-main {
     column-gap: 2em;
-    display: flex;
     height: 3.75em;
   }
 
@@ -693,7 +698,40 @@
   }
 }
 
+a.ul-header-title {
+  color: $color-black;
+  display: block;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.1;
+  text-decoration: none;
+  transition: color 0.5s ease;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+a.ul-header-university-link {
+  align-items: center;
+  display: flex;
+  color: $color-black;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
 .ul-header {
+  .university-logo-simplified {
+    display: block;
+    margin-right: 0.625em;
+    width: 19px;
+  }
+
   .university-logo {
     display: block;
     width: 128px;
@@ -723,12 +761,45 @@
         display: none;
       }
 
+      &-menu-trigger {
+        &:before,
+        &:after {
+          background-color: $color-black;
+        }
+        & > .ul-header-menu-trigger-midbar {
+          &:before,
+          &:after {
+            background-color: $color-black;
+          }
+        }
+      }
+
+      &-search-trigger {
+        i {
+          transition: filter 0.5s ease;
+          filter: none;
+        }
+        &:hover,
+        &:active {
+          background-color: $color-black;
+          i {
+            transition: none;
+            filter: invert(1);
+          }
+        }
+      }
+
       .university-logo {
         &-fill {
           fill: $color-black;
           transition: none;
         }
       }
+    }
+
+    a.ul-header-title,
+    a.ul-header-university-link {
+      color: unset;
     }
   }
 
@@ -741,9 +812,10 @@
 
     // Show main UI elements
     &-top {
-      display: flex;
+      justify-content: flex-end;
     }
 
+    &-top-meta,
     &-main-nav,
     &-secondary-nav,
     &-language-switcher {

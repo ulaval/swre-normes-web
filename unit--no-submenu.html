@@ -168,17 +168,43 @@
       <section class="footer-main">
         <div class="container footer-main-inner">
           <div class="footer-contact">
-            <div class="footer-contact-inner footer-contact-inner--left footer-unit">
-              <h2 class="footer-unit-title">
+            <div class="footer-contact-inner footer-contact-inner--left footer-address">
+              <h2 class="footer-address-title">
 
                 <!-- Include this SVG as an inline SVG -->
                 <!-- ./assets/dist/svg/contact.svg -->
                 <svg class="contact" aria-role="presentation" aria-hidden="true" viewBox="0 0 25.2 36">
                   <path d="M12.6,0A12.6,12.6,0,0,0,0,12.6c0,6.72,11.64,22.44,12.12,23.16a.6.6,0,0,0,.96,0c.48-.72,12.12-16.44,12.12-23.16A12.6,12.6,0,0,0,12.6,0Zm0,18A5.4,5.4,0,1,1,18,12.6,5.378,5.378,0,0,1,12.6,18Z"></path>
                 </svg>
-                Faculté des sciences <br> de l'administration
+                <span class="footer-address-title-inner">
+                  <span class="footer-address-title-unit">Université Laval</span>
+                  <span class="footer-address-title-subunit">Université Laval</span>
+                </span>
               </h2>
-              <p class="footer-unit-infos accessible-links-wrapper">
+
+              <!-- Remove first subtitle if you only have one address -->
+              <h3 class="footer-address-name">
+                Pavillon A
+              </h3>
+              <p class="footer-address-infos accessible-links-wrapper">
+
+                <!-- Replace address and google maps link with your own -->
+                <a class="address" href="https://www.google.com/maps/place/2325+Rue+de+l'Universit%C3%A9,+Qu%C3%A9bec,+QC+G1V+0B4,+Canada" target="_blank" rel="noopener"><span class="contact-row">2325, rue de l’Université</span> <span class="contact-row">Québec (Québec) G1V&nbsp;0A6</span></a>
+                <br />
+
+                <!-- Replace phone numbers with your own -->
+                <span class="contact-row">Téléphone: <a class="tel" href="tel:+14186562131">418 656-2131</a></span>
+                <span class="divider">|</span>
+                <span class="contact-row">Sans frais: <a class="tel" href="tel:+18777852825">1 877-785-2825</a></span>
+              </p>
+
+              <!-- Remove second subtitle if you only have one address -->
+              <h3 class="footer-address-name">
+                Pavillon B
+              </h3>
+
+              <!-- Remove second address if you only have one address -->
+              <p class="footer-address-infos accessible-links-wrapper">
 
                 <!-- Replace address and google maps link with your own -->
                 <a class="address" href="https://www.google.com/maps/place/2325+Rue+de+l'Universit%C3%A9,+Qu%C3%A9bec,+QC+G1V+0B4,+Canada" target="_blank" rel="noopener"><span class="contact-row">2325, rue de l’Université</span> <span class="contact-row">Québec (Québec) G1V&nbsp;0A6</span></a>
@@ -191,7 +217,7 @@
               </p>
             </div>
             <div class="footer-contact-inner footer-contact-inner--right">
-              <ul class="footer-social">
+              <ul class="footer-social menu">
 
                 <!-- Replace social links href to your own social network -->
                 <!-- Order social links by follower count -->
@@ -276,8 +302,8 @@
           <nav class="footer-utils accessible-links-wrapper" aria-label="Accès rapides">
             <div class="footer-navigation">
               <div class="footer-navigation-group">
-                <h2 class="footer-navigation-title">Connexion</h2>
-                <ul>
+                <p class="footer-navigation-title">Connexion</p>
+                <ul class="menu">
                   <li><a href="#">monPortail</a></li>
                   <li><a href="#">Courrier électronique</a></li>
                   <li><a href="#">Capsule</a></li>
@@ -286,16 +312,16 @@
                 </ul>
               </div>
               <div class="footer-navigation-group">
-                <h2 class="footer-navigation-title">Carrière à l'UL</h2>
-                <ul>
+                <p class="footer-navigation-title">Carrière à l'UL</p>
+                <ul class="menu">
                   <li><a href="#">Emplois</a></li>
                   <li><a href="#">Peoplesoft RH</a></li>
                   <li><a href="#">Intranet</a></li>
                 </ul>
               </div>
               <div class="footer-navigation-group">
-                <h2 class="footer-navigation-title">Milieu de vie</h2>
-                <ul>
+                <p class="footer-navigation-title">Milieu de vie</p>
+                <ul class="menu">
                   <li><a href="#">Bibliothèque</a></li>
                   <li><a href="#">PEPS</a></li>
                   <li><a href="#">Rouge et Or</a></li>
@@ -308,7 +334,7 @@
 
               <!-- Emergency links should lead to ulaval.ca page -->
               <!-- Emergency links should be localized -->
-              <h2 class="footer-emergency-title"><a href="https://www.ulaval.ca/mesures-durgence">Mesures d'urgence</a></h2>
+              <p class="footer-emergency-title"><a href="https://www.ulaval.ca/mesures-durgence">Mesures d'urgence</a></p>
               <p class="footer-emergency-text">Composer le <a href="tel:+14186565555">418-656-5555</a></p>
             </div>
           </nav>
@@ -346,7 +372,7 @@
             <!-- Copright text should be localized -->
             <span>&copy;&nbsp;2023&nbsp;Université Laval</span><span>Tous droits réservés</span>
           </p>
-          <ul class="footer-legal accessible-links-wrapper">
+          <ul class="footer-legal menu accessible-links-wrapper">
 
             <!-- Footer legal links should lead to ulaval.ca pages -->
             <!-- Footer legal links should be localized -->

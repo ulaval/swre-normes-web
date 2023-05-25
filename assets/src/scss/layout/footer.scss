@@ -60,6 +60,7 @@
 
 .footer-address-title-subunit {
   font-weight: normal;
+  font-size: fix-font-size-hack(0.9em);
 }
 
 .footer-address-name {
@@ -70,6 +71,7 @@
 
 .footer-address-infos {
   font-size: fix-font-size-hack(0.875em);
+  margin-bottom: 0.75em;
 
   .contact-row {
     display: block;

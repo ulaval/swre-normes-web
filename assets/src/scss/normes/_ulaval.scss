@@ -18,7 +18,7 @@
     .ul-header-logo {
       width: 140px;
       padding: 8px;
-      .ul-logo-fill {
+      .university-logo-fill {
         fill: var(--ul-color-black);
         transition: fill 0.5s ease;
       }
@@ -78,7 +78,7 @@
     .ul-header.ul-university-header {
       .ul-header-ul-link {
         .ul-header-logo {
-          .ul-logo-fill {
+          .university-logo-fill {
             fill: var(--ul-color-white);
           }
         }

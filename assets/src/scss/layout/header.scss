@@ -31,10 +31,8 @@
       width: 100%;
     }
 
-    .university-logo {
-      &-fill {
-        fill: $color-white;
-      }
+    .university-logo-fill {
+      fill: $color-white;
     }
 
     &-menu-trigger {
@@ -735,10 +733,9 @@ a.ul-header-university-link {
   .university-logo {
     display: block;
     width: 128px;
-
-    &-fill {
-      transition: fill 0.4s ease;
-    }
+  }
+  .university-logo-fill {
+    transition: fill 0.4s ease;
   }
 }
 
@@ -761,11 +758,9 @@ a.ul-header-university-link {
         display: none;
       }
 
-      .university-logo {
-        &-fill {
-          fill: $color-black;
-          transition: none;
-        }
+      .university-logo-fill {
+        fill: $color-black;
+        transition: none;
       }
 
       &-menu-trigger {

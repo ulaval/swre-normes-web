@@ -17,7 +17,6 @@
 
   .ul-header {
     background-color: $color-black;
-    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
     height: 100vh;
     left: 0;
     overflow-y: scroll;
@@ -79,6 +78,7 @@
 
 // Header should always have a total height of 8.75em (without submenu)
 .ul-header {
+  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   width: 100%;
   z-index: 8888;

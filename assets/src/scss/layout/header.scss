@@ -734,6 +734,7 @@ a.ul-header-university-link {
     display: block;
     width: 128px;
   }
+
   .university-logo-fill {
     transition: fill 0.4s ease;
   }
@@ -798,29 +799,27 @@ a.ul-header-university-link {
     }
   }
 
-  .ul-header {
-    // Hide mobile-only elements
-    &-menu-trigger,
-    &-mobile-menu.open {
-      display: none;
-    }
+  // Hide mobile-only elements
+  .ul-header-menu-trigger,
+  .ul-header-mobile-menu.open {
+    display: none;
+  }
 
-    // Show main UI elements
-    &-top {
-      justify-content: flex-end;
-    }
+  // Show main UI elements
+  .ul-header-top {
+    justify-content: flex-end;
+  }
 
-    &-top-meta,
-    &-main-nav,
-    &-secondary-nav,
-    &-language-switcher {
-      display: block;
-    }
+  .ul-header-top-meta,
+  .ul-header-main-nav,
+  .ul-header-secondary-nav,
+  .ul-header-language-switcher {
+    display: block;
+  }
 
-    &-search {
-      form {
-        padding: fix-font-size-hack(1rem) fix-font-size-hack(2.22rem);
-      }
+  .ul-header-search {
+    form {
+      padding: fix-font-size-hack(1rem) fix-font-size-hack(2.22rem);
     }
   }
 }

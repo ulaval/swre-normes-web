@@ -10,57 +10,78 @@
 .ul-mobile-menu-open {
   overflow: hidden;
 
+  // @TODO: Specific style to change if --university vs --unit
+  // --university: 6.25em
+  // --unit: 8.75em
+  padding-top: 6.25em;
+
   .ul-header {
     background-color: $color-black;
     height: 100vh;
     left: 0;
-    position: absolute;
+    overflow-y: scroll;
+    position: fixed;
     top: 0;
-    z-index: 8888;
+
+    // Extremely important animation fix when mobile menu overflows
+    transition-delay: 0.4s;
+    transition-property: background-color;
+
+    &:after {
+      width: 100%;
+    }
 
     .university-logo {
       &-fill {
         fill: $color-white;
       }
     }
+
+    &-mobile-menu {
+      transform: translateX(0);
+    }
   }
 }
 
 // Header should always have a total height of 8.75em (without submenu)
 .ul-header {
-  background-image: linear-gradient(
-    90deg,
-    var(--ul-color-red),
-    var(--ul-color-red) 50%,
-    var(--ul-color-gold) 0,
-    var(--ul-color-gold)
-  );
-  background-color: $color-white;
-  background-repeat: no-repeat;
-  background-size: 100% 8px;
-  box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.16);
   position: relative;
   width: 100%;
-  z-index: 3;
+  z-index: 8888;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+  }
 
   &:before {
-    background: linear-gradient(
-          90deg,
-          var(--ul-color-red),
-          var(--ul-color-red) 80%,
-          var(--ul-color-gold) 80%,
-          var(--ul-color-gold)
-        )
-        no-repeat,
-      var(--ul-color-white);
+    background-image: linear-gradient(
+      90deg,
+      var(--ul-color-red),
+      var(--ul-color-red) 80%,
+      var(--ul-color-gold) 80%,
+      var(--ul-color-gold)
+    );
+    background-color: $color-white;
+    background-repeat: no-repeat;
     background-size: 100% 8px;
-    display: block;
-    content: "";
-    padding: 0;
     height: 8px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &:after {
+    background-color: $color-black;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    transition: width 0.4s ease;
+    width: 0;
   }
 
   // Hide any non-mobile interface elements
+  &-top,
   &-main-nav,
   &-secondary-nav,
   &-language-switcher {
@@ -70,7 +91,6 @@
   &-top,
   &-main {
     align-items: center;
-    display: flex;
   }
 
   &-top {
@@ -86,6 +106,7 @@
 
   &-main {
     column-gap: 2em;
+    display: flex;
     height: 3.75em;
   }
 
@@ -293,6 +314,7 @@
     align-items: center;
     background: none;
     border: 0;
+    cursor: pointer;
     display: flex;
     display: inline-block;
     height: 48px;
@@ -445,37 +467,49 @@
   }
 
   &-mobile-menu {
+    animation-duration: 0.4s;
+    animation-name: ul-header-mobile-moveOut;
+    animation-timing-function: ease;
+    background-color: $color-black;
     display: none;
+    transform: translateX(-100vw);
 
     &.open {
+      animation-name: ul-header-mobile-moveIn;
       display: block;
+    }
 
-      .ul-header-main-nav,
-      .ul-header-secondary-nav {
-        display: block;
-      }
+    .ul-header-main-nav,
+    .ul-header-secondary-nav {
+      display: block;
     }
   }
 
   // Main nav is present twice, once for each modifier: mobile, desktop
   &-main-nav {
     // Generic styles applicable to mobile and desktop
+    .menu {
+      display: flex;
+    }
+
     .menu-item {
       display: flex;
       padding-top: fix-font-size-hack(0.3rem);
     }
 
     .menu-link {
+      background-image: linear-gradient(
+        90deg,
+        var(--ul-color-red),
+        var(--ul-color-red)
+      );
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      background-size: 0 4px;
+      padding-bottom: fix-font-size-hack(0.3rem);
       text-align: center;
       text-decoration: none;
-      background: linear-gradient(
-          90deg,
-          var(--ul-color-red),
-          var(--ul-color-red)
-        )
-        no-repeat left bottom / 0 4px;
-      transition: background-size 400ms;
-      padding-bottom: fix-font-size-hack(0.3rem);
+      transition: background-size 0.4ms;
 
       &:hover,
       &:focus-visible {
@@ -488,25 +522,35 @@
       }
 
       &[aria-current="page"] {
-        background-image: linear-gradient(90deg, $color-black, $color-black);
         background-position: left bottom;
         background-repeat: no-repeat;
         background-size: 100% 4px;
       }
     }
 
-    // Mobile specific layout and color
+    // Main nav - Mobile specific layout and color
     &--mobile {
+      margin-bottom: fix-font-size-hack(2em);
+
+      .menu {
+        flex-direction: column;
+        gap: fix-font-size-hack(0.688em);
+      }
+
       .menu-link {
         color: $color-white;
         font-size: fix-font-size-hack(1.5em);
+        line-height: 1.2;
+
+        &[aria-current="page"] {
+          background-image: linear-gradient(90deg, $color-white, $color-white);
+        }
       }
     }
 
-    // Desktop specific layout and color
+    // Main nav - Desktop specific layout and color
     &--desktop {
       .menu {
-        display: flex;
         gap: fix-font-size-hack(2em);
       }
 
@@ -514,27 +558,22 @@
         color: $color-black;
         font-size: fix-font-size-hack(1em);
         font-weight: 700;
+
+        &[aria-current="page"] {
+          background-image: linear-gradient(90deg, $color-black, $color-black);
+        }
       }
     }
   }
 
-  // In header, secondary nav
+  // Secondary nav is present twice, once for each modifier: mobile, desktop
   &-secondary-nav {
-    ul {
+    // Generic styles applicable to mobile and desktop
+    .menu {
       display: flex;
-      gap: fix-font-size-hack(1.5rem);
-      list-style: none;
-      justify-content: flex-end;
-      margin: 0;
-      padding: 0;
     }
-  }
 
-  .ul-link--in-list {
-    font-size: fix-font-size-hack(0.875rem);
-    list-style-type: none;
-    a {
-      color: var(--ul-color-black);
+    .menu-link {
       text-decoration: none;
 
       &:hover,
@@ -555,6 +594,33 @@
         outline-offset: 3px;
       }
     }
+
+    // Secondary nav - Mobile specific layout and color
+    &--mobile {
+      .menu {
+        flex-direction: column;
+        gap: fix-font-size-hack(0.75em);
+      }
+
+      .menu-link {
+        color: $color-white;
+        font-size: fix-font-size-hack(1.25em);
+      }
+    }
+
+    // Secondary nav - Desktop specific layout and color
+    &--desktop {
+      .menu {
+        gap: fix-font-size-hack(1.5em);
+        justify-content: flex-end;
+      }
+
+      .menu-link {
+        color: $color-black;
+        font-size: fix-font-size-hack(0.875em);
+        line-height: 1.2;
+      }
+    }
   }
 
   // @TODO: Review this
@@ -563,8 +629,12 @@
   }
 
   .container {
-    padding-top: fix-font-size-hack(1rem);
     padding-bottom: fix-font-size-hack(1rem);
+    padding-top: fix-font-size-hack(1rem);
+
+    // Used to display header contents above animated :after background
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -572,27 +642,36 @@
   .university-logo {
     display: block;
     width: 128px;
+
+    &-fill {
+      transition: fill 0.4s ease;
+    }
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-}
-
 @media (min-width: 1280px) {
+  // Main desktop layout, when mobile menu was open
   .ul-mobile-menu-open {
     overflow: initial;
+    padding-top: 0;
 
     .ul-header {
       background-color: $color-white;
       height: initial;
       left: initial;
+      overflow-y: initial;
       position: relative;
       top: initial;
-      z-index: 8888;
+      transition-delay: initial;
+
+      &:after {
+        display: none;
+      }
 
       .university-logo {
         &-fill {
-          fill: $color-white;
+          fill: $color-black;
+          transition: none;
         }
       }
     }
@@ -606,6 +685,10 @@
     }
 
     // Show main UI elements
+    &-top {
+      display: flex;
+    }
+
     &-main-nav,
     &-secondary-nav,
     &-language-switcher {
@@ -617,6 +700,35 @@
         padding: fix-font-size-hack(1rem) fix-font-size-hack(2.22rem);
       }
     }
+  }
+}
+
+// Animations and transition mediaqueries
+// Override motion sickness-inducing animations
+@media (prefers-reduced-motion: reduce) {
+  .ul-header {
+    &:after {
+      transition: none;
+    }
+  }
+}
+
+// Keyframes
+@keyframes ul-header-mobile-moveIn {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes ul-header-mobile-moveOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100vw);
   }
 }
 

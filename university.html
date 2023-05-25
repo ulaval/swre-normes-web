@@ -39,19 +39,18 @@
         <div class="ul-header-top">
           <!--<div class="ul-header-top-brand">[top logo]</div>-->
           <div class="ul-header-top-meta">
-            <nav class="ul-header-secondary-nav" aria-label="Liens rapides">
+            <nav class="ul-header-secondary-nav ul-header-secondary-nav--desktop" aria-label="Liens rapides">
               <ul class="menu">
-                <!-- <li class="ul-link--in-list"><a href="#" aria-current="page">Libellé supp</a></li> -->
-                <li class="ul-link--in-list"><a href="#">monPortail</a></li>
-                <li class="ul-link--in-list"><a href="#">Nouvelles</a></li>
-                <li class="ul-link--in-list"><a href="#">Nous joindre</a></li>
-                <li class="ul-link--in-list"><a href="#">Donner</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">monPortail</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Nouvelles</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Nous joindre</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Donner</a></li>
               </ul>
             </nav>
           </div>
         </div>
         <div class="ul-header-main">
-          <div class=" ul-header-main-brand">
+          <div class="ul-header-main-brand">
 
             <!-- UL Logo link should lead to https://www.ulaval.ca/ -->
             <a href="https://www.ulaval.ca/">
@@ -114,46 +113,43 @@
           </div>
         </div>
       </div>
-      <div class="ul-header-mobile-menu" id="ul-mobile-menu">
-        <div class="container">
-          <nav class="ul-header-main-nav ul-header-main-nav--mobile" aria-label="Principale">
-            <ul class="menu">
-              <li class="menu-item"><a class="menu-link" href="#" aria-current="page">Futurs étudiants</a></li>
-              <li class="menu-item"><a class="menu-link" href="#">Étudiants actuels</a></li>
-              <li class="menu-item"><a class="menu-link" href="#">Études</a></li>
-              <li class="menu-item"><a class="menu-link" href="#">Facultés</a></li>
-              <li class="menu-item"><a class="menu-link" href="#">Recherche et création</a></li>
-              <li class="menu-item"><a class="menu-link" href="#">Notre université</a></li>
-            </ul>
-          </nav>
-          <nav class="ul-header-secondary-nav" aria-label="Liens rapides">
-            <ul class="menu">
-              <!--<li class="ul-link--in-secondary-nav"><a href="#" aria-current="page">Libellé supp</a></li>-->
-              <li class="ul-link--in-secondary-nav"><a href="#">monPortail</a></li>
-              <li class="ul-link--in-secondary-nav"><a href="#">Nouvelles</a></li>
-              <li class="ul-link--in-secondary-nav"><a href="#">Nous joindre</a></li>
-              <li class="ul-link--in-secondary-nav"><a href="#">Donner</a></li>
-            </ul>
-          </nav>
-          <nav class="ul-mobile-language-switcher" aria-label="Sélectionnez votre langue">
-            <ul class="menu">
-              <li class="ul-link--in-mobile-language-switcher">
-                <span class="visually-hidden" lang="fr">Français</span>
-                <span aria-hidden="true" aria-role="presentation" class="current-language">Fr</span>
-              </li>
-              <li class="ul-link--in-mobile-language-switcher">
-                <a href="#">
-                  <span lang="en" aria-label="English">En</span>
-                </a>
-              </li>
-              <li class="ul-link--in-mobile-language-switcher">
-                <a href="#">
-                  <span lang="es" aria-label="Español">Es</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+      <div class="container ul-header-mobile-menu" id="ul-mobile-menu">
+        <nav class="ul-header-main-nav ul-header-main-nav--mobile" aria-label="Principale">
+          <ul class="menu">
+            <li class="menu-item"><a class="menu-link" href="#" aria-current="page">Futurs étudiants</a></li>
+            <li class="menu-item"><a class="menu-link" href="#">Étudiants actuels</a></li>
+            <li class="menu-item"><a class="menu-link" href="#">Études</a></li>
+            <li class="menu-item"><a class="menu-link" href="#">Facultés</a></li>
+            <li class="menu-item"><a class="menu-link" href="#">Recherche et création</a></li>
+            <li class="menu-item"><a class="menu-link" href="#">Notre université</a></li>
+          </ul>
+        </nav>
+        <nav class="ul-header-secondary-nav ul-header-secondary-nav--mobile" aria-label="Liens rapides">
+          <ul class="menu">
+            <li class="menu-item"><a class="menu-link" href="#">monPortail</a></li>
+            <li class="menu-item"><a class="menu-link" href="#">Nouvelles</a></li>
+            <li class="menu-item"><a class="menu-link" href="#">Nous joindre</a></li>
+            <li class="menu-item"><a class="menu-link" href="#">Donner</a></li>
+          </ul>
+        </nav>
+        <nav class="ul-mobile-language-switcher" aria-label="Sélectionnez votre langue">
+          <ul class="menu">
+            <li class="menu-item">
+              <span class="visually-hidden" lang="fr">Français</span>
+              <span aria-hidden="true" aria-role="presentation" class="current-language">Fr</span>
+            </li>
+            <li class="menu-item">
+              <a href="#">
+                <span lang="en" aria-label="English">En</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#">
+                <span lang="es" aria-label="Español">Es</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
       <div class="ul-header-search" id="site-main-search">
         <form role="search" method="get" action="#">

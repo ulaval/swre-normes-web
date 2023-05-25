@@ -1,9 +1,8 @@
-// Importation du fichier global
-@import "./abstracts/_global_abstracts.scss";
+@import "./_variables.scss";
 
 .ul-header-menu-sous-unite-container {
-  background-color: var(--ul-color-black);
-  color: var(--ul-color-white);
+  background-color: $color-black;
+  color: $color-white;
 }
 
 .ul-header-menu-sous-unite-content {
@@ -14,9 +13,9 @@
   button {
     display: none;
     border: none;
-    background-color: var(--ul-color-black);
-    border-left: 1px var(--ul-color-white) solid;
-    border-right: 1px var(--ul-color-white) solid;
+    background-color: $color-black;
+    border-left: 1px $color-white solid;
+    border-right: 1px $color-white solid;
     flex: 0 0 3rem;
     align-items: center;
     justify-content: center;
@@ -32,7 +31,7 @@
       filter: invert(1);
     }
     &:hover {
-      background-color: var(--ul-color-white);
+      background-color: $color-white;
       &:before {
         filter: none;
       }
@@ -40,8 +39,8 @@
     &:focus-visible,
     &:focus {
       outline-offset: 2px;
-      outline-color: var(--ul-color-black);
-      background-color: var(--ul-color-white);
+      outline-color: $color-black;
+      background-color: $color-white;
       &:before {
         filter: none;
       }
@@ -69,7 +68,7 @@
 
   a {
     display: block;
-    color: var(--ul-color-white);
+    color: $color-white;
     text-decoration: none;
     font-size: fix-font-size-hack(0.875rem);
     padding: fix-font-size-hack(0.56rem);
@@ -79,20 +78,20 @@
     }
 
     &:hover {
-      background-color: var(--ul-color-white);
-      color: var(--ul-color-black);
+      background-color: $color-white;
+      color: $color-black;
     }
 
     &:focus-visible {
       outline-offset: fix-font-size-hack(0.19rem);
-      background-color: var(--ul-color-white);
-      color: var(--ul-color-black);
+      background-color: $color-white;
+      color: $color-black;
     }
   }
 }
 
 .ul-header-menu-sous-unite-link {
-  color: var(--ul-color-white);
+  color: $color-white;
   font-size: fix-font-size-hack(1rem);
   font-weight: 700;
   text-decoration: none;
@@ -147,7 +146,7 @@
   }
   .ul-link--in-sous-unite-content {
     width: 100%;
-    border-top: 1px var(--ul-color-grey) solid;
+    border-top: 1px $color-gray-medium solid;
 
     a {
       &:focus-visible {

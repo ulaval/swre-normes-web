@@ -1,5 +1,4 @@
-// Importation du fichier global
-@import "./abstracts/_global_abstracts.scss";
+@import "./_variables.scss";
 
 // Styles
 :root {
@@ -21,10 +20,10 @@
   display: block;
   padding: fix-font-size-hack(1rem);
   line-height: fix-font-size-hack(1rem);
-  color: var(--ul-color-black);
+  color: $color-black;
   &:hover,
   &:active {
-    background-color: var(--ul-color-black);
+    background-color: $color-black;
     i {
       filter: invert(1);
     }
@@ -35,7 +34,7 @@
   border: 0;
   background: none;
   padding: fix-font-size-hack(1rem) fix-font-size-hack(0.591rem);
-  color: var(--ul-color-black);
+  color: $color-black;
   box-sizing: border-box;
   line-height: fix-font-size-hack(1rem);
   display: flex;
@@ -52,7 +51,7 @@
   &:hover,
   &:active,
   &[aria-expanded="true"] {
-    background-color: var(--ul-color-black);
+    background-color: $color-black;
     &:after {
       filter: invert(1);
     }
@@ -72,26 +71,26 @@
 
 .ul-secure-menu {
   position: absolute;
-  background-color: var(--ul-color-black);
-  color: var(--ul-color-white);
+  background-color: $color-black;
+  color: $color-white;
   top: 100%;
   right: 0;
   margin: 0;
   padding: 0;
   list-style: none;
-  border: 1px var(--ul-color-black) solid;
+  border: 1px $color-black solid;
   white-space: nowrap;
   z-index: 1;
 }
 
 .ul-link--in-secure-nav {
   &:not(:first-child) {
-    border-top: 1px var(--ul-color-grey) solid;
+    border-top: 1px $color-gray-medium solid;
   }
 
   a {
     display: block;
-    color: var(--ul-color-white);
+    color: $color-white;
     padding: fix-font-size-hack(0.591rem);
     box-sizing: border-box;
     line-height: fix-font-size-hack(1rem);
@@ -103,22 +102,22 @@
     }
 
     &:hover {
-      color: var(--ul-color-black);
-      background-color: var(--ul-color-white);
+      color: $color-black;
+      background-color: $color-white;
       text-decoration: underline;
     }
 
     &:focus,
     &:focus-visible {
-      outline: 1px color(--ul-color-black) solid;
-      background-color: var(--ul-color-white);
-      color: var(--ul-color-black);
+      outline: 1px $color-black solid;
+      background-color: $color-white;
+      color: $color-black;
       outline-offset: 2px;
     }
 
     &:active {
-      color: var(--ul-color-black);
-      background-color: var(--ul-color-white);
+      color: $color-black;
+      background-color: $color-white;
       text-decoration: underline;
     }
   }
@@ -138,7 +137,7 @@
       }
       &:hover,
       &:active {
-        background-color: var(--ul-color-white);
+        background-color: $color-white;
         i {
           background-image: var(--img-secure-logged);
           transition: none;
@@ -150,14 +149,14 @@
       }
     }
     .ul-secure-login {
-      color: var(--ul-color-white);
+      color: $color-white;
       i {
         transition: filter 0.5s ease;
         filter: invert(1);
       }
       &:hover,
       &:active {
-        background-color: var(--ul-color-white);
+        background-color: $color-white;
         i {
           transition: none;
           filter: none;

@@ -31,6 +31,12 @@
       width: 100%;
     }
 
+    .university-logo {
+      &-fill {
+        fill: $color-white;
+      }
+    }
+
     &-menu-trigger {
       &:before,
       &:after {
@@ -61,12 +67,6 @@
 
     &-mobile-menu {
       transform: translateX(0);
-    }
-
-    .university-logo {
-      &-fill {
-        fill: $color-white;
-      }
     }
   }
 
@@ -112,6 +112,56 @@
     top: 0;
     transition: width 0.4s ease;
     width: 0;
+  }
+  // @TODO: Review this
+  .ul-link--in-language-nav {
+    &:not(:first-child) {
+      border-top: 1px var(--ul-color-grey) solid;
+    }
+
+    a {
+      box-sizing: border-box;
+      color: var(--ul-color-white);
+      display: block;
+      font-size: fix-font-size-hack(0.875rem);
+      line-height: fix-font-size-hack(1rem);
+      padding: fix-font-size-hack(0.591rem);
+      text-decoration: none;
+
+      &:hover {
+        background-color: var(--ul-color-white);
+        color: var(--ul-color-black);
+        text-decoration: underline;
+      }
+
+      &:focus,
+      &:focus-visible {
+        background-color: var(--ul-color-white);
+        color: var(--ul-color-black);
+        outline-offset: 2px;
+        outline: 1px color(--ul-color-black) solid;
+      }
+
+      &:active {
+        background-color: var(--ul-color-white);
+        color: var(--ul-color-black);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // @TODO: Review this
+  :focus {
+    outline: 1px solid;
+  }
+
+  .container {
+    padding-bottom: fix-font-size-hack(1rem);
+    padding-top: fix-font-size-hack(1rem);
+
+    // Used to display header contents above animated :after background
+    position: relative;
+    z-index: 1;
   }
 
   // Hide any non-mobile interface elements
@@ -329,43 +379,6 @@
 
     &[aria-expanded="true"]:after {
       transform: scaleY(-1);
-    }
-  }
-
-  // @TODO: Review this
-  .ul-link--in-language-nav {
-    &:not(:first-child) {
-      border-top: 1px var(--ul-color-grey) solid;
-    }
-
-    a {
-      box-sizing: border-box;
-      color: var(--ul-color-white);
-      display: block;
-      font-size: fix-font-size-hack(0.875rem);
-      line-height: fix-font-size-hack(1rem);
-      padding: fix-font-size-hack(0.591rem);
-      text-decoration: none;
-
-      &:hover {
-        background-color: var(--ul-color-white);
-        color: var(--ul-color-black);
-        text-decoration: underline;
-      }
-
-      &:focus,
-      &:focus-visible {
-        background-color: var(--ul-color-white);
-        color: var(--ul-color-black);
-        outline-offset: 2px;
-        outline: 1px color(--ul-color-black) solid;
-      }
-
-      &:active {
-        background-color: var(--ul-color-white);
-        color: var(--ul-color-black);
-        text-decoration: underline;
-      }
     }
   }
 
@@ -683,20 +696,6 @@
       }
     }
   }
-
-  // @TODO: Review this
-  :focus {
-    outline: 1px solid;
-  }
-
-  .container {
-    padding-bottom: fix-font-size-hack(1rem);
-    padding-top: fix-font-size-hack(1rem);
-
-    // Used to display header contents above animated :after background
-    position: relative;
-    z-index: 1;
-  }
 }
 
 a.ul-header-title {
@@ -762,6 +761,13 @@ a.ul-header-university-link {
         display: none;
       }
 
+      .university-logo {
+        &-fill {
+          fill: $color-black;
+          transition: none;
+        }
+      }
+
       &-menu-trigger {
         &:before,
         &:after {
@@ -787,13 +793,6 @@ a.ul-header-university-link {
             transition: none;
             filter: invert(1);
           }
-        }
-      }
-
-      .university-logo {
-        &-fill {
-          fill: $color-black;
-          transition: none;
         }
       }
     }

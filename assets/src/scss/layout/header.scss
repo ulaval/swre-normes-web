@@ -31,14 +31,42 @@
       width: 100%;
     }
 
-    .university-logo {
-      &-fill {
-        fill: $color-white;
+    &-menu-trigger {
+      &:before,
+      &:after {
+        background-color: var(--ul-color-white);
+      }
+      & > .ul-header-menu-trigger-midbar {
+        &:before,
+        &:after {
+          background-color: var(--ul-color-white);
+        }
+      }
+    }
+
+    &-search-trigger {
+      i {
+        transition: filter 0.5s ease;
+        filter: invert(1);
+      }
+      &:hover,
+      &:active {
+        background-color: var(--ul-color-white);
+        i {
+          transition: none;
+          filter: none;
+        }
       }
     }
 
     &-mobile-menu {
       transform: translateX(0);
+    }
+
+    .university-logo {
+      &-fill {
+        fill: $color-white;
+      }
     }
   }
 }
@@ -226,12 +254,14 @@
       position: absolute;
       background-color: var(--ul-color-black);
       color: var(--ul-color-white);
-      top: 100%;
-      width: 100%;
+      left: 0;
+      right: 0;
+      border: 1px solid $color-black;
       margin: 0;
       padding: 0;
       list-style: none;
       z-index: 1;
+      border-top: 1px solid #fff;
     }
 
     &--mobile {

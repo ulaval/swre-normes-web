@@ -233,6 +233,29 @@
       list-style: none;
       z-index: 1;
     }
+
+    &--mobile {
+      .menu {
+        display: flex;
+        font-size: fix-font-size-hack(1.25em);
+        gap: fix-font-size-hack(0.8em);
+      }
+
+      .menu-link {
+        color: $color-white;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .current-language {
+        color: $color-white;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+    }
   }
 
   &-language-switcher-trigger {
@@ -509,7 +532,7 @@
       padding-bottom: fix-font-size-hack(0.3rem);
       text-align: center;
       text-decoration: none;
-      transition: background-size 0.4ms;
+      transition: background-size 0.4s;
 
       &:hover,
       &:focus-visible {
@@ -597,6 +620,8 @@
 
     // Secondary nav - Mobile specific layout and color
     &--mobile {
+      margin-bottom: fix-font-size-hack(2em);
+
       .menu {
         flex-direction: column;
         gap: fix-font-size-hack(0.75em);

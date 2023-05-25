@@ -539,14 +539,14 @@
 
 .header-mobile-menu {
   animation-duration: 0.4s;
-  animation-name: header-mobile-moveOut;
+  animation-name: slide-out-left;
   animation-timing-function: ease;
   background-color: $color-black;
   display: none;
   transform: translateX(-100vw);
 
   &.open {
-    animation-name: header-mobile-moveIn;
+    animation-name: slide-in-left;
     display: block;
   }
 
@@ -835,7 +835,7 @@ a.header-university-link {
 }
 
 // Keyframes
-@keyframes header-mobile-moveIn {
+@keyframes slide-in-left {
   from {
     transform: translateX(-100vw);
   }
@@ -844,7 +844,7 @@ a.header-university-link {
   }
 }
 
-@keyframes header-mobile-moveOut {
+@keyframes slide-out-left {
   from {
     transform: translateX(0);
   }

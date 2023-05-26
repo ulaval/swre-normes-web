@@ -1,0 +1,14 @@
+/**
+ * Header with submenu
+ */
+
+// Import abstracts
+@import "../abstracts/_abstracts.scss";
+
+// Styles
+@mixin header-with-submenu {
+  // @TODO: Remove test CSS
+  body {
+    background: red;
+  }
+}

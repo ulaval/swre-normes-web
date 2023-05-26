@@ -1,0 +1,13 @@
+/**
+ * Header with submenu
+ */
+
+// Import abstracts
+@import "../abstracts/_abstracts.scss";
+
+// Styles
+@mixin header-with-submenu {
+  body {
+    background: red;
+  }
+}

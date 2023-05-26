@@ -1,5 +1,3 @@
-@import "./_variables.scss";
-
 .ul-header-menu-sous-unite-container {
   background-color: $color-black;
   color: $color-white;
@@ -105,7 +103,7 @@
   }
 }
 
-@media (max-width: $ul-mobile-width) {
+@media (max-width: 1280px) {
   .ul-header-menu-sous-unite-content {
     button {
       display: flex;

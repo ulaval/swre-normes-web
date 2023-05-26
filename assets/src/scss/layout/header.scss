@@ -740,7 +740,7 @@ a.header-university-link {
   }
 }
 
-@if not $always-menu-mobile {
+@if not $menu-is-always-mobile {
   @media (min-width: 1280px) {
     // Main desktop layout, when mobile menu was open
     .mobile-menu-open {
@@ -855,15 +855,7 @@ a.header-university-link {
   }
 }
 
-/*
- * Uncomment the corresponding header modifier
- * "ulaval.ca" should use "_header--university.scss".
- * "unite.ulaval.ca" should use "_header--unit--no-submenu.scss".
- * "unite.ulaval.ca/sous-unite" should use "_header--unit--with-submenu.scss".
- * "sous-unite.unite.ulaval.ca" should use "_header--subunit.scss".
- */
-// @TODO: Make this automatically conditional from a settings.scss, probably
-@import "./_header--university.scss";
-// @import "./_header--unit--no-submenu.scss";
-// @import "./_header--unit--with-submenu.scss";
-// @import "./_header--subunit.scss";
+@import "./_header-with-submenu.scss";
+@if $header-with-submenu {
+  @include header-with-submenu();
+}

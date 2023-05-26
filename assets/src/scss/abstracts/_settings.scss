@@ -26,6 +26,30 @@ $website-container-type: "fixed";
 $website-container-max-width: 1600px;
 
 /**
+ * If true, remove some styles in order to always keep the mobile menu.
+ *
+ * @usage $always-menu-mobile: false;
+ * @usage $always-menu-mobile: true;
+ */
+$always-menu-mobile: false;
+
+/**
+ * Activate some styles for a better footer on mobile.
+ *
+ * @usage $better-footer-design: false;
+ * @usage $better-footer-design: true;
+ */
+$better-footer-design: true;
+
+/**
+ * Activate some styles to help with debugging.
+ *
+ * @usage $debug: false;
+ * @usage $debug: true;
+ */
+$debug: false;
+
+/**
  * Fixes the font-size hack for websites using 62.5% font-sizing to use em as pixel.
  * Change $font-size-hack to true if your website use the font-size hack.
  *
@@ -48,19 +72,3 @@ $font-size-hack: false;
     @return $value;
   }
 }
-
-/**
- * Activate some styles for a better footer on mobile.
- *
- * @usage $better-footer-design: false;
- * @usage $better-footer-design: true;
- */
-$better-footer-design: true;
-
-/**
- * Activate some styles to help with debugging.
- *
- * @usage $debug: false;
- * @usage $debug: true;
- */
-$debug: false;

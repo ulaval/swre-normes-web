@@ -740,86 +740,88 @@ a.header-university-link {
   }
 }
 
-@media (min-width: 1280px) {
-  // Main desktop layout, when mobile menu was open
-  .mobile-menu-open {
-    overflow: initial;
-    padding-top: 0;
+@if not $always-menu-mobile {
+  @media (min-width: 1280px) {
+    // Main desktop layout, when mobile menu was open
+    .mobile-menu-open {
+      overflow: initial;
+      padding-top: 0;
 
-    .header {
-      background-color: $color-white;
-      height: initial;
-      left: initial;
-      overflow-y: initial;
-      position: relative;
-      top: initial;
-      transition-delay: initial;
+      .header {
+        background-color: $color-white;
+        height: initial;
+        left: initial;
+        overflow-y: initial;
+        position: relative;
+        top: initial;
+        transition-delay: initial;
 
-      &:after {
-        display: none;
+        &:after {
+          display: none;
+        }
+
+        .university-logo-fill {
+          fill: $color-black;
+          transition: none;
+        }
       }
 
-      .university-logo-fill {
-        fill: $color-black;
-        transition: none;
-      }
-    }
-
-    .header-menu-trigger {
-      &:before,
-      &:after {
-        background-color: $color-black;
-      }
-      & > .header-menu-trigger-midbar {
+      .header-menu-trigger {
         &:before,
         &:after {
           background-color: $color-black;
         }
-      }
-    }
-
-    .header-search-trigger {
-      i {
-        transition: filter 0.5s ease;
-        filter: none;
-      }
-      &:hover,
-      &:active {
-        background-color: $color-black;
-        i {
-          transition: none;
-          filter: invert(1);
+        & > .header-menu-trigger-midbar {
+          &:before,
+          &:after {
+            background-color: $color-black;
+          }
         }
       }
+
+      .header-search-trigger {
+        i {
+          transition: filter 0.5s ease;
+          filter: none;
+        }
+        &:hover,
+        &:active {
+          background-color: $color-black;
+          i {
+            transition: none;
+            filter: invert(1);
+          }
+        }
+      }
+
+      a.header-title,
+      a.header-university-link {
+        color: unset;
+      }
     }
 
-    a.header-title,
-    a.header-university-link {
-      color: unset;
+    // Hide mobile-only elements
+    .header-menu-trigger,
+    .header-mobile-menu.open {
+      display: none;
     }
-  }
 
-  // Hide mobile-only elements
-  .header-menu-trigger,
-  .header-mobile-menu.open {
-    display: none;
-  }
+    // Show main UI elements
+    .header-top {
+      justify-content: flex-end;
+    }
 
-  // Show main UI elements
-  .header-top {
-    justify-content: flex-end;
-  }
+    .header-top-meta,
+    .header-main-nav,
+    .header-secondary-nav,
+    .header-language-switcher {
+      display: block;
+    }
 
-  .header-top-meta,
-  .header-main-nav,
-  .header-secondary-nav,
-  .header-language-switcher {
-    display: block;
-  }
-
-  .header-search {
-    form {
-      padding: fix-font-size-hack(1rem) fix-font-size-hack(2.22rem);
+    .header-search {
+      form {
+        padding: fix-font-size-hack(1rem) fix-font-size-hack(2.22rem);
+      }
     }
   }
 }

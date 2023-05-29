@@ -184,6 +184,16 @@
   margin-bottom: 1em;
 }
 
+.header-top-brand {
+  display: flex;
+
+  .divider {
+    padding: 0 fix-font-size-hack(0.25em);
+    position: relative;
+    top: -1px;
+  }
+}
+
 .header-top-meta {
   margin-left: auto;
 }
@@ -711,9 +721,8 @@ a.header-title {
   }
 }
 
-a.header-university-link {
-  align-items: center;
-  display: flex;
+a.header-university-link,
+a.header-unit-link {
   color: $color-black;
   text-decoration: none;
 
@@ -721,6 +730,11 @@ a.header-university-link {
   &:focus {
     text-decoration: underline;
   }
+}
+
+a.header-university-link {
+  align-items: center;
+  display: flex;
 }
 
 .header {

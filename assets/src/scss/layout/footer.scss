@@ -247,33 +247,11 @@ a.footer-button--dark {
 .footer-logos {
   margin-top: fix-font-size-hack(3em);
   text-align: center;
-
-  //   @media (max-width: $ul-tablet-small) {
-  //     flex-direction: column;
-  //     gap: fix-font-size-hack(2rem);
-  //     align-items: flex-start;
-  //   }
-
-  //   @media (max-width: $ul-tablet-small) {
-  //     flex-direction: column;
-  //     gap: fix-font-size-hack(3rem);
-  //   }
-
-  //   &:not(:where(.footer-logos-agreements)) {
-  //     justify-content: flex-end;
-  //   }
-
-  //   .footer-logo-unite {
-  //     width: 237px;
-  //   }
-
-  //   .footer-logo {
-  //     width: 140px;
-  //   }
 }
 
 .footer-logo {
   display: inline-block;
+  height: 52px;
   transition: filter 0.125s ease, opacity 0.125s ease;
 
   &:hover,
@@ -288,6 +266,28 @@ a.footer-button--dark {
     outline-width: 1px;
     outline-offset: fix-font-size-hack(0.5em);
   }
+
+  img {
+    display: block;
+    height: 100%;
+    width: auto;
+  }
+}
+
+.footer-accreditations {
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: fix-font-size-hack(1em) fix-font-size-hack(2em);
+    justify-content: center;
+    margin-bottom: fix-font-size-hack(3em);
+  }
+}
+
+.footer-accreditations-title {
+  font-size: fix-font-size-hack(0.875em);
+  font-weight: 700;
+  margin-bottom: fix-font-size-hack(1.5em);
 }
 
 .footer {
@@ -493,6 +493,16 @@ a.footer-button--dark {
   .footer-bottom-inner {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .footer-logos {
+    text-align: left;
+  }
+
+  .footer-accreditations {
+    .menu {
+      margin-bottom: 0;
+    }
   }
 
   .footer-copyright {

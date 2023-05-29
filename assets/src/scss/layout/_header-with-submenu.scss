@@ -7,6 +7,12 @@
 
 // Styles
 @mixin header-with-submenu {
+  .mobile-menu-open {
+    .header-sub-nav {
+      display: none;
+    }
+  }
+
   .header-sub-nav {
     align-items: center;
     background-color: $color-black;
@@ -152,6 +158,12 @@
   }
 
   @media (min-width: 1280px) {
+    .mobile-menu-open {
+      .header-sub-nav {
+        display: flex;
+      }
+    }
+
     .header-sub-nav {
       .container {
       }

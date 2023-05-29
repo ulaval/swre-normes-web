@@ -7,7 +7,7 @@
 
 // Styles
 
-.ul-mobile-menu-open {
+.mobile-menu-open {
   overflow: hidden;
 
   // @TODO: Specific style to change if --university vs --unit
@@ -15,7 +15,7 @@
   // --unit: 8.75em
   padding-top: 6.25em;
 
-  .ul-header {
+  .header {
     background-color: $color-black;
     height: 100vh;
     left: 0;
@@ -38,12 +38,12 @@
     &-menu-trigger {
       &:before,
       &:after {
-        background-color: var(--ul-color-white);
+        background-color: $color-white;
       }
-      & > .ul-header-menu-trigger-midbar {
+      & > .header-menu-trigger-midbar {
         &:before,
         &:after {
-          background-color: var(--ul-color-white);
+          background-color: $color-white;
         }
       }
     }
@@ -55,7 +55,7 @@
       }
       &:hover,
       &:active {
-        background-color: var(--ul-color-white);
+        background-color: $color-white;
         i {
           transition: none;
           filter: none;
@@ -68,14 +68,14 @@
     }
   }
 
-  a.ul-header-title,
-  a.ul-header-university-link {
+  a.header-title,
+  a.header-university-link {
     color: $color-white;
   }
 }
 
 // Header should always have a total height of 8.75em (without submenu)
-.ul-header {
+.header {
   box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   width: 100%;
@@ -90,10 +90,10 @@
   &:before {
     background-image: linear-gradient(
       90deg,
-      var(--ul-color-red),
-      var(--ul-color-red) 80%,
-      var(--ul-color-gold) 80%,
-      var(--ul-color-gold)
+      $color-ul-red,
+      $color-ul-red 80%,
+      $color-ul-yellow 80%,
+      $color-ul-yellow
     );
     background-color: $color-white;
     background-repeat: no-repeat;
@@ -114,12 +114,12 @@
   // @TODO: Review this
   .ul-link--in-language-nav {
     &:not(:first-child) {
-      border-top: 1px var(--ul-color-grey) solid;
+      border-top: 1px $color-gray-medium solid;
     }
 
     a {
       box-sizing: border-box;
-      color: var(--ul-color-white);
+      color: $color-white;
       display: block;
       font-size: fix-font-size-hack(0.875rem);
       line-height: fix-font-size-hack(1rem);
@@ -127,22 +127,22 @@
       text-decoration: none;
 
       &:hover {
-        background-color: var(--ul-color-white);
-        color: var(--ul-color-black);
+        background-color: $color-white;
+        color: $color-black;
         text-decoration: underline;
       }
 
       &:focus,
       &:focus-visible {
-        background-color: var(--ul-color-white);
-        color: var(--ul-color-black);
+        background-color: $color-white;
+        color: $color-black;
         outline-offset: 2px;
-        outline: 1px color(--ul-color-black) solid;
+        outline: 1px $color-black solid;
       }
 
       &:active {
-        background-color: var(--ul-color-white);
-        color: var(--ul-color-black);
+        background-color: $color-white;
+        color: $color-black;
         text-decoration: underline;
       }
     }
@@ -164,45 +164,45 @@
 }
 
 // Hide any non-mobile interface elements
-.ul-header-top-meta,
-.ul-header-main-nav,
-.ul-header-secondary-nav,
-.ul-header-language-switcher {
+.header-top-meta,
+.header-main-nav,
+.header-secondary-nav,
+.header-language-switcher {
   display: none;
 }
 
-.ul-header-top,
-.ul-header-main {
+.header-top,
+.header-main {
   align-items: center;
   display: flex;
 }
 
 // Set height to avoid any jump if either small logo or meta nav isn't present
-.ul-header-top-brand,
-.ul-header-top-meta {
+.header-top-brand,
+.header-top-meta {
   height: 1.5em;
   margin-bottom: 1em;
 }
 
-.ul-header-top-meta {
+.header-top-meta {
   margin-left: auto;
 }
 
-.ul-header-main {
+.header-main {
   column-gap: 2em;
   height: 3.75em;
 }
 
-.ul-header-main-utilities {
+.header-main-utilities {
   margin-left: auto;
 }
 
-.ul-header-tools {
+.header-tools {
   display: flex;
 }
 
-.ul-header-search {
-  background: var(--ul-color-black);
+.header-search {
+  background: $color-black;
   overflow: hidden;
   display: none;
   position: absolute;
@@ -212,17 +212,17 @@
 
   &.open {
     display: block;
-    animation: ul-header-search-fadeIn 0.5s;
+    animation: header-search-fadeIn 0.5s;
   }
 
   &:not(.open).remove {
     display: block;
-    animation: ul-header-search-fadeOut 0.5s;
+    animation: header-search-fadeOut 0.5s;
   }
 
   form {
     padding: fix-font-size-hack(2rem);
-    color: var(--ul-color-white);
+    color: $color-white;
     max-width: 870px;
     margin: 0 auto;
     padding: fix-font-size-hack(1rem) fix-font-size-hack(1.5rem);
@@ -230,7 +230,7 @@
     align-items: stretch;
 
     input.champ-recherche {
-      background-color: var(--ul-color-white);
+      background-color: $color-white;
       border-radius: 0;
       border: 0;
       flex: 1;
@@ -244,13 +244,13 @@
     }
 
     button {
-      background-color: var(--ul-color-white);
+      background-color: $color-white;
       padding: 18px;
       border: none;
       line-height: 1em;
       display: inline-block;
       &:hover {
-        background-color: var(--ul-color-black);
+        background-color: $color-black;
         i {
           filter: invert(1);
         }
@@ -262,10 +262,10 @@
   }
 }
 
-.ul-header-search-trigger {
+.header-search-trigger {
   background: none;
   border: 0;
-  color: var(--ul-color-black);
+  color: $color-black;
   cursor: pointer;
   font-family: var(--ul-font);
   font-size: fix-font-size-hack(1rem);
@@ -282,14 +282,14 @@
 
   &:hover,
   &:active {
-    background-color: var(--ul-color-black);
+    background-color: $color-black;
     i {
       filter: invert(1);
     }
   }
 
   &[aria-expanded="true"] {
-    background-color: var(--ul-color-black);
+    background-color: $color-black;
     i {
       filter: invert(1) !important;
       background-position: top left;
@@ -302,24 +302,12 @@
   }
 }
 
-.ul-header-language-switcher {
+.header-language-switcher {
   position: relative;
 
-  &-list {
-    position: absolute;
-    background-color: var(--ul-color-black);
-    color: var(--ul-color-white);
-    left: 0;
-    right: 0;
-    border: 1px solid $color-black;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    z-index: 1;
-    border-top: 1px solid #fff;
-  }
-
   &--mobile {
+    text-transform: uppercase;
+
     .menu {
       display: flex;
       font-size: fix-font-size-hack(1.25em);
@@ -343,17 +331,33 @@
   }
 }
 
-.ul-header-language-switcher-trigger {
+.header-language-switcher-list {
+  background-color: $color-black;
+  border-top: 1px solid #fff;
+  border: 1px solid $color-black;
+  color: $color-white;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.header-language-switcher-trigger {
   background: none;
   border: 0;
   box-sizing: border-box;
-  color: var(--ul-color-black);
+  color: $color-black;
   cursor: pointer;
   font-family: var(--ul-font);
   font-size: fix-font-size-hack(0.875rem);
   font-weight: 600;
   line-height: fix-font-size-hack(1rem);
   padding: fix-font-size-hack(1rem) fix-font-size-hack(0.591rem);
+  text-transform: uppercase;
 
   &:after {
     background-image: var(--img-dropdown-arrow);
@@ -368,8 +372,8 @@
   &:hover,
   &:active,
   &[aria-expanded="true"] {
-    background-color: var(--ul-color-black);
-    color: var(--ul-color-white);
+    background-color: $color-black;
+    color: $color-white;
 
     &:after {
       filter: invert(1);
@@ -381,7 +385,7 @@
   }
 }
 
-.ul-header-menu-trigger {
+.header-menu-trigger {
   align-items: center;
   background: none;
   border: 0;
@@ -394,7 +398,7 @@
   width: 48px;
 
   &:before {
-    background: var(--ul-color-black);
+    background: $color-black;
     border-radius: 2px;
     content: "";
     height: 2px;
@@ -415,7 +419,7 @@
     bottom: 16px;
     left: 16px;
     right: 16px;
-    background-color: var(--ul-color-black);
+    background-color: $color-black;
     height: 2px;
     border-radius: 2px;
 
@@ -426,7 +430,7 @@
 
   &-midbar {
     &:before {
-      background-color: var(--ul-color-black);
+      background-color: $color-black;
       border-radius: 2px;
       content: "";
       height: 2px;
@@ -441,7 +445,7 @@
     }
 
     &:after {
-      background-color: var(--ul-color-black);
+      background-color: $color-black;
       border-radius: 2px;
       content: "";
       height: 2px;
@@ -458,17 +462,17 @@
 
   &:hover,
   &:active {
-    background-color: var(--ul-color-black);
+    background-color: $color-black;
 
     &:before,
     &:after {
-      background-color: var(--ul-color-white);
+      background-color: $color-white;
     }
 
-    .ul-header-menu-trigger-midbar {
+    .header-menu-trigger-midbar {
       &:before,
       &:after {
-        background-color: var(--ul-color-white);
+        background-color: $color-white;
       }
     }
   }
@@ -490,7 +494,7 @@
       }
     }
 
-    .ul-header-menu-trigger-midbar {
+    .header-menu-trigger-midbar {
       &:before,
       &:after {
         transition: background-color 0.5s ease;
@@ -509,7 +513,7 @@
       right: 32px;
     }
 
-    .ul-header-menu-trigger-midbar {
+    .header-menu-trigger-midbar {
       &:before {
         transform: rotate(-45deg);
       }
@@ -520,44 +524,44 @@
 
     &:hover,
     &:active {
-      background-color: var(--ul-color-white);
+      background-color: $color-white;
 
       &:before,
       &:after {
-        background-color: var(--ul-color-black);
+        background-color: $color-black;
       }
 
-      .ul-header-menu-trigger-midbar {
+      .header-menu-trigger-midbar {
         &:before,
         &:after {
-          background-color: var(--ul-color-black);
+          background-color: $color-black;
         }
       }
     }
   }
 }
 
-.ul-header-mobile-menu {
+.header-mobile-menu {
   animation-duration: 0.4s;
-  animation-name: ul-header-mobile-moveOut;
+  animation-name: slide-out-left;
   animation-timing-function: ease;
   background-color: $color-black;
   display: none;
   transform: translateX(-100vw);
 
   &.open {
-    animation-name: ul-header-mobile-moveIn;
+    animation-name: slide-in-left;
     display: block;
   }
 
-  .ul-header-main-nav,
-  .ul-header-secondary-nav {
+  .header-main-nav,
+  .header-secondary-nav {
     display: block;
   }
 }
 
 // Main nav is present twice, once for each modifier: mobile, desktop
-.ul-header-main-nav {
+.header-main-nav {
   // Generic styles applicable to mobile and desktop
   .menu {
     display: flex;
@@ -569,11 +573,7 @@
   }
 
   .menu-link {
-    background-image: linear-gradient(
-      90deg,
-      var(--ul-color-red),
-      var(--ul-color-red)
-    );
+    background-image: linear-gradient(90deg, $color-ul-red, $color-ul-red);
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 0 4px;
@@ -638,7 +638,7 @@
 }
 
 // Secondary nav is present twice, once for each modifier: mobile, desktop
-.ul-header-secondary-nav {
+.header-secondary-nav {
   // Generic styles applicable to mobile and desktop
   .menu {
     display: flex;
@@ -696,7 +696,7 @@
   }
 }
 
-a.ul-header-title {
+a.header-title {
   color: $color-black;
   display: block;
   font-size: 1.5em;
@@ -711,7 +711,7 @@ a.ul-header-title {
   }
 }
 
-a.ul-header-university-link {
+a.header-university-link {
   align-items: center;
   display: flex;
   color: $color-black;
@@ -723,7 +723,7 @@ a.ul-header-university-link {
   }
 }
 
-.ul-header {
+.header {
   .university-logo-simplified {
     display: block;
     margin-right: 0.625em;
@@ -740,86 +740,88 @@ a.ul-header-university-link {
   }
 }
 
-@media (min-width: 1280px) {
-  // Main desktop layout, when mobile menu was open
-  .ul-mobile-menu-open {
-    overflow: initial;
-    padding-top: 0;
+@if not $menu-is-always-mobile {
+  @media (min-width: 1280px) {
+    // Main desktop layout, when mobile menu was open
+    .mobile-menu-open {
+      overflow: initial;
+      padding-top: 0;
 
-    .ul-header {
-      background-color: $color-white;
-      height: initial;
-      left: initial;
-      overflow-y: initial;
-      position: relative;
-      top: initial;
-      transition-delay: initial;
+      .header {
+        background-color: $color-white;
+        height: initial;
+        left: initial;
+        overflow-y: initial;
+        position: relative;
+        top: initial;
+        transition-delay: initial;
 
-      &:after {
-        display: none;
+        &:after {
+          display: none;
+        }
+
+        .university-logo-fill {
+          fill: $color-black;
+          transition: none;
+        }
       }
 
-      .university-logo-fill {
-        fill: $color-black;
-        transition: none;
-      }
-    }
-
-    .ul-header-menu-trigger {
-      &:before,
-      &:after {
-        background-color: $color-black;
-      }
-      & > .ul-header-menu-trigger-midbar {
+      .header-menu-trigger {
         &:before,
         &:after {
           background-color: $color-black;
         }
-      }
-    }
-
-    .ul-header-search-trigger {
-      i {
-        transition: filter 0.5s ease;
-        filter: none;
-      }
-      &:hover,
-      &:active {
-        background-color: $color-black;
-        i {
-          transition: none;
-          filter: invert(1);
+        & > .header-menu-trigger-midbar {
+          &:before,
+          &:after {
+            background-color: $color-black;
+          }
         }
       }
+
+      .header-search-trigger {
+        i {
+          transition: filter 0.5s ease;
+          filter: none;
+        }
+        &:hover,
+        &:active {
+          background-color: $color-black;
+          i {
+            transition: none;
+            filter: invert(1);
+          }
+        }
+      }
+
+      a.header-title,
+      a.header-university-link {
+        color: unset;
+      }
     }
 
-    a.ul-header-title,
-    a.ul-header-university-link {
-      color: unset;
+    // Hide mobile-only elements
+    .header-menu-trigger,
+    .header-mobile-menu.open {
+      display: none;
     }
-  }
 
-  // Hide mobile-only elements
-  .ul-header-menu-trigger,
-  .ul-header-mobile-menu.open {
-    display: none;
-  }
+    // Show main UI elements
+    .header-top {
+      justify-content: flex-end;
+    }
 
-  // Show main UI elements
-  .ul-header-top {
-    justify-content: flex-end;
-  }
+    .header-top-meta,
+    .header-main-nav,
+    .header-secondary-nav,
+    .header-language-switcher {
+      display: block;
+    }
 
-  .ul-header-top-meta,
-  .ul-header-main-nav,
-  .ul-header-secondary-nav,
-  .ul-header-language-switcher {
-    display: block;
-  }
-
-  .ul-header-search {
-    form {
-      padding: fix-font-size-hack(1rem) fix-font-size-hack(2.22rem);
+    .header-search {
+      form {
+        padding: fix-font-size-hack(1rem) fix-font-size-hack(2.22rem);
+      }
     }
   }
 }
@@ -827,7 +829,7 @@ a.ul-header-university-link {
 // Animations and transition mediaqueries
 // Override motion sickness-inducing animations
 @media (prefers-reduced-motion: reduce) {
-  .ul-header {
+  .header {
     &:after {
       transition: none;
     }
@@ -835,7 +837,7 @@ a.ul-header-university-link {
 }
 
 // Keyframes
-@keyframes ul-header-mobile-moveIn {
+@keyframes slide-in-left {
   from {
     transform: translateX(-100vw);
   }
@@ -844,7 +846,7 @@ a.ul-header-university-link {
   }
 }
 
-@keyframes ul-header-mobile-moveOut {
+@keyframes slide-out-left {
   from {
     transform: translateX(0);
   }
@@ -853,15 +855,7 @@ a.ul-header-university-link {
   }
 }
 
-/*
- * Uncomment the corresponding header modifier
- * "ulaval.ca" should use "_header--university.scss".
- * "unite.ulaval.ca" should use "_header--unit--no-submenu.scss".
- * "unite.ulaval.ca/sous-unite" should use "_header--unit--with-submenu.scss".
- * "sous-unite.unite.ulaval.ca" should use "_header--subunit.scss".
- */
-// @TODO: Make this automatically conditional from a settings.scss, probably
-@import "./_header--university.scss";
-// @import "./_header--unit--no-submenu.scss";
-// @import "./_header--unit--with-submenu.scss";
-// @import "./_header--subunit.scss";
+@import "./_header-with-submenu.scss";
+@if $header-with-submenu {
+  @include header-with-submenu();
+}

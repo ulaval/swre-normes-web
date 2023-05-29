@@ -1,0 +1,168 @@
+/**
+ * Header - Unit with submenu
+ */
+
+// Import abstracts
+@import "../abstracts/_abstracts.scss";
+
+// Styles
+.header-sub-nav {
+  align-items: center;
+  background-color: $color-black;
+  column-gap: fix-font-size-hack(2em);
+  display: flex;
+
+  &-top {
+    column-gap: fix-font-size-hack(2em);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &-main {
+    background-color: $color-black;
+    display: none;
+    left: 0;
+    overflow: hidden;
+    right: 0;
+    top: 100%;
+    position: absolute;
+
+    &.open {
+      display: block;
+    }
+  }
+
+  &-title {
+    font-size: fix-font-size-hack(1em);
+    font-weight: 700;
+    padding: 0.438em;
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: $color-white;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline-offset: 3px;
+    }
+  }
+
+  &-button {
+    display: flex;
+    border: none;
+    background-color: $color-black;
+    border-left: 1px $color-white solid;
+    border-right: 1px $color-white solid;
+    flex: 0 0 3em;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.811' height='7.797' viewBox='0 0 13.811 7.797'%3E%3Cpath d='M8.268,16.029a.375.375,0,0,1,.528,0l5.729,5.729,5.733-5.729a.375.375,0,0,1,.528.528l-5.995,6a.367.367,0,0,1-.528,0l-5.995-6A.375.375,0,0,1,8.268,16.029Z' transform='translate(-7.607 -15.368)' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E%0A");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: "";
+      display: block;
+      filter: invert(1);
+      height: 8px;
+      width: 16px;
+    }
+
+    &:hover {
+      background-color: $color-white;
+
+      &:before {
+        filter: none;
+      }
+    }
+
+    &:focus-visible,
+    &:focus {
+      outline-offset: 2px;
+      outline-color: $color-black;
+      background-color: $color-white;
+
+      &:before {
+        filter: none;
+      }
+    }
+
+    &[aria-expanded="true"] {
+      &:before {
+        transform: scaleY(-1);
+      }
+    }
+  }
+
+  .container {
+    align-items: stretch;
+    column-gap: fix-font-size-hack(2em);
+    display: flex;
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 100%;
+  }
+
+  .menu {
+    align-items: stretch;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-link {
+    color: $color-white;
+    display: block;
+    font-size: fix-font-size-hack(0.875em);
+    padding: fix-font-size-hack(0.588em);
+    text-decoration: none;
+
+    &[aria-current="page"] {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+    }
+
+    &:focus-visible {
+      background-color: $color-white;
+      color: $color-black;
+      outline-offset: fix-font-size-hack(0.19em);
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .header-sub-nav {
+    &-top {
+      width: auto;
+    }
+
+    &-main {
+      display: block;
+      left: initial;
+      overflow: initial;
+      position: initial;
+      right: initial;
+      top: initial;
+    }
+
+    &-button {
+      display: none;
+    }
+
+    .menu {
+      align-items: center;
+      column-gap: 0.5em;
+      justify-content: initial;
+    }
+  }
+}

@@ -24,12 +24,12 @@ var closeMainSearch = function () {
 
 // Fermeture du moteur de recherche
 var closeMenuSousUnite = function () {
-  document.querySelector(".header-menu-sous-unite").classList.remove("open");
+  document.querySelector("#ul-header-menu-sous-unite").classList.remove("open");
   document
-    .querySelector(".header-menu-sous-unite-trigger")
+    .querySelector(".header-sub-nav-button")
     .setAttribute("aria-expanded", "false");
   document
-    .querySelector(".header-menu-sous-unite-trigger")
+    .querySelector(".header-sub-nav-button")
     .setAttribute("aria-label", "Ouvrir le menu");
 };
 
@@ -144,13 +144,11 @@ if ((secureMenu = document.querySelector(".ul-secure-menu-trigger"))) {
 }
 
 // Activation du menu sous-unité si disponible
-if (
-  (sousUniteTrigger = document.querySelector(".header-menu-sous-unite-trigger"))
-) {
+if ((sousUniteTrigger = document.querySelector(".header-sub-nav-button"))) {
   sousUniteTrigger.addEventListener("click", function () {
     if (this.getAttribute("aria-expanded") == "false") {
       closeOtherElements();
-      document.querySelector(".header-menu-sous-unite").classList.add("open");
+      document.querySelector(".header-sub-nav-main").classList.add("open");
       this.setAttribute("aria-label", "Fermer le menu");
       this.setAttribute("aria-expanded", "true");
     } else {

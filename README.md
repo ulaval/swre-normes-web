@@ -20,6 +20,10 @@ project/
 │   ├── dist/
 │   │   ├── css/
 │   │   │   └── *.css
+│   │   ├── favicon/
+│   │   │   └── *.png
+│   │   ├── fonts/
+│   │   │   └── *.woff
 │   │   ├── img/
 │   │   │   └── *.jpg
 │   │   ├── js/

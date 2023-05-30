@@ -70,7 +70,7 @@ $debug: false;
  * @usage fix-font-size-hack(1rem, false) => 1rem
  * @usage fix-font-size-hack(1rem, true) => 1.6rem
  */
-$font-size-hack: true;
+$font-size-hack: false;
 @function fix-font-size-hack($value, $hack: $font-size-hack) {
   @if $hack {
     // Multiply $value by 1.6 to scale 62.5% back to 100%

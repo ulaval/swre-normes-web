@@ -57,22 +57,21 @@ npm run build
 ```
 
 ### Documentation ###
-Les normes web ont été construites à partir de nos standards de programmation définit ici:
-[Standards de programmation du SWRE](https://wiki.dti.ulaval.ca/display/OrgBSW/UL+-+Normes+web)
+Les normes web ont été construites à partir de nos standards de programmation définit ici: [Standards de programmation du SWRE](https://wiki.dti.ulaval.ca/display/OrgBSW/UL+-+Normes+web).
 
 ### Soutien à l'installation ###
-Contacter aide@bsw.ulaval.ca pour obtenir de l'aide.
+Contacter [aide@bsw.ulaval.ca](mailto:aide@bsw.ulaval.ca) pour obtenir de l'aide.
 
 ### Demande d'évolution et correctifs ###
 Les demande d'évolution sont les bienvenus sous forme de *pull request*.
 
-Pour les problèmes majeurs, veuillez ouvrir un billet en écrivant à aide@bsw.ulaval.ca en expliquant comment répliquer le problème.
+Pour les problèmes majeurs, veuillez ouvrir un billet en écrivant à [aide@bsw.ulaval.ca](mailto:aide@bsw.ulaval.ca) en expliquant comment répliquer le problème.
 
 ### Contributeurs ###
-Alexandre Breton (ALBRE40)
-Bruno Gosselin (BRGOS17)
-Dave Gingras (DAGIN39)
-Maxime Breton (MABRE140)
+* Alexandre Breton (ALBRE40)
+* Bruno Gosselin (BRGOS17)
+* Dave Gingras (DAGIN39)
+* Maxime Breton (MABRE140)
 
 ### Mainteneurs ###
-Alexandre Breton (ALBRE40)
+* Alexandre Breton (ALBRE40)

@@ -1,7 +1,7 @@
 # Normes web pour les sites de l'Université Laval #
 Les normes comprennent l'entête et le pied de page pour tous les sites universitaires.
 
-Les différentes cas d'utilisation sont démontrer dans les quatre gabarits du dépôt de code.
+Les différentes cas d'utilisation sont démontrés dans les quatre gabarits du dépôt de code.
 
 ### Gabarits de référence ###
 En fonction de votre type de site, utilisez le fichier HTML correspondant à votre URL:
@@ -12,7 +12,7 @@ En fonction de votre type de site, utilisez le fichier HTML correspondant à vot
 * `sous-unite.unite.ulaval.ca` devrait utilisé le gabarit `subunit.html`.
 
 ### Structure de dossier ###
-La structure de dossier suivante est recommandé pour la bonne compilation des styles et des scripts.
+La structure de dossier suivante est recommandée pour la bonne compilation des styles et des scripts.
 
 ```bash
 project/
@@ -63,6 +63,6 @@ Les normes web ont été construites à partir de nos standards de programmation
 Contacter [info@bsw.ulaval.ca](mailto:info@bsw.ulaval.ca) pour obtenir de l'aide.
 
 ### Demande d'évolution et correctifs ###
-Les demande d'évolution sont les bienvenus sous forme de *pull request*.
+Les demandes d'évolution sont les bienvenus sous forme de *pull request*.
 
-Pour les problèmes majeurs, veuillez ouvrir un billet en écrivant à [info@bsw.ulaval.ca](mailto:info@bsw.ulaval.ca) en expliquant comment répliquer le problème.
+Pour les problèmes majeurs, veuillez ouvrir un billet en écrivant à [info@bsw.ulaval.ca](mailto:info@bsw.ulaval.ca) en expliquant comment reproduire le problème.

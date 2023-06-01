@@ -39,7 +39,6 @@
       background-color: $color-black;
       display: none;
       left: 0;
-      overflow: hidden;
       right: 0;
       top: 100%;
       position: absolute;
@@ -138,7 +137,27 @@
       display: block;
       font-size: fix-font-size-hack(0.875em);
       padding: fix-font-size-hack(0.588em) 0;
+      position: relative;
       text-decoration: none;
+
+      &:before,
+      &:after {
+        background-color: $color-black;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+      &:before {
+        right: 100%;
+      }
+
+      &:after {
+        left: 100%;
+      }
 
       &[aria-current="page"] {
         text-decoration: underline;
@@ -147,6 +166,11 @@
       &:hover {
         background-color: $color-white;
         color: $color-black;
+
+        &:before,
+        &:after {
+          background-color: $color-white;
+        }
       }
 
       &:focus-visible {
@@ -194,6 +218,13 @@
         column-gap: 0.25em;
         flex-direction: row;
         justify-content: initial;
+      }
+
+      .menu-link {
+        &:before,
+        &:after {
+          display: none;
+        }
       }
     }
   }

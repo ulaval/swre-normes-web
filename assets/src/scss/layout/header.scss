@@ -150,11 +150,6 @@
     }
   }
 
-  // @TODO: Review this
-  :focus {
-    outline: 1px solid;
-  }
-
   .container {
     padding-bottom: fix-font-size-hack(1rem);
     padding-top: fix-font-size-hack(1rem);
@@ -221,7 +216,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  z-index: 1;
+  // @TODO: Implement z-index function for all z-index
+  z-index: 10;
 
   &.open {
     display: block;

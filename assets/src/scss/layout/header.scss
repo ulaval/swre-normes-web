@@ -69,7 +69,9 @@
   }
 
   a.header-title,
-  a.header-university-link {
+  a.header-university-link,
+  a.header-unit-link,
+  .header-top-brand .divider {
     color: $color-white;
   }
 }
@@ -707,6 +709,13 @@
   }
 }
 
+a.header-title,
+a.header-university-link,
+a.header-unit-link,
+.header-top-brand .divider {
+  transition: color 0.5s ease;
+}
+
 a.header-title {
   color: $color-black;
   display: block;
@@ -714,7 +723,6 @@ a.header-title {
   font-weight: 700;
   line-height: 1.1;
   text-decoration: none;
-  transition: color 0.5s ease;
 
   &:hover,
   &:focus {
@@ -810,7 +818,9 @@ a.header-university-link {
       }
 
       a.header-title,
-      a.header-university-link {
+      a.header-university-link,
+      a.header-unit-link,
+      .header-top-brand .divider {
         color: unset;
       }
     }

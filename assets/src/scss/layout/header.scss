@@ -69,7 +69,9 @@
   }
 
   a.header-title,
-  a.header-university-link {
+  a.header-university-link,
+  a.header-unit-link,
+  .header-top-brand .divider {
     color: $color-white;
   }
 }
@@ -186,6 +188,7 @@
 
 .header-top-brand {
   display: flex;
+  align-items: center;
 
   .divider {
     padding: 0 fix-font-size-hack(0.25em);
@@ -706,6 +709,13 @@
   }
 }
 
+a.header-title,
+a.header-university-link,
+a.header-unit-link,
+.header-top-brand .divider {
+  transition: color 0.5s ease;
+}
+
 a.header-title {
   color: $color-black;
   display: block;
@@ -713,7 +723,6 @@ a.header-title {
   font-weight: 700;
   line-height: 1.1;
   text-decoration: none;
-  transition: color 0.5s ease;
 
   &:hover,
   &:focus {
@@ -809,7 +818,9 @@ a.header-university-link {
       }
 
       a.header-title,
-      a.header-university-link {
+      a.header-university-link,
+      a.header-unit-link,
+      .header-top-brand .divider {
         color: unset;
       }
     }

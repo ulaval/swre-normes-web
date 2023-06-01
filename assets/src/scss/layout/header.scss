@@ -221,7 +221,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  z-index: 1;
+  // @TODO: Implement z-index function for all z-index
+  z-index: 10;
 
   &.open {
     display: block;

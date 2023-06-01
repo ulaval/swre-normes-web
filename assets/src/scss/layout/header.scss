@@ -35,6 +35,10 @@
       fill: $color-white;
     }
 
+    &-container {
+      background-color: initial;
+    }
+
     &-menu-trigger {
       &:before,
       &:after {
@@ -114,7 +118,7 @@
   // @TODO: Review this
   .ul-link--in-language-nav {
     &:not(:first-child) {
-      border-top: 1px $color-gray-medium solid;
+      border-top: 1px solid $color-white;
     }
 
     a {
@@ -122,14 +126,12 @@
       color: $color-white;
       display: block;
       font-size: fix-font-size-hack(0.875rem);
-      line-height: fix-font-size-hack(1rem);
       padding: fix-font-size-hack(0.591rem);
       text-decoration: none;
 
       &:hover {
         background-color: $color-white;
         color: $color-black;
-        text-decoration: underline;
       }
 
       &:focus,
@@ -169,6 +171,12 @@
 .header-secondary-nav,
 .header-language-switcher {
   display: none;
+}
+
+.header-container {
+  background-color: $color-white;
+  position: relative;
+  z-index: 150;
 }
 
 .header-top,
@@ -212,22 +220,24 @@
 }
 
 .header-search {
-  background: $color-black;
-  overflow: hidden;
+  animation: slide-out-top 0.25s;
   display: none;
-  position: absolute;
+  background: $color-black;
   left: 0;
+  position: absolute;
   right: 0;
-  z-index: 1;
+  transform: translateY(-100%);
+  z-index: 100;
 
   &.open {
+    animation: slide-in-top 0.25s;
     display: block;
-    animation: header-search-fadeIn 0.5s;
+    transform: none;
   }
 
   &:not(.open).remove {
     display: block;
-    animation: header-search-fadeOut 0.5s;
+    animation: slide-out-top 0.25s;
   }
 
   form {
@@ -250,6 +260,10 @@
 
       &:focus {
         outline: none;
+      }
+
+      &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
       }
     }
 
@@ -353,6 +367,7 @@
   position: absolute;
   right: 0;
   text-transform: uppercase;
+  top: 100%;
   z-index: 1;
 }
 
@@ -866,6 +881,24 @@ a.header-university-link {
   }
   to {
     transform: translateX(-100vw);
+  }
+}
+
+@keyframes slide-in-top {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out-top {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
   }
 }
 

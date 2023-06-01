@@ -257,7 +257,7 @@ var closeOtherElements = function () {
 // Ajout/retrait de certaines classes durant les périodes d'animation pour aider à la fluidité
 document.addEventListener("animationstart", function (e) {
   if (
-    e.animationName === "header-search-fadeIn" ||
+    e.animationName === "slide-in-top" ||
     e.animationName === "header-mobile-fadeIn" ||
     e.animationName === "header-sous-unite-fadeIn"
   ) {
@@ -266,7 +266,7 @@ document.addEventListener("animationstart", function (e) {
 });
 document.addEventListener("animationend", function (e) {
   if (
-    e.animationName === "header-search-fadeOut" ||
+    e.animationName === "slide-out-top" ||
     e.animationName === "header-mobile-fadeOut" ||
     e.animationName === "header-sous-unite-fadeOut"
   ) {

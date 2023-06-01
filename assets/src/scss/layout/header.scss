@@ -150,11 +150,6 @@
     }
   }
 
-  // @TODO: Review this
-  :focus {
-    outline: 1px solid;
-  }
-
   .container {
     padding-bottom: fix-font-size-hack(1rem);
     padding-top: fix-font-size-hack(1rem);

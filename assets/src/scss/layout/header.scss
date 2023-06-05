@@ -252,6 +252,7 @@
       font-size: fix-font-size-hack(1rem);
       margin: 0;
       padding: 11px 15px;
+      -webkit-appearance: none;
 
       &:focus {
         outline: none;

@@ -245,6 +245,8 @@
     display: flex;
 
     input.champ-recherche {
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
       background-color: $color-white;
       border-radius: 0;
       border: 0;

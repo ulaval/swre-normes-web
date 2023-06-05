@@ -241,13 +241,9 @@
   }
 
   form {
-    padding: fix-font-size-hack(2rem);
-    color: $color-white;
-    max-width: 870px;
-    margin: 0 auto;
-    padding: fix-font-size-hack(1rem) fix-font-size-hack(1.5rem);
-    display: flex;
     align-items: stretch;
+    color: $color-white;
+    display: flex;
 
     input.champ-recherche {
       background-color: $color-white;
@@ -845,12 +841,6 @@ a.header-university-link {
     .header-secondary-nav,
     .header-language-switcher {
       display: block;
-    }
-
-    .header-search {
-      form {
-        padding: fix-font-size-hack(1rem) fix-font-size-hack(2.22rem);
-      }
     }
   }
 }

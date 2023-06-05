@@ -245,6 +245,7 @@ var toolMenuKeyUp = function (e) {
 
 var closeOtherElements = function () {
   closeMainMenu();
+  closeMenuSousUnite();
   closeToolMenu();
   if (document.querySelector(".header-search-trigger")) {
     closeMainSearch();

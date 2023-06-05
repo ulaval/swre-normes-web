@@ -80,14 +80,14 @@
   border: 1px $color-black solid;
   white-space: nowrap;
   z-index: 1;
-}
 
-.ul-link--in-secure-nav {
-  &:not(:first-child) {
-    border-top: 1px $color-gray-medium solid;
+  .menu-item {
+    &:not(:first-child) {
+      border-top: 1px $color-gray-medium solid;
+    }
   }
 
-  a {
+  .menu-link {
     display: block;
     color: $color-white;
     padding: fix-font-size-hack(0.591rem);

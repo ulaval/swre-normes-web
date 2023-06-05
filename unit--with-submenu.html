@@ -86,8 +86,20 @@
             <div class="header-main-utilities">
               <div class="header-tools">
                 <button type="button" class="header-search-trigger" aria-expanded="false" aria-controls="site-main-search" aria-label="Chercher"><i aria-hidden="true" class="ul-i-search" role="presentation"></i></button>
-                <!-- Le label peut être modifié selon l'utilité du bouton de connexion -->
-                <!-- <a href="#" class="ul-secure-login" aria-label="Espace sécurisé"><i class="ul-i-login" aria-role="presentation" aria-hidden="true"></i></a> -->
+                <!-- Anonymous, not logged in version -->
+                <a href="#" class="ul-secure-login" aria-label="Espace sécurisé"><i class="ul-i-login" aria-role="presentation" aria-hidden="true"></i></a>
+
+                <!-- Connected, logged in version -->
+                <nav class="ul-secure-menu-container">
+                  <button type="button" id="ul-secure-menu-button" aria-haspopup="true" class="ul-secure-menu-trigger" aria-expanded="false" aria-controls="ul-secure-menu" aria-label="Ouvrir le menu sécurisé">
+                    <i aria-hidden="true" aria-role="presentation" class="ul-i-secure-logged"></i>
+                  </button>
+                  <ul id="ul-secure-menu" class="ul-secure-menu menu" role="menu" aria-labelledby="ul-secure-menu-button" hidden>
+                    <li class="menu-item" role="presentation"><a class="menu-link" href="#" role="menuitem">Espace sécurisé</a></li>
+                    <li class="menu-item" role="presentation"><a class="menu-link" href="#" role="menuitem" class="ul-secure-logout">Déconnexion (IDUL00)</a></li>
+                  </ul>
+                </nav>
+
                 <nav class="header-language-switcher">
                   <button type="button" class="header-language-switcher-trigger" aria-expanded="false" aria-controls="ul-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
                     <span aria-hidden="true" aria-role="presentation">fr</span>
@@ -105,6 +117,7 @@
                     </li>
                   </ul>
                 </nav>
+
                 <button type="button" class="header-menu-trigger" aria-expanded="false" aria-controls="ul-mobile-menu"><span class="header-menu-trigger-midbar" role="presentation"></span><span class="screen-reader-text visually-hidden">Ouvrir le menu principal</span></button>
               </div>
             </div>
@@ -149,13 +162,15 @@
         </nav>
       </div>
       <div class="header-search" id="site-main-search">
-        <form role="search" method="get" action="#">
-          <label for="site-header-search-bar" class="visually-hidden">Que cherchez-vous?</label>
-          <input id="site-header-search-bar" type="search" placeholder="Chercher par mots-clés" name="q" value="" class="champ-recherche" />
-          <button type="submit" class="btn-recherche" value="" aria-label="Chercher">
-            <i class="ul-i-search" aria-hidden="true" role="presentation"></i>
-          </button>
-        </form>
+        <div class="container">
+          <form role="search" method="get" action="#">
+            <label for="site-header-search-bar" class="visually-hidden">Que cherchez-vous?</label>
+            <input id="site-header-search-bar" type="search" placeholder="Chercher par mots-clés" name="q" value="" class="champ-recherche" />
+            <button type="submit" class="btn-recherche" value="" aria-label="Chercher">
+              <i class="ul-i-search" aria-hidden="true" role="presentation"></i>
+            </button>
+          </form>
+        </div>
       </div>
 
       <div class="header-sub-nav">

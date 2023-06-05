@@ -24,13 +24,17 @@ var closeMainSearch = function () {
 
 // Fermeture du moteur de recherche
 var closeMenuSousUnite = function () {
-  document.querySelector("#ul-header-menu-sous-unite").classList.remove("open");
-  document
-    .querySelector(".header-sub-nav-button")
-    .setAttribute("aria-expanded", "false");
-  document
-    .querySelector(".header-sub-nav-button")
-    .setAttribute("aria-label", "Ouvrir le menu");
+  if (document.querySelector("#ul-header-menu-sous-unite")) {
+    document
+      .querySelector("#ul-header-menu-sous-unite")
+      .classList.remove("open");
+    document
+      .querySelector(".header-sub-nav-button")
+      .setAttribute("aria-expanded", "false");
+    document
+      .querySelector(".header-sub-nav-button")
+      .setAttribute("aria-label", "Ouvrir le menu");
+  }
 };
 
 // Fermeture d'un menu d'outil

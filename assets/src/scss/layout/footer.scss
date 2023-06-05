@@ -60,7 +60,7 @@
 
 .footer-address-title-subunit {
   font-weight: normal;
-  font-size: fix-font-size-hack(0.9em);
+  font-size: 0.9em;
 }
 
 .footer-address-name {
@@ -345,9 +345,11 @@ a.footer-button--dark {
     border-top: 1px solid $color-gray-lightest;
     padding-top: fix-font-size-hack(3em);
   }
-  .footer-logo {
-    filter: grayscale(100%);
-    opacity: 0.85;
+  .footer-accreditations {
+    .footer-logo {
+      filter: grayscale(100%);
+      opacity: 0.85;
+    }
   }
 }
 
@@ -452,7 +454,8 @@ a.footer-button--dark {
   }
 
   @if $better-footer-design {
-    .footer-utils {
+    .footer-utils,
+    .footer-logos {
       border: 0;
       padding: 0;
     }

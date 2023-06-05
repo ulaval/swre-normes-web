@@ -74,9 +74,12 @@
 
   a.header-title,
   a.header-university-link,
-  a.header-unit-link,
-  .header-top-brand .divider {
+  a.header-unit-link {
     color: $color-white;
+  }
+
+  .header-top-brand .divider {
+    border-left: 1px solid $color-white;
   }
 }
 
@@ -185,16 +188,30 @@
 // Set height to avoid any jump if either small logo or meta nav isn't present
 .header-top-brand,
 .header-top-meta {
-  height: 1.5em;
+  min-height: 1.5em;
   margin-bottom: 1em;
 }
 
 .header-top-brand {
   display: flex;
-  align-items: center;
+
+  @if $better-header-design {
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  @if $font-size-hack {
+    font-size: fix-font-size-hack(1em);
+  }
 
   .divider {
-    padding: 0 fix-font-size-hack(0.25em);
+    @if $better-header-design {
+      display: none;
+    }
+    border-left: 1px solid $color-black;
+    margin: 0 0.5em;
     position: relative;
     top: -1px;
   }
@@ -206,7 +223,7 @@
 
 .header-main {
   column-gap: 2em;
-  height: 3.75em;
+  min-height: fix-font-size-hack(3.75em);
 }
 
 .header-main-utilities {
@@ -590,6 +607,7 @@
   }
 
   .menu-item {
+    // align-items: center;
     display: flex;
     padding-top: fix-font-size-hack(0.3rem);
   }
@@ -720,9 +738,12 @@
 
 a.header-title,
 a.header-university-link,
-a.header-unit-link,
-.header-top-brand .divider {
+a.header-unit-link {
   transition: color 0.5s ease;
+}
+
+.header-top-brand .divider {
+  transition: border-left 0.5s ease;
 }
 
 a.header-title {
@@ -753,6 +774,16 @@ a.header-unit-link {
 a.header-university-link {
   align-items: center;
   display: flex;
+  white-space: nowrap;
+  @if $better-header-design {
+    margin-bottom: 0.25em;
+  }
+}
+
+a.header-unit-link {
+  @if $better-header-design {
+    text-align: center;
+  }
 }
 
 .header {
@@ -769,6 +800,27 @@ a.header-university-link {
 
   .university-logo-fill {
     transition: fill 0.4s ease;
+  }
+}
+
+@media (min-width: $breakpoint-sm) {
+  @if $better-header-design {
+    .header-top-brand {
+      flex-direction: row;
+      flex-grow: 1;
+      justify-content: flex-start;
+
+      .divider {
+        display: inline;
+      }
+    }
+
+    a.header-university-link {
+      margin-bottom: 0;
+    }
+    a.header-unit-link {
+      text-align: left;
+    }
   }
 }
 
@@ -828,9 +880,12 @@ a.header-university-link {
 
       a.header-title,
       a.header-university-link,
-      a.header-unit-link,
-      .header-top-brand .divider {
+      a.header-unit-link {
         color: unset;
+      }
+
+      .header-top-brand .divider {
+        border-left: 1px solid $color-black;
       }
     }
 

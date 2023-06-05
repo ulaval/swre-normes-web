@@ -152,14 +152,21 @@ $website-container-step-padding: fix-font-size-hack(calc(1.25em / 2));
 }
 
 @if $debug {
-  header,
-  main,
-  footer {
-    @if $website-container-type == "fixed" {
-      background: $color-ul-yellow;
+  body {
+    @if $font-size-hack {
+      background: red;
+    } @else {
+      background: green;
     }
-    @if $website-container-type == "fluid" {
-      background: $color-ul-blue;
+
+    .header-container,
+    .footer-main {
+      @if $website-container-type == "fixed" {
+        background: $color-ul-yellow;
+      }
+      @if $website-container-type == "fluid" {
+        background: $color-ul-blue;
+      }
     }
   }
 }

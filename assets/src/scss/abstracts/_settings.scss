@@ -42,6 +42,14 @@ $header-with-submenu: true;
 $menu-is-always-mobile: false;
 
 /**
+ * Activate some styles for a better header on mobile.
+ *
+ * @usage $better-header-design: false;
+ * @usage $better-header-design: true;
+ */
+$better-header-design: false;
+
+/**
  * Activate some styles for a better footer on mobile.
  *
  * @usage $better-footer-design: false;

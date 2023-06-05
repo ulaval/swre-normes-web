@@ -18,12 +18,15 @@
     background-color: $color-black;
     column-gap: fix-font-size-hack(2em);
     display: flex;
+    height: 36px;
 
     .container {
       display: flex;
+      height: 100%;
       padding-bottom: 0;
       padding-top: 0;
       width: 100%;
+      align-items: center;
     }
 
     .menu {
@@ -33,11 +36,22 @@
       justify-content: space-between;
     }
 
+    .menu-item {
+      display: flex;
+      & + .menu-item {
+        .menu-link {
+          border-top: 1px solid $color-white;
+        }
+      }
+    }
+
     .menu-link {
       color: $color-white;
       display: block;
+      display: flex;
+      flex-grow: 1;
       font-size: fix-font-size-hack(0.875em);
-      padding: fix-font-size-hack(0.588em) 0;
+      height: 36px;
       position: relative;
       text-decoration: none;
 
@@ -60,11 +74,8 @@
         left: 100%;
       }
 
-      &[aria-current="page"] {
-        text-decoration: underline;
-      }
-
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: $color-white;
         color: $color-black;
 
@@ -74,10 +85,8 @@
         }
       }
 
-      &:focus-visible {
-        background-color: $color-white;
-        color: $color-black;
-        outline-offset: fix-font-size-hack(0.19em);
+      &:focus {
+        outline: none;
       }
     }
   }
@@ -115,20 +124,24 @@
   .header-sub-nav-title {
     font-size: fix-font-size-hack(1em);
     font-weight: 700;
-    padding: 0.438em 0;
+    padding: 0.438em 10px;
+    margin: 0 -10px;
     text-decoration: none;
 
-    &:link,
-    &:visited {
-      color: $color-white;
-    }
-
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: underline;
     }
 
-    &:focus-visible {
-      outline-offset: 3px;
+    &:focus {
+      outline-color: $color-white;
+      outline-offset: -6px;
+      outline-style: dotted;
+      outline-width: 1px;
+    }
+
+    &:visited {
+      color: $color-white;
     }
   }
 
@@ -155,7 +168,8 @@
       width: 16px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $color-white;
 
       &:before {
@@ -163,15 +177,8 @@
       }
     }
 
-    &:focus-visible,
     &:focus {
-      outline-offset: 2px;
-      outline-color: $color-black;
-      background-color: $color-white;
-
-      &:before {
-        filter: none;
-      }
+      outline: none;
     }
 
     &[aria-expanded="true"] {
@@ -197,6 +204,14 @@
         column-gap: 0.25em;
         flex-direction: row;
         justify-content: initial;
+      }
+
+      .menu-item {
+        & + .menu-item {
+          .menu-link {
+            border-top: 0;
+          }
+        }
       }
 
       .menu-link {

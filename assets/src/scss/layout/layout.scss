@@ -23,16 +23,15 @@ $website-container-step-padding: fix-font-size-hack(calc(1.25em / 2));
   }
 }
 // Styles
-@if $sticky-footer {
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
 
-  .main {
-    flex-grow: 1;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .container {

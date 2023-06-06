@@ -34,14 +34,6 @@ $website-container-max-width: 1600px;
 $header-with-submenu: true;
 
 /**
- * If true, add styles to stick the footer at the bottom of the viewport.
- *
- * @usage $sticky-footer: false;
- * @usage $sticky-footer: true;
- */
-$sticky-footer: true;
-
-/**
  * If true, remove some styles to always keep the main menu always mobile.
  *
  * @usage $menu-is-always-mobile: false;

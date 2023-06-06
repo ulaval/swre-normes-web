@@ -193,8 +193,8 @@
 }
 
 .header-top-brand {
-  display: flex;
   align-items: center;
+  display: flex;
 
   @if $better-header-design {
     flex-direction: column;
@@ -800,6 +800,7 @@ a.header-university-link {
   align-items: center;
   display: flex;
   white-space: nowrap;
+
   @if $better-header-design {
     margin-bottom: 0.25em;
   }

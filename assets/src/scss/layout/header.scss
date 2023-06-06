@@ -194,9 +194,9 @@
 
 .header-top-brand {
   display: flex;
+  align-items: center;
 
   @if $better-header-design {
-    align-items: center;
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
@@ -207,10 +207,12 @@
   }
 
   .divider {
+    align-self: stretch;
+
     @if $better-header-design {
       display: none;
     }
-    border-left: 1px solid $color-black;
+    border-left: 1px solid $color-gray-medium;
     margin: 0 0.5em;
     position: relative;
     top: -1px;
@@ -607,9 +609,12 @@
   }
 
   .menu-item {
-    // align-items: center;
+    @if $better-header-design {
+      align-items: center;
+    }
+
     display: flex;
-    padding-top: fix-font-size-hack(0.3rem);
+    padding-top: fix-font-size-hack(0.25em);
   }
 
   .menu-link {
@@ -617,19 +622,19 @@
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 0 4px;
-    padding-bottom: fix-font-size-hack(0.3rem);
+    padding-bottom: fix-font-size-hack(0.25em);
     text-align: center;
     text-decoration: none;
-    transition: background-size 0.4s;
+    transition: background-size 0.25s ease;
 
     &:hover,
-    &:focus-visible {
+    &:focus {
       background-size: 100% 4px;
       background-position-x: left;
     }
 
-    &:focus-visible {
-      outline-offset: 10px;
+    &:focus {
+      outline: none;
     }
 
     &[aria-current="page"] {
@@ -672,6 +677,15 @@
 
       &[aria-current="page"] {
         background-image: linear-gradient(90deg, $color-black, $color-black);
+
+        &:hover,
+        &:focus {
+          background-image: linear-gradient(
+            90deg,
+            $color-ul-red,
+            $color-ul-red
+          );
+        }
       }
     }
   }
@@ -740,6 +754,15 @@ a.header-title,
 a.header-university-link,
 a.header-unit-link {
   transition: color 0.5s ease;
+
+  padding: 0 2px;
+  margin: 0 -2px;
+  &:focus {
+    outline-color: $color-black;
+    outline-offset: 2px;
+    outline-style: dotted;
+    outline-width: 1px;
+  }
 }
 
 .header-top-brand .divider {
@@ -753,6 +776,8 @@ a.header-title {
   font-weight: 700;
   line-height: 1.1;
   text-decoration: none;
+  padding: 0.25em;
+  margin: -0.25em;
 
   &:hover,
   &:focus {
@@ -885,7 +910,7 @@ a.header-unit-link {
       }
 
       .header-top-brand .divider {
-        border-left: 1px solid $color-black;
+        border-left: 1px solid $color-gray-medium;
       }
     }
 
@@ -918,6 +943,12 @@ a.header-unit-link {
 @media (prefers-reduced-motion: reduce) {
   .header {
     &:after {
+      transition: none;
+    }
+  }
+
+  .header-main-nav {
+    .menu-link {
       transition: none;
     }
   }

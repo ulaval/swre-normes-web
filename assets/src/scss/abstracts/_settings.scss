@@ -34,7 +34,7 @@ $website-container-max-width: 1600px;
 $header-with-submenu: true;
 
 /**
- * If true, remove some styles in order to always keep the mobile.
+ * If true, remove some styles to always keep the main menu always mobile.
  *
  * @usage $menu-is-always-mobile: false;
  * @usage $menu-is-always-mobile: true;
@@ -42,7 +42,7 @@ $header-with-submenu: true;
 $menu-is-always-mobile: false;
 
 /**
- * Activate some styles for a better header on mobile.
+ * If true, add styles for a better header on mobile.
  *
  * @usage $better-header-design: false;
  * @usage $better-header-design: true;
@@ -50,7 +50,7 @@ $menu-is-always-mobile: false;
 $better-header-design: false;
 
 /**
- * Activate some styles for a better footer on mobile.
+ * If true, add styles for a better footer on mobile.
  *
  * @usage $better-footer-design: false;
  * @usage $better-footer-design: true;
@@ -58,7 +58,7 @@ $better-header-design: false;
 $better-footer-design: true;
 
 /**
- * Activate some styles to help with debugging.
+ * If true, add styles to help with debugging.
  *
  * @usage $debug: false;
  * @usage $debug: true;

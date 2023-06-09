@@ -87,7 +87,11 @@
 
 .footer-address-infos {
   font-size: fix-font-size-hack(0.875em);
-  margin-bottom: 0.75em;
+  margin-bottom: 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   .contact-row {
     display: block;
@@ -104,9 +108,6 @@
     margin: 0;
     padding: 0;
     white-space: nowrap;
-  }
-  & + .footer-address-infos {
-    margin-top: fix-font-size-hack(0.75em);
   }
 }
 
@@ -501,6 +502,7 @@ a.footer-button--dark {
     display: flex;
     justify-content: space-between;
     max-width: fix-font-size-hack(50em);
+    transition: max-width 0.125s ease;
   }
 
   .footer-navigation {
@@ -552,6 +554,10 @@ a.footer-button--dark {
 }
 
 @media (min-width: $breakpoint-xl) {
+  .footer-utils {
+    max-width: 72%;
+  }
+
   // .footer-contact {
   //   padding-bottom: fix-font-size-hack(3em);
   //   margin-bottom: fix-font-size-hack(-0.75em);

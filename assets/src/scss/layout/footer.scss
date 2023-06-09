@@ -379,9 +379,9 @@ a.footer-button--dark {
 }
 
 @media (min-width: $breakpoint-sm) {
-  .footer-button {
-    max-width: fix-font-size-hack(16em);
-  }
+  // .footer-button {
+  //   max-width: fix-font-size-hack(16em);
+  // }
 
   .footer-navigation {
     align-items: flex-start;
@@ -411,6 +411,13 @@ a.footer-button--dark {
 
   .footer-address-title {
     justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+
+    svg {
+      margin-bottom: 0em;
+      margin-right: 0.5em;
+    }
   }
 
   .footer-social {
@@ -457,21 +464,6 @@ a.footer-button--dark {
     .footer-logos {
       border: 0;
       padding: 0;
-    }
-  } @else {
-    .footer-address-title {
-      svg {
-        margin-left: fix-font-size-hack(-1.375em);
-      }
-    }
-  }
-
-  .footer-address-title {
-    flex-direction: row;
-
-    svg {
-      margin-bottom: 0em;
-      margin-right: 0.5em;
     }
   }
 

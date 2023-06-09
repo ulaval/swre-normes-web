@@ -194,7 +194,6 @@
 .header-top-brand,
 .header-top-meta {
   min-height: 1.5em;
-  // margin-bottom: 1em;
   @include property-with-fluid("margin-bottom", 8px, 16px, 1280px, 1600px);
 }
 
@@ -930,10 +929,6 @@ a.header-unit-link {
     .header-language-switcher {
       display: block;
     }
-
-    // a.header-title {
-    //   font-size: fix-font-size-hack(1.5em);
-    // }
   }
 }
 

@@ -526,18 +526,19 @@ a.footer-button--dark {
 }
 
 @media (min-width: $breakpoint-xl) {
-  .footer-contact {
-    padding-bottom: fix-font-size-hack(3em);
-    margin-bottom: fix-font-size-hack(-0.75em);
-  }
-  .footer-button {
-    & + .footer-button {
-      margin-bottom: fix-font-size-hack(-4.063em);
-    }
-  }
+  // .footer-contact {
+  //   padding-bottom: fix-font-size-hack(3em);
+  //   margin-bottom: fix-font-size-hack(-0.75em);
+  // }
 
-  .footer-navigation-title,
-  .footer-emergency-title {
-    margin-top: fix-font-size-hack(-0.75em);
-  }
+  // .footer-button {
+  //   & + .footer-button {
+  //     margin-bottom: fix-font-size-hack(-4.063em);
+  //   }
+  // }
+
+  // .footer-navigation-title,
+  // .footer-emergency-title {
+  //   margin-top: fix-font-size-hack(-0.75em);
+  // }
 }

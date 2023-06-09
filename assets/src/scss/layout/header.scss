@@ -198,7 +198,7 @@
 }
 
 .header-top-brand {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
 
   @if $better-header-design {

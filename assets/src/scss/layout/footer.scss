@@ -55,7 +55,7 @@
 
   display: flex;
   font-size: fix-font-size-hack(1.25em);
-  margin-bottom: 0.75em;
+  margin-bottom: 1rem;
 
   svg {
     fill: $color-ul-red;
@@ -87,7 +87,7 @@
 
 .footer-address-infos {
   font-size: fix-font-size-hack(0.875em);
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 
   &:last-child {
     margin-bottom: 0;
@@ -234,7 +234,7 @@ a.footer-button--dark {
 .footer-navigation-title {
   font-size: fix-font-size-hack(0.875em);
   font-weight: 700;
-  margin-bottom: fix-font-size-hack(0.5em);
+  margin-bottom: fix-font-size-hack(0.5rem);
 }
 
 .footer-emergency {
@@ -245,7 +245,7 @@ a.footer-button--dark {
   font-size: fix-font-size-hack(0.875em);
   font-weight: 700;
   margin: 0;
-  margin-bottom: fix-font-size-hack(0.5em);
+  margin-bottom: fix-font-size-hack(0.5rem);
 
   a {
     color: $color-ul-red;

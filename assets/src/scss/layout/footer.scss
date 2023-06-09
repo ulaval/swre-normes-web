@@ -22,7 +22,11 @@
 }
 
 .footer-address {
-  text-align: center;
+  @if $better-footer-design {
+    text-align: center;
+  } @else {
+    text-align: left;
+  }
 
   .divider {
     display: none;
@@ -32,17 +36,30 @@
 }
 
 .footer-address-title {
-  align-items: center;
+  @if $better-footer-design {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    svg {
+      margin-bottom: 0.5em;
+    }
+  } @else {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    svg {
+      margin-right: 0.5em;
+    }
+  }
+
   display: flex;
-  flex-direction: column;
   font-size: fix-font-size-hack(1.25em);
-  justify-content: center;
   margin-bottom: 0.75em;
 
   svg {
     fill: $color-ul-red;
     height: 1.2em;
-    margin-bottom: 0.5em;
     position: relative;
     top: -0.05em;
   }
@@ -189,7 +206,11 @@ a.footer-button--dark {
 }
 
 .footer-utils {
-  text-align: center;
+  @if $better-footer-design {
+    text-align: center;
+  } @else {
+    text-align: left;
+  }
 }
 
 .footer-navigation {
@@ -403,20 +424,23 @@ a.footer-button--dark {
   .footer-contact {
     display: flex;
     justify-content: space-between;
+    gap: fix-font-size-hack(2em);
   }
 
-  .footer-address {
-    text-align: left;
-  }
+  @if $better-footer-design {
+    .footer-address {
+      text-align: left;
+    }
 
-  .footer-address-title {
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: row;
+    .footer-address-title {
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: row;
 
-    svg {
-      margin-bottom: 0em;
-      margin-right: 0.5em;
+      svg {
+        margin-bottom: 0em;
+        margin-right: 0.5em;
+      }
     }
   }
 
@@ -433,7 +457,9 @@ a.footer-button--dark {
   }
 
   .footer-utils {
-    text-align: left;
+    @if $better-footer-design {
+      text-align: left;
+    }
     gap: fix-font-size-hack(2em);
   }
 

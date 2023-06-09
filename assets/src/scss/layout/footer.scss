@@ -245,6 +245,7 @@ a.footer-button--dark {
   font-size: fix-font-size-hack(0.875em);
   font-weight: 700;
   margin: 0;
+  margin-bottom: fix-font-size-hack(0.5em);
 
   a {
     color: $color-ul-red;

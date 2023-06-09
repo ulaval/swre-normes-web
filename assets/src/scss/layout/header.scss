@@ -156,8 +156,8 @@
   }
 
   .container {
-    padding-bottom: fix-font-size-hack(1rem);
-    padding-top: fix-font-size-hack(1rem);
+    padding-bottom: fix-font-size-hack(1em);
+    padding-top: fix-font-size-hack(1em);
 
     // Used to display header contents above animated :after background
     position: relative;
@@ -177,6 +177,11 @@
   background-color: $color-white;
   position: relative;
   z-index: 150;
+
+  & > .container {
+    @include property-with-fluid("padding-bottom", 8px, 16px, 1280px, 1600px);
+    @include property-with-fluid("padding-top", 12px, 16px, 1280px, 1600px);
+  }
 }
 
 .header-top,
@@ -189,7 +194,8 @@
 .header-top-brand,
 .header-top-meta {
   min-height: 1.5em;
-  margin-bottom: 1em;
+  // margin-bottom: 1em;
+  @include property-with-fluid("margin-bottom", 8px, 16px, 1280px, 1600px);
 }
 
 .header-top-brand {
@@ -224,7 +230,7 @@
 }
 
 .header-main {
-  column-gap: 2em;
+  @include property-with-fluid("column-gap", 32px, 64px, 1280px, 1600px);
   min-height: fix-font-size-hack(3.75em);
 }
 
@@ -667,7 +673,7 @@
   // Main nav - Desktop specific layout and color
   &--desktop {
     .menu {
-      gap: fix-font-size-hack(2em);
+      @include property-with-fluid("column-gap", 16px, 32px, 1280px, 1600px);
     }
 
     .menu-link {
@@ -702,21 +708,12 @@
     text-decoration: none;
 
     &:hover,
-    &:focus-visible,
-    &[aria-current="page"] {
+    &:focus {
       text-decoration: underline;
     }
 
-    &:focus-visible {
-      outline-offset: 5px;
-    }
-
-    &[href]:hover {
-      text-decoration: underline;
-    }
-
-    &[href]:focus-visible {
-      outline-offset: 3px;
+    &:focus {
+      outline-color: $color-white;
     }
   }
 
@@ -738,7 +735,7 @@
   // Secondary nav - Desktop specific layout and color
   &--desktop {
     .menu {
-      gap: fix-font-size-hack(1.5em);
+      @include property-with-fluid("column-gap", 16px, 24px, 1280px, 1600px);
       justify-content: flex-end;
     }
 
@@ -772,7 +769,8 @@ a.header-unit-link {
 a.header-title {
   color: $color-black;
   display: block;
-  font-size: fix-font-size-hack(1.375em);
+  // font-size: fix-font-size-hack(1.375em);
+  @include property-with-fluid("font-size", 18px, 24px, 1280px, 1600px);
   font-weight: 700;
   line-height: 1.1;
   text-decoration: none;
@@ -933,9 +931,9 @@ a.header-unit-link {
       display: block;
     }
 
-    a.header-title {
-      font-size: fix-font-size-hack(1.5em);
-    }
+    // a.header-title {
+    //   font-size: fix-font-size-hack(1.5em);
+    // }
   }
 }
 

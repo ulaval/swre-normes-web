@@ -18,7 +18,7 @@
     background-color: $color-black;
     column-gap: fix-font-size-hack(2em);
     display: flex;
-    height: 36px;
+    min-height: 36px;
 
     .container {
       display: flex;
@@ -122,7 +122,7 @@
   }
 
   .header-sub-nav-title {
-    font-size: fix-font-size-hack(1em);
+    @include property-with-fluid("font-size", 14px, 16px, 1280px, 1600px);
     font-weight: 700;
     padding: 0.438em 10px;
     margin: 0 -10px;

@@ -179,7 +179,7 @@
   z-index: 150;
 
   & > .container {
-    @include property-with-fluid("padding-bottom", 8px, 16px, 1280px, 1600px);
+    @include property-with-fluid("padding-bottom", 10px, 16px, 1280px, 1600px);
     @include property-with-fluid("padding-top", 12px, 16px, 1280px, 1600px);
   }
 }

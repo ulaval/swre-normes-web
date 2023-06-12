@@ -76,6 +76,10 @@
   a.header-university-link,
   a.header-unit-link {
     color: $color-white;
+
+    &:focus {
+      outline-color: $color-white;
+    }
   }
 
   .header-top-brand .divider {

@@ -122,7 +122,7 @@
   }
 
   .header-sub-nav-title {
-    @include property-with-fluid("font-size", 14px, 16px, 1280px, 1600px);
+    @include property-with-fluid-value("font-size", 14px, 16px, 1280px, 1600px);
     font-weight: 700;
     padding: 0.438em 10px;
     margin: 0 -10px;

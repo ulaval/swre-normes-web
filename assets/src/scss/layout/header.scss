@@ -179,8 +179,20 @@
   z-index: 150;
 
   & > .container {
-    @include property-with-fluid("padding-bottom", 10px, 16px, 1280px, 1600px);
-    @include property-with-fluid("padding-top", 12px, 16px, 1280px, 1600px);
+    @include property-with-fluid-value(
+      "padding-bottom",
+      10px,
+      16px,
+      1280px,
+      1600px
+    );
+    @include property-with-fluid-value(
+      "padding-top",
+      12px,
+      16px,
+      1280px,
+      1600px
+    );
   }
 }
 
@@ -194,7 +206,13 @@
 .header-top-brand,
 .header-top-meta {
   min-height: 1.5em;
-  @include property-with-fluid("margin-bottom", 8px, 16px, 1280px, 1600px);
+  @include property-with-fluid-value(
+    "margin-bottom",
+    8px,
+    16px,
+    1280px,
+    1600px
+  );
 }
 
 .header-top-brand {
@@ -229,7 +247,7 @@
 }
 
 .header-main {
-  @include property-with-fluid("column-gap", 32px, 64px, 1280px, 1600px);
+  @include property-with-fluid-value("column-gap", 32px, 64px, 1280px, 1600px);
   min-height: fix-font-size-hack(3.75em);
 }
 
@@ -672,7 +690,13 @@
   // Main nav - Desktop specific layout and color
   &--desktop {
     .menu {
-      @include property-with-fluid("column-gap", 16px, 32px, 1280px, 1600px);
+      @include property-with-fluid-value(
+        "column-gap",
+        24px,
+        32px,
+        1280px,
+        1600px
+      );
     }
 
     .menu-link {
@@ -734,7 +758,13 @@
   // Secondary nav - Desktop specific layout and color
   &--desktop {
     .menu {
-      @include property-with-fluid("column-gap", 16px, 24px, 1280px, 1600px);
+      @include property-with-fluid-value(
+        "column-gap",
+        16px,
+        24px,
+        1280px,
+        1600px
+      );
       justify-content: flex-end;
     }
 
@@ -769,7 +799,7 @@ a.header-title {
   color: $color-black;
   display: block;
   // font-size: fix-font-size-hack(1.375em);
-  @include property-with-fluid("font-size", 18px, 24px, 1280px, 1600px);
+  @include property-with-fluid-value("font-size", 18px, 24px, 1280px, 1600px);
   font-weight: 700;
   line-height: 1.1;
   text-decoration: none;

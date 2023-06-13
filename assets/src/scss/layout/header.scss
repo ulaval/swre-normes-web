@@ -970,6 +970,51 @@ a.header-unit-link {
   }
 }
 
+@if $header-container-type == "stretched" {
+  @media (min-width: 1280px) {
+    .header-container {
+      & > .container {
+        max-width: none;
+      }
+    }
+  }
+
+  @if $website-container-type == "fixed" {
+    @media (min-width: $breakpoint-xl) {
+      .header-container {
+        & > .container {
+          padding-left: $website-container-base-padding +
+            $website-container-step-padding * 4;
+          padding-right: $website-container-base-padding +
+            $website-container-step-padding * 4;
+        }
+      }
+    }
+
+    @media (min-width: $breakpoint-xxl) {
+      .header-container {
+        & > .container {
+          padding-left: $website-container-base-padding +
+            $website-container-step-padding * 5;
+          padding-right: $website-container-base-padding +
+            $website-container-step-padding * 5;
+        }
+      }
+    }
+
+    @media (min-width: $breakpoint-sl) {
+      .header-container {
+        & > .container {
+          padding-left: $website-container-base-padding +
+            $website-container-step-padding * 6;
+          padding-right: $website-container-base-padding +
+            $website-container-step-padding * 6;
+        }
+      }
+    }
+  }
+}
+
 // Animations and transition mediaqueries
 // Override motion sickness-inducing animations
 @media (prefers-reduced-motion: reduce) {

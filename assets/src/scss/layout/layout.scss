@@ -8,14 +8,6 @@
 // Import abstracts
 @import "../abstracts/_abstracts.scss";
 
-// Local variables
-// On mobile, the base padding on each side is 1em (16px).
-$website-container-base-padding: fix-font-size-hack(1em);
-
-// The we a step that is increasing for each breakpoint.
-// The step is equal to half of 1.25em (20px) of each side.
-$website-container-step-padding: fix-font-size-hack(calc(1.25em / 2));
-
 // Styles
 @if $font-size-hack {
   html {

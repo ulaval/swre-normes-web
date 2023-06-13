@@ -5,20 +5,28 @@
 /**
  * Define the responsive way to resize the website.
  *
- * With the fixed method, the website will have multiple pre-defined breakpoints
- * With the fluid method, the website will always use 100% of the available space.
+ * With the "fixed" method, the website will have multiple pre-defined breakpoints.
+ * With the fluid" method, the website will always use 100% of the available space.
  *
- * @usage $website-container-max-width: "fixed";
+ * @usage $website-container-type: "fixed";
  * @usage $website-container-type: "fluid";
  */
 $website-container-type: "fluid";
 
 /**
- * Define the responsive way to resize the website.
+ * Define the way to contain the header.
  *
- * With the fixed method, the website will have multiple pre-defined breakpoints
- * With the fluid method, the website will always use 100% of the available space.
+ * With the "contained" method, the header will be contained with the website content.
+ * With the "stretched" method, the header will be not contained with the website content.
  *
+ * @usage $header-container-type: "contained";
+ * @usage $header-container-type: "stretched";
+ */
+$header-container-type: "contained";
+
+/**
+ * Define the max-width that the website will stop stretching.
+ * *
  * @usage $website-container-max-width: 1940px;
  * @usage $website-container-max-width: 1600px;
  * @usage $website-container-max-width: 1280px;

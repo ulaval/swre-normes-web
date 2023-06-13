@@ -329,6 +329,15 @@
       display: none;
     }
 
+    @if $website-container-type == "fluid" {
+      .header-sub-nav {
+        .menu-link {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
     @if $header-container-type == "stretched" {
       .header-sub-nav {
         & > .container {

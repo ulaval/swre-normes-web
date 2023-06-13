@@ -790,23 +790,21 @@ $better-header-design: false;
   }
 }
 
+.header-top-brand .divider {
+  transition: border-left 0.5s ease;
+}
+
 a.header-title,
 a.header-university-link,
 a.header-unit-link {
   transition: color 0.5s ease;
 
-  padding: 0 2px;
-  margin: 0 -2px;
   &:focus {
     outline-color: $color-black;
     outline-offset: 2px;
     outline-style: dotted;
     outline-width: 1px;
   }
-}
-
-.header-top-brand .divider {
-  transition: border-left 0.5s ease;
 }
 
 a.header-title {
@@ -841,6 +839,8 @@ a.header-university-link {
   align-items: center;
   display: flex;
   white-space: nowrap;
+  padding: 2px;
+  margin: -2px;
 
   @if $better-header-design {
     margin-bottom: 0.25em;
@@ -848,6 +848,9 @@ a.header-university-link {
 }
 
 a.header-unit-link {
+  padding: 0 2px;
+  margin: 0 -2px;
+
   @if $better-header-design {
     text-align: center;
   }

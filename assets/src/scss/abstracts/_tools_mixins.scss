@@ -14,7 +14,7 @@
  * @example
  * // Usage:
  * .element {
- *   @include property-with-fluid('font-size', 18px, 24px, 1280px, 1600px);
+ *   @include property-with-fluid-value('font-size', 18px, 24px, 1280px, 1600px);
  * }
  *
  *  // Output:
@@ -23,7 +23,7 @@
  *   font-size: calc(14px + (6vw - 48px) * 0.0666667);
  * }
  */
-@mixin property-with-fluid(
+@mixin property-with-fluid-value(
   $property,
   $value-start,
   $value-end,

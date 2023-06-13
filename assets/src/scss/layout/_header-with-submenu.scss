@@ -1,5 +1,6 @@
 /**
  * Header with submenu
+ * @TODO: Fix for stretch container submenu links on fluid and fixed from 1200px to 1280px
  */
 
 // Import abstracts
@@ -22,16 +23,9 @@
 
     .container {
       display: flex;
-      height: 100%;
       padding-bottom: 0;
       padding-top: 0;
       width: 100%;
-      align-items: center;
-
-      .container {
-        padding-left: fix-font-size-hack(1em);
-        padding-right: fix-font-size-hack(1em);
-      }
     }
 
     .menu {
@@ -39,10 +33,12 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      width: 100%;
     }
 
     .menu-item {
       display: flex;
+
       & + .menu-item {
         .menu-link {
           border-top: 1px solid $color-white;
@@ -51,12 +47,12 @@
     }
 
     .menu-link {
+      align-items: center;
       color: $color-white;
-      display: block;
       display: flex;
       flex-grow: 1;
       font-size: fix-font-size-hack(0.875em);
-      height: 36px;
+      min-height: 36px;
       position: relative;
       text-decoration: none;
 
@@ -97,17 +93,24 @@
   }
 
   .header-sub-nav-container {
-    column-gap: fix-font-size-hack(3em);
+    @include property-with-fluid-value(
+      "column-gap",
+      32px,
+      64px,
+      1280px,
+      1600px
+    );
   }
 
   .header-sub-nav-top {
+    align-items: center;
     column-gap: fix-font-size-hack(2em);
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
 
-  .header-sub-nav-top-container {
+  .header-sub-nav-top-wrapper {
     column-gap: fix-font-size-hack(2em);
     justify-content: space-between;
   }
@@ -116,13 +119,18 @@
     background-color: $color-black;
     display: none;
     left: 0;
+    position: absolute;
     right: 0;
     top: 100%;
-    position: absolute;
 
     &.open {
       border-top: 1px solid $color-white;
-      display: block;
+      display: flex;
+    }
+
+    .container {
+      padding-bottom: fix-font-size-hack(0.25em);
+      padding-top: fix-font-size-hack(0.25em);
     }
   }
 
@@ -151,15 +159,17 @@
   }
 
   .header-sub-nav-button {
-    display: flex;
-    border: none;
+    align-items: center;
     background-color: $color-black;
+    border-bottom: none;
     border-left: 1px $color-white solid;
     border-right: 1px $color-white solid;
+    border-top: none;
     cursor: pointer;
+    display: flex;
     flex: 0 0 3em;
-    align-items: center;
     justify-content: center;
+    min-height: 36px;
 
     &:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.811' height='7.797' viewBox='0 0 13.811 7.797'%3E%3Cpath d='M8.268,16.029a.375.375,0,0,1,.528,0l5.729,5.729,5.733-5.729a.375.375,0,0,1,.528.528l-5.995,6a.367.367,0,0,1-.528,0l-5.995-6A.375.375,0,0,1,8.268,16.029Z' transform='translate(-7.607 -15.368)' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E%0A");
@@ -193,6 +203,82 @@
     }
   }
 
+  @if $website-container-type == "fluid" {
+    .header-sub-nav {
+      .menu-link {
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    @if $website-container-type == "fluid" {
+      .header-sub-nav {
+        .menu-link {
+          padding-left: 3px;
+          padding-right: 3px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    @if $website-container-type == "fluid" {
+      .header-sub-nav {
+        .menu-link {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    @if $website-container-type == "fluid" {
+      .header-sub-nav {
+        .menu-link {
+          padding-left: 6px;
+          padding-right: 6px;
+        }
+      }
+    }
+
+    @if $header-container-type == "stretch" {
+      @if $website-container-type == "fixed" {
+        .header-sub-nav {
+          .container {
+            padding-left: $website-container-base-padding +
+              $website-container-step-padding *
+              4;
+            padding-right: $website-container-base-padding +
+              $website-container-step-padding *
+              4;
+          }
+        }
+      }
+    }
+  }
+
+  .header-sub-nav-main {
+    .container {
+      @include property-with-fluid-value(
+        "padding-left",
+        12px,
+        16px,
+        1280px,
+        1600px
+      );
+      @include property-with-fluid-value(
+        "padding-right",
+        12px,
+        16px,
+        1280px,
+        1600px
+      );
+    }
+  }
+
   @media (min-width: 1280px) {
     .mobile-menu-open {
       .header-sub-nav {
@@ -201,12 +287,7 @@
     }
 
     .header-sub-nav {
-      .container {
-      }
-
       .menu {
-        align-items: center;
-        column-gap: 0.25em;
         flex-direction: row;
         justify-content: initial;
       }
@@ -232,7 +313,7 @@
     }
 
     .header-sub-nav-main {
-      display: block;
+      display: flex;
       left: initial;
       overflow: initial;
       position: initial;
@@ -246,6 +327,76 @@
 
     .header-sub-nav-button {
       display: none;
+    }
+
+    @if $website-container-type == "fluid" {
+      .header-sub-nav {
+        .menu-link {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
+    @if $header-container-type == "stretched" {
+      .header-sub-nav {
+        & > .container {
+          max-width: none;
+        }
+      }
+
+      .header-sub-nav {
+        .menu-link {
+          text-align: center;
+        }
+      }
+
+      @if $website-container-type == "fixed" {
+        .header-sub-nav {
+          & > .container {
+            padding-left: $website-container-base-padding +
+              $website-container-step-padding *
+              4;
+            padding-right: $website-container-base-padding +
+              $website-container-step-padding *
+              4;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-xxl) {
+    @if $header-container-type == "stretch" {
+      @if $website-container-type == "fixed" {
+        .header-sub-nav {
+          & > .container {
+            padding-left: $website-container-base-padding +
+              $website-container-step-padding *
+              5;
+            padding-right: $website-container-base-padding +
+              $website-container-step-padding *
+              5;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-sl) {
+    @if $header-container-type == "stretch" {
+      @if $website-container-type == "fixed" {
+        .header-sub-nav {
+          & > .container {
+            padding-left: $website-container-base-padding +
+              $website-container-step-padding *
+              6;
+            padding-right: $website-container-base-padding +
+              $website-container-step-padding *
+              6;
+          }
+        }
+      }
     }
   }
 }

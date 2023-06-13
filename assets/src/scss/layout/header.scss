@@ -5,8 +5,16 @@
 // Import abstracts
 @import "../abstracts/_abstracts.scss";
 
-// Styles
+// Local variables
+/**
+ * If true, add styles for a better header on mobile.
+ *
+ * @usage $better-header-design: false;
+ * @usage $better-header-design: true;
+ */
+$better-header-design: false;
 
+// Styles
 .mobile-menu-open {
   overflow: hidden;
 
@@ -636,12 +644,9 @@
   }
 
   .menu-item {
-    @if $better-header-design {
-      align-items: center;
-    }
-
+    align-items: center;
     display: flex;
-    padding-top: fix-font-size-hack(0.25em);
+    padding-top: fix-font-size-hack(0.5em);
   }
 
   .menu-link {
@@ -649,7 +654,7 @@
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 0 4px;
-    padding-bottom: fix-font-size-hack(0.25em);
+    padding-bottom: fix-font-size-hack(0.5em);
     text-align: center;
     text-decoration: none;
     transition: background-size 0.25s ease;
@@ -707,6 +712,7 @@
       color: $color-black;
       font-size: fix-font-size-hack(1em);
       font-weight: 700;
+      line-height: 1.25;
 
       &[aria-current="page"] {
         background-image: linear-gradient(90deg, $color-black, $color-black);
@@ -738,10 +744,6 @@
     &:focus {
       text-decoration: underline;
     }
-
-    &:focus {
-      outline-color: $color-white;
-    }
   }
 
   // Secondary nav - Mobile specific layout and color
@@ -756,6 +758,10 @@
     .menu-link {
       color: $color-white;
       font-size: fix-font-size-hack(1.25em);
+
+      &:focus {
+        outline-color: $color-white;
+      }
     }
   }
 
@@ -776,8 +782,16 @@
       color: $color-black;
       font-size: fix-font-size-hack(0.875em);
       line-height: 1.2;
+
+      &:focus {
+        outline-color: $color-black;
+      }
     }
   }
+}
+
+.header-top-brand .divider {
+  transition: border-left 0.5s ease;
 }
 
 a.header-title,
@@ -785,18 +799,12 @@ a.header-university-link,
 a.header-unit-link {
   transition: color 0.5s ease;
 
-  padding: 0 2px;
-  margin: 0 -2px;
   &:focus {
     outline-color: $color-black;
     outline-offset: 2px;
     outline-style: dotted;
     outline-width: 1px;
   }
-}
-
-.header-top-brand .divider {
-  transition: border-left 0.5s ease;
 }
 
 a.header-title {
@@ -831,6 +839,8 @@ a.header-university-link {
   align-items: center;
   display: flex;
   white-space: nowrap;
+  padding: 2px;
+  margin: -2px;
 
   @if $better-header-design {
     margin-bottom: 0.25em;
@@ -838,6 +848,9 @@ a.header-university-link {
 }
 
 a.header-unit-link {
+  padding: 0 2px;
+  margin: 0 -2px;
+
   @if $better-header-design {
     text-align: center;
   }
@@ -939,6 +952,10 @@ a.header-unit-link {
       a.header-university-link,
       a.header-unit-link {
         color: unset;
+
+        &:focus {
+          outline-color: $color-black;
+        }
       }
 
       .header-top-brand .divider {
@@ -966,6 +983,51 @@ a.header-unit-link {
 
     .header-main-brand {
       flex: 0 0 auto;
+    }
+  }
+}
+
+@if $header-container-type == "stretched" {
+  @media (min-width: 1280px) {
+    .header-container {
+      & > .container {
+        max-width: none;
+      }
+    }
+  }
+
+  @if $website-container-type == "fixed" {
+    @media (min-width: $breakpoint-xl) {
+      .header-container {
+        & > .container {
+          padding-left: $website-container-base-padding +
+            $website-container-step-padding * 4;
+          padding-right: $website-container-base-padding +
+            $website-container-step-padding * 4;
+        }
+      }
+    }
+
+    @media (min-width: $breakpoint-xxl) {
+      .header-container {
+        & > .container {
+          padding-left: $website-container-base-padding +
+            $website-container-step-padding * 5;
+          padding-right: $website-container-base-padding +
+            $website-container-step-padding * 5;
+        }
+      }
+    }
+
+    @media (min-width: $breakpoint-sl) {
+      .header-container {
+        & > .container {
+          padding-left: $website-container-base-padding +
+            $website-container-step-padding * 6;
+          padding-right: $website-container-base-padding +
+            $website-container-step-padding * 6;
+        }
+      }
     }
   }
 }

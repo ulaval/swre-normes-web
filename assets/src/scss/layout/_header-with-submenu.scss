@@ -21,16 +21,17 @@
     min-height: 36px;
 
     .container {
+      align-items: center;
       display: flex;
-      height: 100%;
       padding-bottom: 0;
       padding-top: 0;
       width: 100%;
-      align-items: center;
 
       .container {
+        padding-bottom: fix-font-size-hack(0.25em);
         padding-left: fix-font-size-hack(1em);
         padding-right: fix-font-size-hack(1em);
+        padding-top: fix-font-size-hack(0.25em);
       }
     }
 
@@ -56,7 +57,7 @@
       display: flex;
       flex-grow: 1;
       font-size: fix-font-size-hack(0.875em);
-      height: 36px;
+      min-height: 36px;
       position: relative;
       text-decoration: none;
 
@@ -101,13 +102,14 @@
   }
 
   .header-sub-nav-top {
+    align-items: center;
     column-gap: fix-font-size-hack(2em);
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
 
-  .header-sub-nav-top-container {
+  .header-sub-nav-top-wrapper {
     column-gap: fix-font-size-hack(2em);
     justify-content: space-between;
   }
@@ -116,9 +118,9 @@
     background-color: $color-black;
     display: none;
     left: 0;
+    position: absolute;
     right: 0;
     top: 100%;
-    position: absolute;
 
     &.open {
       border-top: 1px solid $color-white;
@@ -151,15 +153,16 @@
   }
 
   .header-sub-nav-button {
-    display: flex;
-    border: none;
+    align-items: center;
     background-color: $color-black;
     border-left: 1px $color-white solid;
     border-right: 1px $color-white solid;
+    border: none;
     cursor: pointer;
+    display: flex;
     flex: 0 0 3em;
-    align-items: center;
     justify-content: center;
+    min-height: 36px;
 
     &:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.811' height='7.797' viewBox='0 0 13.811 7.797'%3E%3Cpath d='M8.268,16.029a.375.375,0,0,1,.528,0l5.729,5.729,5.733-5.729a.375.375,0,0,1,.528.528l-5.995,6a.367.367,0,0,1-.528,0l-5.995-6A.375.375,0,0,1,8.268,16.029Z' transform='translate(-7.607 -15.368)' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E%0A");

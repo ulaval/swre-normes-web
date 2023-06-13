@@ -5,8 +5,16 @@
 // Import abstracts
 @import "../abstracts/_abstracts.scss";
 
-// Styles
+// Local variables
+/**
+ * If true, add styles for a better header on mobile.
+ *
+ * @usage $better-header-design: false;
+ * @usage $better-header-design: true;
+ */
+$better-header-design: false;
 
+// Styles
 .mobile-menu-open {
   overflow: hidden;
 

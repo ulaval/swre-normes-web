@@ -8,6 +8,15 @@
 // Import abstracts
 @import "../abstracts/_abstracts.scss";
 
+// Local variables
+/**
+ * If true, add styles to help with debugging.
+ *
+ * @usage $debug: false;
+ * @usage $debug: true;
+ */
+$debug: false;
+
 // Styles
 @if $font-size-hack {
   html {

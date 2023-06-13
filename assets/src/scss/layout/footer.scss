@@ -5,6 +5,15 @@
 // Import abstracts
 @import "../abstracts/_abstracts.scss";
 
+// Local variables
+/**
+ * If true, add styles for a better footer on mobile.
+ *
+ * @usage $better-footer-design: false;
+ * @usage $better-footer-design: true;
+ */
+$better-footer-design: false;
+
 // Styles
 .footer {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);

@@ -744,10 +744,6 @@ $better-header-design: false;
     &:focus {
       text-decoration: underline;
     }
-
-    &:focus {
-      outline-color: $color-white;
-    }
   }
 
   // Secondary nav - Mobile specific layout and color
@@ -762,6 +758,10 @@ $better-header-design: false;
     .menu-link {
       color: $color-white;
       font-size: fix-font-size-hack(1.25em);
+
+      &:focus {
+        outline-color: $color-white;
+      }
     }
   }
 
@@ -782,6 +782,10 @@ $better-header-design: false;
       color: $color-black;
       font-size: fix-font-size-hack(0.875em);
       line-height: 1.2;
+
+      &:focus {
+        outline-color: $color-black;
+      }
     }
   }
 }
@@ -945,6 +949,10 @@ a.header-unit-link {
       a.header-university-link,
       a.header-unit-link {
         color: unset;
+
+        &:focus {
+          outline-color: $color-black;
+        }
       }
 
       .header-top-brand .divider {

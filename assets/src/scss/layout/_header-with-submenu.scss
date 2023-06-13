@@ -27,6 +27,11 @@
       padding-top: 0;
       width: 100%;
       align-items: center;
+
+      .container {
+        padding-left: fix-font-size-hack(1em);
+        padding-right: fix-font-size-hack(1em);
+      }
     }
 
     .menu {

@@ -35,10 +35,6 @@
       fill: $color-white;
     }
 
-    &-container {
-      background-color: initial;
-    }
-
     &-menu-trigger {
       &:before,
       &:after {
@@ -70,6 +66,10 @@
     &-mobile-menu {
       transform: translateX(0);
     }
+  }
+
+  .header-container {
+    background-color: initial;
   }
 
   a.header-title,

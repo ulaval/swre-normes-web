@@ -20,16 +20,14 @@ body {
   font-weight: 400;
 }
 
-a,
-a:active,
-a:visited {
-  color: #0645ad;
+a {
+  color: $color-links-default;
   text-decoration: underline;
 }
 
-a:hover {
-  color: #0645ad;
-  text-decoration: none;
+a:hover,
+a:focus {
+  color: $color-links-active;
 }
 
 address {

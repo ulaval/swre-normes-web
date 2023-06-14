@@ -157,10 +157,10 @@ $better-footer-design: false;
   svg {
     display: block;
     fill: $color-black;
-    height: fix-font-size-hack(1.5em);
+    height: fix-font-size-hack(2em);
     padding: fix-font-size-hack(0.25em);
     transition: fill 0.125s ease;
-    width: fix-font-size-hack(1.5em);
+    width: fix-font-size-hack(2em);
   }
 }
 

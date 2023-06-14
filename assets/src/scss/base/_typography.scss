@@ -103,6 +103,14 @@ ul li {
   list-style-type: disc;
 }
 
+button {
+  background-color: transparent;
+  border-width: 0;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: initial;

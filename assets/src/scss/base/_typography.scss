@@ -94,13 +94,15 @@ ol {
   }
 }
 
+ul {
+  li {
+    list-style-type: disc;
+  }
+}
+
 li {
   line-height: 1.375;
   margin: 0 0 fix-font-size-hack(1em) 0;
-}
-
-ul li {
-  list-style-type: disc;
 }
 
 button {

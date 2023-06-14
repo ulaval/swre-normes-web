@@ -5,8 +5,16 @@
 // Import abstracts
 @import "../abstracts/_abstracts.scss";
 
-// Styles
+// Local variables
+/**
+ * If true, add styles for a better header on mobile.
+ *
+ * @usage $better-header-design: false;
+ * @usage $better-header-design: true;
+ */
+$better-header-design: false;
 
+// Styles
 .mobile-menu-open {
   overflow: hidden;
 
@@ -33,10 +41,6 @@
 
     .university-logo-fill {
       fill: $color-white;
-    }
-
-    &-container {
-      background-color: initial;
     }
 
     &-menu-trigger {
@@ -72,10 +76,18 @@
     }
   }
 
+  .header-container {
+    background-color: initial;
+  }
+
   a.header-title,
   a.header-university-link,
   a.header-unit-link {
     color: $color-white;
+
+    &:focus {
+      outline-color: $color-white;
+    }
   }
 
   .header-top-brand .divider {
@@ -156,8 +168,8 @@
   }
 
   .container {
-    padding-bottom: fix-font-size-hack(1rem);
-    padding-top: fix-font-size-hack(1rem);
+    padding-bottom: fix-font-size-hack(1em);
+    padding-top: fix-font-size-hack(1em);
   }
 }
 
@@ -173,6 +185,23 @@
   background-color: $color-white;
   position: relative;
   z-index: 150;
+
+  & > .container {
+    @include property-with-fluid-value(
+      "padding-bottom",
+      10px,
+      16px,
+      1280px,
+      1600px
+    );
+    @include property-with-fluid-value(
+      "padding-top",
+      12px,
+      16px,
+      1280px,
+      1600px
+    );
+  }
 }
 
 .header-top,
@@ -185,14 +214,20 @@
 .header-top-brand,
 .header-top-meta {
   min-height: 1.5em;
-  margin-bottom: 1em;
+  @include property-with-fluid-value(
+    "margin-bottom",
+    8px,
+    16px,
+    1280px,
+    1600px
+  );
 }
 
 .header-top-brand {
+  align-items: flex-start;
   display: flex;
 
   @if $better-header-design {
-    align-items: center;
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
@@ -203,10 +238,12 @@
   }
 
   .divider {
+    align-self: stretch;
+
     @if $better-header-design {
       display: none;
     }
-    border-left: 1px solid $color-black;
+    border-left: 1px solid $color-gray-medium;
     margin: 0 0.5em;
     position: relative;
     top: -1px;
@@ -218,7 +255,7 @@
 }
 
 .header-main {
-  column-gap: 2em;
+  @include property-with-fluid-value("column-gap", 32px, 64px, 1280px, 1600px);
   min-height: fix-font-size-hack(3.75em);
 }
 
@@ -609,9 +646,9 @@
   }
 
   .menu-item {
-    // align-items: center;
+    align-items: center;
     display: flex;
-    padding-top: fix-font-size-hack(0.3rem);
+    padding-top: fix-font-size-hack(0.5em);
   }
 
   .menu-link {
@@ -619,19 +656,19 @@
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 0 4px;
-    padding-bottom: fix-font-size-hack(0.3rem);
+    padding-bottom: fix-font-size-hack(0.5em);
     text-align: center;
     text-decoration: none;
-    transition: background-size 0.4s;
+    transition: background-size 0.25s ease;
 
     &:hover,
-    &:focus-visible {
+    &:focus {
       background-size: 100% 4px;
       background-position-x: left;
     }
 
-    &:focus-visible {
-      outline-offset: 10px;
+    &:focus {
+      outline: none;
     }
 
     &[aria-current="page"] {
@@ -664,16 +701,32 @@
   // Main nav - Desktop specific layout and color
   &--desktop {
     .menu {
-      gap: fix-font-size-hack(2em);
+      @include property-with-fluid-value(
+        "column-gap",
+        24px,
+        32px,
+        1280px,
+        1600px
+      );
     }
 
     .menu-link {
       color: $color-black;
       font-size: fix-font-size-hack(1em);
       font-weight: 700;
+      line-height: 1.25;
 
       &[aria-current="page"] {
         background-image: linear-gradient(90deg, $color-black, $color-black);
+
+        &:hover,
+        &:focus {
+          background-image: linear-gradient(
+            90deg,
+            $color-ul-red,
+            $color-ul-red
+          );
+        }
       }
     }
   }
@@ -690,21 +743,8 @@
     text-decoration: none;
 
     &:hover,
-    &:focus-visible,
-    &[aria-current="page"] {
+    &:focus {
       text-decoration: underline;
-    }
-
-    &:focus-visible {
-      outline-offset: 5px;
-    }
-
-    &[href]:hover {
-      text-decoration: underline;
-    }
-
-    &[href]:focus-visible {
-      outline-offset: 3px;
     }
   }
 
@@ -720,13 +760,23 @@
     .menu-link {
       color: $color-white;
       font-size: fix-font-size-hack(1.25em);
+
+      &:focus {
+        outline-color: $color-white;
+      }
     }
   }
 
   // Secondary nav - Desktop specific layout and color
   &--desktop {
     .menu {
-      gap: fix-font-size-hack(1.5em);
+      @include property-with-fluid-value(
+        "column-gap",
+        16px,
+        24px,
+        1280px,
+        1600px
+      );
       justify-content: flex-end;
     }
 
@@ -734,27 +784,41 @@
       color: $color-black;
       font-size: fix-font-size-hack(0.875em);
       line-height: 1.2;
+
+      &:focus {
+        outline-color: $color-black;
+      }
     }
   }
-}
-
-a.header-title,
-a.header-university-link,
-a.header-unit-link {
-  transition: color 0.5s ease;
 }
 
 .header-top-brand .divider {
   transition: border-left 0.5s ease;
 }
 
+a.header-title,
+a.header-university-link,
+a.header-unit-link {
+  transition: color 0.5s ease;
+
+  &:focus {
+    outline-color: $color-black;
+    outline-offset: 2px;
+    outline-style: dotted;
+    outline-width: 1px;
+  }
+}
+
 a.header-title {
   color: $color-black;
   display: block;
-  font-size: fix-font-size-hack(1.375em);
+  // font-size: fix-font-size-hack(1.375em);
+  @include property-with-fluid-value("font-size", 18px, 24px, 1280px, 1600px);
   font-weight: 700;
   line-height: 1.1;
   text-decoration: none;
+  padding: 0.25em;
+  margin: -0.25em;
 
   &:hover,
   &:focus {
@@ -777,12 +841,18 @@ a.header-university-link {
   align-items: center;
   display: flex;
   white-space: nowrap;
+  padding: 2px;
+  margin: -2px;
+
   @if $better-header-design {
     margin-bottom: 0.25em;
   }
 }
 
 a.header-unit-link {
+  padding: 0 2px;
+  margin: 0 -2px;
+
   @if $better-header-design {
     text-align: center;
   }
@@ -884,10 +954,14 @@ a.header-unit-link {
       a.header-university-link,
       a.header-unit-link {
         color: unset;
+
+        &:focus {
+          outline-color: $color-black;
+        }
       }
 
       .header-top-brand .divider {
-        border-left: 1px solid $color-black;
+        border-left: 1px solid $color-gray-medium;
       }
     }
 
@@ -909,8 +983,53 @@ a.header-unit-link {
       display: block;
     }
 
-    a.header-title {
-      font-size: fix-font-size-hack(1.5em);
+    .header-main-brand {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+@if $header-container-type == "stretched" {
+  @media (min-width: 1280px) {
+    .header-container {
+      & > .container {
+        max-width: none;
+      }
+    }
+  }
+
+  @if $website-container-type == "fixed" {
+    @media (min-width: $breakpoint-xl) {
+      .header-container {
+        & > .container {
+          padding-left: $website-container-base-padding +
+            $website-container-step-padding * 4;
+          padding-right: $website-container-base-padding +
+            $website-container-step-padding * 4;
+        }
+      }
+    }
+
+    @media (min-width: $breakpoint-xxl) {
+      .header-container {
+        & > .container {
+          padding-left: $website-container-base-padding +
+            $website-container-step-padding * 5;
+          padding-right: $website-container-base-padding +
+            $website-container-step-padding * 5;
+        }
+      }
+    }
+
+    @media (min-width: $breakpoint-sl) {
+      .header-container {
+        & > .container {
+          padding-left: $website-container-base-padding +
+            $website-container-step-padding * 6;
+          padding-right: $website-container-base-padding +
+            $website-container-step-padding * 6;
+        }
+      }
     }
   }
 }
@@ -920,6 +1039,12 @@ a.header-unit-link {
 @media (prefers-reduced-motion: reduce) {
   .header {
     &:after {
+      transition: none;
+    }
+  }
+
+  .header-main-nav {
+    .menu-link {
       transition: none;
     }
   }

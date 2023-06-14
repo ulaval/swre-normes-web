@@ -5,6 +5,15 @@
 // Import abstracts
 @import "../abstracts/_abstracts.scss";
 
+// Local variables
+/**
+ * If true, add styles for a better footer on mobile.
+ *
+ * @usage $better-footer-design: false;
+ * @usage $better-footer-design: true;
+ */
+$better-footer-design: false;
+
 // Styles
 .footer {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
@@ -22,7 +31,11 @@
 }
 
 .footer-address {
-  text-align: center;
+  @if $better-footer-design {
+    text-align: center;
+  } @else {
+    text-align: left;
+  }
 
   .divider {
     display: none;
@@ -32,25 +45,33 @@
 }
 
 .footer-address-title {
-  align-items: center;
+  @if $better-footer-design {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    svg {
+      margin-bottom: 0.5em;
+    }
+  } @else {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    svg {
+      margin-right: 0.5em;
+    }
+  }
+
   display: flex;
-  flex-direction: column;
   font-size: fix-font-size-hack(1.25em);
-  justify-content: center;
-  margin-bottom: 0.75em;
+  margin-bottom: 1rem;
 
   svg {
     fill: $color-ul-red;
     height: 1.2em;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
     position: relative;
     top: -0.05em;
   }
-}
-
-.footer-address-title-inner {
-  // text-align: left;
 }
 
 .footer-address-title-unit,
@@ -58,9 +79,16 @@
   display: block;
 }
 
+.footer-address-title-unit {
+  font-weight: 700;
+}
+
 .footer-address-title-subunit {
-  font-weight: normal;
   font-size: 0.9em;
+
+  @if not $better-footer-design {
+    margin-left: -28px;
+  }
 }
 
 .footer-address-name {
@@ -71,7 +99,11 @@
 
 .footer-address-infos {
   font-size: fix-font-size-hack(0.875em);
-  margin-bottom: 0.75em;
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   .contact-row {
     display: block;
@@ -88,9 +120,6 @@
     margin: 0;
     padding: 0;
     white-space: nowrap;
-  }
-  & + .footer-address-infos {
-    margin-top: fix-font-size-hack(0.75em);
   }
 }
 
@@ -189,7 +218,11 @@ a.footer-button--dark {
 }
 
 .footer-utils {
-  text-align: center;
+  @if $better-footer-design {
+    text-align: center;
+  } @else {
+    text-align: left;
+  }
 }
 
 .footer-navigation {
@@ -212,7 +245,7 @@ a.footer-button--dark {
 .footer-navigation-title {
   font-size: fix-font-size-hack(0.875em);
   font-weight: 700;
-  margin-bottom: fix-font-size-hack(0.5em);
+  margin-bottom: fix-font-size-hack(0.5rem);
 }
 
 .footer-emergency {
@@ -223,6 +256,7 @@ a.footer-button--dark {
   font-size: fix-font-size-hack(0.875em);
   font-weight: 700;
   margin: 0;
+  margin-bottom: fix-font-size-hack(0.5rem);
 
   a {
     color: $color-ul-red;
@@ -339,7 +373,10 @@ a.footer-button--dark {
 }
 
 @if $better-footer-design {
-  .footer-utils,
+  .footer-contact {
+    border-bottom: 1px solid $color-gray-lightest;
+    padding-bottom: fix-font-size-hack(3em);
+  }
   .footer-logos {
     border-top: 1px solid $color-gray-lightest;
     padding-top: fix-font-size-hack(3em);
@@ -379,9 +416,9 @@ a.footer-button--dark {
 }
 
 @media (min-width: $breakpoint-sm) {
-  .footer-button {
-    max-width: fix-font-size-hack(16em);
-  }
+  // .footer-button {
+  //   max-width: fix-font-size-hack(16em);
+  // }
 
   .footer-navigation {
     align-items: flex-start;
@@ -403,14 +440,28 @@ a.footer-button--dark {
   .footer-contact {
     display: flex;
     justify-content: space-between;
+    gap: fix-font-size-hack(2em);
   }
 
-  .footer-address {
-    text-align: left;
-  }
+  @if $better-footer-design {
+    .footer-address {
+      text-align: left;
+    }
 
-  .footer-address-title {
-    justify-content: flex-start;
+    .footer-address-title {
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: row;
+
+      svg {
+        margin-bottom: 0em;
+        margin-right: 0.5em;
+      }
+    }
+
+    .footer-address-title-subunit {
+      margin-left: -28px;
+    }
   }
 
   .footer-social {
@@ -426,7 +477,9 @@ a.footer-button--dark {
   }
 
   .footer-utils {
-    text-align: left;
+    @if $better-footer-design {
+      text-align: left;
+    }
     gap: fix-font-size-hack(2em);
   }
 
@@ -452,28 +505,6 @@ a.footer-button--dark {
     @include website-container-type-breakpoint-670;
   }
 
-  @if $better-footer-design {
-    .footer-utils,
-    .footer-logos {
-      border: 0;
-      padding: 0;
-    }
-  } @else {
-    .footer-address-title {
-      svg {
-        margin-left: fix-font-size-hack(-1.375em);
-      }
-    }
-  }
-
-  .footer-address-title {
-    flex-direction: row;
-
-    svg {
-      margin-bottom: 0em;
-    }
-  }
-
   .footer-address-title-inner {
     text-align: left;
   }
@@ -482,6 +513,7 @@ a.footer-button--dark {
     display: flex;
     justify-content: space-between;
     max-width: fix-font-size-hack(50em);
+    transition: max-width 0.125s ease;
   }
 
   .footer-navigation {
@@ -533,18 +565,23 @@ a.footer-button--dark {
 }
 
 @media (min-width: $breakpoint-xl) {
-  .footer-contact {
-    padding-bottom: fix-font-size-hack(3em);
-    margin-bottom: fix-font-size-hack(-0.75em);
-  }
-  .footer-button {
-    & + .footer-button {
-      margin-bottom: fix-font-size-hack(-4.063em);
-    }
+  .footer-utils {
+    max-width: 72%;
   }
 
-  .footer-navigation-title,
-  .footer-emergency-title {
-    margin-top: fix-font-size-hack(-0.75em);
-  }
+  // .footer-contact {
+  //   padding-bottom: fix-font-size-hack(3em);
+  //   margin-bottom: fix-font-size-hack(-0.75em);
+  // }
+
+  // .footer-button {
+  //   & + .footer-button {
+  //     margin-bottom: fix-font-size-hack(-4.063em);
+  //   }
+  // }
+
+  // .footer-navigation-title,
+  // .footer-emergency-title {
+  //   margin-top: fix-font-size-hack(-0.75em);
+  // }
 }

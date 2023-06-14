@@ -2,4 +2,54 @@
  * Define basic mixins that can be used by any website.
  */
 
-// @TODO: Add mixins
+/**
+ * Creates a fluid transition for a specified CSS property between two breakpoints.
+ *
+ * @param {String} $property - The CSS property to apply the fluid transition to.
+ * @param {Value} $value-start - The starting value of the property.
+ * @param {Value} $value-end - The ending value of the property.
+ * @param {Breakpoint} $breakpoint-start - The starting breakpoint where the fluid transition begins.
+ * @param {Breakpoint} $breakpoint-end - The ending breakpoint where the fluid transition stops.
+ *
+ * @example
+ * // Usage:
+ * .element {
+ *   @include property-with-fluid-value('font-size', 18px, 24px, 1280px, 1600px);
+ * }
+ *
+ *  // Output:
+ * .element {
+ *   font-size: 14px;
+ *   font-size: calc(14px + (6vw - 48px) * 0.0666667);
+ * }
+ */
+@mixin property-with-fluid-value(
+  $property,
+  $value-start,
+  $value-end,
+  $breakpoint-start,
+  $breakpoint-end
+) {
+  // Define complex calculation to have a fluid value changing between to breakpoints
+  $base-value: $value-start;
+  $values-difference: strip-unit($value-end) - strip-unit($value-start);
+  $breakpoints-difference: strip-unit($breakpoint-end) -
+    strip-unit($breakpoint-start);
+  $viewport-difference: calc(100vw - $breakpoint-start);
+  $scaling-value: calc(
+    $values-difference * ($viewport-difference / $breakpoints-difference)
+  );
+
+  // Use $value-start as the default value in breowser cannot render the complex calculation
+  #{$property}: $value-start;
+
+  @media (min-width: $breakpoint-start) {
+    // Use complex calculation after the $breakpoint-start to start the fluid value
+    #{$property}: calc($value-start + ($scaling-value));
+  }
+
+  @media (min-width: $breakpoint-end) {
+    // Use $value-end for after the $breakpoint-end to stop the fluid value
+    #{$property}: $value-end;
+  }
+}

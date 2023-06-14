@@ -71,6 +71,7 @@ $better-footer-design: false;
     height: 1.2em;
     position: relative;
     top: -0.05em;
+    flex-shrink: 0;
   }
 }
 

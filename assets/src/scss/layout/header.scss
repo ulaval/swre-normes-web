@@ -100,6 +100,7 @@ $better-header-design: false;
   box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   width: 100%;
+  // @TODO: Implement z-index function for all z-index
   z-index: 8888;
 
   &:before,
@@ -121,6 +122,7 @@ $better-header-design: false;
     background-size: 100% 8px;
     height: 8px;
     position: relative;
+    // @TODO: Implement z-index function for all z-index
     z-index: 1;
   }
 
@@ -184,6 +186,7 @@ $better-header-design: false;
 .header-container {
   background-color: $color-white;
   position: relative;
+  // @TODO: Implement z-index function for all z-index
   z-index: 150;
 
   & > .container {
@@ -213,7 +216,6 @@ $better-header-design: false;
 // Set height to avoid any jump if either small logo or meta nav isn't present
 .header-top-brand,
 .header-top-meta {
-  min-height: 1.5em;
   @include property-with-fluid-value(
     "margin-bottom",
     8px,
@@ -221,6 +223,7 @@ $better-header-design: false;
     1280px,
     1600px
   );
+  min-height: 1.5em;
 }
 
 .header-top-brand {
@@ -239,14 +242,14 @@ $better-header-design: false;
 
   .divider {
     align-self: stretch;
-
-    @if $better-header-design {
-      display: none;
-    }
     border-left: 1px solid $color-gray-medium;
     margin: 0 0.5em;
     position: relative;
     top: -1px;
+
+    @if $better-header-design {
+      display: none;
+    }
   }
 }
 
@@ -294,6 +297,7 @@ $better-header-design: false;
     color: $color-white;
     display: flex;
 
+    // @TODO: Rename selector in scss and html
     input.champ-recherche {
       -webkit-appearance: none;
       -webkit-border-radius: 0;
@@ -327,6 +331,7 @@ $better-header-design: false;
         }
       }
     }
+
     label {
       margin-bottom: fix-font-size-hack(0.3rem);
     }
@@ -415,6 +420,7 @@ $better-header-design: false;
   right: 0;
   text-transform: uppercase;
   top: 100%;
+  // @TODO: Implement z-index function for all z-index
   z-index: 1;
 }
 
@@ -480,6 +486,7 @@ $better-header-design: false;
     right: 16px;
     top: 16px;
 
+    // @TODO: Review and/or move to bottom of the page
     @media (prefers-reduced-motion: no-preference) {
       transition: left 0.3s ease;
     }
@@ -495,6 +502,7 @@ $better-header-design: false;
     height: 2px;
     border-radius: 2px;
 
+    // @TODO: Review and/or move to bottom of the page
     @media (prefers-reduced-motion: no-preference) {
       transition: right 0.3s ease;
     }
@@ -511,6 +519,7 @@ $better-header-design: false;
       right: 16px;
       top: 23px;
 
+      // @TODO: Review and/or move to bottom of the page
       @media (prefers-reduced-motion: no-preference) {
         transition: transform 0.3s ease;
       }
@@ -526,6 +535,7 @@ $better-header-design: false;
       right: 16px;
       top: 23px;
 
+      // @TODO: Review and/or move to bottom of the page
       @media (prefers-reduced-motion: no-preference) {
         transition: transform 0.3s ease;
       }
@@ -571,6 +581,7 @@ $better-header-design: false;
       &:after {
         transition: background-color 0.5s ease;
 
+        // @TODO: Review and/or move to bottom of the page
         @media (prefers-reduced-motion: no-preference) {
           transition: transform 0.3s ease, background-color 0.3s ease;
         }
@@ -621,6 +632,7 @@ $better-header-design: false;
   display: none;
   position: relative;
   transform: translateX(-100vw);
+  // @TODO: Implement z-index function for all z-index
   z-index: 1;
 
   &.open {
@@ -806,15 +818,14 @@ a.header-unit-link {
 }
 
 a.header-title {
+  @include property-with-fluid-value("font-size", 18px, 24px, 1280px, 1600px);
   color: $color-black;
   display: block;
-  // font-size: fix-font-size-hack(1.375em);
-  @include property-with-fluid-value("font-size", 18px, 24px, 1280px, 1600px);
   font-weight: 700;
   line-height: 1.1;
-  text-decoration: none;
-  padding: 0.25em;
   margin: -0.25em;
+  padding: 0.25em;
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -886,6 +897,7 @@ a.header-unit-link {
     a.header-university-link {
       margin-bottom: 0;
     }
+
     a.header-unit-link {
       text-align: left;
     }

@@ -9,6 +9,7 @@
 .skip-to-content {
   text-align: center;
   background-color: $color-gray-lighter;
+
   a {
     color: $color-gray-dark;
     display: inline-block;
@@ -16,6 +17,7 @@
     margin-top: 0.25em;
     padding-left: 0.125em;
     padding-right: 0.125em;
+
     &:focus {
       outline-color: $color-gray-dark;
       outline-offset: 2px;

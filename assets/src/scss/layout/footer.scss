@@ -45,10 +45,15 @@ $better-footer-design: false;
 }
 
 .footer-address-title {
+  display: flex;
+  font-size: fix-font-size-hack(1.25em);
+  margin-bottom: 1rem;
+
   @if $better-footer-design {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+
     svg {
       margin-bottom: 0.5em;
     }
@@ -62,12 +67,9 @@ $better-footer-design: false;
     }
   }
 
-  display: flex;
-  font-size: fix-font-size-hack(1.25em);
-  margin-bottom: 1rem;
-
   svg {
     fill: $color-ul-red;
+    flex-shrink: 0;
     height: 1.2em;
     position: relative;
     top: -0.05em;
@@ -108,13 +110,16 @@ $better-footer-design: false;
   .contact-row {
     display: block;
   }
+
   a {
     color: $color-black;
     text-decoration: none;
   }
+
   .address {
     display: inline-block;
   }
+
   .tel {
     // Better outline shape
     margin: 0;
@@ -138,6 +143,7 @@ $better-footer-design: false;
   a {
     background-color: $color-white;
     border: 1px solid transparent;
+    // @TODO: Find a better display when only one social is present
     // border: 1px solid $color-gray-lightest;
     display: inline-block;
     transition: background-color 0.125s ease;
@@ -162,10 +168,6 @@ $better-footer-design: false;
     transition: fill 0.125s ease;
     width: fix-font-size-hack(2em);
   }
-}
-
-.footer-newsletter,
-.footer-query {
 }
 
 .footer-button {
@@ -264,6 +266,7 @@ a.footer-button--dark {
     text-transform: uppercase;
   }
 }
+
 .footer-emergency-text {
   font-size: fix-font-size-hack(0.875em);
 
@@ -416,10 +419,6 @@ a.footer-button--dark {
 }
 
 @media (min-width: $breakpoint-sm) {
-  // .footer-button {
-  //   max-width: fix-font-size-hack(16em);
-  // }
-
   .footer-navigation {
     align-items: flex-start;
     display: flex;
@@ -477,10 +476,11 @@ a.footer-button--dark {
   }
 
   .footer-utils {
+    gap: fix-font-size-hack(2em);
+
     @if $better-footer-design {
       text-align: left;
     }
-    gap: fix-font-size-hack(2em);
   }
 
   .footer-logos {
@@ -568,20 +568,4 @@ a.footer-button--dark {
   .footer-utils {
     max-width: 72%;
   }
-
-  // .footer-contact {
-  //   padding-bottom: fix-font-size-hack(3em);
-  //   margin-bottom: fix-font-size-hack(-0.75em);
-  // }
-
-  // .footer-button {
-  //   & + .footer-button {
-  //     margin-bottom: fix-font-size-hack(-4.063em);
-  //   }
-  // }
-
-  // .footer-navigation-title,
-  // .footer-emergency-title {
-  //   margin-top: fix-font-size-hack(-0.75em);
-  // }
 }

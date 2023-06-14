@@ -13,7 +13,7 @@
   // @TODO: Specific style to change if --university vs --unit
   // --university: 6.25em
   // --unit: 8.75em
-  padding-top: 6.25em;
+  padding-top: 8.75em;
 
   .header {
     background-color: $color-black;
@@ -158,10 +158,6 @@
   .container {
     padding-bottom: fix-font-size-hack(1rem);
     padding-top: fix-font-size-hack(1rem);
-
-    // Used to display header contents above animated :after background
-    position: relative;
-    z-index: 1;
   }
 }
 
@@ -224,6 +220,10 @@
 .header-main {
   column-gap: 2em;
   min-height: fix-font-size-hack(3.75em);
+}
+
+.header-main-brand {
+  flex: 0 0 auto;
 }
 
 .header-main-utilities {
@@ -586,7 +586,9 @@
   animation-timing-function: ease;
   background-color: $color-black;
   display: none;
+  position: relative;
   transform: translateX(-100vw);
+  z-index: 1;
 
   &.open {
     animation-name: slide-in-left;

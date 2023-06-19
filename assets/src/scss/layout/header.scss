@@ -679,7 +679,7 @@ $better-header-design: false;
       outline: none;
     }
 
-    &[aria-current="page"] {
+    &.is-active {
       background-position: left bottom;
       background-repeat: no-repeat;
       background-size: 100% 4px;
@@ -700,7 +700,7 @@ $better-header-design: false;
       font-size: fix-font-size-hack(1.5em);
       line-height: 1.2;
 
-      &[aria-current="page"] {
+      &.is-active {
         background-image: linear-gradient(90deg, $color-white, $color-white);
       }
     }
@@ -724,7 +724,7 @@ $better-header-design: false;
       font-weight: 700;
       line-height: 1.25;
 
-      &[aria-current="page"] {
+      &.is-active {
         background-image: linear-gradient(90deg, $color-black, $color-black);
 
         &:hover,

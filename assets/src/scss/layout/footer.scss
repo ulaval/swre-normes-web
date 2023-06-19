@@ -181,6 +181,10 @@ $better-footer-design: false;
   padding: 0.771em 1.5em;
   text-align: center;
   text-decoration: none;
+
+  &:focus {
+    text-decoration: none;
+  }
 }
 
 a.footer-button--light {
@@ -262,12 +266,12 @@ a.footer-button--dark {
   font-weight: 700;
   margin: 0;
   margin-bottom: fix-font-size-hack(0.5rem);
+}
 
-  a {
-    color: $color-ul-red;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
+.footer .footer-emergency-title a {
+  color: $color-ul-red;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .footer-emergency-text {

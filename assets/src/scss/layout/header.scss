@@ -144,8 +144,8 @@ $better-header-design: false;
       box-sizing: border-box;
       color: $color-white;
       display: block;
-      font-size: fix-font-size-hack(0.875rem);
-      padding: fix-font-size-hack(0.591rem);
+      font-size: fix-font-size-hack(0.875em);
+      padding: fix-font-size-hack(0.591em);
       text-decoration: none;
 
       &:hover {
@@ -305,7 +305,7 @@ $better-header-design: false;
       border-radius: 0;
       border: 0;
       flex: 1;
-      font-size: fix-font-size-hack(1rem);
+      font-size: fix-font-size-hack(1em);
       margin: 0;
       padding: 11px 15px;
 
@@ -333,7 +333,7 @@ $better-header-design: false;
     }
 
     label {
-      margin-bottom: fix-font-size-hack(0.3rem);
+      margin-bottom: fix-font-size-hack(0.3em);
     }
   }
 }
@@ -344,9 +344,9 @@ $better-header-design: false;
   color: $color-black;
   cursor: pointer;
   font-family: var(--ul-font);
-  font-size: fix-font-size-hack(1rem);
-  line-height: fix-font-size-hack(1rem);
-  padding: fix-font-size-hack(0.938rem) fix-font-size-hack(1rem);
+  font-size: fix-font-size-hack(1em);
+  line-height: fix-font-size-hack(1em);
+  padding: fix-font-size-hack(0.938em) fix-font-size-hack(1em);
   position: relative;
 
   @media (prefers-reduced-motion: no-preference) {
@@ -431,10 +431,10 @@ $better-header-design: false;
   color: $color-black;
   cursor: pointer;
   font-family: var(--ul-font);
-  font-size: fix-font-size-hack(0.875rem);
+  font-size: fix-font-size-hack(0.875em);
   font-weight: 600;
-  line-height: fix-font-size-hack(1rem);
-  padding: fix-font-size-hack(1rem) fix-font-size-hack(0.591rem);
+  line-height: fix-font-size-hack(1em);
+  padding: fix-font-size-hack(1em) fix-font-size-hack(0.591em);
   text-transform: uppercase;
 
   &:after {

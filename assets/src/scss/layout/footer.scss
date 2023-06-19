@@ -182,6 +182,7 @@ $better-footer-design: false;
   text-align: center;
   text-decoration: none;
 
+  &:hover,
   &:focus {
     text-decoration: none;
   }

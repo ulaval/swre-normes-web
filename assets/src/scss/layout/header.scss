@@ -134,6 +134,13 @@ $better-header-design: false;
     transition: width 0.4s ease;
     width: 0;
   }
+
+  a {
+    &:visited {
+      color: unset;
+    }
+  }
+
   // @TODO: Review this
   .ul-link--in-language-nav {
     &:not(:first-child) {

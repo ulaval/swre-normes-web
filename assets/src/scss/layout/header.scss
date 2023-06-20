@@ -42,6 +42,16 @@ $better-header-design: false;
       width: 100%;
     }
 
+    a.header-title,
+    a.header-university-link,
+    a.header-unit-link {
+      color: $color-white;
+
+      &:focus {
+        outline-color: $color-white;
+      }
+    }
+
     .university-logo-fill {
       fill: $color-white;
     }
@@ -81,16 +91,6 @@ $better-header-design: false;
 
   .header-container {
     background-color: initial;
-  }
-
-  a.header-title,
-  a.header-university-link,
-  a.header-unit-link {
-    color: $color-white;
-
-    &:focus {
-      outline-color: $color-white;
-    }
   }
 
   .header-top-brand .divider {
@@ -146,44 +146,105 @@ $better-header-design: false;
     }
   }
 
-  // @TODO: Review this
-  .ul-link--in-language-nav {
-    &:not(:first-child) {
-      border-top: 1px solid $color-white;
+  a.header-title,
+  a.header-university-link,
+  a.header-unit-link {
+    transition: color 0.5s ease;
+
+    &:focus {
+      outline-color: $color-black;
+      outline-offset: 2px;
+      outline-style: dotted;
+      outline-width: 1px;
     }
+  }
 
-    a {
-      box-sizing: border-box;
-      color: $color-white;
-      display: block;
-      font-size: fix-font-size-hack(0.875em);
-      padding: fix-font-size-hack(0.591em);
-      text-decoration: none;
+  a.header-title {
+    @include property-with-fluid-value("font-size", 18px, 24px, 1280px, 1600px);
+    color: $color-black;
+    display: block;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: -0.25em;
+    padding: 0.25em;
+    text-decoration: none;
 
-      &:hover {
-        background-color: $color-white;
-        color: $color-black;
-      }
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
 
-      &:focus,
-      &:focus-visible {
-        background-color: $color-white;
-        color: $color-black;
-        outline-offset: 2px;
-        outline: 1px $color-black solid;
-      }
+  a.header-university-link,
+  a.header-unit-link {
+    color: $color-black;
+    text-decoration: none;
 
-      &:active {
-        background-color: $color-white;
-        color: $color-black;
-        text-decoration: underline;
-      }
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  a.header-university-link {
+    align-items: center;
+    display: flex;
+    white-space: nowrap;
+    padding: 2px;
+    margin: -2px;
+
+    @if $better-header-design {
+      margin-bottom: 0.25em;
+    }
+  }
+
+  a.header-unit-link {
+    padding: 0 2px;
+    margin: 0 -2px;
+
+    @if $better-header-design {
+      text-align: center;
     }
   }
 
   .container {
     padding-bottom: fix-font-size-hack(1em);
     padding-top: fix-font-size-hack(1em);
+  }
+}
+
+// @TODO: Review this
+.ul-link--in-language-nav {
+  &:not(:first-child) {
+    border-top: 1px solid $color-white;
+  }
+
+  a {
+    box-sizing: border-box;
+    color: $color-white;
+    display: block;
+    font-size: fix-font-size-hack(0.875em);
+    padding: fix-font-size-hack(0.591em);
+    text-decoration: none;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+    }
+
+    &:focus,
+    &:focus-visible {
+      background-color: $color-white;
+      color: $color-black;
+      outline-offset: 2px;
+      outline: 1px $color-black solid;
+    }
+
+    &:active {
+      background-color: $color-white;
+      color: $color-black;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -821,67 +882,6 @@ $better-header-design: false;
   transition: border-left 0.5s ease;
 }
 
-a.header-title,
-a.header-university-link,
-a.header-unit-link {
-  transition: color 0.5s ease;
-
-  &:focus {
-    outline-color: $color-black;
-    outline-offset: 2px;
-    outline-style: dotted;
-    outline-width: 1px;
-  }
-}
-
-a.header-title {
-  @include property-with-fluid-value("font-size", 18px, 24px, 1280px, 1600px);
-  color: $color-black;
-  display: block;
-  font-weight: 700;
-  line-height: 1.1;
-  margin: -0.25em;
-  padding: 0.25em;
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-}
-
-a.header-university-link,
-a.header-unit-link {
-  color: $color-black;
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-}
-
-a.header-university-link {
-  align-items: center;
-  display: flex;
-  white-space: nowrap;
-  padding: 2px;
-  margin: -2px;
-
-  @if $better-header-design {
-    margin-bottom: 0.25em;
-  }
-}
-
-a.header-unit-link {
-  padding: 0 2px;
-  margin: 0 -2px;
-
-  @if $better-header-design {
-    text-align: center;
-  }
-}
-
 .header {
   .university-logo-simplified {
     display: block;
@@ -901,6 +901,16 @@ a.header-unit-link {
 
 @media (min-width: $breakpoint-sm) {
   @if $better-header-design {
+    .header {
+      a.header-university-link {
+        margin-bottom: 0;
+      }
+
+      a.header-unit-link {
+        text-align: left;
+      }
+    }
+
     .header-top-brand {
       flex-direction: row;
       flex-grow: 1;
@@ -909,14 +919,6 @@ a.header-unit-link {
       .divider {
         display: inline;
       }
-    }
-
-    a.header-university-link {
-      margin-bottom: 0;
-    }
-
-    a.header-unit-link {
-      text-align: left;
     }
   }
 }
@@ -945,6 +947,16 @@ a.header-unit-link {
           fill: $color-black;
           transition: none;
         }
+
+        a.header-title,
+        a.header-university-link,
+        a.header-unit-link {
+          color: unset;
+
+          &:focus {
+            outline-color: $color-black;
+          }
+        }
       }
 
       .header-menu-trigger {
@@ -972,16 +984,6 @@ a.header-unit-link {
             transition: none;
             filter: invert(1);
           }
-        }
-      }
-
-      a.header-title,
-      a.header-university-link,
-      a.header-unit-link {
-        color: unset;
-
-        &:focus {
-          outline-color: $color-black;
         }
       }
 

@@ -768,6 +768,10 @@ $better-header-design: false;
     }
   }
 
+  .menu-item {
+    display: flex;
+  }
+
   // Secondary nav - Mobile specific layout and color
   &--mobile {
     margin-bottom: fix-font-size-hack(2em);

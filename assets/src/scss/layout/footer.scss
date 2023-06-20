@@ -27,6 +27,43 @@ $better-footer-design: false;
       color: unset;
     }
   }
+
+  a.footer-button--light {
+    background-color: $color-white;
+    color: $color-black;
+
+    &:hover,
+    &:focus {
+      background-color: $color-black;
+      color: $color-white;
+    }
+
+    &:focus {
+      outline-color: $color-white;
+      outline-offset: -4px;
+      outline-style: solid;
+      outline-width: 2px;
+    }
+  }
+
+  a.footer-button--dark {
+    background-color: $color-black;
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      background-color: $color-white;
+      color: $color-black;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 1px $color-black inset;
+      outline-color: $color-black;
+      outline-offset: -6px;
+      outline-style: solid;
+      outline-width: 2px;
+    }
+  }
 }
 
 .footer-main {
@@ -193,43 +230,6 @@ $better-footer-design: false;
   &:hover,
   &:focus {
     text-decoration: none;
-  }
-}
-
-a.footer-button--light {
-  background-color: $color-white;
-  color: $color-black;
-
-  &:hover,
-  &:focus {
-    background-color: $color-black;
-    color: $color-white;
-  }
-
-  &:focus {
-    outline-color: $color-white;
-    outline-offset: -4px;
-    outline-style: solid;
-    outline-width: 2px;
-  }
-}
-
-a.footer-button--dark {
-  background-color: $color-black;
-  color: $color-white;
-
-  &:hover,
-  &:focus {
-    background-color: $color-white;
-    color: $color-black;
-  }
-
-  &:focus {
-    box-shadow: 0px 0px 0px 1px $color-black inset;
-    outline-color: $color-black;
-    outline-offset: -6px;
-    outline-style: solid;
-    outline-width: 2px;
   }
 }
 

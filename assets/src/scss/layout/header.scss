@@ -206,11 +206,6 @@ $better-header-design: false;
       text-align: center;
     }
   }
-
-  .container {
-    padding-bottom: fix-font-size-hack(1em);
-    padding-top: fix-font-size-hack(1em);
-  }
 }
 
 // @TODO: Review this
@@ -406,6 +401,11 @@ $better-header-design: false;
   }
 }
 
+.header-search-container {
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+}
+
 .header-search-form {
   color: $color-white;
   display: flex;
@@ -414,7 +414,22 @@ $better-header-design: false;
 
 .header-search-type {
   border: 0;
+  display: flex;
+  margin-bottom: 1.25em;
   padding: 0;
+
+  label {
+    border: 1px solid $color-white;
+    cursor: pointer;
+    font-size: 0.875em;
+    margin-right: 0.75em;
+    padding: 0.25em 1em;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+    }
+  }
 
   input:checked + label {
     background-color: $color-white;
@@ -473,7 +488,7 @@ $better-header-design: false;
       gap: fix-font-size-hack(0.8em);
     }
 
-    .menu-link {
+    a.menu-link {
       color: $color-white;
       text-decoration: none;
 
@@ -743,7 +758,7 @@ $better-header-design: false;
     padding-top: fix-font-size-hack(0.5em);
   }
 
-  .menu-link {
+  a.menu-link {
     background-image: linear-gradient(90deg, $color-ul-red, $color-ul-red);
     background-position: left bottom;
     background-repeat: no-repeat;
@@ -779,7 +794,7 @@ $better-header-design: false;
       gap: fix-font-size-hack(0.688em);
     }
 
-    .menu-link {
+    a.menu-link {
       color: $color-white;
       font-size: fix-font-size-hack(1.5em);
       line-height: 1.2;
@@ -802,7 +817,7 @@ $better-header-design: false;
       );
     }
 
-    .menu-link {
+    a.menu-link {
       color: $color-black;
       font-size: fix-font-size-hack(1em);
       font-weight: 700;
@@ -831,7 +846,7 @@ $better-header-design: false;
     display: flex;
   }
 
-  .menu-link {
+  a.menu-link {
     text-decoration: none;
 
     &:hover,
@@ -853,7 +868,7 @@ $better-header-design: false;
       gap: fix-font-size-hack(0.75em);
     }
 
-    .menu-link {
+    a.menu-link {
       color: $color-white;
       font-size: fix-font-size-hack(1.25em);
 
@@ -876,7 +891,7 @@ $better-header-design: false;
       justify-content: flex-end;
     }
 
-    .menu-link {
+    a.menu-link {
       color: $color-black;
       font-size: fix-font-size-hack(0.875em);
       line-height: 1.2;
@@ -938,7 +953,11 @@ $better-header-design: false;
     // Main desktop layout, when mobile menu was open
     .mobile-menu-open {
       overflow: initial;
-      padding-top: 0;
+
+      &.unit,
+      &.university {
+        padding-top: 0;
+      }
 
       .header {
         background-color: $color-white;
@@ -1081,7 +1100,7 @@ $better-header-design: false;
   }
 
   .header-main-nav {
-    .menu-link {
+    a.menu-link {
       transition: none;
     }
   }

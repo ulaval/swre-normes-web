@@ -40,13 +40,13 @@
       display: flex;
 
       & + .menu-item {
-        .menu-link {
+        a.menu-link {
           border-top: 1px solid $color-white;
         }
       }
     }
 
-    .menu-link {
+    a.menu-link {
       align-items: center;
       color: $color-white;
       display: flex;
@@ -202,7 +202,7 @@
 
   @if $website-container-type == "fluid" {
     .header-sub-nav {
-      .menu-link {
+      a.menu-link {
         padding-left: 2px;
         padding-right: 2px;
       }
@@ -212,7 +212,7 @@
   @media (min-width: $breakpoint-md) {
     @if $website-container-type == "fluid" {
       .header-sub-nav {
-        .menu-link {
+        a.menu-link {
           padding-left: 3px;
           padding-right: 3px;
         }
@@ -223,7 +223,7 @@
   @media (min-width: $breakpoint-lg) {
     @if $website-container-type == "fluid" {
       .header-sub-nav {
-        .menu-link {
+        a.menu-link {
           padding-left: 5px;
           padding-right: 5px;
         }
@@ -234,7 +234,7 @@
   @media (min-width: $breakpoint-xl) {
     @if $website-container-type == "fluid" {
       .header-sub-nav {
-        .menu-link {
+        a.menu-link {
           padding-left: 6px;
           padding-right: 6px;
         }
@@ -291,13 +291,13 @@
 
       .menu-item {
         & + .menu-item {
-          .menu-link {
+          a.menu-link {
             border-top: 0;
           }
         }
       }
 
-      .menu-link {
+      a.menu-link {
         &:before,
         &:after {
           display: none;
@@ -328,7 +328,7 @@
 
     @if $website-container-type == "fluid" {
       .header-sub-nav {
-        .menu-link {
+        a.menu-link {
           padding-left: 0;
           padding-right: 0;
         }
@@ -343,7 +343,7 @@
       }
 
       .header-sub-nav {
-        .menu-link {
+        a.menu-link {
           text-align: center;
         }
       }

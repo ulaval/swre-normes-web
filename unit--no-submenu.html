@@ -163,16 +163,16 @@
         </nav>
       </div>
       <div class="header-search" id="header-search">
-        <div class="container">
+        <div class="header-search-container container">
 
           <!-- Replace the action for your own-->
-          <form class="header-search-form" role="search" method="get" action="/chercher/google">
+          <form id="header-search-form" class="header-search-form" role="search" method="get" action="/chercher/google">
             <fieldset class="header-search-type">
               <legend class="visually-hidden">Choisir le type de recherche</legend>
 
               <!-- Replace the data-action and data-placeholder for your own-->
               <!-- The data-placeholder and the label should be localized -->
-              <input id="search-in--website" class="visually-hidden" type="radio" name="search-type" value="website" data-action="/chercher/google" data-placeholder="Que cherchez-vous?">
+              <input id="search-in--website" class="visually-hidden" type="radio" checked name="search-type" value="website" data-action="/chercher/google" data-placeholder="Que cherchez-vous?">
               <label for="search-in--website">Tout ulaval.ca</label>
 
               <!-- Replace the data-action and data-placeholder for your own-->
@@ -449,6 +449,7 @@
     </footer>
 
     <script src="./assets/dist/js/normes.js"></script>
+    <script src="./assets/dist/js/header-search.js"></script>
   </body>
 
 </html>

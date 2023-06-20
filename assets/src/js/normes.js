@@ -115,7 +115,7 @@ if ((searchBarButton = document.querySelector(".header-search-trigger"))) {
     if (this.getAttribute("aria-expanded") == "false") {
       closeOtherElements();
       document.querySelector(".header-search").classList.add("open");
-      document.querySelector(".champ-recherche").focus();
+      document.querySelector(".header-search-input").focus();
       document.addEventListener("keydown", detectBackTabOnSearchBar);
       this.setAttribute("aria-expanded", "true");
     } else {
@@ -190,7 +190,7 @@ var preventScrollOnNavKeyDowns = function (e) {
 // Retourne le focus directement sur le bouton trigger de la barre de recherche
 var detectBackTabOnSearchBar = function (e) {
   if (
-    document.activeElement == document.querySelector(".champ-recherche") &&
+    document.activeElement == document.querySelector(".header-search-input") &&
     e.shiftKey &&
     e.keyCode == 9
   ) {

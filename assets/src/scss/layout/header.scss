@@ -364,49 +364,44 @@ $better-header-design: false;
     display: block;
     animation: slide-out-top 0.25s;
   }
+}
 
-  form {
-    align-items: stretch;
-    color: $color-white;
-    display: flex;
+.header-search-form {
+  align-items: stretch;
+  color: $color-white;
+  display: flex;
+}
 
-    // @TODO: Rename selector in scss and html
-    input.champ-recherche {
-      -webkit-appearance: none;
-      -webkit-border-radius: 0;
-      background-color: $color-white;
-      border-radius: 0;
-      border: 0;
-      flex: 1;
-      font-size: fix-font-size-hack(1em);
-      margin: 0;
-      padding: 11px 15px;
+.header-search-input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  background-color: $color-white;
+  border-radius: 0;
+  border: 0;
+  flex: 1;
+  font-size: fix-font-size-hack(1em);
+  margin: 0;
+  padding: 11px 15px;
 
-      &:focus {
-        outline: none;
-      }
+  &:focus {
+    outline: none;
+  }
 
-      &::-webkit-search-cancel-button {
-        -webkit-appearance: none;
-      }
-    }
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+}
 
-    button {
-      background-color: $color-white;
-      padding: 18px;
-      border: none;
-      line-height: 1em;
-      display: inline-block;
-      &:hover {
-        background-color: $color-black;
-        i {
-          filter: invert(1);
-        }
-      }
-    }
-
-    label {
-      margin-bottom: fix-font-size-hack(0.3em);
+.header-search-button {
+  background-color: $color-white;
+  padding: 18px;
+  border: none;
+  line-height: 1em;
+  display: inline-block;
+  &:hover {
+    background-color: $color-black;
+    i {
+      filter: invert(1);
     }
   }
 }

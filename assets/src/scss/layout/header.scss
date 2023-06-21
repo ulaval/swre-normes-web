@@ -126,7 +126,7 @@ $better-header-design: false;
     height: 8px;
     position: relative;
     // @TODO: Implement z-index function for all z-index
-    z-index: 1;
+    z-index: 9999;
   }
 
   &:after {

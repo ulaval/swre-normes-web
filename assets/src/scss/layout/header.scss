@@ -206,11 +206,6 @@ $better-header-design: false;
       text-align: center;
     }
   }
-
-  .container {
-    padding-bottom: fix-font-size-hack(1em);
-    padding-top: fix-font-size-hack(1em);
-  }
 }
 
 // @TODO: Review this
@@ -406,9 +401,44 @@ $better-header-design: false;
   }
 }
 
+.header-search-container {
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+}
+
 .header-search-form {
-  align-items: stretch;
   color: $color-white;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-search-type {
+  border: 0;
+  display: flex;
+  margin-bottom: 1.25em;
+  padding: 0;
+
+  label {
+    border: 1px solid $color-white;
+    cursor: pointer;
+    font-size: 0.875em;
+    margin-right: 0.75em;
+    padding: 0.25em 1em;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+    }
+  }
+
+  input:checked + label {
+    background-color: $color-white;
+    color: $color-black;
+  }
+}
+
+.header-search-main {
+  align-items: stretch;
   display: flex;
 }
 
@@ -923,7 +953,11 @@ $better-header-design: false;
     // Main desktop layout, when mobile menu was open
     .mobile-menu-open {
       overflow: initial;
-      padding-top: 0;
+
+      &.unit,
+      &.university {
+        padding-top: 0;
+      }
 
       .header {
         background-color: $color-white;

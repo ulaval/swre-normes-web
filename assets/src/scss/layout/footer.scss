@@ -76,6 +76,10 @@ $better-footer-design: false;
   transition: margin-bottom 0.125s ease-out;
 }
 
+.footer-contact-inner--right {
+  max-width: 14.25em;
+}
+
 .footer-address {
   @if $better-footer-design {
     text-align: center;
@@ -456,6 +460,10 @@ $better-footer-design: false;
     display: flex;
     justify-content: space-between;
     gap: fix-font-size-hack(2em);
+  }
+
+  .footer-contact-inner--right {
+    max-width: unset;
   }
 
   @if $better-footer-design {

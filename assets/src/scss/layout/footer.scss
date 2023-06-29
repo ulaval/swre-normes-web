@@ -372,14 +372,15 @@ $better-footer-design: false;
 }
 
 .footer-legal {
+  //first rules for footer-legal mobile fisrt
   font-size: fix-font-size-hack(0.75em);
   margin-bottom: 0;
-  margin-top: 0.5em;
+  // margin-top: 0.5em;
 
-  li {
-    display: block;
-    margin-top: fix-font-size-hack(0.17em);
-  }
+  // li {
+  //   display: block;
+  //   margin-top: fix-font-size-hack(0.17em);
+  // }
 
   a {
     color: $color-white;
@@ -389,6 +390,22 @@ $better-footer-design: false;
       outline-color: $color-gray-light;
     }
   }
+  //moved rules fdrom 470px breakpoint back to first mobile rule breakpoint
+  margin-top: 0;
+
+    li {
+      display: inline-block;
+      margin-top: 0;
+    }
+
+    li + li {
+      &:before {
+        content: "|";
+        padding: 0 fix-font-size-hack(0.5em);
+        position: relative;
+        top: -1px;
+      }
+    }
 }
 
 @if $better-footer-design {

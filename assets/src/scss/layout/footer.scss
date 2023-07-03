@@ -93,6 +93,7 @@ $better-footer-design: false;
 .footer-address-title {
   display: flex;
   font-size: fix-font-size-hack(1.25em);
+  line-height: fix-font-size-hack(1.375em);
   margin-bottom: 1rem;
 
   @if $better-footer-design {
@@ -133,6 +134,7 @@ $better-footer-design: false;
 
 .footer-address-title-subunit {
   font-size: 0.9em;
+  font-weight: 400;
 
   @if not $better-footer-design {
     margin-left: -28px;
@@ -263,6 +265,7 @@ $better-footer-design: false;
 .footer-navigation-title {
   font-size: fix-font-size-hack(0.875em);
   font-weight: 700;
+  line-height: fix-font-size-hack(1.375em);
   margin-bottom: fix-font-size-hack(0.5rem);
 }
 

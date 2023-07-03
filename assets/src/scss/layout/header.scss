@@ -5,16 +5,6 @@
 // Import abstracts
 @import "../abstracts/_abstracts.scss";
 
-// Local variables
-/**
- * If true, add styles for a better header on mobile.
- *
- * @usage $better-header-design: false;
- * @usage $better-header-design: true;
- */
-$better-header-design: false;
-
-// Styles
 .mobile-menu-open.university {
   padding-top: 5.125em;
 }
@@ -103,7 +93,6 @@ $better-header-design: false;
   box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   width: 100%;
-  // @TODO: Implement z-index function for all z-index
   z-index: 8888;
 
   &:before,
@@ -125,7 +114,6 @@ $better-header-design: false;
     background-size: 100% 8px;
     height: 8px;
     position: relative;
-    // @TODO: Implement z-index function for all z-index
     z-index: 9999;
   }
 
@@ -192,23 +180,14 @@ $better-header-design: false;
     white-space: nowrap;
     padding: 2px;
     margin: -2px;
-
-    @if $better-header-design {
-      margin-bottom: 0.25em;
-    }
   }
 
   a.header-unit-link {
     padding: 0 2px;
     margin: 0 -2px;
-
-    @if $better-header-design {
-      text-align: center;
-    }
   }
 }
 
-// @TODO: Review this
 .ul-link--in-language-nav {
   &:not(:first-child) {
     border-top: 1px solid $color-white;
@@ -254,7 +233,6 @@ $better-header-design: false;
 .header-container {
   background-color: $color-white;
   position: relative;
-  // @TODO: Implement z-index function for all z-index
   z-index: 150;
 
   & > .container {
@@ -298,12 +276,6 @@ $better-header-design: false;
   align-items: flex-start;
   display: flex;
 
-  @if $better-header-design {
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: center;
-  }
-
   @if $font-size-hack {
     font-size: fix-font-size-hack(1em);
   }
@@ -314,10 +286,6 @@ $better-header-design: false;
     margin: 0 0.5em;
     position: relative;
     top: -1px;
-
-    @if $better-header-design {
-      display: none;
-    }
   }
 }
 
@@ -386,7 +354,6 @@ $better-header-design: false;
   position: absolute;
   right: 0;
   transform: translateY(-100%);
-  // @TODO: Implement z-index function for all z-index
   z-index: 10;
 
   &.open {
@@ -518,7 +485,6 @@ $better-header-design: false;
   right: 0;
   text-transform: uppercase;
   top: 100%;
-  // @TODO: Implement z-index function for all z-index
   z-index: 1;
 }
 
@@ -585,7 +551,6 @@ $better-header-design: false;
     right: 16px;
     top: 16px;
 
-    // @TODO: Review and/or move to bottom of the page
     @media (prefers-reduced-motion: no-preference) {
       transition: left 0.3s ease;
     }
@@ -601,7 +566,6 @@ $better-header-design: false;
     height: 2px;
     border-radius: 2px;
 
-    // @TODO: Review and/or move to bottom of the page
     @media (prefers-reduced-motion: no-preference) {
       transition: right 0.3s ease;
     }
@@ -618,7 +582,6 @@ $better-header-design: false;
       right: 16px;
       top: 23px;
 
-      // @TODO: Review and/or move to bottom of the page
       @media (prefers-reduced-motion: no-preference) {
         transition: transform 0.3s ease;
       }
@@ -634,7 +597,6 @@ $better-header-design: false;
       right: 16px;
       top: 23px;
 
-      // @TODO: Review and/or move to bottom of the page
       @media (prefers-reduced-motion: no-preference) {
         transition: transform 0.3s ease;
       }
@@ -680,7 +642,6 @@ $better-header-design: false;
       &:after {
         transition: background-color 0.5s ease;
 
-        // @TODO: Review and/or move to bottom of the page
         @media (prefers-reduced-motion: no-preference) {
           transition: transform 0.3s ease, background-color 0.3s ease;
         }
@@ -731,7 +692,6 @@ $better-header-design: false;
   display: none;
   position: relative;
   transform: translateX(-100vw);
-  // @TODO: Implement z-index function for all z-index
   z-index: 1;
 
   &.open {
@@ -921,30 +881,6 @@ $better-header-design: false;
 
   .university-logo-fill {
     transition: fill 0.4s ease;
-  }
-}
-
-@media (min-width: $breakpoint-sm) {
-  @if $better-header-design {
-    .header {
-      a.header-university-link {
-        margin-bottom: 0;
-      }
-
-      a.header-unit-link {
-        text-align: left;
-      }
-    }
-
-    .header-top-brand {
-      flex-direction: row;
-      flex-grow: 1;
-      justify-content: flex-start;
-
-      .divider {
-        display: inline;
-      }
-    }
   }
 }
 

@@ -3,6 +3,7 @@
  */
 
 /**
+ * @TODO
  * Define the responsive way to resize the website.
  *
  * With the "fixed" method, the website will have multiple pre-defined breakpoints.
@@ -14,6 +15,7 @@
 $website-container-type: "fluid";
 
 /**
+ * @TODO
  * Define the way to contain the header.
  *
  * With the "contained" method, the header will be contained with the website content.
@@ -25,6 +27,7 @@ $website-container-type: "fluid";
 $header-container-type: "contained";
 
 /**
+ * @TODO
  * Define the max-width that the website will stop stretching.
  * *
  * @usage $website-container-max-width: 1940px;
@@ -34,6 +37,7 @@ $header-container-type: "contained";
 $website-container-max-width: 1600px;
 
 /**
+ * @TODO
  * If true, add some styles to style the submenu.
  *
  * @usage $header-with-submenu: false;
@@ -42,6 +46,7 @@ $website-container-max-width: 1600px;
 $header-with-submenu: true;
 
 /**
+ * @TODO
  * If true, remove some styles to always keep the main menu always mobile.
  *
  * @usage $menu-is-always-mobile: false;
@@ -50,6 +55,7 @@ $header-with-submenu: true;
 $menu-is-always-mobile: false;
 
 /**
+ * @TODO
  * Fixes the font-size hack for websites using 62.5% font-sizing to use em as pixel.
  * Change $font-size-hack to true if your website use the font-size hack.
  *

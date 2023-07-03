@@ -179,7 +179,7 @@ $better-footer-design: false;
   display: flex;
   font-size: 1em;
   gap: fix-font-size-hack(0.75em);
-  justify-content: center;
+  justify-content: flex-start;
   margin: fix-font-size-hack(1.5em) 0;
 
   li {

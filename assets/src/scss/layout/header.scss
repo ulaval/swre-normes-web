@@ -485,7 +485,7 @@ $better-header-design: false;
     .menu {
       display: flex;
       font-size: fix-font-size-hack(1.25em);
-      gap: fix-font-size-hack(0.8em);
+      gap: fix-font-size-hack(1.2em);
     }
 
     a.menu-link {
@@ -755,7 +755,7 @@ $better-header-design: false;
   .menu-item {
     align-items: center;
     display: flex;
-    padding-top: fix-font-size-hack(0.5em);
+    padding-top: fix-font-size-hack(0.375em);
   }
 
   a.menu-link {
@@ -763,7 +763,7 @@ $better-header-design: false;
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 0 4px;
-    padding-bottom: fix-font-size-hack(0.5em);
+    padding-bottom: fix-font-size-hack(0.417em);
     text-align: center;
     text-decoration: none;
     transition: background-size 0.25s ease;
@@ -787,11 +787,12 @@ $better-header-design: false;
 
   // Main nav - Mobile specific layout and color
   &--mobile {
-    margin-bottom: fix-font-size-hack(2em);
+    margin-top: fix-font-size-hack(2.375em);
+    margin-bottom: fix-font-size-hack(3em);
 
     .menu {
       flex-direction: column;
-      gap: fix-font-size-hack(0.688em);
+      gap: fix-font-size-hack(1em);
     }
 
     a.menu-link {
@@ -861,11 +862,11 @@ $better-header-design: false;
 
   // Secondary nav - Mobile specific layout and color
   &--mobile {
-    margin-bottom: fix-font-size-hack(2em);
+    margin-bottom: fix-font-size-hack(2.375em);
 
     .menu {
       flex-direction: column;
-      gap: fix-font-size-hack(0.75em);
+      gap: fix-font-size-hack(1em);
     }
 
     a.menu-link {

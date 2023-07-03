@@ -171,6 +171,7 @@ $better-footer-design: false;
     margin: 0;
     padding: 0;
     white-space: nowrap;
+    text-decoration: underline;
   }
 }
 
@@ -178,7 +179,7 @@ $better-footer-design: false;
   display: flex;
   font-size: 1em;
   gap: fix-font-size-hack(0.75em);
-  justify-content: center;
+  justify-content: flex-start;
   margin: fix-font-size-hack(1.5em) 0;
 
   li {
@@ -598,6 +599,12 @@ $better-footer-design: false;
 }
 
 @media (min-width: $breakpoint-xl) {
+  .footer-address-infos {
+    .tel {
+      text-decoration: unset;
+    }
+  }
+
   .footer-utils {
     max-width: 72%;
   }

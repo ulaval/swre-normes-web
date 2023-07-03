@@ -61,12 +61,6 @@ $better-header-design: false;
       &:after {
         background-color: $color-white;
       }
-      & > .header-menu-trigger-midbar {
-        &:before,
-        &:after {
-          background-color: $color-white;
-        }
-      }
     }
 
     &-search-trigger {
@@ -466,7 +460,7 @@ $better-header-design: false;
   background-color: $color-white;
   padding: 18px;
   border: none;
-  line-height: 1em;
+  line-height: 0.6em;
   display: inline-block;
   &:hover {
     background-color: $color-black;
@@ -568,156 +562,74 @@ $better-header-design: false;
   border: 0;
   cursor: pointer;
   display: flex;
-  display: inline-block;
   height: 48px;
-  padding: 16px;
+  padding: 0;
   position: relative;
   width: 48px;
 
-  &:before {
-    background: $color-black;
-    border-radius: 2px;
-    content: "";
-    height: 2px;
-    height: 3px;
-    left: 16px;
-    position: absolute;
-    right: 16px;
-    top: 16px;
+  svg.nav-mobile-icon {
+    height: 48px;
+    opacity: 1;
+    position: relative;
+    width: 48px;
 
-    // @TODO: Review and/or move to bottom of the page
-    @media (prefers-reduced-motion: no-preference) {
-      transition: left 0.3s ease;
+    .fermer-gauche {
+      opacity: 0;
+    }
+  }
+  svg {
+    .ouvrir-haut,
+    .ouvrir-milieu,
+    .ouvrir-bas {
+      -webkit-transition: all .2s ease .2s;
+      transition: all .2s ease .2s;
+    }
+    .fermer-gauche {
+      //visibility: hidden;
+      -webkit-transition: all 0;
+      transition: all 0;
     }
   }
 
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
-    background-color: $color-black;
-    height: 2px;
-    border-radius: 2px;
+  &[aria-expanded="false"] {
+    svg.nav-mobile-icon {
+      fill: #000;
 
-    // @TODO: Review and/or move to bottom of the page
-    @media (prefers-reduced-motion: no-preference) {
-      transition: right 0.3s ease;
-    }
-  }
-
-  &-midbar {
-    &:before {
-      background-color: $color-black;
-      border-radius: 2px;
-      content: "";
-      height: 2px;
-      left: 16px;
-      position: absolute;
-      right: 16px;
-      top: 23px;
-
-      // @TODO: Review and/or move to bottom of the page
-      @media (prefers-reduced-motion: no-preference) {
-        transition: transform 0.3s ease;
+      .ouvrir-haut,
+      .ouvrir-milieu,
+      .ouvrir-bas {
+        opacity: 1;
+        -webkit-transform: rotate(0.2s);
+        transform: rotate(0.2s);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+        -webkit-transition: all 0s ease 0s;
+        transition: all 0s ease 0s;
       }
-    }
-
-    &:after {
-      background-color: $color-black;
-      border-radius: 2px;
-      content: "";
-      height: 2px;
-      left: 16px;
-      position: absolute;
-      right: 16px;
-      top: 23px;
-
-      // @TODO: Review and/or move to bottom of the page
-      @media (prefers-reduced-motion: no-preference) {
-        transition: transform 0.3s ease;
+      path.fermer-gauche {
+        opacity: 0;
+        -webkit-transition: all 0s;
+        transition: all 0s;
       }
     }
   }
-
-  &:hover,
-  &:active {
-    background-color: $color-black;
-
-    &:before,
-    &:after {
-      background-color: $color-white;
-    }
-
-    .header-menu-trigger-midbar {
-      &:before,
-      &:after {
-        background-color: $color-white;
-      }
-    }
-  }
-
   &[aria-expanded="true"] {
-    transition: background-color 0.5s ease;
+    svg.nav-mobile-icon {
+      fill: #fff;
 
-    &:before,
-    &:after {
-      transition: background-color 0.5s ease;
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      &:before {
-        transition: left 0.3s ease, background-color 0.3s ease;
+      .ouvrir-haut,
+      .ouvrir-milieu,
+      .ouvrir-bas {
+        opacity: 0;
+        -webkit-transform: rotate(0.2s);
+        transform: rotate(0.2s);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%
       }
-      &:before {
-        transition: right 0.3s ease, background-color 0.3s ease;
-      }
-    }
-
-    .header-menu-trigger-midbar {
-      &:before,
-      &:after {
-        transition: background-color 0.5s ease;
-
-        // @TODO: Review and/or move to bottom of the page
-        @media (prefers-reduced-motion: no-preference) {
-          transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-      }
-    }
-
-    &:before {
-      left: 32px;
-    }
-
-    &:after {
-      right: 32px;
-    }
-
-    .header-menu-trigger-midbar {
-      &:before {
-        transform: rotate(-45deg);
-      }
-      &:after {
-        transform: rotate(45deg);
-      }
-    }
-
-    &:hover,
-    &:active {
-      background-color: $color-white;
-
-      &:before,
-      &:after {
-        background-color: $color-black;
-      }
-
-      .header-menu-trigger-midbar {
-        &:before,
-        &:after {
-          background-color: $color-black;
-        }
+      path.fermer-gauche {
+        opacity: 1;
+        -webkit-transition: all .2s ease .2s;
+        transition: all .2s ease .2s;
       }
     }
   }
@@ -993,12 +905,6 @@ $better-header-design: false;
         &:after {
           background-color: $color-black;
         }
-        & > .header-menu-trigger-midbar {
-          &:before,
-          &:after {
-            background-color: $color-black;
-          }
-        }
       }
 
       .header-search-trigger {
@@ -1022,6 +928,16 @@ $better-header-design: false;
     }
 
     // Hide mobile-only elements
+    .header-menu-trigger{
+      .nav-mobile-icon {
+        opacity: 0;
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%
+      }
+    }
+
     .header-menu-trigger,
     .header-mobile-menu.open {
       display: none;

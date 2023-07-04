@@ -360,9 +360,7 @@
     li {
       display: inline-block;
       margin-top: 0;
-    }
 
-    li + li {
       &:before {
         content: "|";
         padding: 0 fix-font-size-hack(0.5em);
@@ -370,26 +368,6 @@
         top: -1px;
       }
     }
-}
-
-@media (min-width: 470px) {
-  .footer-legal {
-    margin-top: 0;
-
-    li {
-      display: inline-block;
-      margin-top: 0;
-    }
-
-    li + li {
-      &:before {
-        content: "|";
-        padding: 0 fix-font-size-hack(0.5em);
-        position: relative;
-        top: -1px;
-      }
-    }
-  }
 }
 
 @media (min-width: $breakpoint-sm) {
@@ -486,10 +464,6 @@
     .menu {
       margin-bottom: 0;
     }
-  }
-
-  .footer-copyright {
-    margin-right: fix-font-size-hack(1.5em);
   }
 
   .footer-copyright,

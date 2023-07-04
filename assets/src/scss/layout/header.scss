@@ -5,16 +5,6 @@
 // Import abstracts
 @import "../abstracts/_abstracts.scss";
 
-// Local variables
-/**
- * If true, add styles for a better header on mobile.
- *
- * @usage $better-header-design: false;
- * @usage $better-header-design: true;
- */
-$better-header-design: false;
-
-// Styles
 .mobile-menu-open.university {
   padding-top: 5.125em;
 }
@@ -61,12 +51,6 @@ $better-header-design: false;
       &:after {
         background-color: $color-white;
       }
-      & > .header-menu-trigger-midbar {
-        &:before,
-        &:after {
-          background-color: $color-white;
-        }
-      }
     }
 
     &-search-trigger {
@@ -103,7 +87,6 @@ $better-header-design: false;
   box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   width: 100%;
-  // @TODO: Implement z-index function for all z-index
   z-index: 8888;
 
   &:before,
@@ -125,7 +108,6 @@ $better-header-design: false;
     background-size: 100% 8px;
     height: 8px;
     position: relative;
-    // @TODO: Implement z-index function for all z-index
     z-index: 9999;
   }
 
@@ -192,23 +174,14 @@ $better-header-design: false;
     white-space: nowrap;
     padding: 2px;
     margin: -2px;
-
-    @if $better-header-design {
-      margin-bottom: 0.25em;
-    }
   }
 
   a.header-unit-link {
     padding: 0 2px;
     margin: 0 -2px;
-
-    @if $better-header-design {
-      text-align: center;
-    }
   }
 }
 
-// @TODO: Review this
 .ul-link--in-language-nav {
   &:not(:first-child) {
     border-top: 1px solid $color-white;
@@ -254,7 +227,6 @@ $better-header-design: false;
 .header-container {
   background-color: $color-white;
   position: relative;
-  // @TODO: Implement z-index function for all z-index
   z-index: 150;
 
   & > .container {
@@ -298,12 +270,6 @@ $better-header-design: false;
   align-items: flex-start;
   display: flex;
 
-  @if $better-header-design {
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: center;
-  }
-
   @if $font-size-hack {
     font-size: fix-font-size-hack(1em);
   }
@@ -314,10 +280,6 @@ $better-header-design: false;
     margin: 0 0.5em;
     position: relative;
     top: -1px;
-
-    @if $better-header-design {
-      display: none;
-    }
   }
 }
 
@@ -376,6 +338,10 @@ $better-header-design: false;
   &[aria-expanded="true"] {
     text-decoration: underline;
   }
+
+  &:focus {
+    outline: 1px solid #000;
+  }
 }
 
 .header-search {
@@ -386,7 +352,6 @@ $better-header-design: false;
   position: absolute;
   right: 0;
   transform: translateY(-100%);
-  // @TODO: Implement z-index function for all z-index
   z-index: 10;
 
   &.open {
@@ -429,6 +394,13 @@ $better-header-design: false;
       background-color: $color-white;
       color: $color-black;
     }
+
+    &:focus {
+      outline: 1px solid #fff;
+      outline-offset: 1px;
+      //outline: 1px solid #fff;
+      //border: 1px solid #000;
+    }
   }
 
   input:checked + label {
@@ -454,7 +426,8 @@ $better-header-design: false;
   padding: 11px 15px;
 
   &:focus {
-    outline: none;
+    outline: 1px solid #000;
+    border: 1px solid #fff;
   }
 
   &::-webkit-search-cancel-button {
@@ -466,13 +439,19 @@ $better-header-design: false;
   background-color: $color-white;
   padding: 18px;
   border: none;
-  line-height: 1em;
+  line-height: 0.6em;
   display: inline-block;
   &:hover {
     background-color: $color-black;
     i {
       filter: invert(1);
     }
+  }
+  &:focus {
+    border: 1px solid #000;
+    outline: 1px solid #fff;
+    margin: 1px;
+    padding: 16px;
   }
 }
 
@@ -485,7 +464,7 @@ $better-header-design: false;
     .menu {
       display: flex;
       font-size: fix-font-size-hack(1.25em);
-      gap: fix-font-size-hack(0.8em);
+      gap: fix-font-size-hack(1.2em);
     }
 
     a.menu-link {
@@ -518,7 +497,6 @@ $better-header-design: false;
   right: 0;
   text-transform: uppercase;
   top: 100%;
-  // @TODO: Implement z-index function for all z-index
   z-index: 1;
 }
 
@@ -557,6 +535,10 @@ $better-header-design: false;
     }
   }
 
+  &:focus {
+    outline: 1px solid #000;
+  }
+
   &[aria-expanded="true"]:after {
     transform: scaleY(-1);
   }
@@ -568,156 +550,74 @@ $better-header-design: false;
   border: 0;
   cursor: pointer;
   display: flex;
-  display: inline-block;
   height: 48px;
-  padding: 16px;
+  padding: 0;
   position: relative;
   width: 48px;
 
-  &:before {
-    background: $color-black;
-    border-radius: 2px;
-    content: "";
-    height: 2px;
-    height: 3px;
-    left: 16px;
-    position: absolute;
-    right: 16px;
-    top: 16px;
+  svg.nav-mobile-icon {
+    height: 48px;
+    opacity: 1;
+    position: relative;
+    width: 48px;
 
-    // @TODO: Review and/or move to bottom of the page
-    @media (prefers-reduced-motion: no-preference) {
-      transition: left 0.3s ease;
+    .fermer-gauche {
+      opacity: 0;
+    }
+  }
+  svg {
+    .ouvrir-haut,
+    .ouvrir-milieu,
+    .ouvrir-bas {
+      -webkit-transition: all .2s ease .2s;
+      transition: all .2s ease .2s;
+    }
+    .fermer-gauche {
+      //visibility: hidden;
+      -webkit-transition: all 0;
+      transition: all 0;
     }
   }
 
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
-    background-color: $color-black;
-    height: 2px;
-    border-radius: 2px;
+  &[aria-expanded="false"] {
+    svg.nav-mobile-icon {
+      fill: #000;
 
-    // @TODO: Review and/or move to bottom of the page
-    @media (prefers-reduced-motion: no-preference) {
-      transition: right 0.3s ease;
-    }
-  }
-
-  &-midbar {
-    &:before {
-      background-color: $color-black;
-      border-radius: 2px;
-      content: "";
-      height: 2px;
-      left: 16px;
-      position: absolute;
-      right: 16px;
-      top: 23px;
-
-      // @TODO: Review and/or move to bottom of the page
-      @media (prefers-reduced-motion: no-preference) {
-        transition: transform 0.3s ease;
+      .ouvrir-haut,
+      .ouvrir-milieu,
+      .ouvrir-bas {
+        opacity: 1;
+        -webkit-transform: rotate(0.2s);
+        transform: rotate(0.2s);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+        -webkit-transition: all 0s ease 0s;
+        transition: all 0s ease 0s;
       }
-    }
-
-    &:after {
-      background-color: $color-black;
-      border-radius: 2px;
-      content: "";
-      height: 2px;
-      left: 16px;
-      position: absolute;
-      right: 16px;
-      top: 23px;
-
-      // @TODO: Review and/or move to bottom of the page
-      @media (prefers-reduced-motion: no-preference) {
-        transition: transform 0.3s ease;
+      path.fermer-gauche {
+        opacity: 0;
+        -webkit-transition: all 0s;
+        transition: all 0s;
       }
     }
   }
-
-  &:hover,
-  &:active {
-    background-color: $color-black;
-
-    &:before,
-    &:after {
-      background-color: $color-white;
-    }
-
-    .header-menu-trigger-midbar {
-      &:before,
-      &:after {
-        background-color: $color-white;
-      }
-    }
-  }
-
   &[aria-expanded="true"] {
-    transition: background-color 0.5s ease;
+    svg.nav-mobile-icon {
+      fill: #fff;
 
-    &:before,
-    &:after {
-      transition: background-color 0.5s ease;
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      &:before {
-        transition: left 0.3s ease, background-color 0.3s ease;
+      .ouvrir-haut,
+      .ouvrir-milieu,
+      .ouvrir-bas {
+        opacity: 0;
+        -webkit-transform: rotate(0.2s);
+        transform: rotate(0.2s);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%
       }
-      &:before {
-        transition: right 0.3s ease, background-color 0.3s ease;
-      }
-    }
-
-    .header-menu-trigger-midbar {
-      &:before,
-      &:after {
-        transition: background-color 0.5s ease;
-
-        // @TODO: Review and/or move to bottom of the page
-        @media (prefers-reduced-motion: no-preference) {
-          transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-      }
-    }
-
-    &:before {
-      left: 32px;
-    }
-
-    &:after {
-      right: 32px;
-    }
-
-    .header-menu-trigger-midbar {
-      &:before {
-        transform: rotate(-45deg);
-      }
-      &:after {
-        transform: rotate(45deg);
-      }
-    }
-
-    &:hover,
-    &:active {
-      background-color: $color-white;
-
-      &:before,
-      &:after {
-        background-color: $color-black;
-      }
-
-      .header-menu-trigger-midbar {
-        &:before,
-        &:after {
-          background-color: $color-black;
-        }
+      path.fermer-gauche {
+        opacity: 1;
+        -webkit-transition: all .2s ease .2s;
+        transition: all .2s ease .2s;
       }
     }
   }
@@ -731,7 +631,6 @@ $better-header-design: false;
   display: none;
   position: relative;
   transform: translateX(-100vw);
-  // @TODO: Implement z-index function for all z-index
   z-index: 1;
 
   &.open {
@@ -755,7 +654,7 @@ $better-header-design: false;
   .menu-item {
     align-items: center;
     display: flex;
-    padding-top: fix-font-size-hack(0.5em);
+    padding-top: fix-font-size-hack(0.375em);
   }
 
   a.menu-link {
@@ -763,7 +662,7 @@ $better-header-design: false;
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 0 4px;
-    padding-bottom: fix-font-size-hack(0.5em);
+    padding-bottom: fix-font-size-hack(0.417em);
     text-align: center;
     text-decoration: none;
     transition: background-size 0.25s ease;
@@ -787,11 +686,12 @@ $better-header-design: false;
 
   // Main nav - Mobile specific layout and color
   &--mobile {
-    margin-bottom: fix-font-size-hack(2em);
+    margin-top: fix-font-size-hack(2.375em);
+    margin-bottom: fix-font-size-hack(3em);
 
     .menu {
       flex-direction: column;
-      gap: fix-font-size-hack(0.688em);
+      gap: fix-font-size-hack(1em);
     }
 
     a.menu-link {
@@ -861,11 +761,11 @@ $better-header-design: false;
 
   // Secondary nav - Mobile specific layout and color
   &--mobile {
-    margin-bottom: fix-font-size-hack(2em);
+    margin-bottom: fix-font-size-hack(2.375em);
 
     .menu {
       flex-direction: column;
-      gap: fix-font-size-hack(0.75em);
+      gap: fix-font-size-hack(1em);
     }
 
     a.menu-link {
@@ -924,30 +824,6 @@ $better-header-design: false;
   }
 }
 
-@media (min-width: $breakpoint-sm) {
-  @if $better-header-design {
-    .header {
-      a.header-university-link {
-        margin-bottom: 0;
-      }
-
-      a.header-unit-link {
-        text-align: left;
-      }
-    }
-
-    .header-top-brand {
-      flex-direction: row;
-      flex-grow: 1;
-      justify-content: flex-start;
-
-      .divider {
-        display: inline;
-      }
-    }
-  }
-}
-
 @if not $menu-is-always-mobile {
   @media (min-width: 1280px) {
     // Main desktop layout, when mobile menu was open
@@ -993,12 +869,6 @@ $better-header-design: false;
         &:after {
           background-color: $color-black;
         }
-        & > .header-menu-trigger-midbar {
-          &:before,
-          &:after {
-            background-color: $color-black;
-          }
-        }
       }
 
       .header-search-trigger {
@@ -1022,6 +892,16 @@ $better-header-design: false;
     }
 
     // Hide mobile-only elements
+    .header-menu-trigger{
+      .nav-mobile-icon {
+        opacity: 0;
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%
+      }
+    }
+
     .header-menu-trigger,
     .header-mobile-menu.open {
       display: none;

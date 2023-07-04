@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
+<html lang="fr-CA">
 
   <head>
 
-    <!-- Make sure to use have the right meta -->
+    <!-- @TODO: Make sure to review the three meta tags below -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Make sure to preload theses necessary fonts -->
+    <!-- @TODO: Make sure to preload theses necessary fonts -->
     <link rel="preload" href="./assets/dist/fonts/WOFF2/TTF/SourceSans3-Regular.ttf.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./assets/dist/fonts/WOFF2/TTF/SourceSans3-Bold.ttf.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Make sure to use theses favicons -->
+    <!-- @TODO: Make sure to use theses favicons -->
     <link rel="apple-touch-icon" href="./assets/dist/favicon/apple-touch-icon.png" sizes="180x180" />
     <link rel="icon" href="./assets/dist/favicon/favicon.ico" sizes="any">
     <link rel="icon" href="./assets/dist/favicon/favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="./assets/dist/favicon/site.webmanifest" />
 
-    <!-- Replace these metatags for your own website -->
+    <!-- @TODO: Replace these metatags for your own website -->
     <title>Université Laval - Normes web</title>
     <meta name="description" content="Normes web pour le site institutionnel ulaval.ca" />
 
@@ -35,7 +35,7 @@
   <body class="university">
 
     <!-- For accessibility reason, we have a visually hidden anchor directing to the main content -->
-    <!-- The text should be translated in multi-language website -->
+    <!-- @TODO: The text should be translated in multi-language website -->
     <div class="skip-to-content">
       <div class="container">
         <a href="#main-content" class="visually-hidden focusable">Aller au contenu principal</a>
@@ -86,7 +86,7 @@
             <nav class="header-main-nav header-main-nav--desktop" aria-label="Navigation principale">
               <ul class="menu">
 
-                <!-- Use class=".is-active" and aria-current="page" for the active page -->
+                <!-- @TODO: Use class=".is-active" and aria-current="page" for the active page -->
                 <li class="menu-item"><a class="menu-link is-active" href="#" aria-current="page">Futurs étudiants</a></li>
                 <li class="menu-item"><a class="menu-link" href="#">Étudiants actuels</a></li>
                 <li class="menu-item"><a class="menu-link" href="#">Études</a></li>
@@ -98,11 +98,13 @@
 
             <div class="header-main-utilities">
               <div class="header-tools">
-                <button type="button" class="header-search-trigger" aria-expanded="false" aria-controls="header-search" aria-label="Chercher"><i aria-hidden="true" class="ul-i-search" role="presentation"></i></button>
-                <!-- Anonymous, not logged in version -->
+                <button type="button" class="header-search-trigger" aria-expanded="false" aria-controls="header-search" aria-label="Chercher">
+                  <i aria-hidden="true" class="ul-i-search" role="presentation"></i>
+                </button>
+                <!-- @TODO: Anonymous, not logged in version -->
                 <!-- <a href="#" class="ul-secure-login" aria-label="Espace sécurisé" title="Espace sécurisé"><i class="ul-i-login" aria-role="presentation" aria-hidden="true"></i></a> -->
 
-                <!-- Connected, logged in version -->
+                <!-- @TODO: Connected, logged in version -->
                 <!-- <nav class="ul-secure-menu-container">
                   <button type="button" id="ul-secure-menu-button" aria-haspopup="true" class="ul-secure-menu-trigger" aria-expanded="false" aria-controls="ul-secure-menu" aria-label="Ouvrir le menu sécurisé" title="Espace sécurisé">
                     <i aria-hidden="true" aria-role="presentation" class="ul-i-secure-logged"></i>
@@ -130,7 +132,15 @@
                     </li>
                   </ul>
                 </nav>
-                <button type="button" class="header-menu-trigger" aria-expanded="false" aria-controls="ul-mobile-menu"><span class="header-menu-trigger-midbar" role="presentation"></span><span class="screen-reader-text visually-hidden">Ouvrir le menu principal</span></button>
+                <button type="button" class="header-menu-trigger" aria-expanded="false" aria-controls="ul-mobile-menu">
+                  <svg aria-hidden="true" class="nav-mobile-icon" viewBox="0 0 48 48">
+                    <g>
+                      <path class="ouvrir-haut ouvrir-milieu ouvrir-bas" transform="translate(16 16)" d="M.978,16a1,1,0,0,1,0-2H15.025a1,1,0,0,1,0,2Zm0-7a1,1,0,0,1,0-2H15.025a1,1,0,0,1,0,2Zm0-7A.989.989,0,0,1,0,1,.989.989,0,0,1,.978,0H15.025A.988.988,0,0,1,16,1a.988.988,0,0,1-.975,1Z"/>
+                      <path class="fermer-gauche" transform="translate(16 16)" d="M.261,15.738a.884.884,0,0,1,0-1.255L6.746,8,.261,1.517A.888.888,0,0,1,1.517.262L8,6.745,14.483.262a.883.883,0,0,1,1.255,0A.868.868,0,0,1,16,.889a.874.874,0,0,1-.262.627L9.255,8l6.483,6.483a.882.882,0,0,1,0,1.255.885.885,0,0,1-1.255,0L8,9.255,1.517,15.738a.884.884,0,0,1-1.256,0Z" />
+                    </g>
+                  </svg>
+                  <span class="screen-reader-text visually-hidden">Ouvrir le menu principal</span>
+                </button>
               </div>
             </div>
           </div>
@@ -140,7 +150,7 @@
         <nav class="header-main-nav header-main-nav--mobile" aria-label="Principale">
           <ul class="menu">
 
-            <!-- Use class=".is-active" and aria-current="page" for the active page -->
+            <!-- @TODO: Use class=".is-active" and aria-current="page" for the active page -->
             <li class="menu-item"><a class="menu-link is-active" href="#" aria-current="page">Futurs étudiants</a></li>
             <li class="menu-item"><a class="menu-link" href="#">Étudiants actuels</a></li>
             <li class="menu-item"><a class="menu-link" href="#">Études</a></li>
@@ -179,31 +189,31 @@
       <div class="header-search" id="header-search">
         <div class="header-search-container container">
 
-          <!-- Replace the action for your own-->
+          <!-- @TODO: Replace the action for your own-->
           <form id="header-search-form" class="header-search-form" role="search" method="get" action="/chercher/google">
             <fieldset class="header-search-type">
               <legend class="visually-hidden">Choisir le type de recherche</legend>
 
-              <!-- Replace the data-action and data-placeholder for your own-->
-              <!-- The data-placeholder and the label should be localized -->
-              <input id="search-in--website" class="visually-hidden" type="radio" name="search-type" value="website" data-action="/chercher/google" data-placeholder="Que cherchez-vous?">
-              <label for="search-in--website">Tout ulaval.ca</label>
+              <!-- @TODO: Replace the data-action and data-placeholder for your own-->
+              <!-- @TODO: The data-placeholder and the label should be localized -->
+              <input id="search-in--website" tabindex="-1" class="visually-hidden" type="radio" name="search-type" value="website" data-action="/chercher/google" data-placeholder="Que cherchez-vous?">
+              <label for="search-in--website" tabindex="0">Tout ulaval.ca</label>
 
-              <!-- Replace the data-action and data-placeholder for your own-->
-              <!-- The data-placeholder and the label should be localized -->
-              <input id="search-in--staff" class="visually-hidden" type="radio" name="search-type" value="staff" data-action="/chercher/trouver-une-personne" data-placeholder="Qui voulez-vous joindre?">
-              <label for="search-in--staff">Bottin</label>
+              <!-- @TODO: Replace the data-action and data-placeholder for your own-->
+              <!-- @TODO: The data-placeholder and the label should be localized -->
+              <input id="search-in--staff" tabindex="-1" class="visually-hidden" type="radio" name="search-type" value="staff" data-action="/chercher/trouver-une-personne" data-placeholder="Qui voulez-vous joindre?">
+              <label for="search-in--staff" tabindex="0">Bottin</label>
 
-              <!-- Replace the data-action and data-placeholder for your own-->
-              <!-- The data-placeholder and the label should be localized -->
-              <input id="search-in--map" class="visually-hidden" type="radio" name="search-type" value="map" data-action="/plan-du-campus" data-placeholder="Que cherchez-vous?">
-              <label for="search-in--map">Plan du campus</label>
+              <!-- @TODO: Replace the data-action and data-placeholder for your own-->
+              <!-- @TODO: The data-placeholder and the label should be localized -->
+              <input id="search-in--map" tabindex="-1" class="visually-hidden" type="radio" name="search-type" value="map" data-action="/plan-du-campus" data-placeholder="Que cherchez-vous?">
+              <label for="search-in--map" tabindex="0">Plan du campus</label>
             </fieldset>
 
             <div class="header-search-main">
-              <label for="header-search-input" class="visually-hidden">Que cherchez-vous?</label>
-              <input id="header-search-input" class="header-search-input" type="search" placeholder="Chercher par mots-clés" name="q" value="" />
-              <button class="header-search-button" type="submit" value="" aria-label="Chercher">
+              <label for="header-search-input" tabindex="-1" class="visually-hidden">Que cherchez-vous?</label>
+              <input id="header-search-input" tabindex="0" class="header-search-input" type="search" placeholder="Chercher par mots-clés" name="q" value="" />
+              <button class="header-search-button" tabindex="0" type="submit" value="" aria-label="Chercher">
                 <i class="ul-i-search" aria-hidden="true" role="presentation"></i>
               </button>
             </div>
@@ -215,8 +225,8 @@
     <!-- The id #main-content is targeted by the .skip-to-content link -->
     <main id="main-content" class="main">
 
-      <!-- You can use .container restrict your content to the website max-width -->
-      <!-- You can use .container-fullwidth unrestrict your content from the website max-width -->
+      <!-- @TODO: You can use .container restrict your content to the website max-width -->
+      <!-- @TODO: You can use .container-fullwidth unrestrict your content from the website max-width -->
       <div class="container">
         <img style="width:100%" src="https://placehold.co/1600x250?font=open-sans&text=.container" alt="Container restricted to the website width">
       </div>
@@ -242,54 +252,52 @@
                 </svg>
 
 
-                <!-- Replace unit title with your own -->
-                <!-- Remove or replce subunit title with your own -->
+                <!-- @TODO: Replace unit title with your own -->
+                <!-- @TODO: Remove or replace subunit title with your own -->
                 <span class="footer-address-title-inner">
                   <span class="footer-address-title-unit">Université Laval</span>
                   <!-- <span class="footer-address-title-subunit">Université Laval</span> -->
                 </span>
               </p>
 
-              <!-- Remove second subtitle if you only have one address -->
+              <!-- @TODO: Remove second subtitle if you only have one address -->
               <!-- <p class="footer-address-name">Pavillon A</p> -->
 
               <p class="footer-address-infos accessible-links-wrapper">
 
-                <!-- Replace address and google maps link with your own -->
-                <a class="address" href="https://www.google.com/maps/place/2325+Rue+de+l'Universit%C3%A9,+Qu%C3%A9bec,+QC+G1V+0B4,+Canada" target="_blank" rel="noopener"><span class="contact-row">2325, rue de l'Université,</span> <span class="contact-row">Québec (Québec) G1V&nbsp;0A6</span></a>
+                <!-- @TODO: Replace address and google maps link with your own -->
+                <a class="address" href="https://www.google.com/maps/place/2325+Rue+de+l'Universit%C3%A9,+Qu%C3%A9bec,+QC+G1V+0B4,+Canada" target="_blank" rel="noopener"><span class="contact-row">2325,&nbsp;rue&nbsp;de&nbsp;l'Université,</span> <span class="contact-row">Québec&nbsp;(Québec)&nbsp;G1V&nbsp;0A6</span></a>
                 <br />
 
-                <!-- Replace phone numbers with your own -->
+                <!-- @TODO: Replace phone numbers with your own -->
                 <span class="contact-row">Téléphone: <a class="tel" href="tel:+14186562131">418&nbsp;656-2131</a></span>
-                <span class="divider">|</span>
-                <span class="contact-row">Sans frais: <a class="tel" href="tel:+18777852825">1&nbsp;877&nbsp;785-2825</a></span>
+                <span class="contact-row">Sans&nbsp;frais:&nbsp;<a class="tel" href="tel:+18777852825">1&nbsp;877&nbsp;785-2825</a></span>
               </p>
 
-              <!-- Remove second subtitle if you only have one address -->
+              <!-- @TODO: Remove second subtitle if you only have one address -->
               <!-- <p class="footer-address-name">Pavillon B</p> -->
 
-              <!-- Remove second address if you only have one address -->
+              <!-- @TODO: Remove second address if you only have one address -->
               <!-- <p class="footer-address-infos accessible-links-wrapper"> -->
 
-              <!-- Replace address and google maps link with your own -->
+              <!-- @TODO: Replace address and google maps link with your own -->
               <!-- <a class="address" href="https://www.google.com/maps/place/2325+Rue+de+l'Universit%C3%A9,+Qu%C3%A9bec,+QC+G1V+0B4,+Canada" target="_blank" rel="noopener"><span class="contact-row">2325, rue de l'Université,</span> <span class="contact-row">Québec (Québec) G1V&nbsp;0A6</span></a> -->
               <!-- <br /> -->
 
-              <!-- Replace phone numbers with your own -->
+              <!-- @TODO: Replace phone numbers with your own -->
               <!-- <span class="contact-row">Téléphone: <a class="tel" href="tel:+14186562131">418&nbsp;656-2131</a></span> -->
-              <!-- <span class="divider">|</span> -->
-              <!-- <span class="contact-row">Sans frais: <a class="tel" href="tel:+18777852825">1&nbsp;877&nbsp;785-2825</a></span> -->
+              <!-- <span class="contact-row">Sans&nbsp;frais:&nbsp;<a class="tel" href="tel:+18777852825">1&nbsp;877&nbsp;785-2825</a></span> -->
               <!-- </p> -->
             </div>
             <div class="footer-contact-inner footer-contact-inner--right">
               <ul class="footer-social menu">
 
-                <!-- Replace social links href to your own social network -->
-                <!-- Order social links by follower count -->
-                <!-- Remove unneeded social links -->
+                <!-- @TODO: Replace social links href to your own social network -->
+                <!-- @TODO: Order social links by follower count -->
+                <!-- @TODO: Remove unneeded social links -->
                 <li><a href="https://www.facebook.com/ulaval.ca/" target="_blank">
 
-                    <!-- Social links text should be localized -->
+                    <!-- @TODO: Social links text should be localized -->
                     <span class="visually-hidden">Suivez-nous sur Facebook</span>
 
                     <!-- Include this SVG as an inline SVG -->
@@ -302,7 +310,7 @@
                 </li>
                 <li><a href="https://www.linkedin.com/company/universite-laval" target="_blank">
 
-                    <!-- Social links text should be localized -->
+                    <!-- @TODO: Social links text should be localized -->
                     <span class="visually-hidden">Suivez-nous sur LinkedIn</span>
 
                     <!-- Include this SVG as an inline SVG -->
@@ -314,7 +322,7 @@
                 </li>
                 <li><a href="https://www.instagram.com/ulaval/" target="_blank">
 
-                    <!-- Social links text should be localized -->
+                    <!-- @TODO: Social links text should be localized -->
                     <span class="visually-hidden">Suivez-nous sur Instagram</span>
 
                     <!-- Include this SVG as an inline SVG -->
@@ -328,7 +336,7 @@
                 </li>
                 <li><a href="https://twitter.com/universitelaval" target="_blank">
 
-                    <!-- Social links text should be localized -->
+                    <!-- @TODO: Social links text should be localized -->
                     <span class="visually-hidden">Suivez-nous sur Twitter</span>
 
                     <!-- Include this SVG as an inline SVG -->
@@ -340,7 +348,7 @@
                 </li>
                 <li><a href="https://www.youtube.com/ulavaltv" target="_blank">
 
-                    <!-- Social links text should be localized -->
+                    <!-- @TODO: Social links text should be localized -->
                     <span class="visually-hidden">Suivez-nous sur Youtube</span>
 
                     <!-- Include this SVG as an inline SVG -->
@@ -352,19 +360,19 @@
                 </li>
               </ul>
 
-              <!-- Newsletter link should be localized -->
-              <!-- Newsletter link should lead to your own newsletter -->
+              <!-- @TODO: Newsletter link should be localized -->
+              <!-- @TODO: Newsletter link should lead to your own newsletter -->
               <a class="footer-newsletter footer-button footer-button--light" href="#">Abonnez-vous à l'infolettre</a>
 
-              <!-- Query link should be localized -->
-              <!-- Query link should lead to your own page -->
+              <!-- @TODO: Query link should be localized -->
+              <!-- @TODO: Query link should lead to your own page -->
               <a class="footer-query footer-button footer-button--dark" href="#">Des questions?</a>
             </div>
           </div>
 
-          <!-- Replace quick links with your own -->
-          <!-- Quick links should be localized -->
-          <!-- Quick links navigation aria-label should be localized -->
+          <!-- @TODO: Replace quick links with your own -->
+          <!-- @TODO: Quick links should be localized -->
+          <!-- @TODO: Quick links navigation aria-label should be localized -->
           <nav class="footer-utils accessible-links-wrapper" aria-label="Accès rapides">
             <div class="footer-navigation">
               <div class="footer-navigation-group">
@@ -398,20 +406,20 @@
             </div>
             <div class="footer-emergency">
 
-              <!-- Emergency links should lead to ulaval.ca page -->
-              <!-- Emergency links should be localized -->
+              <!-- @TODO: Emergency links should lead to ulaval.ca page -->
+              <!-- @TODO: Emergency links should be localized -->
               <p class="footer-emergency-title"><a href="https://www.ulaval.ca/mesures-durgence">Mesures d'urgence</a></p>
               <p class="footer-emergency-text">Composer le <a href="tel:+14186565555">418&nbsp;656-5555</a></p>
             </div>
           </nav>
           <div class="footer-logos">
             <div class="footer-accreditations">
-              <!-- The title can either be present or not -->
-              <!-- The title should be localized -->
+              <!-- @TODO: The title can either be present or not -->
+              <!-- @TODO: The title should be localized -->
               <!-- <p class="footer-accreditations-title">Accréditations</p> -->
 
-              <!-- Replace accreditations links with your own or remove the list -->
-              <!-- If possible, accreditations links should be localized -->
+              <!-- @TODO: Replace accreditations links with your own or remove the list -->
+              <!-- @TODO: If possible, accreditations links should be localized -->
               <!-- <ul class="menu">
                 <li><a class="footer-logo" href="#" target="_blank"><img src="https://placehold.co/75x52?font=open-sans&text=logo" alt="Logo"></a></li>
                 <li><a class="footer-logo" href="#" target="_blank"><img src="https://placehold.co/150x52?font=open-sans&text=logo" alt="Logo"></a></li>
@@ -419,8 +427,8 @@
               </ul> -->
             </div>
 
-            <!-- If UL logo is used, link should lead to lead to ulaval.ca -->
-            <!-- If your unit logo is used, link should lead to your unit website  -->
+            <!-- @TODO: If UL logo is used, link should lead to lead to ulaval.ca -->
+            <!-- @TODO: If your unit logo is used, link should lead to your unit website  -->
             <a class="footer-logo" href="https://www.ulaval.ca/">
 
               <!-- Include this SVG as an inline SVG -->
@@ -447,13 +455,13 @@
         <div class="container footer-bottom-inner">
           <p class="footer-copyright">
 
-            <!-- Copright text should be localized -->
+            <!-- @TODO: Copright text should be localized -->
             <span>&copy;&nbsp;2023&nbsp;Université Laval</span><span>Tous droits réservés</span>
           </p>
           <ul class="footer-legal menu accessible-links-wrapper">
 
-            <!-- Footer legal links should lead to ulaval.ca pages -->
-            <!-- Footer legal links should be localized -->
+            <!-- @TODO: Footer legal links should lead to ulaval.ca pages -->
+            <!-- @TODO: Footer legal links should be localized -->
             <li><a href="https://www.ulaval.ca/conditions">Conditions générales d'utilisation</a></li>
             <li><a href="https://www.ulaval.ca/cybersecurite">Fraude en ligne</a></li>
             <li><a href="https://www.ulaval.ca/confidentialite">Avis de confidentialité</a></li>

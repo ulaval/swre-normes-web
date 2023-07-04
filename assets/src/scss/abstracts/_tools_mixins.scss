@@ -40,7 +40,7 @@
     $values-difference * ($viewport-difference / $breakpoints-difference)
   );
 
-  // Use $value-start as the default value in breowser cannot render the complex calculation
+  // Use $value-start as the default value in browser cannot render the complex calculation
   #{$property}: $value-start;
 
   @media (min-width: $breakpoint-start) {

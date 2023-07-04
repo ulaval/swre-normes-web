@@ -69,6 +69,13 @@ $better-footer-design: false;
 .footer-main {
   background-color: $color-white;
   padding: fix-font-size-hack(4em) 0;
+
+  .tel {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    text-decoration: underline;
+  }
 }
 
 .footer-contact {
@@ -164,14 +171,6 @@ $better-footer-design: false;
 
   .address {
     display: inline-block;
-  }
-
-  .tel {
-    // Better outline shape
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    text-decoration: underline;
   }
 }
 
@@ -582,7 +581,7 @@ $better-footer-design: false;
 }
 
 @media (min-width: $breakpoint-xl) {
-  .footer-address-infos {
+  .footer-main {
     .tel {
       text-decoration: unset;
     }

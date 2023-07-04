@@ -5,19 +5,8 @@
 // Import abstracts
 @import "../abstracts/_abstracts.scss";
 
-// Local variables
-/**
- * If true, add styles for a better footer on mobile.
- *
- * @usage $better-footer-design: false;
- * @usage $better-footer-design: true;
- */
-$better-footer-design: false;
-
-// Styles
 .footer {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
-  // @TODO: Implement z-index function for all z-index
   z-index: 2;
 
   a {
@@ -77,11 +66,7 @@ $better-footer-design: false;
 }
 
 .footer-address {
-  @if $better-footer-design {
-    text-align: center;
-  } @else {
-    text-align: left;
-  }
+  text-align: left;
 
   p>span+span.contact-row:before {
     content: "|";
@@ -92,32 +77,18 @@ $better-footer-design: false;
 }
 
 .footer-address-title {
+  align-items: flex-start;
   display: flex;
+  flex-direction: row;
   font-size: fix-font-size-hack(1.25em);
+  justify-content: flex-start;
   margin-bottom: 1rem;
-
-  @if $better-footer-design {
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-
-    svg {
-      margin-bottom: 0.5em;
-    }
-  } @else {
-    align-items: flex-start;
-    flex-direction: row;
-    justify-content: flex-start;
-
-    svg {
-      margin-right: 0.5em;
-    }
-  }
 
   svg {
     fill: $color-ul-red;
     flex-shrink: 0;
     height: 1.2em;
+    margin-right: 0.5em;
     position: relative;
     top: -0.05em;
   }
@@ -134,10 +105,7 @@ $better-footer-design: false;
 
 .footer-address-title-subunit {
   font-size: 0.9em;
-
-  @if not $better-footer-design {
-    margin-left: -28px;
-  }
+  margin-left: -28px;
 }
 
 .footer-address-name {
@@ -164,7 +132,6 @@ $better-footer-design: false;
   }
 
   .tel {
-    // Better outline shape
     margin: 0;
     padding: 0;
     white-space: nowrap;
@@ -187,8 +154,6 @@ $better-footer-design: false;
   a {
     background-color: $color-white;
     border: 1px solid transparent;
-    // @TODO: Find a better display when only one social is present
-    // border: 1px solid $color-gray-lightest;
     display: inline-block;
     transition: background-color 0.125s ease;
 
@@ -232,11 +197,7 @@ $better-footer-design: false;
 }
 
 .footer-utils {
-  @if $better-footer-design {
-    text-align: center;
-  } @else {
-    text-align: left;
-  }
+  text-align: left;
 }
 
 .footer-navigation {
@@ -285,7 +246,6 @@ $better-footer-design: false;
   font-size: fix-font-size-hack(0.875em);
 
   a {
-    // Better outline shape
     margin: 0;
     padding: 0;
 
@@ -406,23 +366,6 @@ $better-footer-design: false;
     }
 }
 
-@if $better-footer-design {
-  .footer-contact {
-    border-bottom: 1px solid $color-gray-lightest;
-    padding-bottom: fix-font-size-hack(3em);
-  }
-  .footer-logos {
-    border-top: 1px solid $color-gray-lightest;
-    padding-top: fix-font-size-hack(3em);
-  }
-  .footer-accreditations {
-    .footer-logo {
-      filter: grayscale(100%);
-      opacity: 0.85;
-    }
-  }
-}
-
 @media (min-width: 470px) {
   .footer-legal {
     margin-top: 0;
@@ -467,27 +410,6 @@ $better-footer-design: false;
     gap: fix-font-size-hack(2em);
   }
 
-  @if $better-footer-design {
-    .footer-address {
-      text-align: left;
-    }
-
-    .footer-address-title {
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-direction: row;
-
-      svg {
-        margin-bottom: 0em;
-        margin-right: 0.5em;
-      }
-    }
-
-    .footer-address-title-subunit {
-      margin-left: -28px;
-    }
-  }
-
   .footer-social {
     justify-content: flex-end;
     gap: fix-font-size-hack(1.175em);
@@ -502,10 +424,6 @@ $better-footer-design: false;
 
   .footer-utils {
     gap: fix-font-size-hack(2em);
-
-    @if $better-footer-design {
-      text-align: left;
-    }
   }
 
   .footer-logos {

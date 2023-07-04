@@ -83,8 +83,9 @@ $better-footer-design: false;
     text-align: left;
   }
 
-  .divider {
-    display: none;
+  p>span+span.contact-row:before {
+    content: "|";
+    padding: 0 0.25em 0 0;
     position: relative;
     top: -1px;
   }
@@ -154,16 +155,12 @@ $better-footer-design: false;
   }
 
   .contact-row {
-    display: block;
+    display: inline;
   }
 
   a {
     color: $color-black;
     text-decoration: none;
-  }
-
-  .address {
-    display: inline-block;
   }
 
   .tel {
@@ -427,12 +424,6 @@ $better-footer-design: false;
 }
 
 @media (min-width: 470px) {
-  .footer-address-infos {
-    .contact-row,
-    .divider {
-      display: inline;
-    }
-  }
   .footer-legal {
     margin-top: 0;
 

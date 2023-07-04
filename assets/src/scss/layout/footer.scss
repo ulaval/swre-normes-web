@@ -171,6 +171,7 @@ $better-footer-design: false;
     margin: 0;
     padding: 0;
     white-space: nowrap;
+    text-decoration: underline;
   }
 }
 
@@ -178,7 +179,7 @@ $better-footer-design: false;
   display: flex;
   font-size: 1em;
   gap: fix-font-size-hack(0.75em);
-  justify-content: center;
+  justify-content: flex-start;
   margin: fix-font-size-hack(1.5em) 0;
 
   li {
@@ -372,14 +373,15 @@ $better-footer-design: false;
 }
 
 .footer-legal {
+  //first rules for footer-legal mobile fisrt
   font-size: fix-font-size-hack(0.75em);
   margin-bottom: 0;
-  margin-top: 0.5em;
+  // margin-top: 0.5em;
 
-  li {
-    display: block;
-    margin-top: fix-font-size-hack(0.17em);
-  }
+  // li {
+  //   display: block;
+  //   margin-top: fix-font-size-hack(0.17em);
+  // }
 
   a {
     color: $color-white;
@@ -389,6 +391,22 @@ $better-footer-design: false;
       outline-color: $color-gray-light;
     }
   }
+  //moved rules fdrom 470px breakpoint back to first mobile rule breakpoint
+  margin-top: 0;
+
+    li {
+      display: inline-block;
+      margin-top: 0;
+    }
+
+    li + li {
+      &:before {
+        content: "|";
+        padding: 0 fix-font-size-hack(0.5em);
+        position: relative;
+        top: -1px;
+      }
+    }
 }
 
 @if $better-footer-design {
@@ -581,6 +599,12 @@ $better-footer-design: false;
 }
 
 @media (min-width: $breakpoint-xl) {
+  .footer-address-infos {
+    .tel {
+      text-decoration: unset;
+    }
+  }
+
   .footer-utils {
     max-width: 72%;
   }

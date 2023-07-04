@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
+<html lang="fr-CA">
 
   <head>
 
@@ -87,7 +87,9 @@
 
             <div class="header-main-utilities">
               <div class="header-tools">
-                <button type="button" class="header-search-trigger" aria-expanded="false" aria-controls="header-search" aria-label="Chercher"><i aria-hidden="true" class="ul-i-search" role="presentation"></i></button>
+                <button type="button" class="header-search-trigger" aria-expanded="false" aria-controls="header-search" aria-label="Chercher">
+                  <i aria-hidden="true" class="ul-i-search" role="presentation"></i>
+                </button>
                 <!-- @TODO: Anonymous, not logged in version -->
                 <a href="#" class="ul-secure-login" aria-label="Espace sécurisé" title="Espace sécurisé"><i class="ul-i-login" aria-role="presentation" aria-hidden="true"></i></a>
 
@@ -120,7 +122,15 @@
                   </ul>
                 </nav>
 
-                <button type="button" class="header-menu-trigger" aria-expanded="false" aria-controls="ul-mobile-menu"><span class="header-menu-trigger-midbar" role="presentation"></span><span class="screen-reader-text visually-hidden">Ouvrir le menu principal</span></button>
+                <button type="button" class="header-menu-trigger" aria-expanded="false" aria-controls="ul-mobile-menu">
+                  <svg aria-hidden="true" class="nav-mobile-icon" viewBox="0 0 48 48">
+                    <g>
+                      <path class="ouvrir-haut ouvrir-milieu ouvrir-bas" transform="translate(16 16)" d="M.978,16a1,1,0,0,1,0-2H15.025a1,1,0,0,1,0,2Zm0-7a1,1,0,0,1,0-2H15.025a1,1,0,0,1,0,2Zm0-7A.989.989,0,0,1,0,1,.989.989,0,0,1,.978,0H15.025A.988.988,0,0,1,16,1a.988.988,0,0,1-.975,1Z"/>
+                      <path class="fermer-gauche" transform="translate(16 16)" d="M.261,15.738a.884.884,0,0,1,0-1.255L6.746,8,.261,1.517A.888.888,0,0,1,1.517.262L8,6.745,14.483.262a.883.883,0,0,1,1.255,0A.868.868,0,0,1,16,.889a.874.874,0,0,1-.262.627L9.255,8l6.483,6.483a.882.882,0,0,1,0,1.255.885.885,0,0,1-1.255,0L8,9.255,1.517,15.738a.884.884,0,0,1-1.256,0Z" />
+                    </g>
+                  </svg>
+                  <span class="screen-reader-text visually-hidden">Ouvrir le menu principal</span>
+                </button>
               </div>
             </div>
           </div>
@@ -175,24 +185,24 @@
 
               <!-- @TODO: Replace the data-action and data-placeholder for your own-->
               <!-- @TODO: The data-placeholder and the label should be localized -->
-              <input id="search-in--website" class="visually-hidden" type="radio" name="search-type" value="website" data-action="/chercher/google" data-placeholder="Que cherchez-vous?">
-              <label for="search-in--website">Tout ulaval.ca</label>
+              <input id="search-in--website" tabindex="-1" class="visually-hidden" type="radio" name="search-type" value="website" data-action="/chercher/google" data-placeholder="Que cherchez-vous?">
+              <label for="search-in--website" tabindex="0">Tout ulaval.ca</label>
 
               <!-- @TODO: Replace the data-action and data-placeholder for your own-->
               <!-- @TODO: The data-placeholder and the label should be localized -->
-              <input id="search-in--staff" class="visually-hidden" type="radio" name="search-type" value="staff" data-action="/chercher/trouver-une-personne" data-placeholder="Qui voulez-vous joindre?">
-              <label for="search-in--staff">Bottin</label>
+              <input id="search-in--staff" tabindex="-1" class="visually-hidden" type="radio" name="search-type" value="staff" data-action="/chercher/trouver-une-personne" data-placeholder="Qui voulez-vous joindre?">
+              <label for="search-in--staff" tabindex="0">Bottin</label>
 
               <!-- @TODO: Replace the data-action and data-placeholder for your own-->
               <!-- @TODO: The data-placeholder and the label should be localized -->
-              <input id="search-in--map" class="visually-hidden" type="radio" name="search-type" value="map" data-action="/plan-du-campus" data-placeholder="Que cherchez-vous?">
-              <label for="search-in--map">Plan du campus</label>
+              <input id="search-in--map" tabindex="-1" class="visually-hidden" type="radio" name="search-type" value="map" data-action="/plan-du-campus" data-placeholder="Que cherchez-vous?">
+              <label for="search-in--map" tabindex="0">Plan du campus</label>
             </fieldset>
 
             <div class="header-search-main">
-              <label for="header-search-input" class="visually-hidden">Que cherchez-vous?</label>
-              <input id="header-search-input" class="header-search-input" type="search" placeholder="Chercher par mots-clés" name="q" value="" />
-              <button class="header-search-button" type="submit" value="" aria-label="Chercher">
+              <label for="header-search-input" tabindex="-1" class="visually-hidden">Que cherchez-vous?</label>
+              <input id="header-search-input" tabindex="0" class="header-search-input" type="search" placeholder="Chercher par mots-clés" name="q" value="" />
+              <button class="header-search-button" tabindex="0" type="submit" value="" aria-label="Chercher">
                 <i class="ul-i-search" aria-hidden="true" role="presentation"></i>
               </button>
             </div>
@@ -272,13 +282,12 @@
               <p class="footer-address-infos accessible-links-wrapper">
 
                 <!-- @TODO: Replace address and google maps link with your own -->
-                <a class="address" href="https://www.google.com/maps/place/Pavillon+Charles-De+Koninck+-+Universit%C3%A9+Laval/@46.7813285,-71.2776441,17z/" target="_blank" rel="noopener"><span class="contact-row">1030, avenue des Sciences-Humaines, bureau 3431,</span> <span class="contact-row">Québec (Québec) G1V&nbsp;0A6</span></a>
+                <a class="address" href="https://www.google.com/maps/place/Pavillon+Charles-De+Koninck+-+Universit%C3%A9+Laval/@46.7813285,-71.2776441,17z/" target="_blank" rel="noopener"><span class="contact-row">1030,&nbsp;avenue&nbsp;des&nbsp;Sciences-Humaines,&nbsp;bureau&nbsp;3431, </span> <span class="contact-row">Québec&nbsp;(Québec)&nbsp;G1V&nbsp;0A6</span></a>
                 <br />
 
                 <!-- @TODO: Replace phone numbers with your own -->
                 <span class="contact-row">Téléphone: <a class="tel" href="tel:+14186562500">418 656-2500</a>, poste 405867</span>
-                <!-- <span class="divider">|</span> -->
-                <!-- <span class="contact-row">Sans frais: <a class="tel" href="tel:+18777852825">1&nbsp;877&nbsp;785-2825</a></span> -->
+                <!-- <span class="contact-row">Sans&nbsp;frais:&nbsp;<a class="tel" href="tel:+18777852825">1&nbsp;877&nbsp;785-2825</a></span> -->
               </p>
 
               <!-- @TODO: Remove second subtitle if you only have one address -->
@@ -293,8 +302,7 @@
 
               <!-- @TODO: Replace phone numbers with your own -->
               <!-- <span class="contact-row">Téléphone: <a class="tel" href="tel:+14186562131">418&nbsp;656-2131</a></span> -->
-              <!-- <span class="divider">|</span> -->
-              <!-- <span class="contact-row">Sans frais: <a class="tel" href="tel:+18777852825">1&nbsp;877&nbsp;785-2825</a></span> -->
+              <!-- <span class="contact-row">Sans&nbsp;frais:&nbsp;<a class="tel" href="tel:+18777852825">1&nbsp;877&nbsp;785-2825</a></span> -->
               <!-- </p> -->
             </div>
             <div class="footer-contact-inner footer-contact-inner--right">

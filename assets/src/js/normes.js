@@ -190,7 +190,7 @@ var preventScrollOnNavKeyDowns = function (e) {
 // Retourne le focus directement sur le bouton trigger de la barre de recherche
 var detectBackTabOnSearchBar = function (e) {
   if (
-    document.activeElement == document.querySelector(".header-search-input") &&
+    document.activeElement == document.querySelector(".header-search-type label:first-of-type") &&
     e.shiftKey &&
     e.keyCode == 9
   ) {

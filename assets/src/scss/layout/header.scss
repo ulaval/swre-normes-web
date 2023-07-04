@@ -5,16 +5,6 @@
 // Import abstracts
 @import "../abstracts/_abstracts.scss";
 
-// Local variables
-/**
- * If true, add styles for a better header on mobile.
- *
- * @usage $better-header-design: false;
- * @usage $better-header-design: true;
- */
-$better-header-design: false;
-
-// Styles
 .mobile-menu-open.university {
   padding-top: 5.125em;
 }
@@ -97,7 +87,6 @@ $better-header-design: false;
   box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   width: 100%;
-  // @TODO: Implement z-index function for all z-index
   z-index: 8888;
 
   &:before,
@@ -119,7 +108,6 @@ $better-header-design: false;
     background-size: 100% 8px;
     height: 8px;
     position: relative;
-    // @TODO: Implement z-index function for all z-index
     z-index: 9999;
   }
 
@@ -186,23 +174,14 @@ $better-header-design: false;
     white-space: nowrap;
     padding: 2px;
     margin: -2px;
-
-    @if $better-header-design {
-      margin-bottom: 0.25em;
-    }
   }
 
   a.header-unit-link {
     padding: 0 2px;
     margin: 0 -2px;
-
-    @if $better-header-design {
-      text-align: center;
-    }
   }
 }
 
-// @TODO: Review this
 .ul-link--in-language-nav {
   &:not(:first-child) {
     border-top: 1px solid $color-white;
@@ -248,7 +227,6 @@ $better-header-design: false;
 .header-container {
   background-color: $color-white;
   position: relative;
-  // @TODO: Implement z-index function for all z-index
   z-index: 150;
 
   & > .container {
@@ -292,12 +270,6 @@ $better-header-design: false;
   align-items: flex-start;
   display: flex;
 
-  @if $better-header-design {
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: center;
-  }
-
   @if $font-size-hack {
     font-size: fix-font-size-hack(1em);
   }
@@ -308,10 +280,6 @@ $better-header-design: false;
     margin: 0 0.5em;
     position: relative;
     top: -1px;
-
-    @if $better-header-design {
-      display: none;
-    }
   }
 }
 
@@ -370,6 +338,10 @@ $better-header-design: false;
   &[aria-expanded="true"] {
     text-decoration: underline;
   }
+
+  &:focus {
+    outline: 1px solid #000;
+  }
 }
 
 .header-search {
@@ -380,7 +352,6 @@ $better-header-design: false;
   position: absolute;
   right: 0;
   transform: translateY(-100%);
-  // @TODO: Implement z-index function for all z-index
   z-index: 10;
 
   &.open {
@@ -423,6 +394,13 @@ $better-header-design: false;
       background-color: $color-white;
       color: $color-black;
     }
+
+    &:focus {
+      outline: 1px solid #fff;
+      outline-offset: 1px;
+      //outline: 1px solid #fff;
+      //border: 1px solid #000;
+    }
   }
 
   input:checked + label {
@@ -448,7 +426,8 @@ $better-header-design: false;
   padding: 11px 15px;
 
   &:focus {
-    outline: none;
+    outline: 1px solid #000;
+    border: 1px solid #fff;
   }
 
   &::-webkit-search-cancel-button {
@@ -468,6 +447,12 @@ $better-header-design: false;
       filter: invert(1);
     }
   }
+  &:focus {
+    border: 1px solid #000;
+    outline: 1px solid #fff;
+    margin: 1px;
+    padding: 16px;
+  }
 }
 
 .header-language-switcher {
@@ -479,7 +464,7 @@ $better-header-design: false;
     .menu {
       display: flex;
       font-size: fix-font-size-hack(1.25em);
-      gap: fix-font-size-hack(0.8em);
+      gap: fix-font-size-hack(1.2em);
     }
 
     a.menu-link {
@@ -512,7 +497,6 @@ $better-header-design: false;
   right: 0;
   text-transform: uppercase;
   top: 100%;
-  // @TODO: Implement z-index function for all z-index
   z-index: 1;
 }
 
@@ -549,6 +533,10 @@ $better-header-design: false;
     &:after {
       filter: invert(1);
     }
+  }
+
+  &:focus {
+    outline: 1px solid #000;
   }
 
   &[aria-expanded="true"]:after {
@@ -643,7 +631,6 @@ $better-header-design: false;
   display: none;
   position: relative;
   transform: translateX(-100vw);
-  // @TODO: Implement z-index function for all z-index
   z-index: 1;
 
   &.open {
@@ -667,7 +654,7 @@ $better-header-design: false;
   .menu-item {
     align-items: center;
     display: flex;
-    padding-top: fix-font-size-hack(0.5em);
+    padding-top: fix-font-size-hack(0.375em);
   }
 
   a.menu-link {
@@ -675,7 +662,7 @@ $better-header-design: false;
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 0 4px;
-    padding-bottom: fix-font-size-hack(0.5em);
+    padding-bottom: fix-font-size-hack(0.417em);
     text-align: center;
     text-decoration: none;
     transition: background-size 0.25s ease;
@@ -699,11 +686,12 @@ $better-header-design: false;
 
   // Main nav - Mobile specific layout and color
   &--mobile {
-    margin-bottom: fix-font-size-hack(2em);
+    margin-top: fix-font-size-hack(2.375em);
+    margin-bottom: fix-font-size-hack(3em);
 
     .menu {
       flex-direction: column;
-      gap: fix-font-size-hack(0.688em);
+      gap: fix-font-size-hack(1em);
     }
 
     a.menu-link {
@@ -773,11 +761,11 @@ $better-header-design: false;
 
   // Secondary nav - Mobile specific layout and color
   &--mobile {
-    margin-bottom: fix-font-size-hack(2em);
+    margin-bottom: fix-font-size-hack(2.375em);
 
     .menu {
       flex-direction: column;
-      gap: fix-font-size-hack(0.75em);
+      gap: fix-font-size-hack(1em);
     }
 
     a.menu-link {
@@ -833,30 +821,6 @@ $better-header-design: false;
 
   .university-logo-fill {
     transition: fill 0.4s ease;
-  }
-}
-
-@media (min-width: $breakpoint-sm) {
-  @if $better-header-design {
-    .header {
-      a.header-university-link {
-        margin-bottom: 0;
-      }
-
-      a.header-unit-link {
-        text-align: left;
-      }
-    }
-
-    .header-top-brand {
-      flex-direction: row;
-      flex-grow: 1;
-      justify-content: flex-start;
-
-      .divider {
-        display: inline;
-      }
-    }
   }
 }
 

@@ -91,7 +91,9 @@
 
             <div class="header-main-utilities">
               <div class="header-tools">
-                <button type="button" class="header-search-trigger" aria-expanded="false" aria-controls="header-search" aria-label="Chercher"><i aria-hidden="true" class="ul-i-search" role="presentation"></i></button>
+                <button type="button" class="header-search-trigger" aria-expanded="false" aria-controls="header-search" aria-label="Chercher">
+                  <i aria-hidden="true" class="ul-i-search" role="presentation"></i>
+                </button>
 
                 <!-- Anonymous, not logged in version -->
                 <a href="#" class="ul-secure-login" aria-label="Espace sécurisé" title="Espace sécurisé"><i class="ul-i-login" aria-role="presentation" aria-hidden="true"></i></a>
@@ -187,24 +189,24 @@
 
               <!-- Replace the data-action and data-placeholder for your own-->
               <!-- The data-placeholder and the label should be localized -->
-              <input id="search-in--website" class="visually-hidden" type="radio" name="search-type" value="website" data-action="/chercher/google" data-placeholder="Que cherchez-vous?">
-              <label for="search-in--website">Tout ulaval.ca</label>
+              <input id="search-in--website" tabindex="-1" class="visually-hidden" type="radio" name="search-type" value="website" data-action="/chercher/google" data-placeholder="Que cherchez-vous?">
+              <label for="search-in--website" tabindex="0">Tout ulaval.ca</label>
 
               <!-- Replace the data-action and data-placeholder for your own-->
               <!-- The data-placeholder and the label should be localized -->
-              <input id="search-in--staff" class="visually-hidden" type="radio" name="search-type" value="staff" data-action="/chercher/trouver-une-personne" data-placeholder="Qui voulez-vous joindre?">
-              <label for="search-in--staff">Bottin</label>
+              <input id="search-in--staff" tabindex="-1" class="visually-hidden" type="radio" name="search-type" value="staff" data-action="/chercher/trouver-une-personne" data-placeholder="Qui voulez-vous joindre?">
+              <label for="search-in--staff" tabindex="0">Bottin</label>
 
               <!-- Replace the data-action and data-placeholder for your own-->
               <!-- The data-placeholder and the label should be localized -->
-              <input id="search-in--map" class="visually-hidden" type="radio" name="search-type" value="map" data-action="/plan-du-campus" data-placeholder="Que cherchez-vous?">
-              <label for="search-in--map">Plan du campus</label>
+              <input id="search-in--map" tabindex="-1" class="visually-hidden" type="radio" name="search-type" value="map" data-action="/plan-du-campus" data-placeholder="Que cherchez-vous?">
+              <label for="search-in--map" tabindex="0">Plan du campus</label>
             </fieldset>
 
             <div class="header-search-main">
-              <label for="header-search-input" class="visually-hidden">Que cherchez-vous?</label>
-              <input id="header-search-input" class="header-search-input" type="search" placeholder="Chercher par mots-clés" name="q" value="" />
-              <button class="header-search-button" type="submit" value="" aria-label="Chercher">
+              <label for="header-search-input" tabindex="-1" class="visually-hidden">Que cherchez-vous?</label>
+              <input id="header-search-input" tabindex="0" class="header-search-input" type="search" placeholder="Chercher par mots-clés" name="q" value="" />
+              <button class="header-search-button" tabindex="0" type="submit" value="" aria-label="Chercher">
                 <i class="ul-i-search" aria-hidden="true" role="presentation"></i>
               </button>
             </div>

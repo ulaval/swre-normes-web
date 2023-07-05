@@ -58,6 +58,13 @@
 .footer-main {
   background-color: $color-white;
   padding: fix-font-size-hack(4em) 0;
+
+  .tel {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    text-decoration: underline;
+  }
 }
 
 .footer-contact {
@@ -134,13 +141,6 @@
   a {
     color: $color-black;
     text-decoration: none;
-  }
-
-  .tel {
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    text-decoration: underline;
   }
 }
 
@@ -488,7 +488,7 @@
 }
 
 @media (min-width: $breakpoint-xl) {
-  .footer-address-infos {
+  .footer-main {
     .tel {
       text-decoration: unset;
     }

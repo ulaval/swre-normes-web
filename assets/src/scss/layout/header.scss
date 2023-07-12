@@ -16,7 +16,7 @@
 .mobile-menu-open {
   overflow: hidden;
 
-  .header {
+  .#{prefix}header {
     background-color: $color-black;
     height: 100vh;
     left: 0;
@@ -83,7 +83,7 @@
 }
 
 // Header should always have a total height of 8.75em (without submenu)
-.header {
+.#{prefix}header {
   box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   width: 100%;
@@ -229,7 +229,7 @@
   position: relative;
   z-index: 150;
 
-  & > .container {
+  & > .#{prefix}container {
     @include property-with-fluid-value(
       "padding-bottom",
       10px,
@@ -414,7 +414,7 @@
   display: flex;
 }
 
-.header .header-search-input {
+.#{prefix}header .header-search-input {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   background-color: $color-white;
@@ -807,7 +807,7 @@
   transition: border-left 0.5s ease;
 }
 
-.header {
+.#{prefix}header {
   .university-logo-simplified {
     display: block;
     margin-right: 0.625em;
@@ -835,7 +835,7 @@
         padding-top: 0;
       }
 
-      .header {
+      .#{prefix}header {
         background-color: $color-white;
         height: initial;
         left: initial;
@@ -928,7 +928,7 @@
 @if $header-container-type == "stretched" {
   @media (min-width: 1280px) {
     .header-container {
-      & > .container {
+      & > .#{prefix}container {
         max-width: none;
       }
     }
@@ -937,7 +937,7 @@
   @if $website-container-type == "fixed" {
     @media (min-width: $breakpoint-xl) {
       .header-container {
-        & > .container {
+        & > .#{prefix}container {
           padding-left: $website-container-base-padding +
             $website-container-step-padding * 4;
           padding-right: $website-container-base-padding +
@@ -948,7 +948,7 @@
 
     @media (min-width: $breakpoint-xxl) {
       .header-container {
-        & > .container {
+        & > .#{prefix}container {
           padding-left: $website-container-base-padding +
             $website-container-step-padding * 5;
           padding-right: $website-container-base-padding +
@@ -959,7 +959,7 @@
 
     @media (min-width: $breakpoint-sl) {
       .header-container {
-        & > .container {
+        & > .#{prefix}container {
           padding-left: $website-container-base-padding +
             $website-container-step-padding * 6;
           padding-right: $website-container-base-padding +
@@ -973,7 +973,7 @@
 // Animations and transition mediaqueries
 // Override motion sickness-inducing animations
 @media (prefers-reduced-motion: reduce) {
-  .header {
+  .#{prefix}header {
     &:after {
       transition: none;
     }

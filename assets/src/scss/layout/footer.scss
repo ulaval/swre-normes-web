@@ -5,7 +5,7 @@
 // Import abstracts
 @import "../abstracts/_abstracts.scss";
 
-.footer {
+.#{prefix}footer {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
   z-index: 2;
 
@@ -307,7 +307,7 @@
   margin-bottom: fix-font-size-hack(1.5em);
 }
 
-.footer {
+.#{prefix}footer {
   .university-logo {
     display: block;
     width: 128px;

@@ -16,7 +16,7 @@
     display: flex;
     min-height: 36px;
 
-    .#{prefix}container {
+    .#{$prefix}container {
       display: flex;
       padding-bottom: 0;
       padding-top: 0;
@@ -123,7 +123,7 @@
       display: flex;
     }
 
-    .#{prefix}container {
+    .#{$prefix}container {
       padding-bottom: fix-font-size-hack(0.25em);
       padding-top: fix-font-size-hack(0.25em);
     }
@@ -239,7 +239,7 @@
     @if $header-container-type == "stretch" {
       @if $website-container-type == "fixed" {
         .header-sub-nav {
-          .#{prefix}container {
+          .#{$prefix}container {
             padding-left: $website-container-base-padding +
               $website-container-step-padding *
               4;
@@ -253,7 +253,7 @@
   }
 
   .header-sub-nav-main {
-    .#{prefix}container {
+    .#{$prefix}container {
       @include property-with-fluid-value(
         "padding-left",
         12px,
@@ -332,7 +332,7 @@
 
     @if $header-container-type == "stretched" {
       .header-sub-nav {
-        & > .#{prefix}container {
+        & > .#{$prefix}container {
           max-width: none;
         }
       }
@@ -345,7 +345,7 @@
 
       @if $website-container-type == "fixed" {
         .header-sub-nav {
-          & > .#{prefix}container {
+          & > .#{$prefix}container {
             padding-left: $website-container-base-padding +
               $website-container-step-padding *
               4;
@@ -362,7 +362,7 @@
     @if $header-container-type == "stretch" {
       @if $website-container-type == "fixed" {
         .header-sub-nav {
-          & > .#{prefix}container {
+          & > .#{$prefix}container {
             padding-left: $website-container-base-padding +
               $website-container-step-padding *
               5;
@@ -379,7 +379,7 @@
     @if $header-container-type == "stretch" {
       @if $website-container-type == "fixed" {
         .header-sub-nav {
-          & > .#{prefix}container {
+          & > .#{$prefix}container {
             padding-left: $website-container-base-padding +
               $website-container-step-padding *
               6;

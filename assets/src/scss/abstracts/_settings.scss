@@ -78,3 +78,24 @@ $font-size-hack: false;
     @return $value;
   }
 }
+
+/**
+ * @TODO
+ * Insert the prefix name that you want to see before some classes that wraps round the main elements.
+ * This is done to prevent name-clashes between generic names.
+ * This can be left empty and it will not cause issues.
+ * Be cautious, if you use this settings, the html examples given with this packages will not
+ * work properly until you adjust the class names with the prefix you configured bellow.
+ *
+ * For now only the classes are prefixed with this variable:
+ * .container
+ * .container-fullwidth
+ * .header
+ * .footer
+ * .main
+ * .divider
+ *
+ * @usage $prefix: "normes-web-";
+ * @usage $prefix: "ulaval-";
+ */
+ $prefix: "";

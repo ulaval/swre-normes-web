@@ -29,11 +29,11 @@ body {
   min-height: 100vh;
 }
 
-.main {
+.#{$prefix}main {
   flex-grow: 1;
 }
 
-.container {
+.#{$prefix}container {
   margin-left: auto;
   margin-right: auto;
   max-width: $website-container-max-width;
@@ -49,13 +49,13 @@ body {
   }
 }
 
-.container-fullwidth {
+.#{$prefix}container-fullwidth {
   max-width: none;
 }
 
 @if $website-container-max-width >= $breakpoint-sm {
   @media (min-width: $breakpoint-sm) {
-    .container {
+    .#{$prefix}container {
       @if $website-container-type == "fixed" {
         max-width: $breakpoint-sm - px($website-container-step-padding * 2 * 1);
       }
@@ -74,7 +74,7 @@ body {
 
 @if $website-container-max-width >= $breakpoint-md {
   @media (min-width: $breakpoint-md) {
-    .container {
+    .#{$prefix}container {
       @if $website-container-type == "fixed" {
         max-width: $breakpoint-md - px($website-container-step-padding * 2 * 2);
       }
@@ -93,7 +93,7 @@ body {
 
 @if $website-container-max-width >= $breakpoint-lg {
   @media (min-width: $breakpoint-lg) {
-    .container {
+    .#{$prefix}container {
       @if $website-container-type == "fixed" {
         max-width: $breakpoint-lg - px($website-container-step-padding * 2 * 3);
       }
@@ -112,7 +112,7 @@ body {
 
 @if $website-container-max-width >= $breakpoint-xl {
   @media (min-width: $breakpoint-xl) {
-    .container {
+    .#{$prefix}container {
       @if $website-container-type == "fixed" {
         max-width: $breakpoint-xl - px($website-container-step-padding * 2 * 4);
       }
@@ -131,7 +131,7 @@ body {
 
 @if $website-container-max-width >= $breakpoint-xxl {
   @media (min-width: $breakpoint-xxl) {
-    .container {
+    .#{$prefix}container {
       @if $website-container-type == "fixed" {
         max-width: $breakpoint-xxl -
           px($website-container-step-padding * 2 * 5);
@@ -151,7 +151,7 @@ body {
 
 @if $website-container-max-width >= $breakpoint-sl {
   @media (min-width: $breakpoint-sl) {
-    .container {
+    .#{$prefix}container {
       @if $website-container-type == "fixed" {
         max-width: $breakpoint-sl - px($website-container-step-padding * 2 * 6);
       }

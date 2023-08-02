@@ -11,13 +11,19 @@
       filter: invert(1);
     }
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       background-color: $color-white;
       i {
         transition: none;
         filter: none;
       }
+
+      &:after{
+        filter: none;
+      }
     }
+
   }
   .ul-secure-menu-trigger {
     &:hover,
@@ -50,7 +56,8 @@
   line-height: fix-font-size-hack(1rem);
   color: $color-black;
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     background-color: $color-black;
     i {
       filter: invert(1);
@@ -78,6 +85,7 @@
   }
   &:hover,
   &:active,
+  &:focus,
   &[aria-expanded="true"] {
     background-color: $color-black;
     &:after {

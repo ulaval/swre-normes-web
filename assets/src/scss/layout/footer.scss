@@ -279,7 +279,7 @@
 
   &:focus {
     outline-color: $color-black;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 1px;
     outline-offset: fix-font-size-hack(0.5em);
   }

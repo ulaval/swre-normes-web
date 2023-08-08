@@ -51,6 +51,16 @@
       &:after {
         background-color: $color-white;
       }
+      &:focus {
+        background-color: $color-white;
+        i {
+          transition: none;
+          filter: none;
+        }
+        svg {
+          fill: #000;
+        }
+      }
     }
 
     .header-search-trigger {
@@ -59,7 +69,8 @@
         filter: invert(1);
       }
       &:hover,
-      &:active {
+      &:active,
+      &:focus {
         background-color: $color-white;
         i {
           transition: none;
@@ -136,7 +147,7 @@
     &:focus {
       outline-color: $color-black;
       outline-offset: 2px;
-      outline-style: dotted;
+      outline-style: solid;
       outline-width: 1px;
     }
   }
@@ -319,7 +330,8 @@
   }
 
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     background-color: $color-black;
     i {
       filter: invert(1);
@@ -474,6 +486,10 @@
       &:hover {
         text-decoration: underline;
       }
+
+      &:focus {
+        outline: 1px solid #fff;
+      }
     }
 
     .current-language {
@@ -619,6 +635,17 @@
         -webkit-transition: all .2s ease .2s;
         transition: all .2s ease .2s;
       }
+    }
+  }
+
+  &:focus {
+    background-color: $color-black;
+    i {
+      transition: none;
+      filter: none;
+    }
+    svg.nav-mobile-icon {
+      fill: #fff;
     }
   }
 }
@@ -877,7 +904,8 @@
           filter: none;
         }
         &:hover,
-        &:active {
+        &:active,
+        &:focus {
           background-color: $color-black;
           i {
             transition: none;

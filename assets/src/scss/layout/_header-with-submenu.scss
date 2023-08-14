@@ -74,15 +74,15 @@
       &:focus {
         background-color: $color-white;
         color: $color-black;
+        outline-color: #000;
+        outline-offset: -3px;
+        outline-style: solid;
+        outline-width: 1px;
 
         &:before,
         &:after {
           background-color: $color-white;
         }
-      }
-
-      &:focus {
-        outline: none;
       }
     }
   }

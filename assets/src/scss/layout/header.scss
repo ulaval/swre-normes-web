@@ -701,7 +701,10 @@
     }
 
     &:focus {
-      outline: none;
+      outline-color: #fff;
+      outline-offset: 3px;
+      outline-style: solid;
+      outline-width: 1px;
     }
 
     &.is-active {
@@ -949,6 +952,17 @@
 
     .header-main-brand {
       flex: 0 0 auto;
+    }
+
+    .header-main-nav {
+      a.menu-link {
+        &:focus {
+          outline-color: #000;
+          outline-offset: 3px;
+          outline-style: solid;
+          outline-width: 1px;
+        }
+      }
     }
   }
 }

@@ -28,7 +28,8 @@
   $value-start,
   $value-end,
   $breakpoint-start,
-  $breakpoint-end
+  $breakpoint-end,
+  $default-breakpoint: 0
 ) {
   // Define complex calculation to have a fluid value changing between to breakpoints
   $base-value: $value-start;
@@ -40,8 +41,10 @@
     $values-difference * ($viewport-difference / $breakpoints-difference)
   );
 
-  // Use $value-start as the default value in browser cannot render the complex calculation
-  #{$property}: $value-start;
+  @media (min-width: $default-breakpoint) {
+    // Use $value-start as the default value in browser cannot render the complex calculation
+    #{$property}: $value-start;
+  }
 
   @media (min-width: $breakpoint-start) {
     // Use complex calculation after the $breakpoint-start to start the fluid value

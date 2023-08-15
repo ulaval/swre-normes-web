@@ -180,7 +180,6 @@
   }
 
   a.header-university-link {
-    align-items: center;
     display: flex;
     white-space: nowrap;
     padding: 2px;
@@ -287,7 +286,7 @@
 
   .#{$prefix}divider {
     align-self: stretch;
-    border-left: 1px solid $color-gray-medium;
+    border-left: 1px solid $color-black;
     margin: 0 0.5em;
     position: relative;
     top: -1px;
@@ -585,8 +584,8 @@
     .ouvrir-haut,
     .ouvrir-milieu,
     .ouvrir-bas {
-      -webkit-transition: all .2s ease .2s;
-      transition: all .2s ease .2s;
+      -webkit-transition: all 0.2s ease 0.2s;
+      transition: all 0.2s ease 0.2s;
     }
     .fermer-gauche {
       //visibility: hidden;
@@ -628,12 +627,12 @@
         -webkit-transform: rotate(0.2s);
         transform: rotate(0.2s);
         -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%
+        transform-origin: 50% 50%;
       }
       path.fermer-gauche {
         opacity: 1;
-        -webkit-transition: all .2s ease .2s;
-        transition: all .2s ease .2s;
+        -webkit-transition: all 0.2s ease 0.2s;
+        transition: all 0.2s ease 0.2s;
       }
     }
   }
@@ -651,7 +650,7 @@
 }
 
 .header-mobile-menu {
-  animation-duration: 0.4s;
+  animation-duration: 0.5s;
   animation-name: slide-out-left;
   animation-timing-function: ease;
   background-color: $color-black;
@@ -701,7 +700,10 @@
     }
 
     &:focus {
-      outline: none;
+      outline-color: #fff;
+      outline-offset: 3px;
+      outline-style: solid;
+      outline-width: 1px;
     }
 
     &.is-active {
@@ -915,18 +917,18 @@
       }
 
       .header-top-brand .#{$prefix}divider {
-        border-left: 1px solid $color-gray-medium;
+        border-left: 1px solid $color-black;
       }
     }
 
     // Hide mobile-only elements
-    .header-menu-trigger{
+    .header-menu-trigger {
       .nav-mobile-icon {
         opacity: 0;
         -webkit-transform: rotate(-180deg);
         transform: rotate(-180deg);
         -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%
+        transform-origin: 50% 50%;
       }
     }
 
@@ -949,6 +951,17 @@
 
     .header-main-brand {
       flex: 0 0 auto;
+    }
+
+    .header-main-nav {
+      a.menu-link {
+        &:focus {
+          outline-color: #000;
+          outline-offset: 3px;
+          outline-style: solid;
+          outline-width: 1px;
+        }
+      }
     }
   }
 }

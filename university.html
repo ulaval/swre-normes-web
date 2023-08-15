@@ -22,7 +22,7 @@
     <title>Université Laval - Normes web</title>
     <meta name="description" content="Normes web pour le site institutionnel ulaval.ca" />
 
-    <!-- Keep this stylesheet order for optimal performance -->
+    <!-- @TODO: Keep this stylesheet order for optimal performance -->
     <link rel="stylesheet" href="./assets/dist/css/fonts.css" type="text/css" media="all" />
     <link rel="stylesheet" href="./assets/dist/css/base.css" type="text/css" media="all" />
     <link rel="stylesheet" href="./assets/dist/css/utils.css" type="text/css" media="all" />
@@ -34,8 +34,7 @@
 
   <body class="university">
 
-    <!-- For accessibility reason, we have a visually hidden anchor directing to the main content -->
-    <!-- @TODO: The text should be translated in multi-language website -->
+    <!-- @TODO: The accessibility skip to content link should be localized -->
     <div class="skip-to-content">
       <div class="container">
         <a href="#main-content" class="visually-hidden focusable">Aller au contenu principal</a>
@@ -101,10 +100,10 @@
                 <button type="button" class="header-search-trigger" aria-expanded="false" aria-controls="header-search" aria-label="Chercher">
                   <i aria-hidden="true" class="ul-i-search" role="presentation"></i>
                 </button>
-                <!-- @TODO: Anonymous, not logged in version -->
+                <!-- @TODO: Use this for the anonymous, not logged in version -->
                 <!-- <a href="#" class="ul-secure-login" aria-label="Espace sécurisé" title="Espace sécurisé"><i class="ul-i-login" aria-role="presentation" aria-hidden="true"></i></a> -->
 
-                <!-- @TODO: Connected, logged in version -->
+                <!-- @TODO: Use this for the connected, logged in version -->
                 <!-- <nav class="ul-secure-menu-container">
                   <button type="button" id="ul-secure-menu-button" aria-haspopup="true" class="ul-secure-menu-trigger" aria-expanded="false" aria-controls="ul-secure-menu" aria-label="Ouvrir le menu sécurisé" title="Espace sécurisé">
                     <i aria-hidden="true" aria-role="presentation" class="ul-i-secure-logged"></i>

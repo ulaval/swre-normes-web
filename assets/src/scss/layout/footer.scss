@@ -79,7 +79,7 @@
 .footer-address {
   text-align: left;
 
-  p>span+span.contact-row:before {
+  p > span + span.contact-row:before {
     content: "|";
     padding: 0 0.25em 0 0;
     position: relative;
@@ -292,6 +292,8 @@
 }
 
 .footer-accreditations {
+  margin-right: auto;
+
   .menu {
     display: flex;
     flex-wrap: wrap;
@@ -358,17 +360,17 @@
   //moved rules fdrom 470px breakpoint back to first mobile rule breakpoint
   margin-top: 0;
 
-    li {
-      display: inline-block;
-      margin-top: 0;
+  li {
+    display: inline-block;
+    margin-top: 0;
 
-      &:before {
-        content: "|";
-        padding: 0 fix-font-size-hack(0.5em);
-        position: relative;
-        top: -1px;
-      }
+    &:before {
+      content: "|";
+      padding: 0 fix-font-size-hack(0.5em);
+      position: relative;
+      top: -1px;
     }
+  }
 }
 
 @media (min-width: $breakpoint-sm) {
@@ -412,7 +414,7 @@
 
   .footer-logos {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: fix-font-size-hack(2em);
   }
 

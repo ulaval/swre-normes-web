@@ -57,7 +57,7 @@ npm run build
 ```
 
 ### Documentation ###
-Les normes web ont été construites à partir de nos standards de programmation définit ici: [Standards de programmation du SWRE](https://wiki.dti.ulaval.ca/display/OrgBSW/UL+-+Normes+web).
+Documentation des normes sur le [Guide des ressources Web](https://ressourcesweb.ulaval.ca/composantes/en-tete-menu-et-pied-de-page/)
 
 ### Soutien à l'installation ###
 Contacter [info@bsw.ulaval.ca](mailto:info@bsw.ulaval.ca) pour obtenir de l'aide.

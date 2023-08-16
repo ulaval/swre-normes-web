@@ -57,7 +57,7 @@ npm run build
 ```
 
 ### Documentation ###
-Documentation des normes sur le Guide des ressources Web, section [En-tête](https://ressourcesweb.ulaval.ca/identite-visuelle/en-tete/) et [Pied de page]https://ressourcesweb.ulaval.ca/identite-visuelle/pied-de-page/)
+Documentation des normes sur le Guide des ressources Web, section [En-tête](https://ressourcesweb.ulaval.ca/identite-visuelle/en-tete/) et [Pied de page](https://ressourcesweb.ulaval.ca/identite-visuelle/pied-de-page/)
 
 ### Soutien à l'installation ###
 Contacter [info@bsw.ulaval.ca](mailto:info@bsw.ulaval.ca) pour obtenir de l'aide.

@@ -30,7 +30,9 @@ body {
 }
 
 .#{$prefix}main {
+  @include z-index("main");
   flex-grow: 1;
+  position: relative;
 }
 
 .#{$prefix}container {

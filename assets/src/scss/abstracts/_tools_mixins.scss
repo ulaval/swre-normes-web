@@ -56,3 +56,38 @@
     #{$property}: $value-end;
   }
 }
+
+/**
+ * Generates a z-index property with optional adjustments and importance.
+ *
+ * @param {String} $layer - The logical layer name for the desired z-index value.
+ * @param {Number} $added-value - (Optional) Additional value to adjust the z-index.
+ *
+ * @example
+ * // Usage:
+ * .modal {
+ *   @include z-index('modal', 10);
+ * }
+ *
+ * // Output:
+ * .modal {
+ *   z-index: 610;
+ * }
+ */
+@mixin z-index($layer, $added-value: 0) {
+  $z-index-map: (
+    "absolute-top": 900,
+    "cms": 800,
+    "overlay": 700,
+    "modal": 600,
+    "header": 500,
+    "main": 400,
+    "footer": 300,
+    "background": 200,
+    "absolute-bottom": 100,
+  );
+
+  $base-value: map-get($z-index-map, $layer);
+
+  z-index: $base-value + $added-value;
+}

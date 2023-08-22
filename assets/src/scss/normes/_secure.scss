@@ -19,11 +19,10 @@
         filter: none;
       }
 
-      &:after{
+      &:after {
         filter: none;
       }
     }
-
   }
   .ul-secure-menu-trigger {
     &:hover,
@@ -117,7 +116,6 @@
   list-style: none;
   border: 1px $color-black solid;
   white-space: nowrap;
-  z-index: 1;
 
   .menu-item {
     &:not(:first-child) {

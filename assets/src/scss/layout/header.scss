@@ -95,10 +95,10 @@
 
 // Header should always have a total height of 8.75em (without submenu)
 .#{$prefix}header {
-  @include z-index("header");
   box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   width: 100%;
+  @include z-index("header");
 
   &:before,
   &:after {
@@ -107,7 +107,6 @@
   }
 
   &:before {
-    @include z-index("header", 50);
     background-image: linear-gradient(
       90deg,
       $color-ul-red,
@@ -120,6 +119,7 @@
     background-size: 100% 8px;
     height: 8px;
     position: relative;
+    @include z-index("header", 40);
   }
 
   &:after {
@@ -235,9 +235,9 @@
 }
 
 .header-container {
-  @include z-index("header", 25);
   background-color: $color-white;
   position: relative;
+  @include z-index("header", 20);
 
   & > .#{$prefix}container {
     @include property-with-fluid-value(
@@ -357,13 +357,13 @@
 
 .header-search {
   animation: slide-out-top 0.25s;
-  display: none;
   background: $color-black;
+  display: none;
   left: 0;
   position: absolute;
   right: 0;
   transform: translateY(-100%);
-  z-index: 10;
+  @include z-index("header", 10);
 
   &.open {
     animation: slide-in-top 0.25s;
@@ -512,7 +512,6 @@
   right: 0;
   text-transform: uppercase;
   top: 100%;
-  z-index: 1;
 }
 
 .header-language-switcher-trigger {
@@ -656,7 +655,7 @@
   display: none;
   position: relative;
   transform: translateX(-100vw);
-  z-index: 1;
+  @include z-index("header", 30);
 
   &.open {
     animation-name: slide-in-left;

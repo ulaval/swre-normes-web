@@ -23,6 +23,7 @@
     overflow-y: scroll;
     position: fixed;
     top: 0;
+    @include z-index("absolute-top");
 
     // Extremely important animation fix when mobile menu overflows
     transition-delay: 0.4s;

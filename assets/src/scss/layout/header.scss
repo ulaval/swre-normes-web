@@ -418,6 +418,7 @@
   input:checked + label {
     background-color: $color-white;
     color: $color-black;
+    text-decoration: underline;
   }
 }
 

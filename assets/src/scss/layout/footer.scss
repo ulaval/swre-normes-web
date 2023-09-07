@@ -357,20 +357,11 @@
       outline-color: $color-gray-light;
     }
   }
-  // //moved rules fdrom 470px breakpoint back to first mobile rule breakpoint
-  // margin-top: 0;
+}
 
-  // li {
-  //   display: inline-block;
-  //   margin-top: 0;
-
-  //   &:before {
-  //     content: "|";
-  //     padding: 0 fix-font-size-hack(0.5em);
-  //     position: relative;
-  //     top: -1px;
-  //   }
-  // }
+.footer-copyright,
+.footer-legal {
+  line-height: 1.5em;
 }
 
 @media (min-width: 470px) {

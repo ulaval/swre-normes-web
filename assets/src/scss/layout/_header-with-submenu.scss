@@ -74,7 +74,7 @@
       &:focus {
         background-color: $color-white;
         color: $color-black;
-        outline-color: #000;
+        outline-color: $color-black;
         outline-offset: -3px;
         outline-style: solid;
         outline-width: 1px;

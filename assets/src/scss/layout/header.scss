@@ -59,24 +59,24 @@
           filter: none;
         }
         svg {
-          fill: #000;
+          fill: $color-black;
         }
       }
     }
 
     .header-search-trigger {
-      i {
-        transition: filter 0.5s ease;
-        filter: invert(1);
-      }
+      // i {
+      //   transition: filter 0.5s ease;
+      //   filter: invert(1);
+      // }
       &:hover,
       &:active,
       &:focus {
         background-color: $color-white;
-        i {
-          transition: none;
-          filter: none;
-        }
+        // i {
+        //   transition: none;
+        //   filter: none;
+        // }
       }
     }
 
@@ -312,38 +312,44 @@
 }
 
 .header-search-trigger {
-  background: none;
-  border: 0;
-  color: $color-black;
+  // background: none;
+  // border: 0;
+  // color: $color-black;
   cursor: pointer;
-  font-family: var(--ul-font);
-  font-size: fix-font-size-hack(1em);
-  line-height: fix-font-size-hack(1em);
-  padding: fix-font-size-hack(0.938em) fix-font-size-hack(1em);
-  position: relative;
+  // font-family: var(--ul-font);
+  // font-size: fix-font-size-hack(1em);
+  // line-height: fix-font-size-hack(1em);
+  // padding: fix-font-size-hack(0.938em) fix-font-size-hack(1em);
+  // position: relative;
+  width: 3em;
+  height: 3em;
+  overflow: hidden;
 
-  @media (prefers-reduced-motion: no-preference) {
-    transition: color 0.2s ease;
-    i {
-      transition: background-position 0.5s ease;
-    }
-  }
+  // @media (prefers-reduced-motion: no-preference) {
+  //   transition: color 0.2s ease;
+  //   i {
+  //     transition: background-position 0.5s ease;
+  //   }
+  // }
 
   &:hover,
   &:active,
   &:focus {
     background-color: $color-black;
-    i {
-      filter: invert(1);
+    svg {
+      fill: $color-white;
     }
+    // i {
+    //   filter: invert(1);
+    // }
   }
 
   &[aria-expanded="true"] {
     background-color: $color-black;
-    i {
-      filter: invert(1) !important;
-      background-position: top left;
-    }
+    // i {
+    //   filter: invert(1) !important;
+    //   background-position: top left;
+    // }
   }
 
   &:active,
@@ -352,7 +358,7 @@
   }
 
   &:focus {
-    outline: 1px solid #000;
+    outline: 1px solid $color-black;
   }
 }
 
@@ -408,10 +414,10 @@
     }
 
     &:focus {
-      outline: 1px solid #fff;
+      outline: 1px solid $color-white;
       outline-offset: 1px;
-      //outline: 1px solid #fff;
-      //border: 1px solid #000;
+      //outline: 1px solid $color-white;
+      //border: 1px solid  $color-black;
     }
   }
 
@@ -439,8 +445,8 @@
   padding: 11px 15px;
 
   &:focus {
-    outline: 1px solid #000;
-    border: 1px solid #fff;
+    outline: 1px solid $color-black;
+    border: 1px solid $color-white;
   }
 
   &::-webkit-search-cancel-button {
@@ -461,8 +467,8 @@
     }
   }
   &:focus {
-    border: 1px solid #000;
-    outline: 1px solid #fff;
+    border: 1px solid $color-black;
+    outline: 1px solid $color-white;
     margin: 1px;
     padding: 16px;
   }
@@ -489,7 +495,7 @@
       }
 
       &:focus {
-        outline: 1px solid #fff;
+        outline: 1px solid $color-white;
       }
     }
 
@@ -503,7 +509,7 @@
 
 .header-language-switcher-list {
   background-color: $color-black;
-  border-top: 1px solid #fff;
+  border-top: 1px solid $color-white;
   border: 1px solid $color-black;
   color: $color-white;
   left: 0;
@@ -551,7 +557,7 @@
   }
 
   &:focus {
-    outline: 1px solid #000;
+    outline: 1px solid $color-black;
   }
 
   &[aria-expanded="true"]:after {
@@ -596,7 +602,7 @@
 
   &[aria-expanded="false"] {
     svg.nav-mobile-icon {
-      fill: #000;
+      fill: $color-black;
 
       .ouvrir-haut,
       .ouvrir-milieu,
@@ -618,7 +624,7 @@
   }
   &[aria-expanded="true"] {
     svg.nav-mobile-icon {
-      fill: #fff;
+      fill: $color-white;
 
       .ouvrir-haut,
       .ouvrir-milieu,
@@ -645,7 +651,7 @@
       filter: none;
     }
     svg.nav-mobile-icon {
-      fill: #fff;
+      fill: $color-white;
     }
   }
 }
@@ -701,7 +707,7 @@
     }
 
     &:focus {
-      outline-color: #fff;
+      outline-color: $color-white;
       outline-offset: 3px;
       outline-style: solid;
       outline-width: 1px;
@@ -902,18 +908,18 @@
       }
 
       .header-search-trigger {
-        i {
-          transition: filter 0.5s ease;
-          filter: none;
-        }
+        // i {
+        //   transition: filter 0.5s ease;
+        //   filter: none;
+        // }
         &:hover,
         &:active,
         &:focus {
           background-color: $color-black;
-          i {
-            transition: none;
-            filter: invert(1);
-          }
+          // i {
+          //   transition: none;
+          //   filter: invert(1);
+          // }
         }
       }
 
@@ -957,7 +963,7 @@
     .header-main-nav {
       a.menu-link {
         &:focus {
-          outline-color: #000;
+          outline-color: $color-black;
           outline-offset: 3px;
           outline-style: solid;
           outline-width: 1px;

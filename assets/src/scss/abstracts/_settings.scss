@@ -3,8 +3,7 @@
  */
 
 /**
- * @TODO
- * Define the responsive way to resize the website.
+ * @TODO: Define the responsive way to resize the website.
  *
  * With the "fixed" method, the website will have multiple pre-defined breakpoints.
  * With the fluid" method, the website will always use 100% of the available space.
@@ -15,8 +14,7 @@
 $website-container-type: "fluid";
 
 /**
- * @TODO
- * Define the way to contain the header.
+ * @TODO: Define the way to contain the header.
  *
  * With the "contained" method, the header will be contained with the website content.
  * With the "stretched" method, the header will be not contained with the website content.
@@ -27,8 +25,7 @@ $website-container-type: "fluid";
 $header-container-type: "contained";
 
 /**
- * @TODO
- * Define the max-width that the website will stop stretching.
+ * @TODO: Define the max-width that the website will stop stretching.
  * *
  * @usage $website-container-max-width: 1940px;
  * @usage $website-container-max-width: 1600px;
@@ -37,8 +34,7 @@ $header-container-type: "contained";
 $website-container-max-width: 1600px;
 
 /**
- * @TODO
- * If true, add some styles to style the submenu.
+ * @TODO: If true, add some styles to style the submenu.
  *
  * @usage $header-with-submenu: false;
  * @usage $header-with-submenu: true;
@@ -46,8 +42,7 @@ $website-container-max-width: 1600px;
 $header-with-submenu: true;
 
 /**
- * @TODO
- * If true, remove some styles to always keep the main menu always mobile.
+ * @TODO: If true, remove some styles to always keep the main menu always mobile.
  *
  * @usage $menu-is-always-mobile: false;
  * @usage $menu-is-always-mobile: true;
@@ -55,7 +50,8 @@ $header-with-submenu: true;
 $menu-is-always-mobile: false;
 
 /**
- * @TODO
+ * @TODO: Define if you use the font-size hack
+ *
  * Fixes the font-size hack for websites using 62.5% font-sizing to use em as pixel.
  * Change $font-size-hack to true if your website use the font-size hack.
  *
@@ -80,8 +76,7 @@ $font-size-hack: false;
 }
 
 /**
- * @TODO
- * Insert the prefix name that you want to see before some classes that wraps round the main elements.
+ * @TODO: Insert the prefix name that you want to see before some classes that wraps round the main elements.
  * This is done to prevent name-clashes between generic names.
  * This can be left empty and it will not cause issues.
  * Be cautious, if you use this settings, the html examples given with this packages will not
@@ -98,4 +93,4 @@ $font-size-hack: false;
  * @usage $prefix: "normes-web-";
  * @usage $prefix: "ulaval-";
  */
- $prefix: "";
+$prefix: "";

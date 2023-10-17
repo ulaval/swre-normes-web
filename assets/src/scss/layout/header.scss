@@ -10,6 +10,10 @@
 }
 
 .mobile-menu-open.unit {
+  padding-top: 7.625em;
+}
+
+.mobile-menu-open.unit-with-submenu {
   padding-top: 9.875em;
 }
 
@@ -312,6 +316,18 @@
 
 .header-main-utilities {
   button {
+    cursor: pointer;
+    height: 3em;
+    width: 3em;
+    background-color: transparent;
+    transition: background-color 0.125s ease;
+
+    svg {
+      height: 1em;
+      width: 1em;
+      transition: fill 0.125s ease, transform 0.25s ease;
+    }
+
     &:hover,
     &:active,
     &:focus {
@@ -340,24 +356,17 @@
 }
 
 .header-search-trigger {
-  cursor: pointer;
-  height: 3em;
   overflow: hidden;
-  width: 3em;
 
   .switch-toggle {
     align-items: center;
-    display: flex;
-    height: 3em;
     justify-content: center;
+    display: flex;
+    height: 100%;
     position: relative;
     top: -100%;
     transition: top 0.25s ease-in-out;
-    width: 3em;
-    svg {
-      width: 1em;
-      height: 1em;
-    }
+    width: 100%;
   }
 
   &[aria-expanded="true"] {
@@ -583,40 +592,32 @@
 
 .header-menu-trigger {
   align-items: center;
-  background: none;
-  border: 0;
-  cursor: pointer;
+  justify-content: center;
   display: flex;
-  height: 48px;
-  padding: 0;
   position: relative;
-  width: 48px;
 
-  // svg.nav-mobile-icon {
-  //   height: 48px;
-  //   opacity: 1;
-  //   position: relative;
-  //   width: 48px;
+  svg {
+    transform: rotate(0);
+    position: absolute;
+  }
+  .menu {
+    opacity: 1;
+  }
+  .close {
+    opacity: 0;
+  }
 
-  //   .fermer-gauche {
-  //     opacity: 0;
-  //   }
-  // }
-  // svg {
-  //   .ouvrir-haut,
-  //   .ouvrir-milieu,
-  //   .ouvrir-bas {
-  //     -webkit-transition: all 0.2s ease 0.2s;
-  //     transition: all 0.2s ease 0.2s;
-  //   }
-  //   .fermer-gauche {
-  //     //visibility: hidden;
-  //     -webkit-transition: all 0;
-  //     transition: all 0;
-  //   }
-  // }
+  &[aria-expanded="true"] {
+    svg {
+      transform: rotate(-180deg);
+    }
+    .menu {
+      opacity: 0;
+    }
+    .close {
+      opacity: 1;
+    }
 
-  &[aria-expanded="false"] {
     // svg.nav-mobile-icon {
     //   fill: $color-black;
 
@@ -862,8 +863,10 @@
       overflow: initial;
 
       &.unit,
+      &.mobile-menu-open.unit-with-submenu,
       &.university {
         padding-top: 0;
+        padding-right: 0;
       }
 
       .#{$prefix}header {

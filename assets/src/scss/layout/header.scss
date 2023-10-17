@@ -46,49 +46,44 @@
     .university-logo-fill {
       fill: $color-white;
     }
+  }
 
-    .header-menu-trigger {
-      &:before,
-      &:after {
-        background-color: $color-white;
-      }
-      &:focus {
-        background-color: $color-white;
-        i {
-          transition: none;
-          filter: none;
-        }
-        svg {
-          fill: $color-black;
-        }
-      }
+  .header-menu-trigger {
+    &:before,
+    &:after {
+      background-color: $color-white;
     }
-
-    .header-search-trigger {
+    &:focus {
+      background-color: $color-white;
+      i {
+        transition: none;
+        filter: none;
+      }
       svg {
-        fill: $color-white;
-      }
-      // i {
-      //   transition: filter 0.5s ease;
-      //   filter: invert(1);
-      // }
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: $color-white;
-        svg {
-          fill: $color-black;
-        }
-        // i {
-        //   transition: none;
-        //   filter: none;
-        // }
+        fill: $color-black;
       }
     }
+  }
 
-    .header-mobile-menu {
-      transform: translateX(0);
+  .header-search-trigger {
+    svg {
+      fill: $color-white;
     }
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $color-white;
+      svg {
+        fill: $color-black;
+      }
+    }
+    &:focus {
+      outline-color: $color-black;
+    }
+  }
+
+  .header-mobile-menu {
+    transform: translateX(0);
   }
 
   .header-container {
@@ -196,6 +191,21 @@
   a.header-unit-link {
     padding: 0 2px;
     margin: 0 -2px;
+  }
+
+  .university-logo-simplified {
+    display: block;
+    margin-right: 0.625em;
+    width: 19px;
+  }
+
+  .university-logo {
+    display: block;
+    width: 128px;
+  }
+
+  .university-logo-fill {
+    transition: fill 0.4s ease;
   }
 }
 
@@ -335,21 +345,6 @@
       height: 1em;
     }
   }
-  // background: none;
-  // border: 0;
-  // color: $color-black;
-  // font-family: var(--ul-font);
-  // font-size: fix-font-size-hack(1em);
-  // line-height: fix-font-size-hack(1em);
-  // padding: fix-font-size-hack(0.938em) fix-font-size-hack(1em);
-  // position: relative;
-
-  // @media (prefers-reduced-motion: no-preference) {
-  //   transition: color 0.2s ease;
-  //   i {
-  //     transition: background-position 0.5s ease;
-  //   }
-  // }
 
   &:hover,
   &:active,
@@ -358,9 +353,12 @@
     svg {
       fill: $color-white;
     }
-    // i {
-    //   filter: invert(1);
-    // }
+  }
+  &:focus {
+    outline-color: $color-white;
+    outline-offset: -4px;
+    outline-style: solid;
+    outline-width: 2px;
   }
 
   &[aria-expanded="true"] {
@@ -372,20 +370,7 @@
     svg {
       fill: $color-white;
     }
-    // i {
-    //   filter: invert(1) !important;
-    //   background-position: top left;
-    // }
   }
-
-  // &:active,
-  // &[aria-expanded="true"] {
-  //   text-decoration: underline;
-  // }
-
-  // &:focus {
-  //   outline: 1px solid $color-black;
-  // }
 }
 
 .header-search {
@@ -459,7 +444,7 @@
   display: flex;
 }
 
-.#{$prefix}header .header-search-input {
+.header-search-input {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   background-color: $color-white;
@@ -869,23 +854,6 @@
   transition: border-left 0.5s ease;
 }
 
-.#{$prefix}header {
-  .university-logo-simplified {
-    display: block;
-    margin-right: 0.625em;
-    width: 19px;
-  }
-
-  .university-logo {
-    display: block;
-    width: 128px;
-  }
-
-  .university-logo-fill {
-    transition: fill 0.4s ease;
-  }
-}
-
 @if not $menu-is-always-mobile {
   @media (min-width: 1280px) {
     // Main desktop layout, when mobile menu was open
@@ -934,18 +902,19 @@
       }
 
       .header-search-trigger {
-        // i {
-        //   transition: filter 0.5s ease;
-        //   filter: none;
-        // }
+        svg {
+          fill: $color-black;
+        }
         &:hover,
         &:active,
         &:focus {
           background-color: $color-black;
-          // i {
-          //   transition: none;
-          //   filter: invert(1);
-          // }
+          svg {
+            fill: $color-white;
+          }
+        }
+        &:focus {
+          outline-color: $color-white;
         }
       }
 

@@ -6,7 +6,7 @@
 @import "../abstracts/_abstracts.scss";
 
 .mobile-menu-open.university {
-  padding-top: 5.125em;
+  padding-top: 5.625em;
 }
 
 .mobile-menu-open.unit {
@@ -15,6 +15,7 @@
 
 .mobile-menu-open {
   overflow: hidden;
+  padding-right: 1em;
 
   .#{$prefix}header {
     background-color: $color-black;

@@ -1,1 +1,242 @@
-.skip-to-content{text-align:center;background-color:#d4d4d4}.skip-to-content a{color:#333;display:inline-block;margin-bottom:.25em;margin-top:.25em;padding-left:.125em;padding-right:.125em}.skip-to-content a:focus{outline-color:#333;outline-offset:2px;outline-style:solid;outline-width:1px}.visually-hidden{clip-path:inset(50%);clip:rect(0 0 0 0);height:1px;overflow:hidden;position:absolute;white-space:nowrap;width:1px}.visually-hidden.focusable:active,.visually-hidden.focusable:focus{clip-path:none;clip:auto;height:auto;overflow:visible;position:static !important;white-space:normal;width:auto}.menu{margin:0;padding:0}.menu li{list-style-type:none;margin:0}.accessible-links-wrapper a{margin:0 -2px;padding:0 2px}.accessible-links-wrapper a:hover,.accessible-links-wrapper a:focus{text-decoration:underline}.accessible-links-wrapper a:focus{outline-color:#000;outline-offset:1px;outline-style:solid;outline-width:1px}@media(min-width: 768px){.skip-to-content{text-align:left}}
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./assets/src/scss/base/utils.scss ***!
+  \**********************************************************************************************************************************************************************************/
+@charset "UTF-8";
+/**
+ * Utils
+ */
+/**
+ * Import settings, functions, mixins, variables.
+ */
+/**
+ * Add customizable settings to help implementing to all website.
+ */
+/**
+ * @TODO: Define the responsive way to resize the website.
+ *
+ * With the "fixed" method, the website will have multiple pre-defined breakpoints.
+ * With the fluid" method, the website will always use 100% of the available space.
+ *
+ * @usage $website-container-type: "fixed";
+ * @usage $website-container-type: "fluid";
+ */
+/**
+ * @TODO: Define the way to contain the header.
+ *
+ * With the "contained" method, the header will be contained with the website content.
+ * With the "stretched" method, the header will be not contained with the website content.
+ *
+ * @usage $header-container-type: "contained";
+ * @usage $header-container-type: "stretched";
+ */
+/**
+ * @TODO: Define the max-width that the website will stop stretching.
+ * *
+ * @usage $website-container-max-width: 1940px;
+ * @usage $website-container-max-width: 1600px;
+ * @usage $website-container-max-width: 1280px;
+ */
+/**
+ * @TODO: If true, add some styles to style the submenu.
+ *
+ * @usage $header-with-submenu: false;
+ * @usage $header-with-submenu: true;
+ */
+/**
+ * @TODO: If true, remove some styles to always keep the main menu always mobile.
+ *
+ * @usage $menu-is-always-mobile: false;
+ * @usage $menu-is-always-mobile: true;
+ */
+/**
+ * @TODO: Define if you use the font-size hack
+ *
+ * Fixes the font-size hack for websites using 62.5% font-sizing to use em as pixel.
+ * Change $font-size-hack to true if your website use the font-size hack.
+ *
+ * @param {Length} $value - The value to fix.
+ * @param {Boolean} [$font-size-hack: false] - Whether the font-size hack is used on the website.
+ * @return {Length} - The fixed value.
+ *
+ * @usage fix-font-size-hack(1em, false) => 1em
+ * @usage fix-font-size-hack(1em, true) => 1.6em
+ * @usage fix-font-size-hack(1rem, false) => 1rem
+ * @usage fix-font-size-hack(1rem, true) => 1.6rem
+ */
+/**
+ * @TODO: Insert the prefix name that you want to see before some classes that wraps round the main elements.
+ *
+ * This is done to prevent name-clashes between generic names.
+ * This can be left empty and it will not cause issues.
+ * Be cautious, if you use this settings, the html examples given with this packages will not
+ * work properly until you adjust the class names with the prefix you configured bellow.
+ *
+ * For now only the classes are prefixed with this variable:
+ * .container
+ * .container-fullwidth
+ * .header
+ * .footer
+ * .main
+ * .divider
+ *
+ * @usage $prefix: "normes-web-";
+ * @usage $prefix: "ulaval-";
+ */
+/**
+ * Define basic functions that can be used by any website.
+ */
+/*
+ * Remove the unit of a length
+ * @param {Number} $number - Number to remove unit from
+ * @return {Number} - Unitless number
+¸*/
+/**
+ * Converts a pixel value to an rem value based on a given context.
+ *
+ * @param {Number|Length} $pixels - The pixel value to convert to rem.
+ * @param {Number|Length} [$context: $browser-context] - The context value in pixels used for the conversion.
+ * @return {Length} - The calculated value in rem.
+ *
+ * @usage rem(16px) => 1rem
+ * @usage rem(24) => 1.5rem
+ * @usage rem(16, 10) => 1.6rem
+ */
+/**
+ * Converts a pixel value to an em value based on a given context.
+ *
+ * @param {Number|Length} $pixels - The pixel value to convert to em.
+ * @param {Number|Length} [$context: $browser-context] - The context value in pixels used for the conversion.
+ * @return {Length} - The calculated value in em.
+ *
+ * @usage em(16px) => 1em
+ * @usage em(24) => 1.5em
+ * @usage em(16, 10) => 1.6em
+ */
+/**
+ * Converts a em value to an pixel value based on a given context.
+ *
+ * @param {Number|Length} $em - The em value to convert to pixels.
+ * @param {Number|Length} [$context: $browser-context] - The context value in em used for the conversion.
+ * @return {Length} - The calculated value in pixels.
+ *
+ * @usage px(1em) => 16px
+ * @usage px(1) => 16px
+ * @usage px(1, 10) => 10px
+ */
+/**
+ * Define basic mixins that can be used by any website.
+ */
+/**
+ * Creates a fluid transition for a specified CSS property between two breakpoints.
+ *
+ * @param {String} $property - The CSS property to apply the fluid transition to.
+ * @param {Value} $value-start - The starting value of the property.
+ * @param {Value} $value-end - The ending value of the property.
+ * @param {Breakpoint} $breakpoint-start - The starting breakpoint where the fluid transition begins.
+ * @param {Breakpoint} $breakpoint-end - The ending breakpoint where the fluid transition stops.
+ *
+ * @example
+ * // Usage:
+ * .element {
+ *   @include property-with-fluid-value('font-size', 18px, 24px, 1280px, 1600px);
+ * }
+ *
+ *  // Output:
+ * .element {
+ *   font-size: 14px;
+ *   font-size: calc(14px + (6vw - 48px) * 0.0666667);
+ * }
+ */
+/**
+ * Generates a z-index property with optional adjustments and importance.
+ *
+ * @param {String} $layer - The logical layer name for the desired z-index value.
+ * @param {Number} $added-value - (Optional) Additional value to adjust the z-index.
+ *
+ * @example
+ * // Usage:
+ * .modal {
+ *   @include z-index('modal', 10);
+ * }
+ *
+ * // Output:
+ * .modal {
+ *   z-index: 610;
+ * }
+ */
+/**
+ * Define basic breakpoints that can be used by any website.
+ * Always use mobile-first when using breakpoints.
+ */
+/**
+ * Define basic colors that can be used by any website.
+ */
+/**
+ * Define basic website container variables.
+ */
+.skip-to-content {
+  text-align: center;
+  background-color: #d4d4d4;
+}
+.skip-to-content a {
+  color: #333333;
+  display: inline-block;
+  margin-bottom: 0.25em;
+  margin-top: 0.25em;
+  padding-left: 0.125em;
+  padding-right: 0.125em;
+}
+.skip-to-content a:focus {
+  outline-color: #333333;
+  outline-offset: 2px;
+  outline-style: solid;
+  outline-width: 1px;
+}
+
+.visually-hidden {
+  clip-path: inset(50%);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.visually-hidden.focusable:active, .visually-hidden.focusable:focus {
+  clip-path: none;
+  clip: auto;
+  height: auto;
+  overflow: visible;
+  position: static !important;
+  white-space: normal;
+  width: auto;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  list-style-type: none;
+  margin: 0;
+}
+
+.accessible-links-wrapper a {
+  margin: 0 -2px;
+  padding: 0 2px;
+}
+.accessible-links-wrapper a:hover, .accessible-links-wrapper a:focus {
+  text-decoration: underline;
+}
+.accessible-links-wrapper a:focus {
+  outline-color: #000000;
+  outline-offset: 1px;
+  outline-style: solid;
+  outline-width: 1px;
+}
+
+@media (min-width: 768px) {
+  .skip-to-content {
+    text-align: left;
+  }
+}

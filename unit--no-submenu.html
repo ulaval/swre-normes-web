@@ -212,7 +212,11 @@
               <label for="header-search-input" tabindex="-1" class="visually-hidden">Que cherchez-vous?</label>
               <input id="header-search-input" tabindex="0" class="header-search-input" type="search" placeholder="Chercher par mots-clés" name="q" value="" />
               <button class="header-search-button" tabindex="0" type="submit" value="" aria-label="Chercher">
-                <i class="ul-i-search" aria-hidden="true" role="presentation"></i>
+                <!-- @TODO: Include this SVG as an inline SVG -->
+                <!-- ./assets/dist/svg/search.svg -->
+                <svg aria-hidden="true" aria-role="presentation" class="search" viewBox="0 0 32 32">
+                  <path d="m28.97 31.48-7.02-7.01c-5.98 4.59-14.54 3.46-19.13-2.51C-1.77 15.98-.64 7.41 5.33 2.82c5.98-4.58 14.54-3.46 19.13 2.52 3.76 4.9 3.76 11.72 0 16.62l7.01 7.02c.69.69.7 1.8 0 2.5-.69.69-1.81.7-2.5 0ZM3.61 13.67c0 5.55 4.49 10.06 10.05 10.07 2.64 0 5.17-1.03 7.05-2.88.02-.03.05-.05.07-.08l.08-.07c3.89-3.97 3.82-10.34-.15-14.23-3.97-3.89-10.34-3.82-14.23.15a10.026 10.026 0 0 0-2.87 7.04Z"></path>
+                </svg>
               </button>
             </div>
           </form>

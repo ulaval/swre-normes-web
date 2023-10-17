@@ -472,17 +472,28 @@
   border: none;
   line-height: 0.6em;
   display: inline-block;
+
   &:hover {
     background-color: $color-black;
-    i {
-      filter: invert(1);
+    svg {
+      fill: $color-white;
     }
   }
+
   &:focus {
+    background-color: $color-white;
     border: 1px solid $color-black;
     outline: 1px solid $color-white;
     margin: 1px;
     padding: 16px;
+    svg {
+      fill: $color-black;
+    }
+  }
+
+  svg {
+    height: 1em;
+    width: 1em;
   }
 }
 

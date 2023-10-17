@@ -49,37 +49,22 @@
     }
   }
 
-  .header-menu-trigger {
-    &:before,
-    &:after {
-      background-color: $color-white;
-    }
-    &:focus {
-      background-color: $color-white;
-      i {
-        transition: none;
-        filter: none;
-      }
+  .header-main-utilities {
+    button {
       svg {
-        fill: $color-black;
+        fill: $color-white;
       }
-    }
-  }
-
-  .header-search-trigger {
-    svg {
-      fill: $color-white;
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: $color-white;
-      svg {
-        fill: $color-black;
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $color-white;
+        svg {
+          fill: $color-black;
+        }
       }
-    }
-    &:focus {
-      outline-color: $color-black;
+      &:focus {
+        outline-color: $color-black;
+      }
     }
   }
 
@@ -325,14 +310,42 @@
   margin-left: auto;
 }
 
+.header-main-utilities {
+  button {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $color-black;
+      svg {
+        fill: $color-white;
+      }
+    }
+    &:focus {
+      outline-color: $color-white;
+      outline-offset: -4px;
+      outline-style: solid;
+      outline-width: 2px;
+    }
+
+    &[aria-expanded="true"] {
+      background-color: $color-black;
+      .switch-toggle {
+        top: 0;
+      }
+      svg {
+        fill: $color-white;
+      }
+    }
+  }
+}
+
 .header-search-trigger {
   cursor: pointer;
   height: 3em;
   overflow: hidden;
   width: 3em;
 
-  .icon-close,
-  .icon-search {
+  .switch-toggle {
     align-items: center;
     display: flex;
     height: 3em;
@@ -347,29 +360,9 @@
     }
   }
 
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: $color-black;
-    svg {
-      fill: $color-white;
-    }
-  }
-  &:focus {
-    outline-color: $color-white;
-    outline-offset: -4px;
-    outline-style: solid;
-    outline-width: 2px;
-  }
-
   &[aria-expanded="true"] {
-    background-color: $color-black;
-    .icon-close,
-    .icon-search {
+    .switch-toggle {
       top: 0;
-    }
-    svg {
-      fill: $color-white;
     }
   }
 }
@@ -599,80 +592,76 @@
   position: relative;
   width: 48px;
 
-  svg.nav-mobile-icon {
-    height: 48px;
-    opacity: 1;
-    position: relative;
-    width: 48px;
+  // svg.nav-mobile-icon {
+  //   height: 48px;
+  //   opacity: 1;
+  //   position: relative;
+  //   width: 48px;
 
-    .fermer-gauche {
-      opacity: 0;
-    }
-  }
-  svg {
-    .ouvrir-haut,
-    .ouvrir-milieu,
-    .ouvrir-bas {
-      -webkit-transition: all 0.2s ease 0.2s;
-      transition: all 0.2s ease 0.2s;
-    }
-    .fermer-gauche {
-      //visibility: hidden;
-      -webkit-transition: all 0;
-      transition: all 0;
-    }
-  }
+  //   .fermer-gauche {
+  //     opacity: 0;
+  //   }
+  // }
+  // svg {
+  //   .ouvrir-haut,
+  //   .ouvrir-milieu,
+  //   .ouvrir-bas {
+  //     -webkit-transition: all 0.2s ease 0.2s;
+  //     transition: all 0.2s ease 0.2s;
+  //   }
+  //   .fermer-gauche {
+  //     //visibility: hidden;
+  //     -webkit-transition: all 0;
+  //     transition: all 0;
+  //   }
+  // }
 
   &[aria-expanded="false"] {
-    svg.nav-mobile-icon {
-      fill: $color-black;
+    // svg.nav-mobile-icon {
+    //   fill: $color-black;
 
-      .ouvrir-haut,
-      .ouvrir-milieu,
-      .ouvrir-bas {
-        opacity: 1;
-        -webkit-transform: rotate(0.2s);
-        transform: rotate(0.2s);
-        -webkit-transform-origin: 100% 100%;
-        transform-origin: 100% 100%;
-        -webkit-transition: all 0s ease 0s;
-        transition: all 0s ease 0s;
-      }
-      path.fermer-gauche {
-        opacity: 0;
-        -webkit-transition: all 0s;
-        transition: all 0s;
-      }
-    }
+    //   .ouvrir-haut,
+    //   .ouvrir-milieu,
+    //   .ouvrir-bas {
+    //     opacity: 1;
+    //     -webkit-transform: rotate(0.2s);
+    //     transform: rotate(0.2s);
+    //     -webkit-transform-origin: 100% 100%;
+    //     transform-origin: 100% 100%;
+    //     -webkit-transition: all 0s ease 0s;
+    //     transition: all 0s ease 0s;
+    //   }
+    //   path.fermer-gauche {
+    //     opacity: 0;
+    //     -webkit-transition: all 0s;
+    //     transition: all 0s;
+    //   }
+    // }
   }
   &[aria-expanded="true"] {
-    svg.nav-mobile-icon {
-      fill: $color-white;
+    // svg.nav-mobile-icon {
+    //   fill: $color-white;
 
-      .ouvrir-haut,
-      .ouvrir-milieu,
-      .ouvrir-bas {
-        opacity: 0;
-        -webkit-transform: rotate(0.2s);
-        transform: rotate(0.2s);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-      }
-      path.fermer-gauche {
-        opacity: 1;
-        -webkit-transition: all 0.2s ease 0.2s;
-        transition: all 0.2s ease 0.2s;
-      }
-    }
+    //   .ouvrir-haut,
+    //   .ouvrir-milieu,
+    //   .ouvrir-bas {
+    //     opacity: 0;
+    //     -webkit-transform: rotate(0.2s);
+    //     transform: rotate(0.2s);
+    //     -webkit-transform-origin: 50% 50%;
+    //     transform-origin: 50% 50%;
+    //   }
+    //   path.fermer-gauche {
+    //     opacity: 1;
+    //     -webkit-transition: all 0.2s ease 0.2s;
+    //     transition: all 0.2s ease 0.2s;
+    //   }
+    // }
   }
 
   &:hover,
   &:focus {
     background-color: $color-black;
-    i {
-      transition: none;
-      filter: none;
-    }
     svg.nav-mobile-icon {
       fill: $color-white;
     }
@@ -906,27 +895,22 @@
         }
       }
 
-      .header-menu-trigger {
-        &:before,
-        &:after {
-          background-color: $color-black;
-        }
-      }
-
-      .header-search-trigger {
-        svg {
-          fill: $color-black;
-        }
-        &:hover,
-        &:active,
-        &:focus {
-          background-color: $color-black;
+      .header-main-utilities {
+        button {
           svg {
-            fill: $color-white;
+            fill: $color-black;
           }
-        }
-        &:focus {
-          outline-color: $color-white;
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: $color-black;
+            svg {
+              fill: $color-white;
+            }
+          }
+          &:focus {
+            outline-color: $color-white;
+          }
         }
       }
 

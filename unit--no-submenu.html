@@ -84,16 +84,15 @@
             </nav>
 
             <div class="header-main-utilities">
-              <div class="header-tools">
-                <button type="button" class="header-search-trigger" aria-expanded="false" aria-controls="header-search" aria-label="Chercher">
-                  <i aria-hidden="true" class="ul-i-search" role="presentation"></i>
-                </button>
+              <button type="button" class="header-search-trigger" aria-expanded="false" aria-controls="header-search" aria-label="Chercher">
+                <i aria-hidden="true" class="ul-i-search" role="presentation"></i>
+              </button>
 
-                <!-- @TODO: Use this for the anonymous, not logged in version -->
-                <a href="#" class="ul-secure-login" aria-label="Espace sécurisé" title="Espace sécurisé"><i class="ul-i-login" aria-role="presentation" aria-hidden="true"></i></a>
+              <!-- @TODO: Use this for the anonymous, not logged in version -->
+              <a href="#" class="ul-secure-login" aria-label="Espace sécurisé" title="Espace sécurisé"><i class="ul-i-login" aria-role="presentation" aria-hidden="true"></i></a>
 
-                <!-- @TODO: Use this for the connected, logged in version -->
-                <!-- <nav class="ul-secure-menu-container">
+              <!-- @TODO: Use this for the connected, logged in version -->
+              <!-- <nav class="ul-secure-menu-container">
                   <button type="button" id="ul-secure-menu-button" aria-haspopup="true" class="ul-secure-menu-trigger" aria-expanded="false" aria-controls="ul-secure-menu" aria-label="Ouvrir le menu sécurisé" title="Espace sécurisé">
                     <i aria-hidden="true" aria-role="presentation" class="ul-i-secure-logged"></i>
                   </button>
@@ -103,33 +102,33 @@
                   </ul>
                 </nav> -->
 
-                <nav class="header-language-switcher">
-                  <button type="button" class="header-language-switcher-trigger" aria-expanded="false" aria-controls="ul-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
-                    <span aria-hidden="true" aria-role="presentation">fr</span>
-                  </button>
-                  <ul id="header-language-switcher-list" class="header-language-switcher-list menu" role="listbox" aria-label="Sélectionnez une langue" hidden>
-                    <li class="ul-link--in-language-nav" role="option" tabindex="-1" aria-posinset="1" aria-setsize="2" aria-selected="false">
-                      <a href="#">
-                        <span lang="en" aria-label="English">en</span>
-                      </a>
-                    </li>
-                    <li class="ul-link--in-language-nav" role="option" tabindex="-1" aria-posinset="2" aria-setsize="2" aria-selected="false">
-                      <a href="#">
-                        <span lang="es" aria-label="Español">es</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-                <button type="button" class="header-menu-trigger" aria-expanded="false" aria-controls="ul-mobile-menu">
-                  <svg aria-hidden="true" class="nav-mobile-icon" viewBox="0 0 48 48">
-                    <g>
-                      <path class="ouvrir-haut ouvrir-milieu ouvrir-bas" transform="translate(16 16)" d="M.978,16a1,1,0,0,1,0-2H15.025a1,1,0,0,1,0,2Zm0-7a1,1,0,0,1,0-2H15.025a1,1,0,0,1,0,2Zm0-7A.989.989,0,0,1,0,1,.989.989,0,0,1,.978,0H15.025A.988.988,0,0,1,16,1a.988.988,0,0,1-.975,1Z" />
-                      <path class="fermer-gauche" transform="translate(16 16)" d="M.261,15.738a.884.884,0,0,1,0-1.255L6.746,8,.261,1.517A.888.888,0,0,1,1.517.262L8,6.745,14.483.262a.883.883,0,0,1,1.255,0A.868.868,0,0,1,16,.889a.874.874,0,0,1-.262.627L9.255,8l6.483,6.483a.882.882,0,0,1,0,1.255.885.885,0,0,1-1.255,0L8,9.255,1.517,15.738a.884.884,0,0,1-1.256,0Z" />
-                    </g>
-                  </svg>
-                  <span class="screen-reader-text visually-hidden">Ouvrir le menu principal</span>
+              <nav class="header-language-switcher">
+                <button type="button" class="header-language-switcher-trigger" aria-expanded="false" aria-controls="ul-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
+                  <span aria-hidden="true" aria-role="presentation">fr</span>
                 </button>
-              </div>
+                <ul id="header-language-switcher-list" class="header-language-switcher-list menu" role="listbox" aria-label="Sélectionnez une langue" hidden>
+                  <li class="ul-link--in-language-nav" role="option" tabindex="-1" aria-posinset="1" aria-setsize="2" aria-selected="false">
+                    <a href="#">
+                      <span lang="en" aria-label="English">en</span>
+                    </a>
+                  </li>
+                  <li class="ul-link--in-language-nav" role="option" tabindex="-1" aria-posinset="2" aria-setsize="2" aria-selected="false">
+                    <a href="#">
+                      <span lang="es" aria-label="Español">es</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <button type="button" class="header-menu-trigger" aria-expanded="false" aria-controls="ul-mobile-menu">
+                <svg aria-hidden="true" class="nav-mobile-icon" viewBox="0 0 48 48">
+                  <g>
+                    <path class="ouvrir-haut ouvrir-milieu ouvrir-bas" transform="translate(16 16)" d="M.978,16a1,1,0,0,1,0-2H15.025a1,1,0,0,1,0,2Zm0-7a1,1,0,0,1,0-2H15.025a1,1,0,0,1,0,2Zm0-7A.989.989,0,0,1,0,1,.989.989,0,0,1,.978,0H15.025A.988.988,0,0,1,16,1a.988.988,0,0,1-.975,1Z" />
+                    <path class="fermer-gauche" transform="translate(16 16)" d="M.261,15.738a.884.884,0,0,1,0-1.255L6.746,8,.261,1.517A.888.888,0,0,1,1.517.262L8,6.745,14.483.262a.883.883,0,0,1,1.255,0A.868.868,0,0,1,16,.889a.874.874,0,0,1-.262.627L9.255,8l6.483,6.483a.882.882,0,0,1,0,1.255.885.885,0,0,1-1.255,0L8,9.255,1.517,15.738a.884.884,0,0,1-1.256,0Z" />
+                  </g>
+                </svg>
+                <span class="screen-reader-text visually-hidden">Ouvrir le menu principal</span>
+              </button>
+
             </div>
           </div>
         </div>

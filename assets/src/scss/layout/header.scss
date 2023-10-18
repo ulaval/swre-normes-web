@@ -547,20 +547,17 @@
   right: 0;
   text-transform: uppercase;
   top: 100%;
+  padding: 0 2px 2px 2px;
 }
 
 .header-language-switcher-list-item {
-  // &:not(:first-child) {
-  // border-top: 1px solid $color-white;
-  // }
+  border-top: 1px solid $color-white;
 
   a {
     align-items: center;
-    // justify-content: center;
-    background-color: $color-gray-dark;
     color: $color-white;
     display: flex;
-    padding: 0.5em;
+    padding: 0.438em 0.5em;
     text-decoration: none;
 
     span {
@@ -570,11 +567,8 @@
     &:hover,
     &:active,
     &:focus {
-      color: $color-white;
-      outline-color: $color-white;
-      outline-offset: -4px;
-      outline-style: solid;
-      outline-width: 2px;
+      background-color: $color-white;
+      color: $color-black;
     }
   }
 }

@@ -199,40 +199,6 @@
   }
 }
 
-.header-language-switcher-list-item {
-  &:not(:first-child) {
-    border-top: 1px solid $color-white;
-  }
-
-  a {
-    box-sizing: border-box;
-    color: $color-white;
-    display: block;
-    font-size: fix-font-size-hack(0.875em);
-    padding: fix-font-size-hack(0.591em);
-    text-decoration: none;
-
-    &:hover {
-      background-color: $color-white;
-      color: $color-black;
-    }
-
-    &:focus,
-    &:focus-visible {
-      background-color: $color-white;
-      color: $color-black;
-      outline-offset: 2px;
-      outline: 1px $color-black solid;
-    }
-
-    &:active {
-      background-color: $color-white;
-      color: $color-black;
-      text-decoration: underline;
-    }
-  }
-}
-
 // Hide any non-mobile interface elements
 .header-top-meta,
 .header-main-nav,
@@ -537,21 +503,6 @@
   }
 }
 
-.header-language-switcher-list {
-  background-color: $color-black;
-  border-top: 1px solid $color-white;
-  border: 1px solid $color-black;
-  color: $color-white;
-  left: 0;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  text-transform: uppercase;
-  top: 100%;
-}
-
 .header-language-switcher-trigger {
   background: none;
   border: 0;
@@ -576,6 +527,55 @@
   &:focus,
   &[aria-expanded="true"] {
     color: $color-white;
+  }
+
+  &[aria-expanded="true"] {
+    &:hover {
+      outline-color: $color-white;
+      outline-offset: -4px;
+      outline-style: solid;
+      outline-width: 2px;
+    }
+  }
+}
+
+.header-language-switcher-list {
+  background-color: $color-black;
+  color: $color-white;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: 100%;
+}
+
+.header-language-switcher-list-item {
+  // &:not(:first-child) {
+  // border-top: 1px solid $color-white;
+  // }
+
+  a {
+    align-items: center;
+    // justify-content: center;
+    background-color: $color-gray-dark;
+    color: $color-white;
+    display: flex;
+    padding: 0.5em;
+    text-decoration: none;
+
+    span {
+      font-size: fix-font-size-hack(0.875em);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-white;
+      outline-color: $color-white;
+      outline-offset: -4px;
+      outline-style: solid;
+      outline-width: 2px;
+    }
   }
 }
 

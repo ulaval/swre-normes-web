@@ -138,10 +138,10 @@ if (
   });
 }
 
-// Activation du menu sécurisé si disponible
-if ((secureMenu = document.querySelector(".ul-secure-menu-trigger"))) {
-  secureMenu.addEventListener("click", function () {
-    openToolMenu("ul-secure-menu", ".ul-secure-menu-trigger");
+// Activation du menu secure si disponible
+if ((secureArea = document.querySelector(".header-secure-area-trigger"))) {
+  secureArea.addEventListener("click", function () {
+    openToolMenu("header-secure-area-list", ".header-secure-area-trigger");
   });
 }
 
@@ -190,7 +190,8 @@ var preventScrollOnNavKeyDowns = function (e) {
 // Retourne le focus directement sur le bouton trigger de la barre de recherche
 var detectBackTabOnSearchBar = function (e) {
   if (
-    document.activeElement == document.querySelector(".header-search-type label:first-of-type") &&
+    document.activeElement ==
+      document.querySelector(".header-search-type label:first-of-type") &&
     e.shiftKey &&
     e.keyCode == 9
   ) {

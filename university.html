@@ -128,16 +128,22 @@
                 </nav> -->
 
               <nav class="header-language-switcher">
-                <button type="button" class="header-language-switcher-trigger" aria-expanded="false" aria-controls="ul-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
+                <button type="button" class="header-language-switcher-trigger" aria-expanded="false" aria-controls="header-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
                   <span aria-hidden="true" aria-role="presentation">fr</span>
+
+                  <!-- @TODO: Include this SVG as an inline SVG -->
+                  <!-- ./assets/dist/svg/chevron-right-angle-down.svg -->
+                  <svg aria-hidden="true" aria-role="presentation" class="chevron-right-angle-down" viewBox="0 0 32 32">
+                    <path d="M16.03 25c-.54 0-1.05-.21-1.44-.58L.74 10.56c-.81-.82-.81-2.14 0-2.95.82-.81 2.14-.81 2.95 0l12.33 12.33L28.36 7.61c.51-.43 1.05-.6 1.62-.55a2.096 2.096 0 0 1 1.41 3.42L17.5 24.39c-.38.39-.92.62-1.48.62Z" />
+                  </svg>
                 </button>
                 <ul id="header-language-switcher-list" class="header-language-switcher-list menu" role="listbox" aria-label="Sélectionnez une langue" hidden>
-                  <li class="ul-link--in-language-nav" role="option" tabindex="-1" aria-posinset="1" aria-setsize="2" aria-selected="false">
+                  <li class="header-language-switcher-list-item" role="option" tabindex="-1" aria-posinset="1" aria-setsize="2" aria-selected="false">
                     <a href="#">
                       <span lang="en" aria-label="English">en</span>
                     </a>
                   </li>
-                  <li class="ul-link--in-language-nav" role="option" tabindex="-1" aria-posinset="2" aria-setsize="2" aria-selected="false">
+                  <li class="header-language-switcher-list-item" role="option" tabindex="-1" aria-posinset="2" aria-setsize="2" aria-selected="false">
                     <a href="#">
                       <span lang="es" aria-label="Español">es</span>
                     </a>

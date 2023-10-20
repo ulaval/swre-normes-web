@@ -10,6 +10,9 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 * Ajout de la classe `unit-with-submenu` sur le `body` si y il a un sous-menu
 * Remplacement de la classe `ul-language-switcher-list` pour `header-language-switcher-list` dans l'entête
 * Remplacement de la classe `ul-link--in-language-nav` pour `header-language-switcher-list-item` dans l'entête
+* Remplacement de la classe `ul-secure-menu-trigger` pour `header-secure-area-trigger` dans l'entête
+* Remplacement de la classe `ul-secure-menu` pour `header-secure-area-list` dans l'entête
+* Remplacement de la classe `menu-item` dans `ul-secure-menu` pour `header-secure-area-list-item` dans l'entête
 * Correction d'un bogue qui fesait parfois disparaitre les icônes dans l'entête
 * Uniformisation des styles des boutons de la section `header-main-utilities`
 * Corrections dans les commentaires

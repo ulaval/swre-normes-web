@@ -411,15 +411,28 @@
     }
 
     &:focus {
+<<<<<<< HEAD
       outline: 1px solid $color-white;
       outline-offset: 1px;
+=======
+      outline-color: $color-white;
+      outline-offset: -2px;
+      outline-style: solid;
+      outline-width: 2px;
+>>>>>>> master
     }
   }
 
   input:checked + label {
     background-color: $color-white;
     color: $color-black;
-    text-decoration: underline;
+
+    &:focus {
+      outline-color: $color-black;
+      outline-offset: -4px;
+      outline-style: solid;
+      outline-width: 2px;
+    }
   }
 }
 
@@ -428,20 +441,34 @@
   display: flex;
 }
 
-.header-search-input {
+.header-search-input,
+.header-search-button {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
-  background-color: $color-white;
   border-radius: 0;
   border: 0;
+  display: flex;
+}
+.header-search-input {
+  background-color: $color-white;
+
   flex: 1;
   font-size: fix-font-size-hack(1em);
-  margin: 0;
-  padding: 11px 15px;
+  margin-right: -2px;
+  padding: 0.75em 1em;
+
+  &:hover {
+    outline-color: $color-gray-medium;
+    outline-offset: -4px;
+    outline-style: solid;
+    outline-width: 2px;
+  }
 
   &:focus {
-    outline: 1px solid $color-black;
-    border: 1px solid $color-white;
+    outline-color: $color-black;
+    outline-offset: -4px;
+    outline-style: solid;
+    outline-width: 2px;
   }
 
   &::-webkit-search-cancel-button {
@@ -451,18 +478,29 @@
 
 .header-search-button {
   background-color: $color-white;
+<<<<<<< HEAD
   border: none;
   display: inline-block;
   line-height: 0.6em;
   padding: 18px;
+=======
+  padding: 1.125em;
+>>>>>>> master
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $color-black;
+
+    outline-color: $color-white;
+    outline-offset: -2px;
+    outline-style: solid;
+    outline-width: 2px;
     svg {
       fill: $color-white;
     }
   }
 
+<<<<<<< HEAD
   &:focus {
     background-color: $color-white;
     border: 1px solid $color-black;
@@ -475,6 +513,8 @@
     }
   }
 
+=======
+>>>>>>> master
   svg {
     height: 1em;
     width: 1em;
@@ -539,14 +579,15 @@
     color: $color-white;
   }
 
-  &[aria-expanded="true"] {
-    &:hover {
-      outline-color: $color-white;
-      outline-offset: -4px;
-      outline-style: solid;
-      outline-width: 2px;
-    }
-  }
+  // @TODO: Validate if necessary
+  // &[aria-expanded="true"] {
+  //   &:hover {
+  //     outline-color: $color-white;
+  //     outline-offset: -4px;
+  //     outline-style: solid;
+  //     outline-width: 2px;
+  //   }
+  // }
 }
 
 .header-secure-area-list,

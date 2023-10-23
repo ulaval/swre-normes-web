@@ -411,15 +411,10 @@
     }
 
     &:focus {
-<<<<<<< HEAD
-      outline: 1px solid $color-white;
-      outline-offset: 1px;
-=======
       outline-color: $color-white;
       outline-offset: -2px;
       outline-style: solid;
       outline-width: 2px;
->>>>>>> master
     }
   }
 
@@ -478,14 +473,7 @@
 
 .header-search-button {
   background-color: $color-white;
-<<<<<<< HEAD
-  border: none;
-  display: inline-block;
-  line-height: 0.6em;
-  padding: 18px;
-=======
   padding: 1.125em;
->>>>>>> master
 
   &:hover,
   &:focus {
@@ -500,21 +488,6 @@
     }
   }
 
-<<<<<<< HEAD
-  &:focus {
-    background-color: $color-white;
-    border: 1px solid $color-black;
-    margin: 1px;
-    outline: 1px solid $color-white;
-    padding: 16px;
-
-    svg {
-      fill: $color-black;
-    }
-  }
-
-=======
->>>>>>> master
   svg {
     height: 1em;
     width: 1em;

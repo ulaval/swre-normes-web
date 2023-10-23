@@ -6,15 +6,20 @@
 @import "../abstracts/_abstracts.scss";
 
 .mobile-menu-open.university {
-  padding-top: 5.125em;
+  padding-top: 5.625em;
 }
 
 .mobile-menu-open.unit {
-  padding-top: 7.125em;
+  padding-top: 7.625em;
+}
+
+.mobile-menu-open.unit-with-submenu {
+  padding-top: 9.875em;
 }
 
 .mobile-menu-open {
   overflow: hidden;
+  padding-right: 1em;
 
   .#{$prefix}header {
     background-color: $color-black;
@@ -46,43 +51,29 @@
     .university-logo-fill {
       fill: $color-white;
     }
+  }
 
-    .header-menu-trigger {
-      &:before,
-      &:after {
-        background-color: $color-white;
-      }
-      &:focus {
-        background-color: $color-white;
-        i {
-          transition: none;
-          filter: none;
-        }
-        svg {
-          fill: #000;
-        }
-      }
-    }
-
-    .header-search-trigger {
-      i {
-        transition: filter 0.5s ease;
-        filter: invert(1);
+  .header-main-utilities {
+    button {
+      svg {
+        fill: $color-white;
       }
       &:hover,
       &:active,
       &:focus {
         background-color: $color-white;
-        i {
-          transition: none;
-          filter: none;
+        svg {
+          fill: $color-black;
         }
       }
+      &:focus {
+        outline-color: $color-black;
+      }
     }
+  }
 
-    .header-mobile-menu {
-      transform: translateX(0);
-    }
+  .header-mobile-menu {
+    transform: translateX(0);
   }
 
   .header-container {
@@ -190,6 +181,21 @@
   a.header-unit-link {
     padding: 0 2px;
     margin: 0 -2px;
+  }
+
+  .university-logo-simplified {
+    display: block;
+    margin-right: 0.625em;
+    width: 19px;
+  }
+
+  .university-logo {
+    display: block;
+    width: 128px;
+  }
+
+  .university-logo-fill {
+    transition: fill 0.4s ease;
   }
 }
 
@@ -304,55 +310,69 @@
 }
 
 .header-main-utilities {
+  display: flex;
   margin-left: auto;
 }
 
-.header-tools {
-  display: flex;
+.header-main-utilities {
+  button {
+    cursor: pointer;
+    height: 3em;
+    width: 3em;
+    background-color: transparent;
+    transition: background-color 0.125s ease;
+
+    svg {
+      height: 1em;
+      width: 1em;
+      transition: fill 0.125s ease, transform 0.25s ease;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $color-black;
+      svg {
+        fill: $color-white;
+      }
+    }
+    &:focus {
+      outline-color: $color-white;
+      outline-offset: -4px;
+      outline-style: solid;
+      outline-width: 2px;
+    }
+
+    &[aria-expanded="true"] {
+      background-color: $color-black;
+      .switch-toggle {
+        top: 0;
+      }
+      svg {
+        fill: $color-white;
+      }
+    }
+  }
 }
 
 .header-search-trigger {
-  background: none;
-  border: 0;
-  color: $color-black;
-  cursor: pointer;
-  font-family: var(--ul-font);
-  font-size: fix-font-size-hack(1em);
-  line-height: fix-font-size-hack(1em);
-  padding: fix-font-size-hack(0.938em) fix-font-size-hack(1em);
-  position: relative;
+  overflow: hidden;
 
-  @media (prefers-reduced-motion: no-preference) {
-    transition: color 0.2s ease;
-    i {
-      transition: background-position 0.5s ease;
-    }
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: $color-black;
-    i {
-      filter: invert(1);
-    }
+  .switch-toggle {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    position: relative;
+    top: -100%;
+    transition: top 0.25s ease-in-out;
+    width: 100%;
   }
 
   &[aria-expanded="true"] {
-    background-color: $color-black;
-    i {
-      filter: invert(1) !important;
-      background-position: top left;
+    .switch-toggle {
+      top: 0;
     }
-  }
-
-  &:active,
-  &[aria-expanded="true"] {
-    text-decoration: underline;
-  }
-
-  &:focus {
-    outline: 1px solid #000;
   }
 }
 
@@ -408,10 +428,10 @@
     }
 
     &:focus {
-      outline: 1px solid #fff;
+      outline: 1px solid $color-white;
       outline-offset: 1px;
-      //outline: 1px solid #fff;
-      //border: 1px solid #000;
+      //outline: 1px solid $color-white;
+      //border: 1px solid  $color-black;
     }
   }
 
@@ -427,7 +447,7 @@
   display: flex;
 }
 
-.#{$prefix}header .header-search-input {
+.header-search-input {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   background-color: $color-white;
@@ -439,8 +459,8 @@
   padding: 11px 15px;
 
   &:focus {
-    outline: 1px solid #000;
-    border: 1px solid #fff;
+    outline: 1px solid $color-black;
+    border: 1px solid $color-white;
   }
 
   &::-webkit-search-cancel-button {
@@ -454,17 +474,28 @@
   border: none;
   line-height: 0.6em;
   display: inline-block;
+
   &:hover {
     background-color: $color-black;
-    i {
-      filter: invert(1);
+    svg {
+      fill: $color-white;
     }
   }
+
   &:focus {
-    border: 1px solid #000;
-    outline: 1px solid #fff;
+    background-color: $color-white;
+    border: 1px solid $color-black;
+    outline: 1px solid $color-white;
     margin: 1px;
     padding: 16px;
+    svg {
+      fill: $color-black;
+    }
+  }
+
+  svg {
+    height: 1em;
+    width: 1em;
   }
 }
 
@@ -489,7 +520,7 @@
       }
 
       &:focus {
-        outline: 1px solid #fff;
+        outline: 1px solid $color-white;
       }
     }
 
@@ -503,7 +534,7 @@
 
 .header-language-switcher-list {
   background-color: $color-black;
-  border-top: 1px solid #fff;
+  border-top: 1px solid $color-white;
   border: 1px solid $color-black;
   color: $color-white;
   left: 0;
@@ -551,7 +582,7 @@
   }
 
   &:focus {
-    outline: 1px solid #000;
+    outline: 1px solid $color-black;
   }
 
   &[aria-expanded="true"]:after {
@@ -561,91 +592,79 @@
 
 .header-menu-trigger {
   align-items: center;
-  background: none;
-  border: 0;
-  cursor: pointer;
+  justify-content: center;
   display: flex;
-  height: 48px;
-  padding: 0;
   position: relative;
-  width: 48px;
 
-  svg.nav-mobile-icon {
-    height: 48px;
+  svg {
+    transform: rotate(0);
+    position: absolute;
+  }
+  .menu {
     opacity: 1;
-    position: relative;
-    width: 48px;
+  }
+  .close {
+    opacity: 0;
+  }
 
-    .fermer-gauche {
+  &[aria-expanded="true"] {
+    svg {
+      transform: rotate(-180deg);
+    }
+    .menu {
       opacity: 0;
     }
-  }
-  svg {
-    .ouvrir-haut,
-    .ouvrir-milieu,
-    .ouvrir-bas {
-      -webkit-transition: all 0.2s ease 0.2s;
-      transition: all 0.2s ease 0.2s;
+    .close {
+      opacity: 1;
     }
-    .fermer-gauche {
-      //visibility: hidden;
-      -webkit-transition: all 0;
-      transition: all 0;
-    }
-  }
 
-  &[aria-expanded="false"] {
-    svg.nav-mobile-icon {
-      fill: #000;
+    // svg.nav-mobile-icon {
+    //   fill: $color-black;
 
-      .ouvrir-haut,
-      .ouvrir-milieu,
-      .ouvrir-bas {
-        opacity: 1;
-        -webkit-transform: rotate(0.2s);
-        transform: rotate(0.2s);
-        -webkit-transform-origin: 100% 100%;
-        transform-origin: 100% 100%;
-        -webkit-transition: all 0s ease 0s;
-        transition: all 0s ease 0s;
-      }
-      path.fermer-gauche {
-        opacity: 0;
-        -webkit-transition: all 0s;
-        transition: all 0s;
-      }
-    }
+    //   .ouvrir-haut,
+    //   .ouvrir-milieu,
+    //   .ouvrir-bas {
+    //     opacity: 1;
+    //     -webkit-transform: rotate(0.2s);
+    //     transform: rotate(0.2s);
+    //     -webkit-transform-origin: 100% 100%;
+    //     transform-origin: 100% 100%;
+    //     -webkit-transition: all 0s ease 0s;
+    //     transition: all 0s ease 0s;
+    //   }
+    //   path.fermer-gauche {
+    //     opacity: 0;
+    //     -webkit-transition: all 0s;
+    //     transition: all 0s;
+    //   }
+    // }
   }
   &[aria-expanded="true"] {
-    svg.nav-mobile-icon {
-      fill: #fff;
+    // svg.nav-mobile-icon {
+    //   fill: $color-white;
 
-      .ouvrir-haut,
-      .ouvrir-milieu,
-      .ouvrir-bas {
-        opacity: 0;
-        -webkit-transform: rotate(0.2s);
-        transform: rotate(0.2s);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-      }
-      path.fermer-gauche {
-        opacity: 1;
-        -webkit-transition: all 0.2s ease 0.2s;
-        transition: all 0.2s ease 0.2s;
-      }
-    }
+    //   .ouvrir-haut,
+    //   .ouvrir-milieu,
+    //   .ouvrir-bas {
+    //     opacity: 0;
+    //     -webkit-transform: rotate(0.2s);
+    //     transform: rotate(0.2s);
+    //     -webkit-transform-origin: 50% 50%;
+    //     transform-origin: 50% 50%;
+    //   }
+    //   path.fermer-gauche {
+    //     opacity: 1;
+    //     -webkit-transition: all 0.2s ease 0.2s;
+    //     transition: all 0.2s ease 0.2s;
+    //   }
+    // }
   }
 
   &:hover,
   &:focus {
     background-color: $color-black;
-    i {
-      transition: none;
-      filter: none;
-    }
     svg.nav-mobile-icon {
-      fill: #fff;
+      fill: $color-white;
     }
   }
 }
@@ -701,7 +720,7 @@
     }
 
     &:focus {
-      outline-color: #fff;
+      outline-color: $color-white;
       outline-offset: 3px;
       outline-style: solid;
       outline-width: 1px;
@@ -837,23 +856,6 @@
   transition: border-left 0.5s ease;
 }
 
-.#{$prefix}header {
-  .university-logo-simplified {
-    display: block;
-    margin-right: 0.625em;
-    width: 19px;
-  }
-
-  .university-logo {
-    display: block;
-    width: 128px;
-  }
-
-  .university-logo-fill {
-    transition: fill 0.4s ease;
-  }
-}
-
 @if not $menu-is-always-mobile {
   @media (min-width: 1280px) {
     // Main desktop layout, when mobile menu was open
@@ -861,8 +863,10 @@
       overflow: initial;
 
       &.unit,
+      &.unit-with-submenu,
       &.university {
         padding-top: 0;
+        padding-right: 0;
       }
 
       .#{$prefix}header {
@@ -894,25 +898,21 @@
         }
       }
 
-      .header-menu-trigger {
-        &:before,
-        &:after {
-          background-color: $color-black;
-        }
-      }
-
-      .header-search-trigger {
-        i {
-          transition: filter 0.5s ease;
-          filter: none;
-        }
-        &:hover,
-        &:active,
-        &:focus {
-          background-color: $color-black;
-          i {
-            transition: none;
-            filter: invert(1);
+      .header-main-utilities {
+        button {
+          svg {
+            fill: $color-black;
+          }
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: $color-black;
+            svg {
+              fill: $color-white;
+            }
+          }
+          &:focus {
+            outline-color: $color-white;
           }
         }
       }
@@ -957,7 +957,7 @@
     .header-main-nav {
       a.menu-link {
         &:focus {
-          outline-color: #000;
+          outline-color: $color-black;
           outline-offset: 3px;
           outline-style: solid;
           outline-width: 1px;

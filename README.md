@@ -1,4 +1,4 @@
-# Normes web pour les sites de l'Université Laval #
+# Normes Web pour les sites de l'Université Laval #
 Les normes comprennent l'entête et le pied de page pour tous les sites universitaires.
 
 Les différentes cas d'utilisation sont démontrés dans les quatre gabarits du dépôt de code.

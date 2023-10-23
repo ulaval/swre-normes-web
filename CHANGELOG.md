@@ -16,6 +16,9 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 * Correction d'un bogue qui fesait parfois disparaitre les icônes dans l'entête
 * Uniformisation des styles des boutons de la section `header-main-utilities`
 * Corrections dans les commentaires
+* Suppression de la feuille de style désutette `icons.scss`
+* Suppression de la feuille de style désutette `secure.scss`
+* Suppression de la feuille de style désutette `normes.scss`
 
 ## [v1.1] - 2023-08-29
 * Ajout de 2 icônes de réseaux sociaux

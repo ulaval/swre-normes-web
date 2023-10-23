@@ -53,22 +53,20 @@
     }
   }
 
-  .header-main-utilities {
-    button {
+  .header-main-utilities-action {
+    svg {
+      fill: $color-white;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $color-white;
       svg {
-        fill: $color-white;
+        fill: $color-black;
       }
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: $color-white;
-        svg {
-          fill: $color-black;
-        }
-      }
-      &:focus {
-        outline-color: $color-black;
-      }
+    }
+    &:focus {
+      outline-color: $color-black;
     }
   }
 
@@ -280,53 +278,67 @@
   margin-left: auto;
 }
 
-.header-main-utilities {
-  button {
-    cursor: pointer;
-    height: 3em;
-    width: 3em;
-    background-color: transparent;
-    transition: background-color 0.125s ease;
+.header-main-utilities-action {
+  background-color: transparent;
+  cursor: pointer;
+  height: 3em;
+  transition: background-color 0.125s ease;
+  width: 3em;
 
+  svg {
+    height: 1em;
+    width: 1em;
+    transition: fill 0.125s ease;
+  }
+  svg.close,
+  svg.menu {
+    transition: fill 0.125s ease, transform 0.25s ease;
+  }
+  svg.chevron-right-angle-down {
+    margin-left: 0.25em;
+    transform: rotate(0);
+    width: 0.75em;
+    transition: fill 0.125s ease, transform 0.125s ease;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $color-black;
     svg {
-      height: 1em;
-      width: 1em;
-      transition: fill 0.125s ease, transform 0.25s ease;
+      fill: $color-white;
     }
+  }
+  &:focus {
+    outline-color: $color-white;
+    outline-offset: -4px;
+    outline-style: solid;
+    outline-width: 2px;
+  }
 
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: $color-black;
-      svg {
-        fill: $color-white;
-      }
+  &[aria-expanded="true"] {
+    background-color: $color-black;
+    .switch-toggle {
+      top: 0;
     }
-    &:focus {
-      outline-color: $color-white;
-      outline-offset: -4px;
-      outline-style: solid;
-      outline-width: 2px;
+    svg {
+      fill: $color-white;
     }
-
-    &[aria-expanded="true"] {
-      background-color: $color-black;
-      .switch-toggle {
-        top: 0;
-      }
-      svg {
-        fill: $color-white;
-      }
+    svg.chevron-right-angle-down {
+      transform: rotate(180deg);
     }
   }
 }
 
 .header-search-trigger .switch-toggle,
-.header-language-switcher-trigger,
-.header-menu-trigger {
+.header-main-utilities-action {
   align-items: center;
-  justify-content: center;
   display: flex;
+  justify-content: center;
+}
+
+.header-search-trigger.header-main-utilities-action {
+  display: block;
 }
 
 .header-search-trigger {
@@ -364,8 +376,8 @@
   }
 
   &:not(.open).remove {
-    display: block;
     animation: slide-out-top 0.25s;
+    display: block;
   }
 }
 
@@ -482,9 +494,12 @@
   }
 }
 
+.header-secure-area,
 .header-language-switcher {
   position: relative;
+}
 
+.header-language-switcher {
   &--mobile {
     text-transform: uppercase;
 
@@ -529,10 +544,6 @@
   span {
     font-size: fix-font-size-hack(0.875em);
   }
-  svg.chevron-right-angle-down {
-    width: 0.75em;
-    margin-left: 0.25em;
-  }
 
   &:hover,
   &:active,
@@ -552,20 +563,28 @@
   // }
 }
 
+.header-secure-area-list,
 .header-language-switcher-list {
   background-color: $color-black;
   color: $color-white;
-  left: 0;
   position: absolute;
   right: 0;
-  text-transform: uppercase;
   top: 100%;
-  padding: 0 2px 2px 2px;
+  white-space: nowrap;
 }
 
-.header-language-switcher-list-item {
-  border-top: 1px solid $color-white;
+.header-secure-area-list {
+  padding: 2px;
+}
 
+.header-language-switcher-list {
+  left: 0;
+  padding: 0 2px 2px 2px;
+  text-transform: uppercase;
+}
+
+.header-secure-area-list-item,
+.header-language-switcher-list-item {
   a {
     align-items: center;
     color: $color-white;
@@ -586,6 +605,11 @@
   }
 }
 
+.header-secure-area-list-item + .header-secure-area-list-item,
+.header-language-switcher-list-item {
+  border-top: 1px solid $color-white;
+}
+
 .header-menu-trigger {
   position: relative;
 
@@ -602,7 +626,7 @@
 
   &[aria-expanded="true"] {
     svg {
-      transform: rotate(-180deg);
+      transform: rotate(180deg);
     }
     .menu {
       opacity: 0;
@@ -850,22 +874,20 @@
         }
       }
 
-      .header-main-utilities {
-        button {
+      .header-main-utilities-action {
+        svg {
+          fill: $color-black;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: $color-black;
           svg {
-            fill: $color-black;
+            fill: $color-white;
           }
-          &:hover,
-          &:active,
-          &:focus {
-            background-color: $color-black;
-            svg {
-              fill: $color-white;
-            }
-          }
-          &:focus {
-            outline-color: $color-white;
-          }
+        }
+        &:focus {
+          outline-color: $color-white;
         }
       }
 

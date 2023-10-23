@@ -84,7 +84,7 @@
             </nav>
 
             <div class="header-main-utilities">
-              <button type="button" class="header-search-trigger" aria-expanded="false" aria-controls="header-search" aria-label="Chercher">
+              <button type="button" class="header-search-trigger header-main-utilities-action" aria-expanded="false" aria-controls="header-search" aria-label="Chercher">
                 <span class="switch-toggle">
                   <!-- @TODO: Include this SVG as an inline SVG -->
                   <!-- ./assets/dist/svg/close.svg -->
@@ -101,22 +101,48 @@
                 </span>
               </button>
 
-              <!-- @TODO: Use this for the anonymous, not logged in version -->
-              <a href="#" class="ul-secure-login" aria-label="Espace sécurisé" title="Espace sécurisé"><i class="ul-i-login" aria-role="presentation" aria-hidden="true"></i></a>
+              <!-- @TODO: Use this link when the user is logged out -->
+              <a href="#" class="header-main-utilities-action" aria-label="Espace sécurisé" title="Espace sécurisé">
+                <!-- @TODO: Include this SVG as an inline SVG -->
+                <!-- ./assets/dist/svg/user-void.svg -->
+                <svg aria-hidden="true" aria-role="presentation" class="user-void" viewBox="0 0 32 32">
+                  <path d="M0 16C0 7.16 7.16 0 16 0s16 7.16 16 16-7.16 16-16 16c-8.83-.01-16-7.17-16-16Zm16 12.44c2.33 0 4.62-.65 6.6-1.89-3.4-3.67-9.12-3.88-12.79-.48-.16.14-.31.29-.45.45 1.99 1.26 4.29 1.93 6.64 1.93Zm6.52-6.5c1.03.63 1.97 1.41 2.79 2.31 4.56-5.14 4.09-13.01-1.05-17.57S11.25 2.59 6.69 7.74c-4.16 4.69-4.18 11.75-.04 16.47a12.61 12.61 0 0 1 15.87-2.26ZM10 13.34c0-3.31 2.69-6 6-6s6 2.69 6 6-2.69 6-6 6-6-2.69-6-6Zm2.97 0a3.03 3.03 0 0 0 3.04 3.03 3.03 3.03 0 0 0 3.03-3.04 3.034 3.034 0 1 0-6.07.01Z" />
+                </svg>
+              </a>
 
-              <!-- @TODO: Use this for the connected, logged in version -->
-              <!-- <nav class="ul-secure-menu-container">
-                  <button type="button" id="ul-secure-menu-button" aria-haspopup="true" class="ul-secure-menu-trigger" aria-expanded="false" aria-controls="ul-secure-menu" aria-label="Ouvrir le menu sécurisé" title="Espace sécurisé">
-                    <i aria-hidden="true" aria-role="presentation" class="ul-i-secure-logged"></i>
-                  </button>
-                  <ul id="ul-secure-menu" class="ul-secure-menu menu" role="menu" aria-labelledby="ul-secure-menu-button" hidden>
-                    <li class="menu-item" role="presentation"><a class="menu-link" href="#" role="menuitem">Espace sécurisé</a></li>
-                    <li class="menu-item" role="presentation"><a class="menu-link" href="#" role="menuitem" class="ul-secure-logout">Déconnexion (IDUL00)</a></li>
-                  </ul>
-                </nav> -->
+              <!-- @TODO: Use this nav when the user is logged in -->
+              <!-- <nav class="header-secure-area"> -->
+              <!-- <button type="button" id="ul-secure-menu-button" aria-haspopup="true" class="header-secure-area-trigger header-main-utilities-action" aria-expanded="false" aria-controls="ul-secure-menu" aria-label="Ouvrir le menu sécurisé" title="Espace sécurisé"> -->
+              <!-- @TODO: Include this SVG as an inline SVG -->
+              <!-- ./assets/dist/svg/user-filled.svg -->
+              <!-- <svg aria-hidden="true" aria-role="presentation" class="user-filled" viewBox="0 0 32 32">
+                                <path d="M16 16.38a3.03 3.03 0 0 0 3.03-3.04 3.034 3.034 0 1 0-6.07.01A3.03 3.03 0 0 0 16 16.38Z" />
+                                <path d="M16 0C7.16 0 0 7.16 0 16s7.16 16 16 16 16-7.16 16-16S24.84 0 16 0Zm0 7.34c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6 2.69-6 6-6Zm6.59 19.2c-3.4-3.66-9.12-3.87-12.78-.48-.15.14-.3.29-.45.45-1.01-.64-1.92-1.42-2.71-2.31a12.62 12.62 0 0 1 15.87-2.25c1.03.63 1.97 1.4 2.78 2.3-.79.89-1.7 1.66-2.71 2.3Z" />
+                              </svg> -->
+
+              <!-- @TODO: Include this SVG as an inline SVG -->
+              <!-- ./assets/dist/svg/chevron-right-angle-down.svg -->
+              <!-- <svg aria-hidden="true" aria-role="presentation" class="chevron-right-angle-down" viewBox="0 0 32 32">
+                                <path d="M16.03 25c-.54 0-1.05-.21-1.44-.58L.74 10.56c-.81-.82-.81-2.14 0-2.95.82-.81 2.14-.81 2.95 0l12.33 12.33L28.36 7.61c.51-.43 1.05-.6 1.62-.55a2.096 2.096 0 0 1 1.41 3.42L17.5 24.39c-.38.39-.92.62-1.48.62Z" />
+                              </svg> -->
+              <!-- </button> -->
+
+              <!-- <ul id="header-secure-area-list" class="header-secure-area-list menu" role="listbox" aria-label="Faites un choix" hidden>
+                              <li class="header-secure-area-list-item" role="option" tabindex="-1" aria-posinset="1" aria-setsize="2" aria-selected="false">
+                                <a href="#">
+                                  <span>Espace sécurisé</span>
+                                </a>
+                              </li>
+                              <li class="header-secure-area-list-item" role="option" tabindex="-1" aria-posinset="2" aria-setsize="2" aria-selected="false">
+                                <a href="#">
+                                  <span>Déconnexion (IDUL00)</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav> -->
 
               <nav class="header-language-switcher">
-                <button type="button" class="header-language-switcher-trigger" aria-expanded="false" aria-controls="header-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
+                <button type="button" class="header-language-switcher-trigger header-main-utilities-action" aria-expanded="false" aria-controls="header-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
                   <span aria-hidden="true" aria-role="presentation">fr</span>
 
                   <!-- @TODO: Include this SVG as an inline SVG -->
@@ -139,7 +165,7 @@
                 </ul>
               </nav>
 
-              <button type="button" class="header-menu-trigger" aria-expanded="false" aria-controls="ul-mobile-menu">
+              <button type="button" class="header-menu-trigger header-main-utilities-action" aria-expanded="false" aria-controls="ul-mobile-menu">
                 <!-- @TODO: Include this SVG as an inline SVG -->
                 <!-- ./assets/dist/svg/menu.svg -->
                 <svg aria-hidden="true" aria-role="presentation" class="menu" viewBox="0 0 32 32">

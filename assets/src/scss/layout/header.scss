@@ -53,22 +53,20 @@
     }
   }
 
-  .header-main-utilities {
-    button {
+  .header-main-utilities-action {
+    svg {
+      fill: $color-white;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $color-white;
       svg {
-        fill: $color-white;
+        fill: $color-black;
       }
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: $color-white;
-        svg {
-          fill: $color-black;
-        }
-      }
-      &:focus {
-        outline-color: $color-black;
-      }
+    }
+    &:focus {
+      outline-color: $color-black;
     }
   }
 
@@ -285,51 +283,47 @@
   }
 }
 
-.header-main-utilities {
-  button {
-    cursor: pointer;
-    height: 3em;
-    width: 3em;
-    background-color: transparent;
-    transition: background-color 0.125s ease;
+.header-main-utilities-action {
+  cursor: pointer;
+  height: 3em;
+  width: 3em;
+  background-color: transparent;
+  transition: background-color 0.125s ease;
 
+  svg {
+    height: 1em;
+    width: 1em;
+    transition: fill 0.125s ease, transform 0.25s ease;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $color-black;
     svg {
-      height: 1em;
-      width: 1em;
-      transition: fill 0.125s ease, transform 0.25s ease;
+      fill: $color-white;
     }
+  }
+  &:focus {
+    outline-color: $color-white;
+    outline-offset: -4px;
+    outline-style: solid;
+    outline-width: 2px;
+  }
 
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: $color-black;
-      svg {
-        fill: $color-white;
-      }
+  &[aria-expanded="true"] {
+    background-color: $color-black;
+    .switch-toggle {
+      top: 0;
     }
-    &:focus {
-      outline-color: $color-white;
-      outline-offset: -4px;
-      outline-style: solid;
-      outline-width: 2px;
-    }
-
-    &[aria-expanded="true"] {
-      background-color: $color-black;
-      .switch-toggle {
-        top: 0;
-      }
-      svg {
-        fill: $color-white;
-      }
+    svg {
+      fill: $color-white;
     }
   }
 }
 
 .header-search-trigger .switch-toggle,
-.header-secure-area-trigger,
-.header-language-switcher-trigger,
-.header-menu-trigger {
+.header-main-utilities-action {
   align-items: center;
   justify-content: center;
   display: flex;
@@ -855,22 +849,20 @@
         }
       }
 
-      .header-main-utilities {
-        button {
+      .header-main-utilities-action {
+        svg {
+          fill: $color-black;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: $color-black;
           svg {
-            fill: $color-black;
+            fill: $color-white;
           }
-          &:hover,
-          &:active,
-          &:focus {
-            background-color: $color-black;
-            svg {
-              fill: $color-white;
-            }
-          }
-          &:focus {
-            outline-color: $color-white;
-          }
+        }
+        &:focus {
+          outline-color: $color-white;
         }
       }
 

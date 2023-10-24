@@ -381,6 +381,15 @@
   }
 }
 
+.mobile-menu-open {
+  .header-search {
+    &:not(.open).remove {
+      animation: none;
+      display: none;
+    }
+  }
+}
+
 .header-search-container {
   padding-bottom: 1.5em;
   padding-top: 1.5em;

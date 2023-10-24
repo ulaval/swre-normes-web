@@ -839,10 +839,13 @@
   transition: border-left 0.5s ease;
 }
 
-@if not $menu-is-always-mobile {
+@if $always-force-mobile-menu {
+  // Never compile styles to reset menu to desktop mode
+} @else {
+  // Compile styles to reset menu to desktop mode if body does not have "always-force-mobile-menu" class
   @media (min-width: 1280px) {
     // Main desktop layout, when mobile menu was open
-    .mobile-menu-open {
+    .mobile-menu-open:not(.always-force-mobile-menu) {
       overflow: initial;
 
       &.unit,
@@ -903,45 +906,47 @@
       }
     }
 
-    // Hide mobile-only elements
-    .header-menu-trigger {
-      .nav-mobile-icon {
-        opacity: 0;
-        -webkit-transform: rotate(-180deg);
-        transform: rotate(-180deg);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
+    body:not(.always-force-mobile-menu) {
+      // Hide mobile-only elements
+      .header-menu-trigger {
+        .nav-mobile-icon {
+          opacity: 0;
+          -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+          -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+        }
       }
-    }
 
-    .header-menu-trigger,
-    .header-mobile-menu.open {
-      display: none;
-    }
+      .header-menu-trigger,
+      .header-mobile-menu.open {
+        display: none;
+      }
 
-    // Show main UI elements
-    .header-top {
-      justify-content: flex-end;
-    }
+      // Show main UI elements
+      .header-top {
+        justify-content: flex-end;
+      }
 
-    .header-top-meta,
-    .header-main-nav,
-    .header-secondary-nav,
-    .header-language-switcher {
-      display: block;
-    }
+      .header-top-meta,
+      .header-main-nav,
+      .header-secondary-nav,
+      .header-language-switcher {
+        display: block;
+      }
 
-    .header-main-brand {
-      flex: 0 0 auto;
-    }
+      .header-main-brand {
+        flex: 0 0 auto;
+      }
 
-    .header-main-nav {
-      a.menu-link {
-        &:focus {
-          outline-color: $color-black;
-          outline-offset: 3px;
-          outline-style: solid;
-          outline-width: 1px;
+      .header-main-nav {
+        a.menu-link {
+          &:focus {
+            outline-color: $color-black;
+            outline-offset: 3px;
+            outline-style: solid;
+            outline-width: 1px;
+          }
         }
       }
     }

@@ -360,7 +360,7 @@
 }
 
 .header-search {
-  animation: slide-out-top 0.25s;
+  animation: slide-out-top 0.25s ease;
   background: $color-black;
   display: none;
   left: 0;
@@ -370,13 +370,13 @@
   @include z-index("header", 10);
 
   &.open {
-    animation: slide-in-top 0.25s;
+    animation: slide-in-top 0.25s ease;
     display: block;
     transform: none;
   }
 
   &:not(.open).remove {
-    animation: slide-out-top 0.25s;
+    animation: slide-out-top 0.25s ease;
     display: block;
   }
 }
@@ -646,9 +646,7 @@
 }
 
 .header-mobile-menu {
-  animation-duration: 0.5s;
-  animation-name: slide-out-left;
-  animation-timing-function: ease;
+  animation: slide-out-left 0.5s ease;
   background-color: $color-black;
   display: none;
   position: relative;
@@ -656,7 +654,7 @@
   @include z-index("header", 30);
 
   &.open {
-    animation-name: slide-in-left;
+    animation: slide-in-left 0.5s ease;
     display: block;
   }
 

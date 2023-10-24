@@ -842,7 +842,7 @@
 @if $always-force-mobile-menu {
   // Never compile styles to reset menu to desktop mode
 } @else {
-  // Compile styles to reset menu to desktop mode if body does not have "always-force-mobile-menu" class
+  // Compile styles to reset menu to desktop mode when body does not have "always-force-mobile-menu" class
   @media (min-width: 1280px) {
     // Main desktop layout, when mobile menu was open
     .mobile-menu-open:not(.always-force-mobile-menu) {

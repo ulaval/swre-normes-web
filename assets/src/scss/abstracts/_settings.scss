@@ -34,7 +34,7 @@ $header-container-type: "contained";
 $website-container-max-width: 1600px;
 
 /**
- * @TODO: If true, add some styles to style the submenu.
+ * @TODO: If true, compile styles for submenu.
  *
  * @usage $header-with-submenu: false;
  * @usage $header-with-submenu: true;
@@ -42,12 +42,13 @@ $website-container-max-width: 1600px;
 $header-with-submenu: true;
 
 /**
- * @TODO: If true, remove some styles to always keep the main menu always mobile.
+ * @TODO: If true, never compile styles to bring the menu in desktop mode.
+ * @TODO: If false, compile styles to bring the menu in desktop mode when body does not have "always-force-mobile-menu" class.
  *
- * @usage $menu-is-always-mobile: false;
- * @usage $menu-is-always-mobile: true;
+ * @usage $always-force-mobile-menu: false;
+ * @usage $always-force-mobile-menu: true;
  */
-$menu-is-always-mobile: false;
+$always-force-mobile-menu: true;
 
 /**
  * @TODO: Define if you use the font-size hack

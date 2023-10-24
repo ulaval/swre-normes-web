@@ -114,6 +114,7 @@
     background-color: $color-black;
     display: none;
     left: 0;
+    overflow: hidden;
     position: absolute;
     right: 0;
     top: 100%;
@@ -167,35 +168,28 @@
     flex: 0 0 3em;
     justify-content: center;
     min-height: 36px;
+    transition: background-color 0.125s ease;
 
-    &:before {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.811' height='7.797' viewBox='0 0 13.811 7.797'%3E%3Cpath d='M8.268,16.029a.375.375,0,0,1,.528,0l5.729,5.729,5.733-5.729a.375.375,0,0,1,.528.528l-5.995,6a.367.367,0,0,1-.528,0l-5.995-6A.375.375,0,0,1,8.268,16.029Z' transform='translate(-7.607 -15.368)' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E%0A");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      content: "";
-      display: block;
-      filter: invert(1);
-      height: 8px;
-      width: 16px;
+    svg {
+      fill: $color-white;
+      height: 1em;
+      transform: rotate(0);
+      transition: fill 0.125s ease, transform 0.125s ease;
+      width: 1em;
     }
 
     &:hover,
     &:focus {
       background-color: $color-white;
 
-      &:before {
-        filter: none;
+      svg {
+        fill: $color-black;
       }
     }
 
-    &:focus {
-      outline: none;
-    }
-
     &[aria-expanded="true"] {
-      &:before {
-        transform: scaleY(-1);
+      svg {
+        transform: rotate(180deg);
       }
     }
   }
@@ -303,6 +297,10 @@
         &:before,
         &:after {
           display: none;
+        }
+
+        .#{$prefix}container {
+          transition: none;
         }
       }
     }

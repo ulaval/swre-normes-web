@@ -107,7 +107,7 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 </button>
 ```
 
-### SCSS
+### Changements aux styles
 * Dans le SCSS de configuration, un paramètre a changé. Remplacer les instances de l'ancienne variable :
     * `/assets/src/scss/abstracts/_settings.scss`: `$menu-is-always-mobile` devient `$always-force-mobile-menu`
 * Plusieurs SCSS ont été mis à jour de façon importante. Remplacer les éléments suivants avec la nouvelle version :
@@ -118,29 +118,30 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
     * `/assets/src/scss/normes.scss`
     * `/assets/src/scss/normes/_icons.scss`
     * `/assets/src/scss/normes/_secure.scss`
+* Recompiler le SCSS, avec vos paramètres dans le SCSS de configuration `_settings.scss`
 
-### JS
+### Changements aux scripts
 * Le script normes.js a été mis à jour. Remplacer avec la nouvelle version :
-    * `/assets/src/js/normes.js`: Correctif d'une classe pour le menu sécurisé
+    * `/assets/src/js/normes.js`: Correctif d'un sélecteur pour le menu sécurisé
+* Recompiler le JS
 
-### @TODO Keep this?
-* Correction du `line-height` de la section droits d'auteurs et la section de liens légaux
-* Remplacement du terme "Avis de confidentialité" pour "Confidentialité"
-* Simplification du HTML/CSS et retrait de la balise `<div class="header-tools">`
-* Remplacement d'icônes dans l'entête en `svg css` vers des `svg inline`
-* Retrait de fichier svg inutilisé
-* Ajout de la classe `unit-with-submenu` sur le `body` si y il a un sous-menu
-* Remplacement de la classe `ul-language-switcher-list` pour `header-language-switcher-list` dans l'entête
-* Remplacement de la classe `ul-link--in-language-nav` pour `header-language-switcher-list-item` dans l'entête
-* Remplacement de la classe `ul-secure-menu-trigger` pour `header-secure-area-trigger` dans l'entête
-* Remplacement de la classe `ul-secure-menu` pour `header-secure-area-list` dans l'entête
-* Remplacement de la classe `menu-item` dans `ul-secure-menu` pour `header-secure-area-list-item` dans l'entête
-* Correction d'un bogue qui fesait parfois disparaitre les icônes dans l'entête
-* Uniformisation des styles des boutons de la section `header-main-utilities`
-* Corrections dans les commentaires
-* Suppression de la feuille de style désuette `icons.scss`
-* Suppression de la feuille de style désuette `secure.scss`
-* Suppression de la feuille de style désuette `normes.scss`
+### Changements aux icônes
+* Les icônes suivantes ont été ajoutées :
+    * `/assets/dist/svg/chevron-obtuse-angle-left.svg`
+    * `/assets/dist/svg/chevron-right-angle-down.svg`
+    * `/assets/dist/svg/close.svg`
+    * `/assets/dist/svg/logo-ul-city.svg`
+    * `/assets/dist/svg/menu.svg`
+    * `/assets/dist/svg/search.svg`
+    * `/assets/dist/svg/user-filled.svg`
+    * `/assets/dist/svg/user-void.svg`
+* Plusieurs icônes ont été mises à jour. Remplacer les éléments suivants avec la nouvelle version :
+    * `assets/dist/svg/social-flickr.svg`
+    * `assets/dist/svg/social-vimeo.svg`
+* Les icônes suivantes ont été retirées. Supprimer les éléments suivants :
+    * `/assets/dist/svg/chevron-bottom.svg`
+    * `/assets/dist/svg/chevron-left.svg`
+    * `/assets/dist/svg/logo-ul-footer.svg`
 
 ## [v1.1] - 2023-08-29
 * Ajout de 2 icônes de réseaux sociaux

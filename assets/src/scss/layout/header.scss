@@ -418,25 +418,27 @@
       background-color: $color-white;
       color: $color-black;
     }
+  }
 
-    &:focus {
-      outline-color: $color-white;
-      outline-offset: -2px;
-      outline-style: solid;
-      outline-width: 2px;
-    }
+  label:focus,
+  input:focus + label {
+    outline-color: $color-white;
+    outline-offset: -3px;
+    outline-style: solid;
+    outline-width: 3px;
   }
 
   input:checked + label {
     background-color: $color-white;
     color: $color-black;
+  }
 
-    &:focus {
-      outline-color: $color-black;
-      outline-offset: -4px;
-      outline-style: solid;
-      outline-width: 2px;
-    }
+  input:checked + label:focus,
+  input:checked:focus + label {
+    outline-color: $color-black;
+    outline-offset: -4px;
+    outline-style: solid;
+    outline-width: 2px;
   }
 }
 

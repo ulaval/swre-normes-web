@@ -3,7 +3,8 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 
 ## [v1.2] - 2023-10-19
 ### Changements au DOM
-* Remplacer le bouton bascule de recherche `header-search-trigger` avec la structure suivante
+* La structure du bouton bascule de recherche `header-search-trigger` a changé pour la suivante :<br/>
+[Voir sur Bitbucket | university.html | lignes 98 à 113](https://bitbucket.org/ulavalbsw/normes_web/src/89e88d0/university.html?at=master#lines-98:113)
 ```html
 <button type="button" class="header-search-trigger header-main-utilities-action" aria-expanded="false" aria-controls="header-search" aria-label="Chercher">
     <span class="switch-toggle switch-toggle--close">
@@ -16,7 +17,8 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
     </span>
 </button>
 ```
-* Remplacer la composante du sélecteur de langues `header-language-switcher` avec la structure suivante
+* La structure de la composante du sélecteur de langues `header-language-switcher` a changé pour la suivante :<br/>
+[Voir sur Bitbucket | university.html | lignes 155 à 177](https://bitbucket.org/ulavalbsw/normes_web/src/89e88d0/university.html?at=master#lines-155:177)
 ```html
 <nav class="header-language-switcher">
     <button type="button" class="header-language-switcher-trigger header-main-utilities-action" aria-expanded="false" aria-controls="header-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
@@ -39,7 +41,8 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
     </ul>
 </nav>
 ```
-* Remplacer le bouton de menu mobile `header-menu-trigger` avec la structure suivante
+* La structure du bouton de menu mobile `header-menu-trigger` a changé pour la suivante :<br/>
+[Voir sur Bitbucket | university.html | lignes 179 à 193](https://bitbucket.org/ulavalbsw/normes_web/src/89e88d0/university.html?at=master#lines-179:193)
 ```html
 <button type="button" class="header-menu-trigger header-main-utilities-action" aria-expanded="false" aria-controls="ul-mobile-menu">
     <!-- @TODO: Include this SVG as an inline SVG -->
@@ -51,26 +54,29 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
     <span class="screen-reader-text visually-hidden">Ouvrir le menu principal</span>
 </button>
 ```
-* Ajouter à l'input avec l'ID `search-in--website` l'attribut `checked="checked"`
-* Remplacer le bouton `header-search-button` avec la structure suivante
+* L'input avec l'ID `search-in--website` a maintenant l'attribut `checked="checked"`
+* La structure du bouton `header-search-button` a changé pour la suivante :<br/>
+[Voir sur Bitbucket | university.html | lignes 266 à 272](https://bitbucket.org/ulavalbsw/normes_web/src/89e88d0/university.html?at=master#lines-266:272)
 ```html
 <button class="header-search-button" tabindex="0" type="submit" value="" aria-label="Chercher">
     <!-- @TODO: Include this SVG as an inline SVG -->
     <!-- ./assets/dist/svg/search.svg -->
 </button>
 ```
-* Pour un des titres `footer-navigation-title`, remplacer le texte de "Carrière à l'UL" par "Carrière"
-* Dans `footer-legal`, changer le texte du lien `Avis de confidentialité` par `Confidentialité`
-* Remplacer le logo SVG dans `footer-logo` pour le nouveau, anciennement `logo-ul-footer.svg` et maintenant `logo-ul-city.svg`
-* Remplacer la composante `header-secure-area` avec la structure suivante
-    * Lorsque l'utilisateur est déconnecté
+* Dans `footer-navigation`, le texte du titre `footer-navigation-title` avec le libellé `Carrière à l'UL` a changé pour `Carrière`
+* Dans `footer-legal`, le texte du lien avec le libellé `Avis de confidentialité` a changé pour `Confidentialité`
+* Dans `footer-logo`, le `logo-ul-footer.svg` est remplacé par `logo-ul-city.svg`
+* La structure de la composante `header-secure-area` a changé pour la suivante :
+    * Lorsque l'utilisateur est déconnecté<br/>
+    [Voir sur Bitbucket | unit--with-submenu.html | lignes 106 à 112](https://bitbucket.org/ulavalbsw/normes_web/src/89e88d0/unit--with-submenu.html?at=master#lines-106:112)
     ```html
     <a href="#" class="header-main-utilities-action" aria-label="Espace sécurisé" title="Espace sécurisé">
     <!-- @TODO: Include this SVG as an inline SVG -->
     <!-- ./assets/dist/svg/user-void.svg -->
     </a>
     ```
-    * Lorsque l'utilisateur est connecté
+    * Lorsque l'utilisateur est connecté<br/>
+    [Voir sur Bitbucket | unit--with-submenu.html | lignes 115 à 143](https://bitbucket.org/ulavalbsw/normes_web/src/89e88d0/unit--with-submenu.html?at=master#lines-115:143)
     ```html
     <nav class="header-secure-area">
         <button type="button" id="ul-secure-menu-button" aria-haspopup="true" class="header-secure-area-trigger header-main-utilities-action" aria-expanded="false" aria-controls="ul-secure-menu" aria-label="Ouvrir le menu sécurisé" title="Espace sécurisé">
@@ -96,10 +102,11 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
     </nav>
     ```
 #### Spécifique aux sites des unités
-* Retirer le div `header-tools` en conservant son contenu
+* Le div `header-tools` est retirée en conservant son contenu
 #### Spécifique aux sites des sous-unités, en répertoire ou en sous-domaine
-* Retirer le div `header-tools` en conservant son contenu
-* Remplacer le bouton `header-sub-nav-button` avec la structure suivante
+* Le div `header-tools` est retirée en conservant son contenu
+* La structure du bouton de menu secondaire `header-sub-nav-button` a changé pour la suivante :<br/>
+[Voir sur Bitbucket | unit--with-submenu.html | lignes 277 à 284](https://bitbucket.org/ulavalbsw/normes_web/src/89e88d0/unit--with-submenu.html?at=master#lines-277:284)
 ```html
 <button type="button" class="header-sub-nav-button" aria-expanded="false" aria-controls="header-sub-nav-main" aria-label="Menu de sous-navigation">
     <!-- @TODO: Include this SVG as an inline SVG -->

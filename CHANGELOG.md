@@ -4,7 +4,8 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 ## [v1.2] - 2023-10-19
 ### Changements au DOM
 * La structure du bouton bascule de recherche `header-search-trigger` a changé pour la suivante :
-[header-search-trigger | Normes web | Bitbucket](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/university.html?at=master#lines-99:114)
+
+[Voir sur Bitbucket | university.html | lignes 99 à 114](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/university.html?at=master#lines-99:114)
 ```html
 <button type="button" class="header-search-trigger header-main-utilities-action" aria-expanded="false" aria-controls="header-search" aria-label="Chercher">
     <span class="switch-toggle switch-toggle--close">
@@ -18,7 +19,8 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 </button>
 ```
 * La structure de la composante du sélecteur de langues `header-language-switcher` a changé pour la suivante :
-[header-language-switcher | Normes web | Bitbucket](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/university.html?at=master#lines-156:178)
+
+[Voir sur Bitbucket | university.html | lignes 156 à 178](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/university.html?at=master#lines-156:178)
 ```html
 <nav class="header-language-switcher">
     <button type="button" class="header-language-switcher-trigger header-main-utilities-action" aria-expanded="false" aria-controls="header-language-switcher-list" aria-label="Langue actuelle : Français, Sélectionnez votre langue">
@@ -42,7 +44,8 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 </nav>
 ```
 * La structure du bouton de menu mobile `header-menu-trigger` a changé pour la suivante :
-[header-menu-trigger | Normes web | Bitbucket](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/university.html?at=master#lines-180:194)
+
+[Voir sur Bitbucket | university.html | lignes 180 à 194](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/university.html?at=master#lines-180:194)
 ```html
 <button type="button" class="header-menu-trigger header-main-utilities-action" aria-expanded="false" aria-controls="ul-mobile-menu">
     <!-- @TODO: Include this SVG as an inline SVG -->
@@ -56,7 +59,8 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 ```
 * L'input avec l'ID `search-in--website` a maintenant l'attribut `checked="checked"`
 * La structure du bouton `header-search-button` a changé pour la suivante :
-[header-search-button | Normes web | Bitbucket](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/university.html?at=master#lines-267:273)
+
+[Voir sur Bitbucket | university.html | lignes 267 à 273](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/university.html?at=master#lines-267:273)
 ```html
 <button class="header-search-button" tabindex="0" type="submit" value="" aria-label="Chercher">
     <!-- @TODO: Include this SVG as an inline SVG -->
@@ -68,7 +72,8 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 * Dans `footer-logo`, le `logo-ul-footer.svg` est remplacé par `logo-ul-city.svg`
 * La structure de la composante `header-secure-area` a changé pour la suivante :
     * Lorsque l'utilisateur est déconnecté
-    [Utilisateur déconnecté | Normes web | Bitbucket](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/unit--with-submenu.html?at=master#lines-107:113)
+
+    [Voir sur Bitbucket | unit--with-submenu.html | lignes 107 à 113](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/unit--with-submenu.html?at=master#lines-107:113)
     ```html
     <a href="#" class="header-main-utilities-action" aria-label="Espace sécurisé" title="Espace sécurisé">
     <!-- @TODO: Include this SVG as an inline SVG -->
@@ -76,7 +81,8 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
     </a>
     ```
     * Lorsque l'utilisateur est connecté
-    [Utilisateur connecté | Normes web | Bitbucket](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/unit--with-submenu.html?at=master#lines-116:144)
+
+    [Voir sur Bitbucket | unit--with-submenu.html | lignes 116 à 144](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/unit--with-submenu.html?at=master#lines-116:144)
     ```html
     <nav class="header-secure-area">
         <button type="button" id="ul-secure-menu-button" aria-haspopup="true" class="header-secure-area-trigger header-main-utilities-action" aria-expanded="false" aria-controls="ul-secure-menu" aria-label="Ouvrir le menu sécurisé" title="Espace sécurisé">
@@ -106,7 +112,8 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 #### Spécifique aux sites des sous-unités, en répertoire ou en sous-domaine
 * Le div `header-tools` est retirée en conservant son contenu
 * La structure du bouton de menu secondaire `header-sub-nav-button` a changé pour la suivante :
-[header-sub-nav-button | Normes web | Bitbucket](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/unit--with-submenu.html?at=master#lines-278:285)
+
+[Voir sur Bitbucket | unit--with-submenu.html | lignes 278 à 285](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/unit--with-submenu.html?at=master#lines-278:285)
 ```html
 <button type="button" class="header-sub-nav-button" aria-expanded="false" aria-controls="header-sub-nav-main" aria-label="Menu de sous-navigation">
     <!-- @TODO: Include this SVG as an inline SVG -->

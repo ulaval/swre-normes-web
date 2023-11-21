@@ -6,11 +6,11 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 * Remplacer le bouton bascule de recherche `header-search-trigger` avec la structure suivante
 ```html
 <button type="button" class="header-search-trigger header-main-utilities-action" aria-expanded="false" aria-controls="header-search" aria-label="Chercher">
-    <span class="switch-toggle">
+    <span class="switch-toggle switch-toggle--close">
         <!-- @TODO: Include this SVG as an inline SVG -->
         <!-- ./assets/dist/svg/close.svg -->
     </span>
-    <span class="switch-toggle">
+    <span class="switch-toggle switch-toggle--search">
         <!-- @TODO: Include this SVG as an inline SVG -->
         <!-- ./assets/dist/svg/search.svg -->
     </span>

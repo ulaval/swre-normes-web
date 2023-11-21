@@ -3,8 +3,7 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 
 ## [v1.2] - 2023-10-19
 ### Changements au DOM
-* La structure du bouton bascule de recherche `header-search-trigger` a changé pour la suivante :
-
+* La structure du bouton bascule de recherche `header-search-trigger` a changé pour la suivante :<br/>
 [Voir sur Bitbucket | university.html | lignes 99 à 114](https://bitbucket.org/ulavalbsw/normes_web/src/e80c59f27803ac6a7d2fc2061f5a013e421cf2a0/university.html?at=master#lines-99:114)
 ```html
 <button type="button" class="header-search-trigger header-main-utilities-action" aria-expanded="false" aria-controls="header-search" aria-label="Chercher">

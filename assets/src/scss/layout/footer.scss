@@ -243,7 +243,7 @@
   margin-bottom: fix-font-size-hack(0.5rem);
 }
 
-.footer .footer-emergency-title a {
+.#{$prefix}footer .footer-emergency-title a {
   color: $color-ul-red;
   text-decoration: none;
   text-transform: uppercase;

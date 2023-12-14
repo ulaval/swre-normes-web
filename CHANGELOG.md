@@ -1,6 +1,32 @@
 # Changelog #
 Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 
+## [v1.2.1] - 2023-12-14
+### Changements au DOM
+* Un lien pour un courriel de contact a été ajouté à la fin du paragraphe `footer-address-infos accessible-links-wrapper` :<br/>
+[Voir sur Bitbucket | university.html | lignes 329 à 332](https://bitbucket.org/ulavalbsw/normes_web/src/7140da2e203c62e60f502c3311c8b8d9d157b63d/university.html?at=feature%2FBSW-2876_ajout_champ_courriel_pied_de_page#lines-329:332)
+```html
+<p class="footer-address-infos accessible-links-wrapper">
+
+    <!-- @TODO: Replace address and google maps link with your own -->
+    <a class="address" href="https://www.google.com/maps/place/2325+Rue+de+l'Universit%C3%A9,+Qu%C3%A9bec,+QC+G1V+0B4,+Canada" target="_blank" rel="noopener"><span class="contact-row">2325,&nbsp;rue&nbsp;de&nbsp;l'Université,</span> <span class="contact-row">Québec&nbsp;(Québec)&nbsp;G1V&nbsp;0A6</span></a>
+    <br />
+
+    <!-- @TODO: Replace phone numbers with your own -->
+    <span class="contact-row">Téléphone: <a class="tel" href="tel:+14186562131">418&nbsp;656-2131</a></span>
+    <span class="contact-row">Sans&nbsp;frais:&nbsp;<a class="tel" href="tel:+18777852825">1&nbsp;877&nbsp;785-2825</a></span>
+    <br />
+
+    <!-- @TODO: Replace email with your own -->
+    <span>Courriel: <a class="mail" href="mailto:courriel@ulaval.ca">courriel@ulaval.ca</a></span>
+</p>
+```
+
+### Changements aux styles
+* Un SCSS a été mis à jour. Remplacer l'élément suivant avec la nouvelle version :
+    * `/assets/src/scss/layout/footer.scss`
+* Recompiler le SCSS, avec vos paramètres dans le SCSS de configuration `_settings.scss`
+
 ## [v1.2] - 2023-10-19
 ### Changements au DOM
 * La structure du bouton bascule de recherche `header-search-trigger` a changé pour la suivante :<br/>

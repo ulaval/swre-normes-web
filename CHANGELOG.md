@@ -1,6 +1,12 @@
 # Changelog #
 Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 
+## [v1.2.2] - 2024-06-11
+### Ajustement et changement de logos
+* Le logo de Twitter a été remplacé par celui de X
+* Toutes les mentions à Twitter ont été remplacées par X
+* Le logo de Facebook a été ajusté afin de respecter les normes du logo
+
 ## [v1.2.1] - 2023-12-14
 ### Changements au DOM
 * Un lien pour un courriel de contact a été ajouté à la fin du paragraphe `footer-address-infos accessible-links-wrapper` :<br/>

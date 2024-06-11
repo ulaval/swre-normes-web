@@ -7,6 +7,9 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 * Toutes les mentions à Twitter ont été remplacées par X
 * Le logo de Facebook a été ajusté afin de respecter les normes du logo
 
+### Ajustement de l'année en cours
+* L'année 2023 a été changée à 2024 dans le copyright de chacun des templates
+
 ## [v1.2.1] - 2023-12-14
 ### Changements au DOM
 * Un lien pour un courriel de contact a été ajouté à la fin du paragraphe `footer-address-infos accessible-links-wrapper` :<br/>

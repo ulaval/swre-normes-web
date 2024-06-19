@@ -20,6 +20,9 @@ var closeMainSearch = function () {
   document
     .querySelector(".header-search-trigger")
     .setAttribute("aria-expanded", "false");
+  document
+    .querySelector(".header-search-trigger")
+    .setAttribute("aria-label", "Chercher");
 };
 
 // Fermeture du moteur de recherche
@@ -118,6 +121,7 @@ if ((searchBarButton = document.querySelector(".header-search-trigger"))) {
       document.querySelector(".header-search-input").focus();
       document.addEventListener("keydown", detectBackTabOnSearchBar);
       this.setAttribute("aria-expanded", "true");
+      this.setAttribute("aria-label", "Fermer le menu de recherche");
     } else {
       closeMainSearch();
     }
@@ -191,7 +195,7 @@ var preventScrollOnNavKeyDowns = function (e) {
 var detectBackTabOnSearchBar = function (e) {
   if (
     document.activeElement ==
-      document.querySelector(".header-search-type label:first-of-type") &&
+    document.querySelector(".header-search-type label:first-of-type") &&
     e.shiftKey &&
     e.keyCode == 9
   ) {

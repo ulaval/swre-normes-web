@@ -62,7 +62,8 @@
 }
 
 .accessible-links-wrapper {
-  a {
+  a,
+  .ot-sdk-show-settings {
     margin: 0 -2px;
     padding: 0 2px;
 

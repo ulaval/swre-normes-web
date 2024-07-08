@@ -1,6 +1,13 @@
 # Changelog #
 Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 
+## [v1.3] - 2024-07-08
+### Ajout de bouton de préférences
+* Ajout d'un bouton permettant de revoir le choix des préférences de la bannière de consentement.
+
+### Ajustement du texte de remplacement de recherche
+* Le bouton pour fermer la rechercher portait le libellé chercher au lieu de fermer.
+
 ## [v1.2.2] - 2024-06-11
 ### Ajustement et changement de logos
 * Le logo de Twitter a été remplacé par celui de X

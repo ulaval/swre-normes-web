@@ -22,7 +22,7 @@ var closeMainSearch = function () {
     .setAttribute("aria-expanded", "false");
   document
     .querySelector(".header-search-trigger")
-    .setAttribute("aria-label", "Chercher");
+    .setAttribute("aria-label", "Ouvrir le menu de recherche");
 };
 
 // Fermeture du moteur de recherche

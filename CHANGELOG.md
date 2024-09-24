@@ -1,6 +1,10 @@
 # Changelog #
 Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 
+## [v1.3.1] - 2024-09-24
+### Ajout de paramètre pour le formulaire de recherche
+* Ajout d'un paramètre permettant de modifier le nom de l'input du formulaire de recherche en entête.
+
 ## [v1.3] - 2024-07-08
 ### Ajout de bouton de préférences
 * Ajout d'un bouton permettant de revoir le choix des préférences de la bannière de consentement.

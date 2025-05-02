@@ -278,3 +278,11 @@ document.addEventListener("animationend", function (e) {
     e.target.classList.remove("remove");
   }
 });
+
+function setFullHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+window.addEventListener('resize', setFullHeight);
+window.addEventListener('orientationchange', setFullHeight);
+setFullHeight();

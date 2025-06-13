@@ -23,7 +23,7 @@
 
   .#{$prefix}header {
     background-color: $color-black;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     left: 0;
     overflow-y: scroll;
     position: fixed;
@@ -114,7 +114,7 @@
 
   &:after {
     background-color: $color-black;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     position: absolute;
     top: 0;
     transition: width 0.4s ease;
@@ -185,6 +185,7 @@
     display: block;
     margin-right: 0.625em;
     width: 19px;
+    height: 24.03px;
   }
 
   .university-logo {
@@ -707,7 +708,6 @@
     background-repeat: no-repeat;
     background-size: 0 4px;
     padding-bottom: fix-font-size-hack(0.417em);
-    text-align: center;
     text-decoration: none;
     transition: background-size 0.25s ease;
 

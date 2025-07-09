@@ -1,6 +1,10 @@
 # Changelog #
 Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 
+## [v1.4.1] - 2025-07-09
+### Changements visuels
+* Ajout de l'effet survol sur les liens
+
 ## [v1.4] - 2025-06-26
 ### Changements visuels
 * Changements importants des styles de titre, d'espacement, de hauteur de ligne et des hyperliens

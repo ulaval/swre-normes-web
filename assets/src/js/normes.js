@@ -26,12 +26,9 @@ var closeMainSearch = function () {
 var closeMenuSousUnite = function () {
   if (document.querySelector("#header-sub-nav-main")) {
     document.querySelector("#header-sub-nav-main").classList.remove("open");
-    document
-      .querySelector(".header-sub-nav-button")
-      .setAttribute("aria-expanded", "false");
-    document
-      .querySelector(".header-sub-nav-button")
-      .setAttribute("aria-label", "Ouvrir le menu");
+    let subNavButton = document.querySelector(".header-sub-nav-button");
+    subNavButton.setAttribute("aria-expanded", "false");
+    subNavButton.setAttribute("aria-label", subNavButton.getAttribute("data-open-submenu-label"));
   }
 };
 
@@ -152,7 +149,7 @@ if ((sousUniteTrigger = document.querySelector(".header-sub-nav-button"))) {
     if (this.getAttribute("aria-expanded") == "false") {
       closeOtherElements();
       document.querySelector(".header-sub-nav-main").classList.add("open");
-      this.setAttribute("aria-label", "Fermer le menu");
+      this.setAttribute("aria-label", this.getAttribute("data-close-submenu-label"));
       this.setAttribute("aria-expanded", "true");
     } else {
       closeMenuSousUnite();

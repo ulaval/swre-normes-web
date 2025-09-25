@@ -1,6 +1,9 @@
 # Changelog #
 Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 
+## [latest]
+* Correctif sur le lien de l'adresse dans le pied de page
+
 ## [v1.4.1] - 2025-07-09
 ### Changements visuels
 * Ajout de l'effet survol sur les liens

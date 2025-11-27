@@ -91,3 +91,59 @@
 
   z-index: $base-value + $added-value;
 }
+
+// Variables
+$bullet-gap: 0.25em;
+$bullet-base-width: 1.25em;
+
+@mixin ordered-list-style($level: 1, $extra-width: 0, $hierarchical: true) {
+  $counter-name: if($hierarchical, list-counter-#{$level}, independent-counter-#{$level});
+  $content: "";
+
+  @if $hierarchical {
+    @for $i from 1 through $level {
+      $content: $content + "counter(list-counter-#{$i})";
+      @if $i < $level {
+        $content: $content + ' "." ';
+      }
+    }
+  } @else {
+    $content: "counter(#{$counter-name})";
+  }
+
+  li {
+    counter-increment: #{$counter-name};
+    padding-left: $bullet-base-width + $bullet-gap + ($level - 1) * 0.75em + $extra-width;
+    position: relative;
+
+    &::before {
+      content: unquote($content) ". ";
+      left: 0;
+      position: absolute;
+      text-align: left;
+      top: 0;
+      width: $bullet-base-width + ($level - 1) * 0.75em + $extra-width;
+    }
+  }
+
+  li > ol {
+    @if $level <= 10 {
+      @include ordered-list-style($level + 1, 0, $hierarchical);
+    }
+  }
+}
+
+@mixin unordered-list-style {
+  padding-left: 1.1em;
+
+  li {
+    counter-increment: none;
+    counter-reset: none;
+    padding-left: 0;
+    position: relative;
+
+    &::before {
+      content: none;
+    }
+  }
+}

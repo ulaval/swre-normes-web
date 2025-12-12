@@ -230,6 +230,12 @@
   & + .footer-navigation-group {
     margin-top: fix-font-size-hack(2em);
   }
+
+  .menu {
+    li {
+      margin-top: 5px;
+    }
+  }
 }
 
 .footer-navigation-title {

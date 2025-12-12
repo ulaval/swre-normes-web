@@ -2,6 +2,7 @@
 Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 
 ## [latest]
+* Ajouter de l'espacement entre les liens du pied de page afin que ceux-ci soient accessibles
 * Correctif sur le lien de l'adresse dans le pied de page
 * Ajout des mixins pour les listes ordonnées et non ordonnées
 * Correction des listes ordonnées pour que l'on voit la position de l'élément au lieu d'une puce

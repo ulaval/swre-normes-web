@@ -6,6 +6,7 @@ Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 * Correctif sur le lien de l'adresse dans le pied de page
 * Ajout des mixins pour les listes ordonnées et non ordonnées
 * Correction des listes ordonnées pour que l'on voit la position de l'élément au lieu d'une puce
+* Ajout des nouvelles teintes de couleurs de l'identité visuelle de l'Université Laval
 
 ## [v1.4.1] - 2025-07-09
 ### Changements visuels

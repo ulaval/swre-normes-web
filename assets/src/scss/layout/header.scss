@@ -48,6 +48,12 @@
       }
     }
 
+    a.header-university-anniversary-link {
+      &:focus {
+        outline-color: $color-white;
+      }
+    }
+
     .university-logo-fill {
       fill: $color-white;
     }
@@ -131,7 +137,8 @@
 
   a.header-title,
   a.header-university-link,
-  a.header-unit-link {
+  a.header-unit-link,
+  a.header-university-anniversary-link {
     transition: color 0.5s ease;
 
     &:focus {
@@ -139,6 +146,28 @@
       outline-offset: 2px;
       outline-style: solid;
       outline-width: 1px;
+    }
+  }
+
+  .header-university-anniversary {
+    color: $color-ul-red;
+    display: flex;
+    font-weight: 700;
+
+    &:before {
+      content: "|";
+      margin: 0 0.5em;
+    }
+  }
+
+  a.header-university-anniversary-link {
+    color: $color-ul-red;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
     }
   }
 
@@ -169,7 +198,8 @@
     }
   }
 
-  a.header-university-link {
+  a.header-university-link,
+  a.header-university-anniversary-link {
     display: flex;
     white-space: nowrap;
     padding: 2px;
@@ -177,8 +207,9 @@
   }
 
   a.header-unit-link {
+    font-size: 0.875em;
     padding: 0 2px;
-    margin: 0 -2px;
+    margin: 0 -2px 0 2em;
   }
 
   .university-logo-simplified {
@@ -227,6 +258,30 @@
       1600px
     );
   }
+
+  .container--anniversary {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+.anniversary-banner {
+  align-items: center;
+  display: flex;
+  height: 2em;
+  left: 8.125em;
+  position: relative;
+  @include property-with-fluid-value("margin-left", 32px, 64px, 1280px, 1600px);
+
+  a.header-university-anniversary-link {
+    font-size: 0.75em;
+  }
+}
+
+.anniversary-design {
+  margin-right: 1.25em;
+  position: absolute;
+  right: 100%;
 }
 
 .header-top,
@@ -256,6 +311,10 @@
     font-size: fix-font-size-hack(1em);
   }
 
+  &--with-unit {
+    flex-direction: column;
+  }
+
   .#{$prefix}divider {
     align-self: stretch;
     border-left: 1px solid $color-black;
@@ -263,6 +322,11 @@
     position: relative;
     top: -1px;
   }
+}
+
+.header-top-brand-university {
+  display: flex;
+  margin-bottom: 0.25em;
 }
 
 .header-top-meta {

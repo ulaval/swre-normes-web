@@ -493,8 +493,8 @@
   }
 
   .footer-legal {
-    display: flex;
     align-items: center;
+    display: flex;
 
     &:before {
       content: "|";
@@ -504,8 +504,8 @@
     }
 
     li {
-      display: flex;
       align-items: center;
+      display: flex;
     }
   }
 }

@@ -135,6 +135,7 @@
 
 .footer-address-infos {
   font-size: fix-font-size-hack(0.875em);
+  line-height: 1.75;
   margin-bottom: 1rem;
 
   &:last-child {
@@ -353,11 +354,13 @@
 
   li {
     display: block;
-    margin-top: fix-font-size-hack(0.17em);
+    margin-top: fix-font-size-hack(0.25em);
   }
 
   a {
     color: $color-white;
+    display: inline-block;
+    padding: 0.25em;
     text-decoration: none;
 
     &:focus {
@@ -368,7 +371,7 @@
 
 .footer-copyright,
 .footer-legal {
-  line-height: 1.5em;
+  line-height: 2;
 }
 
 @media (min-width: 470px) {
@@ -490,6 +493,7 @@
   }
 
   .footer-legal {
+    align-items: center;
     display: flex;
 
     &:before {
@@ -500,6 +504,7 @@
     }
 
     li {
+      align-items: center;
       display: flex;
     }
   }

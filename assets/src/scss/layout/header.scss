@@ -49,6 +49,8 @@
     }
 
     a.header-university-anniversary-link {
+      color: $color-white;
+
       &:focus {
         outline-color: $color-white;
       }
@@ -236,6 +238,12 @@
 .header-secondary-nav,
 .header-language-switcher {
   display: none;
+}
+
+body.university {
+  .#{$prefix}header {
+    box-shadow: none;
+  }
 }
 
 .header-container {

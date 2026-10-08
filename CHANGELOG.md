@@ -1,6 +1,9 @@
 # Changelog #
 Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 
+## [v1.5.1] - 2026-10-08
+* Correctif sur le fond de couleur dans le menu de sélection des langues
+
 ## [v1.5] - 2026-09-29
 * Mise à jour des visuels pour le 175e de l'Université
 * Ajouter de l'espacement entre les liens du pied de page afin que ceux-ci soient accessibles

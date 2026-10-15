@@ -81,12 +81,24 @@
   }
 }
 
+.height-100 {
+  height: 100%;
+}
+
+.desktop-only {
+  display: none !important;
+}
+
 @media (min-width: $breakpoint-md) {
   .skip-to-content {
     text-align: left;
   }
-}
 
-.height-100 {
-  height: 100%;
+  .desktop-only {
+    display: revert !important;
+  }
+
+  .mobile-only {
+    display: none !important;
+  }
 }

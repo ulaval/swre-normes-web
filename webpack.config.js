@@ -1,6 +1,7 @@
 // Require modules and plugins
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WebpackShellPluginNext = require("webpack-shell-plugin-next");
+const SVGSpritemapPlugin = require("svg-spritemap-webpack-plugin");
 const fs = require("fs");
 const glob = require("glob");
 const path = require("path");
@@ -114,5 +115,38 @@ const cssConfig = {
   ],
 };
 
+const svgSpriteConfig = {
+  name: 'svg-sprite',
+  mode: 'production',
+  // Aucune entrée JS : le plugin crée lui-même son chunk
+  entry: {},
+  output: {
+    path: path.resolve(__dirname, 'assets/dist'),
+  },
+  plugins: [
+    new SVGSpritemapPlugin('assets/src/svg/*.svg', {
+      output: {
+        // Relatif à output.path => assets/dist/svg/sprite.svg
+        filename: 'svg/icons.svg',
+        svg: {
+          sizes: false
+        },
+        svgo: true,
+        svg4everybody: true,
+        chunk: {
+          // Supprime le chunk JS temporaire généré par le plugin
+          keep: false,
+        },
+      },
+      sprite: {
+        prefix: '',
+        generate: {
+          title: false,
+        },
+      },
+    }),
+  ],
+};
+
 // Export both configurations as an array
-module.exports = [jsConfig, cssConfig];
+module.exports = [jsConfig, cssConfig, svgSpriteConfig];

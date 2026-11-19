@@ -21,10 +21,11 @@
     "@npmcli/fs": "^3.1.0",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
-    "glob": "^9.3.4",
+    "glob": "^14.0.6",
     "mini-css-extract-plugin": "^2.7.5",
     "sass": "^1.60.0",
     "sass-loader": "^13.2.2",
+    "svg-spritemap-webpack-plugin": "^4.7.0",
     "webpack": "^5.77.0",
     "webpack-cli": "^5.0.1",
     "webpack-shell-plugin-next": "^2.3.1"

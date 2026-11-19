@@ -292,16 +292,18 @@ body.university {
   position: relative;
   @include property-with-fluid-value("margin-left", 162px, 194px, 1280px, 1600px);
 
+  .anniversary-design {
+    margin-right: 1.25em;
+    position: absolute;
+    right: 100%;
+    width: 80em;
+    height: 2em;
+  }
+
   a.header-university-anniversary-link {
     color: $color-black;
     font-size: 0.75em;
   }
-}
-
-.anniversary-design {
-  margin-right: 1.25em;
-  position: absolute;
-  right: 100%;
 }
 
 .header-top,
